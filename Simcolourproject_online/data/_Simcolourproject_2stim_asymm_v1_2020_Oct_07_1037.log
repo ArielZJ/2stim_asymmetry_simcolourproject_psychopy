@@ -1,0 +1,11 @@
+0.9621 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'pyo', 'pygame'] (in that order).
+33.3340 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1280, 800]. Using actual size
+60.1958 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x12c683f98>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x12e8a5b38>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 200.0], screen=0, size=array([2560, 1600]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+60.1959 	EXP 	window1: recordFrameIntervals = False
+60.3603 	EXP 	window1: recordFrameIntervals = True
+60.5448 	EXP 	window1: recordFrameIntervals = False
+60.6879 	EXP 	Created welcome = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='welcome', opacity=1.0, ori=0, pos=array([-0.2,  0. ]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=2)
+60.7127 	EXP 	welcome: autoDraw = True
+72.5611 	DATA 	Keypress: space
+72.5829 	EXP 	welcome: autoDraw = False
+72.8512 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,423 @@
+0.9824 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'pyo', 'pygame'] (in that order).
+60.0063 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x130c79710>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x12ebbcf98>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 200.0], screen=0, size=array([2560, 1600]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+60.0064 	EXP 	window1: recordFrameIntervals = False
+60.2215 	EXP 	window1: recordFrameIntervals = True
+60.3221 	WARNING 	t of last frame was 33.71ms (=1/29)
+60.4888 	EXP 	window1: recordFrameIntervals = False
+60.5417 	EXP 	Created Circle_1 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb255', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='Circle_1', opacity=1.0, ori=array(0.), pos=array([-0.1,  0.1]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+60.5438 	EXP 	Created centre_cross4 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-1.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=1.5, name='centre_cross4', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+60.6078 	EXP 	Created response1disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response1disk', opacity=1.0, ori=0.0, pos=array([0.09, 0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6117 	EXP 	Created response2disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response2disk', opacity=1.0, ori=0.0, pos=array([0.09, 0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6173 	EXP 	Created response3disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response3disk', opacity=1.0, ori=0.0, pos=array([ 0.09, -0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6223 	EXP 	Created response4disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response4disk', opacity=1.0, ori=0.0, pos=array([ 0.09, -0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6258 	EXP 	Created response5disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response5disk', opacity=1.0, ori=0.0, pos=array([-0.09, -0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6308 	EXP 	Created response6disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response6disk', opacity=1.0, ori=0.0, pos=array([-0.09, -0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6365 	EXP 	Created response7disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response7disk', opacity=1.0, ori=0.0, pos=array([-0.09,  0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.6401 	EXP 	Created response8disk = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='response8disk', opacity=1.0, ori=0.0, pos=array([-0.09,  0.09]), size=array([0.15, 0.15]), texRes=128, units='height', win=Window(...))
+60.7664 	EXP 	Created welcome = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='welcome', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=2)
+60.7934 	EXP 	Created space = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+60.8421 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='height', win=Window(...))
+60.8908 	EXP 	Created slider = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=7, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=None, maxTime=0.0, minTime=0.4, mouseOnly=False, name='slider', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=['1', '2', '3', '4', '5', '6', '7'], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=6.0, win=Window(...))
+60.9204 	EXP 	Created text_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_1', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1.5)
+60.9398 	EXP 	Created space_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_2', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+60.9587 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='red', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255.,   0.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1.5)
+60.9951 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1.5)
+61.0299 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1.5)
+61.0333 	EXP 	Created space_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_3', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.0523 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+61.0715 	EXP 	Created calibrationline = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='calibrationline', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), size=array([0.1, 0.2]), texRes=128, units='height', win=Window(...))
+61.1041 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=2)
+61.1191 	EXP 	Created space_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_4', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.1356 	EXP 	Created space_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_5', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.1460 	EXP 	Created instr_only = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instr_only', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255.,   0.]), text='INSTRUCTIONS ONLY', units='height', win=Window(...), wrapWidth=1)
+61.1640 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255., 255.,   0.]), text='1. Put a finger on <ENTER> on the keyboard.', units='height', win=Window(...), wrapWidth=1.5)
+61.1933 	EXP 	Created space_7 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_7', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.2018 	EXP 	Created instr_only_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instr_only_3', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255.,   0.]), text='INSTRUCTIONS ONLY', units='height', win=Window(...), wrapWidth=1)
+61.2106 	EXP 	Created text_8 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_8', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255., 255.,   0.]), text='2. Close your right eye', units='height', win=Window(...), wrapWidth=1)
+61.2241 	EXP 	Created space_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_6', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.2275 	EXP 	Created instr_only_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instr_only_2', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255.,   0.]), text='INSTRUCTIONS ONLY', units='height', win=Window(...), wrapWidth=1)
+61.2471 	EXP 	Created text_7 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_7', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1.5)
+61.2491 	EXP 	Created center_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-4.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=1.5, name='center_cross', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+61.2783 	EXP 	Created intructioncircle_1 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([255.,   0.,   0.]), fillColorSpace='rgb255', fillRGB=array([255.,   0.,   0.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='intructioncircle_1', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.2950 	EXP 	Created instructioncircle_2 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-3.0, fillColor=array([255., 170.,   0.]), fillColorSpace='rgb255', fillRGB=array([255., 170.,   0.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='instructioncircle_2', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.3121 	EXP 	Created instructioncircle_3 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-4.0, fillColor=array([170., 255.,   0.]), fillColorSpace='rgb255', fillRGB=array([170., 255.,   0.]), interpolate=True, lineColor=array([170., 255.,   0.]), lineColorSpace='rgb', lineRGB=array([170., 255.,   0.]), lineWidth=1, name='instructioncircle_3', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.3293 	EXP 	Created instructioncircle_4 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-5.0, fillColor=array([  0., 255.,   0.]), fillColorSpace='rgb255', fillRGB=array([  0., 255.,   0.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='instructioncircle_4', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.3476 	EXP 	Created instructioncircle_5 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-6.0, fillColor=array([  0., 255., 169.]), fillColorSpace='rgb255', fillRGB=array([  0., 255., 169.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='instructioncircle_5', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.3636 	EXP 	Created insturctioncircle_6 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-7.0, fillColor=array([  0., 169., 255.]), fillColorSpace='rgb255', fillRGB=array([  0., 169., 255.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='insturctioncircle_6', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.3798 	EXP 	Created instructioncircle_7 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-8.0, fillColor=array([  0.,   0., 255.]), fillColorSpace='rgb255', fillRGB=array([  0.,   0., 255.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='instructioncircle_7', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.3977 	EXP 	Created instructioncircle_8 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-9.0, fillColor=array([170.,   0., 255.]), fillColorSpace='rgb255', fillRGB=array([170.,   0., 255.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='instructioncircle_8', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.4154 	EXP 	Created instructioncircle_9 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-10.0, fillColor=array([255.,   0., 170.]), fillColorSpace='rgb255', fillRGB=array([255.,   0., 170.]), interpolate=True, lineColor=None, lineColorSpace='rgb', lineRGB=None, lineWidth=1, name='instructioncircle_9', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...))
+61.4191 	EXP 	Created space_9 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-11.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_9', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.4275 	EXP 	Created text_9 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-12.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_9', opacity=1.0, ori=0, pos=array([0. , 0.4]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+61.4322 	EXP 	Created space_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='space_10', opacity=1.0, ori=0, pos=array([ 0.4, -0.4]), rgb=array([255., 255.,   0.]), text='Press SPACE to continue ', units='height', win=Window(...), wrapWidth=1)
+61.4464 	EXP 	Created text_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='yellow', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_10', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255.,   0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+61.4684 	EXP 	Imported Circle1.xlsx as conditions, 7 conditions, 1 params
+61.4691 	EXP 	Created sequence: random, trialTypes=7, nReps=18, seed=None
+61.4696 	EXP 	New trial (rep=0, index=0): OrderedDict([('Colour_1', '(0,0,255)')])
+61.4906 	EXP 	slider: flipVert = False
+61.4906 	EXP 	slider: autoLog = True
+61.4906 	EXP 	Circle_1: autoDraw = True
+61.4906 	EXP 	centre_cross4: autoDraw = True
+61.7247 	EXP 	New trial (rep=0, index=1): OrderedDict([('Colour_1', '(0,255,0)')])
+61.7397 	EXP 	Circle_1: autoDraw = False
+61.7397 	EXP 	centre_cross4: autoDraw = False
+61.7397 	EXP 	Circle_1: autoDraw = True
+61.7397 	EXP 	centre_cross4: autoDraw = True
+61.9734 	EXP 	New trial (rep=0, index=2): OrderedDict([('Colour_1', '(170,0,255)')])
+61.9889 	EXP 	Circle_1: autoDraw = False
+61.9889 	EXP 	centre_cross4: autoDraw = False
+61.9889 	EXP 	Circle_1: autoDraw = True
+61.9889 	EXP 	centre_cross4: autoDraw = True
+62.2233 	EXP 	New trial (rep=0, index=3): OrderedDict([('Colour_1', '(0,255,169)')])
+62.2390 	EXP 	Circle_1: autoDraw = False
+62.2390 	EXP 	centre_cross4: autoDraw = False
+62.2390 	EXP 	Circle_1: autoDraw = True
+62.2390 	EXP 	centre_cross4: autoDraw = True
+62.4735 	EXP 	New trial (rep=0, index=4): OrderedDict([('Colour_1', '(255,170,0)')])
+62.4888 	EXP 	Circle_1: autoDraw = False
+62.4888 	EXP 	centre_cross4: autoDraw = False
+62.4888 	EXP 	Circle_1: autoDraw = True
+62.4888 	EXP 	centre_cross4: autoDraw = True
+62.7231 	EXP 	New trial (rep=0, index=5): OrderedDict([('Colour_1', '(255,0,0)')])
+62.7383 	EXP 	Circle_1: autoDraw = False
+62.7383 	EXP 	centre_cross4: autoDraw = False
+62.7383 	EXP 	Circle_1: autoDraw = True
+62.7383 	EXP 	centre_cross4: autoDraw = True
+62.9737 	EXP 	New trial (rep=0, index=6): OrderedDict([('Colour_1', '(255,0,170)')])
+62.9892 	EXP 	Circle_1: autoDraw = False
+62.9892 	EXP 	centre_cross4: autoDraw = False
+62.9892 	EXP 	Circle_1: autoDraw = True
+62.9892 	EXP 	centre_cross4: autoDraw = True
+63.2243 	EXP 	New trial (rep=1, index=0): OrderedDict([('Colour_1', '(0,0,255)')])
+63.2393 	EXP 	Circle_1: autoDraw = False
+63.2393 	EXP 	centre_cross4: autoDraw = False
+63.2393 	EXP 	Circle_1: autoDraw = True
+63.2393 	EXP 	centre_cross4: autoDraw = True
+63.4737 	EXP 	New trial (rep=1, index=1): OrderedDict([('Colour_1', '(255,170,0)')])
+63.4894 	EXP 	Circle_1: autoDraw = False
+63.4894 	EXP 	centre_cross4: autoDraw = False
+63.4894 	EXP 	Circle_1: autoDraw = True
+63.4894 	EXP 	centre_cross4: autoDraw = True
+63.7243 	EXP 	New trial (rep=1, index=2): OrderedDict([('Colour_1', '(255,0,0)')])
+63.7398 	EXP 	Circle_1: autoDraw = False
+63.7398 	EXP 	centre_cross4: autoDraw = False
+63.7398 	EXP 	Circle_1: autoDraw = True
+63.7398 	EXP 	centre_cross4: autoDraw = True
+63.9745 	EXP 	New trial (rep=1, index=3): OrderedDict([('Colour_1', '(0,255,0)')])
+63.9897 	EXP 	Circle_1: autoDraw = False
+63.9897 	EXP 	centre_cross4: autoDraw = False
+63.9897 	EXP 	Circle_1: autoDraw = True
+63.9897 	EXP 	centre_cross4: autoDraw = True
+64.2244 	EXP 	New trial (rep=1, index=4): OrderedDict([('Colour_1', '(170,0,255)')])
+64.2397 	EXP 	Circle_1: autoDraw = False
+64.2397 	EXP 	centre_cross4: autoDraw = False
+64.2397 	EXP 	Circle_1: autoDraw = True
+64.2397 	EXP 	centre_cross4: autoDraw = True
+64.4748 	EXP 	New trial (rep=1, index=5): OrderedDict([('Colour_1', '(255,0,170)')])
+64.4902 	EXP 	Circle_1: autoDraw = False
+64.4902 	EXP 	centre_cross4: autoDraw = False
+64.4902 	EXP 	Circle_1: autoDraw = True
+64.4902 	EXP 	centre_cross4: autoDraw = True
+64.7244 	EXP 	New trial (rep=1, index=6): OrderedDict([('Colour_1', '(0,255,169)')])
+64.7398 	EXP 	Circle_1: autoDraw = False
+64.7398 	EXP 	centre_cross4: autoDraw = False
+64.7398 	EXP 	Circle_1: autoDraw = True
+64.7398 	EXP 	centre_cross4: autoDraw = True
+64.9751 	EXP 	New trial (rep=2, index=0): OrderedDict([('Colour_1', '(0,255,0)')])
+64.9900 	EXP 	Circle_1: autoDraw = False
+64.9900 	EXP 	centre_cross4: autoDraw = False
+64.9900 	EXP 	Circle_1: autoDraw = True
+64.9900 	EXP 	centre_cross4: autoDraw = True
+65.2245 	EXP 	New trial (rep=2, index=1): OrderedDict([('Colour_1', '(0,0,255)')])
+65.2402 	EXP 	Circle_1: autoDraw = False
+65.2402 	EXP 	centre_cross4: autoDraw = False
+65.2402 	EXP 	Circle_1: autoDraw = True
+65.2402 	EXP 	centre_cross4: autoDraw = True
+65.4751 	EXP 	New trial (rep=2, index=2): OrderedDict([('Colour_1', '(255,0,170)')])
+65.4906 	EXP 	Circle_1: autoDraw = False
+65.4906 	EXP 	centre_cross4: autoDraw = False
+65.4906 	EXP 	Circle_1: autoDraw = True
+65.4906 	EXP 	centre_cross4: autoDraw = True
+65.7249 	EXP 	New trial (rep=2, index=3): OrderedDict([('Colour_1', '(255,0,0)')])
+65.7403 	EXP 	Circle_1: autoDraw = False
+65.7403 	EXP 	centre_cross4: autoDraw = False
+65.7403 	EXP 	Circle_1: autoDraw = True
+65.7403 	EXP 	centre_cross4: autoDraw = True
+65.9753 	EXP 	New trial (rep=2, index=4): OrderedDict([('Colour_1', '(0,255,169)')])
+65.9908 	EXP 	Circle_1: autoDraw = False
+65.9908 	EXP 	centre_cross4: autoDraw = False
+65.9908 	EXP 	Circle_1: autoDraw = True
+65.9908 	EXP 	centre_cross4: autoDraw = True
+66.2090 	EXP 	New trial (rep=2, index=5): OrderedDict([('Colour_1', '(255,170,0)')])
+66.2239 	EXP 	Circle_1: autoDraw = False
+66.2239 	EXP 	centre_cross4: autoDraw = False
+66.2239 	EXP 	Circle_1: autoDraw = True
+66.2239 	EXP 	centre_cross4: autoDraw = True
+66.4592 	EXP 	New trial (rep=2, index=6): OrderedDict([('Colour_1', '(170,0,255)')])
+66.4747 	EXP 	Circle_1: autoDraw = False
+66.4747 	EXP 	centre_cross4: autoDraw = False
+66.4747 	EXP 	Circle_1: autoDraw = True
+66.4747 	EXP 	centre_cross4: autoDraw = True
+66.7088 	EXP 	New trial (rep=3, index=0): OrderedDict([('Colour_1', '(255,170,0)')])
+66.7243 	EXP 	Circle_1: autoDraw = False
+66.7243 	EXP 	centre_cross4: autoDraw = False
+66.7243 	EXP 	Circle_1: autoDraw = True
+66.7243 	EXP 	centre_cross4: autoDraw = True
+66.9591 	EXP 	New trial (rep=3, index=1): OrderedDict([('Colour_1', '(0,255,169)')])
+66.9745 	EXP 	Circle_1: autoDraw = False
+66.9745 	EXP 	centre_cross4: autoDraw = False
+66.9745 	EXP 	Circle_1: autoDraw = True
+66.9745 	EXP 	centre_cross4: autoDraw = True
+67.2095 	EXP 	New trial (rep=3, index=2): OrderedDict([('Colour_1', '(255,0,0)')])
+67.2242 	EXP 	Circle_1: autoDraw = False
+67.2242 	EXP 	centre_cross4: autoDraw = False
+67.2242 	EXP 	Circle_1: autoDraw = True
+67.2242 	EXP 	centre_cross4: autoDraw = True
+67.4604 	EXP 	New trial (rep=3, index=3): OrderedDict([('Colour_1', '(0,0,255)')])
+67.4747 	EXP 	Circle_1: autoDraw = False
+67.4747 	EXP 	centre_cross4: autoDraw = False
+67.4747 	EXP 	Circle_1: autoDraw = True
+67.4747 	EXP 	centre_cross4: autoDraw = True
+67.7093 	EXP 	New trial (rep=3, index=4): OrderedDict([('Colour_1', '(170,0,255)')])
+67.7247 	EXP 	Circle_1: autoDraw = False
+67.7247 	EXP 	centre_cross4: autoDraw = False
+67.7247 	EXP 	Circle_1: autoDraw = True
+67.7247 	EXP 	centre_cross4: autoDraw = True
+67.9594 	EXP 	New trial (rep=3, index=5): OrderedDict([('Colour_1', '(255,0,170)')])
+67.9749 	EXP 	Circle_1: autoDraw = False
+67.9749 	EXP 	centre_cross4: autoDraw = False
+67.9749 	EXP 	Circle_1: autoDraw = True
+67.9749 	EXP 	centre_cross4: autoDraw = True
+68.2101 	EXP 	New trial (rep=3, index=6): OrderedDict([('Colour_1', '(0,255,0)')])
+68.2250 	EXP 	Circle_1: autoDraw = False
+68.2250 	EXP 	centre_cross4: autoDraw = False
+68.2250 	EXP 	Circle_1: autoDraw = True
+68.2250 	EXP 	centre_cross4: autoDraw = True
+68.4599 	EXP 	New trial (rep=4, index=0): OrderedDict([('Colour_1', '(170,0,255)')])
+68.4750 	EXP 	Circle_1: autoDraw = False
+68.4750 	EXP 	centre_cross4: autoDraw = False
+68.4750 	EXP 	Circle_1: autoDraw = True
+68.4750 	EXP 	centre_cross4: autoDraw = True
+68.7099 	EXP 	New trial (rep=4, index=1): OrderedDict([('Colour_1', '(0,0,255)')])
+68.7246 	EXP 	Circle_1: autoDraw = False
+68.7246 	EXP 	centre_cross4: autoDraw = False
+68.7246 	EXP 	Circle_1: autoDraw = True
+68.7246 	EXP 	centre_cross4: autoDraw = True
+68.9601 	EXP 	New trial (rep=4, index=2): OrderedDict([('Colour_1', '(255,0,170)')])
+68.9748 	EXP 	Circle_1: autoDraw = False
+68.9748 	EXP 	centre_cross4: autoDraw = False
+68.9748 	EXP 	Circle_1: autoDraw = True
+68.9748 	EXP 	centre_cross4: autoDraw = True
+69.2101 	EXP 	New trial (rep=4, index=3): OrderedDict([('Colour_1', '(0,255,169)')])
+69.2257 	EXP 	Circle_1: autoDraw = False
+69.2257 	EXP 	centre_cross4: autoDraw = False
+69.2257 	EXP 	Circle_1: autoDraw = True
+69.2257 	EXP 	centre_cross4: autoDraw = True
+69.4605 	EXP 	New trial (rep=4, index=4): OrderedDict([('Colour_1', '(0,255,0)')])
+69.4760 	EXP 	Circle_1: autoDraw = False
+69.4760 	EXP 	centre_cross4: autoDraw = False
+69.4760 	EXP 	Circle_1: autoDraw = True
+69.4760 	EXP 	centre_cross4: autoDraw = True
+69.7103 	EXP 	New trial (rep=4, index=5): OrderedDict([('Colour_1', '(255,170,0)')])
+69.7261 	EXP 	Circle_1: autoDraw = False
+69.7261 	EXP 	centre_cross4: autoDraw = False
+69.7261 	EXP 	Circle_1: autoDraw = True
+69.7261 	EXP 	centre_cross4: autoDraw = True
+69.9597 	EXP 	New trial (rep=4, index=6): OrderedDict([('Colour_1', '(255,0,0)')])
+69.9757 	EXP 	Circle_1: autoDraw = False
+69.9757 	EXP 	centre_cross4: autoDraw = False
+69.9757 	EXP 	Circle_1: autoDraw = True
+69.9757 	EXP 	centre_cross4: autoDraw = True
+70.2105 	EXP 	New trial (rep=5, index=0): OrderedDict([('Colour_1', '(170,0,255)')])
+70.2262 	EXP 	Circle_1: autoDraw = False
+70.2262 	EXP 	centre_cross4: autoDraw = False
+70.2262 	EXP 	Circle_1: autoDraw = True
+70.2262 	EXP 	centre_cross4: autoDraw = True
+70.4602 	EXP 	New trial (rep=5, index=1): OrderedDict([('Colour_1', '(0,255,0)')])
+70.4762 	EXP 	Circle_1: autoDraw = False
+70.4762 	EXP 	centre_cross4: autoDraw = False
+70.4762 	EXP 	Circle_1: autoDraw = True
+70.4762 	EXP 	centre_cross4: autoDraw = True
+70.7111 	EXP 	New trial (rep=5, index=2): OrderedDict([('Colour_1', '(0,255,169)')])
+70.7257 	EXP 	Circle_1: autoDraw = False
+70.7257 	EXP 	centre_cross4: autoDraw = False
+70.7257 	EXP 	Circle_1: autoDraw = True
+70.7257 	EXP 	centre_cross4: autoDraw = True
+70.9620 	EXP 	New trial (rep=5, index=3): OrderedDict([('Colour_1', '(255,170,0)')])
+70.9764 	EXP 	Circle_1: autoDraw = False
+70.9764 	EXP 	centre_cross4: autoDraw = False
+70.9764 	EXP 	Circle_1: autoDraw = True
+70.9764 	EXP 	centre_cross4: autoDraw = True
+71.2115 	EXP 	New trial (rep=5, index=4): OrderedDict([('Colour_1', '(0,0,255)')])
+71.2270 	EXP 	Circle_1: autoDraw = False
+71.2270 	EXP 	centre_cross4: autoDraw = False
+71.2270 	EXP 	Circle_1: autoDraw = True
+71.2270 	EXP 	centre_cross4: autoDraw = True
+71.4610 	EXP 	New trial (rep=5, index=5): OrderedDict([('Colour_1', '(255,0,0)')])
+71.4772 	EXP 	Circle_1: autoDraw = False
+71.4772 	EXP 	centre_cross4: autoDraw = False
+71.4772 	EXP 	Circle_1: autoDraw = True
+71.4772 	EXP 	centre_cross4: autoDraw = True
+71.7118 	EXP 	New trial (rep=5, index=6): OrderedDict([('Colour_1', '(255,0,170)')])
+71.7261 	EXP 	Circle_1: autoDraw = False
+71.7261 	EXP 	centre_cross4: autoDraw = False
+71.7261 	EXP 	Circle_1: autoDraw = True
+71.7261 	EXP 	centre_cross4: autoDraw = True
+71.9615 	EXP 	New trial (rep=6, index=0): OrderedDict([('Colour_1', '(0,255,0)')])
+71.9769 	EXP 	Circle_1: autoDraw = False
+71.9769 	EXP 	centre_cross4: autoDraw = False
+71.9769 	EXP 	Circle_1: autoDraw = True
+71.9769 	EXP 	centre_cross4: autoDraw = True
+72.2117 	EXP 	New trial (rep=6, index=1): OrderedDict([('Colour_1', '(255,0,0)')])
+72.2265 	EXP 	Circle_1: autoDraw = False
+72.2265 	EXP 	centre_cross4: autoDraw = False
+72.2265 	EXP 	Circle_1: autoDraw = True
+72.2265 	EXP 	centre_cross4: autoDraw = True
+72.4613 	EXP 	New trial (rep=6, index=2): OrderedDict([('Colour_1', '(255,170,0)')])
+72.4769 	EXP 	Circle_1: autoDraw = False
+72.4769 	EXP 	centre_cross4: autoDraw = False
+72.4769 	EXP 	Circle_1: autoDraw = True
+72.4769 	EXP 	centre_cross4: autoDraw = True
+72.7124 	EXP 	New trial (rep=6, index=3): OrderedDict([('Colour_1', '(255,0,170)')])
+72.7272 	EXP 	Circle_1: autoDraw = False
+72.7272 	EXP 	centre_cross4: autoDraw = False
+72.7272 	EXP 	Circle_1: autoDraw = True
+72.7272 	EXP 	centre_cross4: autoDraw = True
+72.9628 	EXP 	New trial (rep=6, index=4): OrderedDict([('Colour_1', '(0,255,169)')])
+72.9775 	EXP 	Circle_1: autoDraw = False
+72.9775 	EXP 	centre_cross4: autoDraw = False
+72.9775 	EXP 	Circle_1: autoDraw = True
+72.9775 	EXP 	centre_cross4: autoDraw = True
+73.2116 	EXP 	New trial (rep=6, index=5): OrderedDict([('Colour_1', '(170,0,255)')])
+73.2274 	EXP 	Circle_1: autoDraw = False
+73.2274 	EXP 	centre_cross4: autoDraw = False
+73.2274 	EXP 	Circle_1: autoDraw = True
+73.2274 	EXP 	centre_cross4: autoDraw = True
+73.4623 	EXP 	New trial (rep=6, index=6): OrderedDict([('Colour_1', '(0,0,255)')])
+73.4780 	EXP 	Circle_1: autoDraw = False
+73.4780 	EXP 	centre_cross4: autoDraw = False
+73.4780 	EXP 	Circle_1: autoDraw = True
+73.4780 	EXP 	centre_cross4: autoDraw = True
+73.7123 	EXP 	New trial (rep=7, index=0): OrderedDict([('Colour_1', '(0,255,0)')])
+73.7278 	EXP 	Circle_1: autoDraw = False
+73.7278 	EXP 	centre_cross4: autoDraw = False
+73.7278 	EXP 	Circle_1: autoDraw = True
+73.7278 	EXP 	centre_cross4: autoDraw = True
+73.9625 	EXP 	New trial (rep=7, index=1): OrderedDict([('Colour_1', '(0,255,169)')])
+73.9771 	EXP 	Circle_1: autoDraw = False
+73.9771 	EXP 	centre_cross4: autoDraw = False
+73.9771 	EXP 	Circle_1: autoDraw = True
+73.9771 	EXP 	centre_cross4: autoDraw = True
+74.2127 	EXP 	New trial (rep=7, index=2): OrderedDict([('Colour_1', '(170,0,255)')])
+74.2276 	EXP 	Circle_1: autoDraw = False
+74.2276 	EXP 	centre_cross4: autoDraw = False
+74.2276 	EXP 	Circle_1: autoDraw = True
+74.2276 	EXP 	centre_cross4: autoDraw = True
+74.4626 	EXP 	New trial (rep=7, index=3): OrderedDict([('Colour_1', '(255,0,0)')])
+74.4784 	EXP 	Circle_1: autoDraw = False
+74.4784 	EXP 	centre_cross4: autoDraw = False
+74.4784 	EXP 	Circle_1: autoDraw = True
+74.4784 	EXP 	centre_cross4: autoDraw = True
+74.7133 	EXP 	New trial (rep=7, index=4): OrderedDict([('Colour_1', '(0,0,255)')])
+74.7281 	EXP 	Circle_1: autoDraw = False
+74.7281 	EXP 	centre_cross4: autoDraw = False
+74.7281 	EXP 	Circle_1: autoDraw = True
+74.7281 	EXP 	centre_cross4: autoDraw = True
+74.9634 	EXP 	New trial (rep=7, index=5): OrderedDict([('Colour_1', '(255,170,0)')])
+74.9782 	EXP 	Circle_1: autoDraw = False
+74.9782 	EXP 	centre_cross4: autoDraw = False
+74.9782 	EXP 	Circle_1: autoDraw = True
+74.9782 	EXP 	centre_cross4: autoDraw = True
+75.2131 	EXP 	New trial (rep=7, index=6): OrderedDict([('Colour_1', '(255,0,170)')])
+75.2287 	EXP 	Circle_1: autoDraw = False
+75.2287 	EXP 	centre_cross4: autoDraw = False
+75.2287 	EXP 	Circle_1: autoDraw = True
+75.2287 	EXP 	centre_cross4: autoDraw = True
+75.4630 	EXP 	New trial (rep=8, index=0): OrderedDict([('Colour_1', '(255,0,0)')])
+75.4781 	EXP 	Circle_1: autoDraw = False
+75.4781 	EXP 	centre_cross4: autoDraw = False
+75.4781 	EXP 	Circle_1: autoDraw = True
+75.4781 	EXP 	centre_cross4: autoDraw = True
+75.7133 	EXP 	New trial (rep=8, index=1): OrderedDict([('Colour_1', '(255,170,0)')])
+75.7291 	EXP 	Circle_1: autoDraw = False
+75.7291 	EXP 	centre_cross4: autoDraw = False
+75.7291 	EXP 	Circle_1: autoDraw = True
+75.7291 	EXP 	centre_cross4: autoDraw = True
+75.9636 	EXP 	New trial (rep=8, index=2): OrderedDict([('Colour_1', '(0,0,255)')])
+75.9780 	EXP 	Circle_1: autoDraw = False
+75.9780 	EXP 	centre_cross4: autoDraw = False
+75.9780 	EXP 	Circle_1: autoDraw = True
+75.9780 	EXP 	centre_cross4: autoDraw = True
+76.2136 	EXP 	New trial (rep=8, index=3): OrderedDict([('Colour_1', '(0,255,0)')])
+76.2284 	EXP 	Circle_1: autoDraw = False
+76.2284 	EXP 	centre_cross4: autoDraw = False
+76.2284 	EXP 	Circle_1: autoDraw = True
+76.2284 	EXP 	centre_cross4: autoDraw = True
+76.4634 	EXP 	New trial (rep=8, index=4): OrderedDict([('Colour_1', '(0,255,169)')])
+76.4790 	EXP 	Circle_1: autoDraw = False
+76.4790 	EXP 	centre_cross4: autoDraw = False
+76.4790 	EXP 	Circle_1: autoDraw = True
+76.4790 	EXP 	centre_cross4: autoDraw = True
+76.7138 	EXP 	New trial (rep=8, index=5): OrderedDict([('Colour_1', '(170,0,255)')])
+76.7285 	EXP 	Circle_1: autoDraw = False
+76.7285 	EXP 	centre_cross4: autoDraw = False
+76.7285 	EXP 	Circle_1: autoDraw = True
+76.7285 	EXP 	centre_cross4: autoDraw = True
+76.9638 	EXP 	New trial (rep=8, index=6): OrderedDict([('Colour_1', '(255,0,170)')])
+76.9791 	EXP 	Circle_1: autoDraw = False
+76.9791 	EXP 	centre_cross4: autoDraw = False
+76.9791 	EXP 	Circle_1: autoDraw = True
+76.9791 	EXP 	centre_cross4: autoDraw = True
+77.2141 	EXP 	New trial (rep=9, index=0): OrderedDict([('Colour_1', '(255,0,0)')])
+77.2300 	EXP 	Circle_1: autoDraw = False
+77.2300 	EXP 	centre_cross4: autoDraw = False
+77.2300 	EXP 	Circle_1: autoDraw = True
+77.2300 	EXP 	centre_cross4: autoDraw = True
+77.4643 	EXP 	New trial (rep=9, index=1): OrderedDict([('Colour_1', '(255,170,0)')])
+77.4794 	EXP 	Circle_1: autoDraw = False
+77.4794 	EXP 	centre_cross4: autoDraw = False
+77.4794 	EXP 	Circle_1: autoDraw = True
+77.4794 	EXP 	centre_cross4: autoDraw = True
+77.7143 	EXP 	New trial (rep=9, index=2): OrderedDict([('Colour_1', '(0,0,255)')])
+77.7296 	EXP 	Circle_1: autoDraw = False
+77.7296 	EXP 	centre_cross4: autoDraw = False
+77.7296 	EXP 	Circle_1: autoDraw = True
+77.7296 	EXP 	centre_cross4: autoDraw = True
+77.9642 	EXP 	New trial (rep=9, index=3): OrderedDict([('Colour_1', '(170,0,255)')])
+77.9796 	EXP 	Circle_1: autoDraw = False
+77.9796 	EXP 	centre_cross4: autoDraw = False
+77.9796 	EXP 	Circle_1: autoDraw = True
+77.9796 	EXP 	centre_cross4: autoDraw = True
+78.2145 	EXP 	New trial (rep=9, index=4): OrderedDict([('Colour_1', '(0,255,0)')])
+78.2298 	EXP 	Circle_1: autoDraw = False
+78.2298 	EXP 	centre_cross4: autoDraw = False
+78.2298 	EXP 	Circle_1: autoDraw = True
+78.2298 	EXP 	centre_cross4: autoDraw = True
+78.4649 	EXP 	New trial (rep=9, index=5): OrderedDict([('Colour_1', '(0,255,169)')])
+78.4797 	EXP 	Circle_1: autoDraw = False
+78.4797 	EXP 	centre_cross4: autoDraw = False
+78.4797 	EXP 	Circle_1: autoDraw = True
+78.4797 	EXP 	centre_cross4: autoDraw = True
+78.7149 	EXP 	New trial (rep=9, index=6): OrderedDict([('Colour_1', '(255,0,170)')])
+78.7298 	EXP 	Circle_1: autoDraw = False
+78.7298 	EXP 	centre_cross4: autoDraw = False
+78.7298 	EXP 	Circle_1: autoDraw = True
+78.7298 	EXP 	centre_cross4: autoDraw = True
+78.9658 	EXP 	New trial (rep=10, index=0): OrderedDict([('Colour_1', '(0,255,169)')])
+78.9811 	EXP 	Circle_1: autoDraw = False
+78.9811 	EXP 	centre_cross4: autoDraw = False
+78.9811 	EXP 	Circle_1: autoDraw = True
+78.9811 	EXP 	centre_cross4: autoDraw = True
+79.2157 	EXP 	New trial (rep=10, index=1): OrderedDict([('Colour_1', '(255,170,0)')])
+79.2311 	EXP 	Circle_1: autoDraw = False
+79.2311 	EXP 	centre_cross4: autoDraw = False
+79.2311 	EXP 	Circle_1: autoDraw = True
+79.2311 	EXP 	centre_cross4: autoDraw = True
+79.4654 	EXP 	New trial (rep=10, index=2): OrderedDict([('Colour_1', '(255,0,0)')])
+79.4801 	EXP 	Circle_1: autoDraw = False
+79.4801 	EXP 	centre_cross4: autoDraw = False
+79.4801 	EXP 	Circle_1: autoDraw = True
+79.4801 	EXP 	centre_cross4: autoDraw = True
+79.5957 	DATA 	Keypress: escape
+79.7156 	EXP 	New trial (rep=10, index=3): OrderedDict([('Colour_1', '(170,0,255)')])
+79.9981 	EXP 	window1: mouseVisible = True
