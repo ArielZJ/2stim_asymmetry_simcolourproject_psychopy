@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Mon Oct 12 15:26:14 2020
+    on Tue Oct 13 15:13:20 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -66,7 +66,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 # Setup the Window
 win = visual.Window(
     size=[1280, 800], fullscr=True, screen=0, 
-    winType='pyglet', allowGUI=True, allowStencil=False,
+    winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='height')
@@ -96,6 +96,443 @@ trackpad1 = 'images/trackpad_button.png'
 mouse_button1 = 'images/mouse_button.png'
 
 
+
+# Initialize components for Routine "screen_scale"
+screen_scaleClock = core.Clock()
+oldt=0
+x_size=8.560
+y_size=5.398
+screen_height=0
+
+if win.units=='norm':
+    x_scale=.05
+    y_scale=.1
+    dbase = .0001
+    unittext=' norm units'
+    vsize=2
+elif win.units=='pix':
+    x_scale=60
+    y_scale=40
+    dbase = .1
+    unittext=' pixels'
+    vsize=win.size[1]
+else:
+    x_scale=.05
+    y_scale=.05
+    dbase = .0001
+    unittext=' height units'
+    vsize=1
+text_top = visual.TextStim(win=win, name='text_top',
+    text='Resize this image to match the size of a credit card\nUp arrow for taller\nDown arrow for shorter\nLeft arrow for narrower\nRight arrow for wider',
+    font='Arial',
+    units='norm', pos=(0, .7), height=0.1, wrapWidth=1.5, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-2.0);
+text_bottom = visual.TextStim(win=win, name='text_bottom',
+    text='Press the space bar when done',
+    font='Arial',
+    units='norm', pos=(0, -.6), height=0.1, wrapWidth=1.5, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-3.0);
+ccimage = visual.ImageStim(
+    win=win,
+    name='ccimage', 
+    image='card.png', mask=None,
+    ori=0, pos=(0, 0), size=1.0,
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+
+# Initialize components for Routine "Stim1_display_prac"
+Stim1_display_pracClock = core.Clock()
+Circle = visual.Polygon(
+    win=win, name='Circle',units='pix', 
+    edges=1000, size=(50,50),
+    ori=0, pos=[0,0],
+    lineWidth=1, lineColor=None, lineColorSpace='rgb',
+    fillColor=1.0, fillColorSpace='rgb255',
+    opacity=1, depth=0.0, interpolate=True)
+centre_cross4_2 = visual.ShapeStim(
+    win=win, name='centre_cross4_2', vertices='cross',units='norm', 
+    size=(0.05, 0.05),
+    ori=0, pos=(0, 0),
+    lineWidth=1.5, lineColor=[1,1,1], lineColorSpace='rgb',
+    fillColor=[1,1,1], fillColorSpace='rgb',
+    opacity=1, depth=-1.0, interpolate=True)
+
+# Initialize components for Routine "response_prac"
+response_pracClock = core.Clock()
+response1disk_5 = visual.ImageStim(
+    win=win,
+    name='response1disk_5', 
+    image='response1disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
+response2disk_5 = visual.ImageStim(
+    win=win,
+    name='response2disk_5', 
+    image='response2disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+response3disk_5 = visual.ImageStim(
+    win=win,
+    name='response3disk_5', 
+    image='response3disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+response4disk_5 = visual.ImageStim(
+    win=win,
+    name='response4disk_5', 
+    image='response4disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
+response5disk_5 = visual.ImageStim(
+    win=win,
+    name='response5disk_5', 
+    image='response5disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+response6disk_5 = visual.ImageStim(
+    win=win,
+    name='response6disk_5', 
+    image='response6disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+response7disk_5 = visual.ImageStim(
+    win=win,
+    name='response7disk_5', 
+    image='response7disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+response8disk_5 = visual.ImageStim(
+    win=win,
+    name='response8disk_5', 
+    image='response8disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-7.0)
+mouse_5 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_5.mouseClock = core.Clock()
+Circle_3 = visual.Polygon(
+    win=win, name='Circle_3',
+    edges=1000, size=(0.1, 0.1),
+    ori=0, pos=(0, 0),
+    lineWidth=1, lineColor=None, lineColorSpace='rgb',
+    fillColor=1.0, fillColorSpace='rgb255',
+    opacity=1, depth=-9.0, interpolate=True)
+text_29 = visual.TextStim(win=win, name='text_29',
+    text='Please choose the similarity level of the previously 2 cued circles\n0 => Most similar\n7 => Most different ',
+    font='Arial',
+    pos=(0, -0.3), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-11.0);
+
+# Initialize components for Routine "summary1_prac"
+summary1_pracClock = core.Clock()
+response1disk_8 = visual.ImageStim(
+    win=win,
+    name='response1disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
+response2disk_8 = visual.ImageStim(
+    win=win,
+    name='response2disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+response3disk_8 = visual.ImageStim(
+    win=win,
+    name='response3disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+response4disk_8 = visual.ImageStim(
+    win=win,
+    name='response4disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
+response5disk_8 = visual.ImageStim(
+    win=win,
+    name='response5disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+response6disk_8 = visual.ImageStim(
+    win=win,
+    name='response6disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+response7disk_8 = visual.ImageStim(
+    win=win,
+    name='response7disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+response8disk_8 = visual.ImageStim(
+    win=win,
+    name='response8disk_8', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-7.0)
+mouse_8 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_8.mouseClock = core.Clock()
+rectangle_6 = visual.Rect(
+    win=win, name='rectangle_6',
+    width=(0.1, 0.08)[0], height=(0.1, 0.08)[1],
+    ori=0, pos=(0, 0),
+    lineWidth=1, lineColor=None, lineColorSpace='rgb',
+    fillColor='green', fillColorSpace='rgb',
+    opacity=1, depth=-9.0, interpolate=True)
+
+
+text_34 = visual.TextStim(win=win, name='text_34',
+    text='Please click on the green rectangle to continue',
+    font='Arial',
+    pos=(0, -0.27), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-11.0);
+text_35 = visual.TextStim(win=win, name='text_35',
+    text='default text',
+    font='Arial',
+    pos=(0, -0.3), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-12.0);
+
+# Initialize components for Routine "special_trial_prac"
+special_trial_pracClock = core.Clock()
+text_36 = visual.TextStim(win=win, name='text_36',
+    text='SPECIAL TRIAL',
+    font='Arial',
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
+    color='RED', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+
+# Initialize components for Routine "catch_prac"
+catch_pracClock = core.Clock()
+response1disk_7 = visual.ImageStim(
+    win=win,
+    name='response1disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
+response2disk_7 = visual.ImageStim(
+    win=win,
+    name='response2disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+response3disk_7 = visual.ImageStim(
+    win=win,
+    name='response3disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+response4disk_7 = visual.ImageStim(
+    win=win,
+    name='response4disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
+response5disk_7 = visual.ImageStim(
+    win=win,
+    name='response5disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+response6disk_7 = visual.ImageStim(
+    win=win,
+    name='response6disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+response7disk_7 = visual.ImageStim(
+    win=win,
+    name='response7disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+response8disk_7 = visual.ImageStim(
+    win=win,
+    name='response8disk_7', 
+    image='/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-7.0)
+mouse_7 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_7.mouseClock = core.Clock()
+# Set up catch trials 
+
+catchtrialorderprac = []
+for i in range(0,2):
+    n = rnd.randint(1,7)
+    catchtrialorderprac.append(n)
+print(catchtrialorderprac)
+
+text_32 = visual.TextStim(win=win, name='text_32',
+    text='default text',
+    font='Arial',
+    pos=(0, -0.3), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-10.0);
+rectangle_5 = visual.Rect(
+    win=win, name='rectangle_5',
+    width=(0.1, 0.08)[0], height=(0.1, 0.08)[1],
+    ori=0, pos=(0, 0),
+    lineWidth=1, lineColor=None, lineColorSpace='rgb',
+    fillColor='green', fillColorSpace='rgb',
+    opacity=1, depth=-11.0, interpolate=True)
+
+# Initialize components for Routine "summary2_prac"
+summary2_pracClock = core.Clock()
+response1disk_6 = visual.ImageStim(
+    win=win,
+    name='response1disk_6', 
+    image='response1disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
+response2disk_6 = visual.ImageStim(
+    win=win,
+    name='response2disk_6', 
+    image='response2disks.png', mask=None,
+    ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+response3disk_6 = visual.ImageStim(
+    win=win,
+    name='response3disk_6', 
+    image='response3disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+response4disk_6 = visual.ImageStim(
+    win=win,
+    name='response4disk_6', 
+    image='response4disks.png', mask=None,
+    ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
+response5disk_6 = visual.ImageStim(
+    win=win,
+    name='response5disk_6', 
+    image='response5disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+response6disk_6 = visual.ImageStim(
+    win=win,
+    name='response6disk_6', 
+    image='response6disks.png', mask=None,
+    ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+response7disk_6 = visual.ImageStim(
+    win=win,
+    name='response7disk_6', 
+    image='response7disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+response8disk_6 = visual.ImageStim(
+    win=win,
+    name='response8disk_6', 
+    image='response8disks.png', mask=None,
+    ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-7.0)
+mouse_6 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_6.mouseClock = core.Clock()
+rectangle_4 = visual.Rect(
+    win=win, name='rectangle_4',
+    width=(0.1, 0.08)[0], height=(0.1, 0.08)[1],
+    ori=0, pos=(0, 0),
+    lineWidth=1, lineColor=None, lineColorSpace='rgb',
+    fillColor='green', fillColorSpace='rgb',
+    opacity=1, depth=-9.0, interpolate=True)
+pracnumber = 0;
+
+text_30 = visual.TextStim(win=win, name='text_30',
+    text='Please click on the green rectangle to continue',
+    font='Arial',
+    pos=(0, -0.27), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-11.0);
+text_31 = visual.TextStim(win=win, name='text_31',
+    text='default text',
+    font='Arial',
+    pos=(0, -0.3), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-12.0);
 
 # Initialize components for Routine "Stim1_display"
 Stim1_displayClock = core.Clock()
@@ -198,12 +635,22 @@ text_23 = visual.TextStim(win=win, name='text_23',
     languageStyle='LTR',
     depth=-11.0);
 
+# Initialize components for Routine "special_trial"
+special_trialClock = core.Clock()
+text_33 = visual.TextStim(win=win, name='text_33',
+    text='SPECIAL TRIAL',
+    font='Arial',
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
+    color='RED', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+
 # Initialize components for Routine "catch_1"
 catch_1Clock = core.Clock()
 response1disk_3 = visual.ImageStim(
     win=win,
     name='response1disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png', mask=None,
+    image='response1disks.png', mask=None,
     ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -211,7 +658,7 @@ response1disk_3 = visual.ImageStim(
 response2disk_3 = visual.ImageStim(
     win=win,
     name='response2disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png', mask=None,
+    image='response2disks.png', mask=None,
     ori=0, pos=(0.09,0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -219,7 +666,7 @@ response2disk_3 = visual.ImageStim(
 response3disk_3 = visual.ImageStim(
     win=win,
     name='response3disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png', mask=None,
+    image='response3disks.png', mask=None,
     ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -227,7 +674,7 @@ response3disk_3 = visual.ImageStim(
 response4disk_3 = visual.ImageStim(
     win=win,
     name='response4disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png', mask=None,
+    image='response4disks.png', mask=None,
     ori=0, pos=(0.09,-0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -235,7 +682,7 @@ response4disk_3 = visual.ImageStim(
 response5disk_3 = visual.ImageStim(
     win=win,
     name='response5disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png', mask=None,
+    image='response5disks.png', mask=None,
     ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -243,7 +690,7 @@ response5disk_3 = visual.ImageStim(
 response6disk_3 = visual.ImageStim(
     win=win,
     name='response6disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png', mask=None,
+    image='response6disks.png', mask=None,
     ori=0, pos=(-0.09,-0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -251,7 +698,7 @@ response6disk_3 = visual.ImageStim(
 response7disk_3 = visual.ImageStim(
     win=win,
     name='response7disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png', mask=None,
+    image='response7disks.png', mask=None,
     ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -259,7 +706,7 @@ response7disk_3 = visual.ImageStim(
 response8disk_3 = visual.ImageStim(
     win=win,
     name='response8disk_3', 
-    image='/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png', mask=None,
+    image='response8disks.png', mask=None,
     ori=0, pos=(-0.09,0.09), size=(0.15, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -400,18 +847,6 @@ space = visual.TextStim(win=win, name='space',
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
-
-# Initialize components for Routine "screensize_calibration"
-screensize_calibrationClock = core.Clock()
-image = visual.ImageStim(
-    win=win,
-    name='image', 
-    image='/Users/bethfisher/Documents/tLab/SimilarityColorProject-MultiplePatches-2stim-asymmetry/card.png', mask=None,
-    ori=0, pos=(0, 0), size=1.0,
-    color=[1,1,1], colorSpace='rgb', opacity=1,
-    flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
-slider = visual.RatingScale(win=win, name='slider', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=[''], scale='')
 
 # Initialize components for Routine "instr_1"
 instr_1Clock = core.Clock()
@@ -742,11 +1177,1254 @@ for thisComponent in startupComponents:
 # the Routine "startup" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
+# ------Prepare to start Routine "screen_scale"-------
+continueRoutine = True
+# update component parameters for each repeat
+ccimage.setSize((x_size*x_scale, x_size*x_scale*0.62))
+# keep track of which components have finished
+screen_scaleComponents = [text_top, text_bottom, ccimage]
+for thisComponent in screen_scaleComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+screen_scaleClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "screen_scale"-------
+while continueRoutine:
+    # get current time
+    t = screen_scaleClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=screen_scaleClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    keys=event.getKeys()
+    
+    if len(keys):
+        if t-oldt<.5:
+            dscale=5*dbase
+            oldt=t
+        else:
+            dscale=dbase
+            oldt=t
+        if 'space' in keys:
+            continueRoutine=False
+        elif 'left' in keys:
+            x_scale=round((x_scale-dscale)*10000)/10000
+        elif 'right' in keys:
+            x_scale=round((x_scale+dscale)*10000)/10000
+        screen_height=round(vsize*10/y_scale)/10
+        ccimage.size=[x_size*x_scale, x_size*x_scale*0.62]
+        
+    
+    # *text_top* updates
+    if text_top.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_top.frameNStart = frameN  # exact frame index
+        text_top.tStart = t  # local t and not account for scr refresh
+        text_top.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_top, 'tStartRefresh')  # time at next scr refresh
+        text_top.setAutoDraw(True)
+    
+    # *text_bottom* updates
+    if text_bottom.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_bottom.frameNStart = frameN  # exact frame index
+        text_bottom.tStart = t  # local t and not account for scr refresh
+        text_bottom.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_bottom, 'tStartRefresh')  # time at next scr refresh
+        text_bottom.setAutoDraw(True)
+    
+    # *ccimage* updates
+    if ccimage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        ccimage.frameNStart = frameN  # exact frame index
+        ccimage.tStart = t  # local t and not account for scr refresh
+        ccimage.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(ccimage, 'tStartRefresh')  # time at next scr refresh
+        ccimage.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in screen_scaleComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "screen_scale"-------
+for thisComponent in screen_scaleComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('X Scale',x_scale)
+thisExp.addData('Y Scale',y_scale)
+
+thisExp.addData('ccimage.started', ccimage.tStartRefresh)
+thisExp.addData('ccimage.stopped', ccimage.tStopRefresh)
+# the Routine "screen_scale" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# set up handler to look after randomisation of conditions etc
+trials_2 = data.TrialHandler(nReps=1, method='random', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('practrials.xlsx', selection='0:7'),
+    seed=None, name='trials_2')
+thisExp.addLoop(trials_2)  # add the loop to the experiment
+thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+if thisTrial_2 != None:
+    for paramName in thisTrial_2:
+        exec('{} = thisTrial_2[paramName]'.format(paramName))
+
+for thisTrial_2 in trials_2:
+    currentLoop = trials_2
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+    if thisTrial_2 != None:
+        for paramName in thisTrial_2:
+            exec('{} = thisTrial_2[paramName]'.format(paramName))
+    
+    # ------Prepare to start Routine "Stim1_display_prac"-------
+    continueRoutine = True
+    routineTimer.add(0.500000)
+    # update component parameters for each repeat
+    # Circle position and size 
+    
+    x = 100
+    y = 100
+    
+    radius_F = 1 
+    radius_P = 1
+    
+    angle_1 = 0
+    angle_2 = 0
+    
+    
+    theta_1 = (angle_1)*(pi/180)
+    theta_2 = (angle_2)*(pi/180)
+    
+    
+    deltax_1 = radius_F*cos(theta_1)
+    deltay_1 = radius_F*sin(theta_1)
+    deltax_2 = radius_P*cos(theta_2)
+    deltay_2 = radius_P*sin(theta_2)
+    
+    
+    a_1 = x + deltax_1
+    b_1 = y + deltay_1
+    a_2 = x + deltax_2
+    b_2 = y + deltay_2
+    
+    
+    # Set circle position 
+    if Ecc == 'FF':
+        circle1posx = a_1;
+        circle1posy = b_1;
+    elif Ecc == 'PF':
+            circle1posx = a_2;
+            circle1posy = b_2;
+    
+    # Randomly select circle colour
+    
+    Colour_1 = rnd.randint(1,9);
+    
+    # Set circle colour
+    if Colour_1 == 1:
+        Circle1_col = (255, 0, 0);
+    elif Colour_1 == 2:
+        Circle1_col = (255, 170, 0);
+    elif Colour_1 == 3:
+        Circle1_col = (170, 255, 0);
+    elif Colour_1 == 4:
+        Circle1_col = (0, 255, 0);
+    elif Colour_1 == 5:
+        Circle1_col = (0, 255, 169);
+    elif Colour_1 == 6:
+        Circle1_col = (255, 0, 0);
+    elif Colour_1 == 7:
+        Circle1_col = (0, 0, 255);
+    elif Colour_1 == 8:
+        Circle1_col = (170, 0, 255);
+    elif Colour_1 == 9:
+        Circle1_col = (255, 0, 170);
+    # keep track of which components have finished
+    Stim1_display_pracComponents = [Circle, centre_cross4_2]
+    for thisComponent in Stim1_display_pracComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Stim1_display_pracClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "Stim1_display_prac"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = Stim1_display_pracClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Stim1_display_pracClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *Circle* updates
+        if Circle.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            Circle.frameNStart = frameN  # exact frame index
+            Circle.tStart = t  # local t and not account for scr refresh
+            Circle.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Circle, 'tStartRefresh')  # time at next scr refresh
+            Circle.setAutoDraw(True)
+        if Circle.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > Circle.tStartRefresh + 0.25-frameTolerance:
+                # keep track of stop time/frame for later
+                Circle.tStop = t  # not accounting for scr refresh
+                Circle.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(Circle, 'tStopRefresh')  # time at next scr refresh
+                Circle.setAutoDraw(False)
+        if Circle.status == STARTED:  # only update if drawing
+            Circle.setPos((circle1posx,circle1posy), log=False)
+            Circle.setFillColor(Circle1_col, log=False)
+        
+        # *centre_cross4_2* updates
+        if centre_cross4_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            centre_cross4_2.frameNStart = frameN  # exact frame index
+            centre_cross4_2.tStart = t  # local t and not account for scr refresh
+            centre_cross4_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(centre_cross4_2, 'tStartRefresh')  # time at next scr refresh
+            centre_cross4_2.setAutoDraw(True)
+        if centre_cross4_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > centre_cross4_2.tStartRefresh + 0.500-frameTolerance:
+                # keep track of stop time/frame for later
+                centre_cross4_2.tStop = t  # not accounting for scr refresh
+                centre_cross4_2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(centre_cross4_2, 'tStopRefresh')  # time at next scr refresh
+                centre_cross4_2.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in Stim1_display_pracComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "Stim1_display_prac"-------
+    for thisComponent in Stim1_display_pracComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_2.addData('Circle.started', Circle.tStartRefresh)
+    trials_2.addData('Circle.stopped', Circle.tStopRefresh)
+    trials_2.addData('centre_cross4_2.started', centre_cross4_2.tStartRefresh)
+    trials_2.addData('centre_cross4_2.stopped', centre_cross4_2.tStopRefresh)
+    
+    # ------Prepare to start Routine "response_prac"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    # setup some python lists for storing info about the mouse_5
+    mouse_5.clicked_name = []
+    gotValidClick = False  # until a click is received
+    # Count trial numbers
+    
+    pracnumber =  pracnumber + 1;
+    
+    # Randomly select circle colour
+    
+    Colour_2 = rnd.randint(1,9);
+    
+    # Set circle colour
+    if Colour_2 == 1:
+        Circle2_col = (255, 0, 0);
+    elif Colour_2 == 2:
+        Circle2_col = (255, 170, 0);
+    elif Colour_2 == 3:
+        Circle2_col = (170, 255, 0);
+    elif Colour_2 == 4:
+        Circle2_col = (0, 255, 0);
+    elif Colour_2 == 5:
+        Circle2_col = (0, 255, 169);
+    elif Colour_2 == 6:
+        Circle2_col = (255, 0, 0);
+    elif Colour_2 == 7:
+        Circle2_col = (0, 0, 255);
+    elif Colour_2 == 8:
+        Circle2_col = (170, 0, 255);
+    elif Colour_2 == 9:
+        Circle2_col = (255, 0, 170);
+    
+    # keep track of which components have finished
+    response_pracComponents = [response1disk_5, response2disk_5, response3disk_5, response4disk_5, response5disk_5, response6disk_5, response7disk_5, response8disk_5, mouse_5, Circle_3, text_29]
+    for thisComponent in response_pracComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    response_pracClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "response_prac"-------
+    while continueRoutine:
+        # get current time
+        t = response_pracClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=response_pracClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *response1disk_5* updates
+        if response1disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response1disk_5.frameNStart = frameN  # exact frame index
+            response1disk_5.tStart = t  # local t and not account for scr refresh
+            response1disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response1disk_5, 'tStartRefresh')  # time at next scr refresh
+            response1disk_5.setAutoDraw(True)
+        
+        # *response2disk_5* updates
+        if response2disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response2disk_5.frameNStart = frameN  # exact frame index
+            response2disk_5.tStart = t  # local t and not account for scr refresh
+            response2disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response2disk_5, 'tStartRefresh')  # time at next scr refresh
+            response2disk_5.setAutoDraw(True)
+        
+        # *response3disk_5* updates
+        if response3disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response3disk_5.frameNStart = frameN  # exact frame index
+            response3disk_5.tStart = t  # local t and not account for scr refresh
+            response3disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response3disk_5, 'tStartRefresh')  # time at next scr refresh
+            response3disk_5.setAutoDraw(True)
+        
+        # *response4disk_5* updates
+        if response4disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response4disk_5.frameNStart = frameN  # exact frame index
+            response4disk_5.tStart = t  # local t and not account for scr refresh
+            response4disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response4disk_5, 'tStartRefresh')  # time at next scr refresh
+            response4disk_5.setAutoDraw(True)
+        
+        # *response5disk_5* updates
+        if response5disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response5disk_5.frameNStart = frameN  # exact frame index
+            response5disk_5.tStart = t  # local t and not account for scr refresh
+            response5disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response5disk_5, 'tStartRefresh')  # time at next scr refresh
+            response5disk_5.setAutoDraw(True)
+        
+        # *response6disk_5* updates
+        if response6disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response6disk_5.frameNStart = frameN  # exact frame index
+            response6disk_5.tStart = t  # local t and not account for scr refresh
+            response6disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response6disk_5, 'tStartRefresh')  # time at next scr refresh
+            response6disk_5.setAutoDraw(True)
+        
+        # *response7disk_5* updates
+        if response7disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response7disk_5.frameNStart = frameN  # exact frame index
+            response7disk_5.tStart = t  # local t and not account for scr refresh
+            response7disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response7disk_5, 'tStartRefresh')  # time at next scr refresh
+            response7disk_5.setAutoDraw(True)
+        
+        # *response8disk_5* updates
+        if response8disk_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response8disk_5.frameNStart = frameN  # exact frame index
+            response8disk_5.tStart = t  # local t and not account for scr refresh
+            response8disk_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response8disk_5, 'tStartRefresh')  # time at next scr refresh
+            response8disk_5.setAutoDraw(True)
+        # *mouse_5* updates
+        if mouse_5.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            mouse_5.frameNStart = frameN  # exact frame index
+            mouse_5.tStart = t  # local t and not account for scr refresh
+            mouse_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse_5, 'tStartRefresh')  # time at next scr refresh
+            mouse_5.status = STARTED
+            mouse_5.mouseClock.reset()
+            prevButtonState = mouse_5.getPressed()  # if button is down already this ISN'T a new click
+        if mouse_5.status == STARTED:  # only update if started and not finished!
+            buttons = mouse_5.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # check if the mouse was inside our 'clickable' objects
+                    gotValidClick = False
+                    for obj in [response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk,]:
+                        if obj.contains(mouse_5):
+                            gotValidClick = True
+                            mouse_5.clicked_name.append(obj.name)
+                    if gotValidClick:  # abort routine on response
+                        continueRoutine = False
+        
+        # *Circle_3* updates
+        if Circle_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            Circle_3.frameNStart = frameN  # exact frame index
+            Circle_3.tStart = t  # local t and not account for scr refresh
+            Circle_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Circle_3, 'tStartRefresh')  # time at next scr refresh
+            Circle_3.setAutoDraw(True)
+        if Circle_3.status == STARTED:  # only update if drawing
+            Circle_3.setFillColor(Circle2_col, log=False)
+        
+        # *text_29* updates
+        if text_29.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_29.frameNStart = frameN  # exact frame index
+            text_29.tStart = t  # local t and not account for scr refresh
+            text_29.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_29, 'tStartRefresh')  # time at next scr refresh
+            text_29.setAutoDraw(True)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in response_pracComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "response_prac"-------
+    for thisComponent in response_pracComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_2.addData('response1disk_5.started', response1disk_5.tStartRefresh)
+    trials_2.addData('response1disk_5.stopped', response1disk_5.tStopRefresh)
+    trials_2.addData('response2disk_5.started', response2disk_5.tStartRefresh)
+    trials_2.addData('response2disk_5.stopped', response2disk_5.tStopRefresh)
+    trials_2.addData('response3disk_5.started', response3disk_5.tStartRefresh)
+    trials_2.addData('response3disk_5.stopped', response3disk_5.tStopRefresh)
+    trials_2.addData('response4disk_5.started', response4disk_5.tStartRefresh)
+    trials_2.addData('response4disk_5.stopped', response4disk_5.tStopRefresh)
+    trials_2.addData('response5disk_5.started', response5disk_5.tStartRefresh)
+    trials_2.addData('response5disk_5.stopped', response5disk_5.tStopRefresh)
+    trials_2.addData('response6disk_5.started', response6disk_5.tStartRefresh)
+    trials_2.addData('response6disk_5.stopped', response6disk_5.tStopRefresh)
+    trials_2.addData('response7disk_5.started', response7disk_5.tStartRefresh)
+    trials_2.addData('response7disk_5.stopped', response7disk_5.tStopRefresh)
+    trials_2.addData('response8disk_5.started', response8disk_5.tStartRefresh)
+    trials_2.addData('response8disk_5.stopped', response8disk_5.tStopRefresh)
+    # store data for trials_2 (TrialHandler)
+    x, y = mouse_5.getPos()
+    buttons = mouse_5.getPressed()
+    if sum(buttons):
+        # check if the mouse was inside our 'clickable' objects
+        gotValidClick = False
+        for obj in [response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk,]:
+            if obj.contains(mouse_5):
+                gotValidClick = True
+                mouse_5.clicked_name.append(obj.name)
+    trials_2.addData('mouse_5.x', x)
+    trials_2.addData('mouse_5.y', y)
+    trials_2.addData('mouse_5.leftButton', buttons[0])
+    trials_2.addData('mouse_5.midButton', buttons[1])
+    trials_2.addData('mouse_5.rightButton', buttons[2])
+    if len(mouse_5.clicked_name):
+        trials_2.addData('mouse_5.clicked_name', mouse_5.clicked_name[0])
+    trials_2.addData('mouse_5.started', mouse_5.tStart)
+    trials_2.addData('mouse_5.stopped', mouse_5.tStop)
+    trials_2.addData('Circle_3.started', Circle_3.tStartRefresh)
+    trials_2.addData('Circle_3.stopped', Circle_3.tStopRefresh)
+    trials_2.addData('text_29.started', text_29.tStartRefresh)
+    trials_2.addData('text_29.stopped', text_29.tStopRefresh)
+    # the Routine "response_prac" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "summary1_prac"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    # setup some python lists for storing info about the mouse_8
+    mouse_8.clicked_name = []
+    gotValidClick = False  # until a click is received
+    pracnumbertext = f'You have finished {pracnumber} of 7 practice questions';
+    
+    text_35.setText(pracnumbertext)
+    # keep track of which components have finished
+    summary1_pracComponents = [response1disk_8, response2disk_8, response3disk_8, response4disk_8, response5disk_8, response6disk_8, response7disk_8, response8disk_8, mouse_8, rectangle_6, text_34, text_35]
+    for thisComponent in summary1_pracComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    summary1_pracClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "summary1_prac"-------
+    while continueRoutine:
+        # get current time
+        t = summary1_pracClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=summary1_pracClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *response1disk_8* updates
+        if response1disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response1disk_8.frameNStart = frameN  # exact frame index
+            response1disk_8.tStart = t  # local t and not account for scr refresh
+            response1disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response1disk_8, 'tStartRefresh')  # time at next scr refresh
+            response1disk_8.setAutoDraw(True)
+        
+        # *response2disk_8* updates
+        if response2disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response2disk_8.frameNStart = frameN  # exact frame index
+            response2disk_8.tStart = t  # local t and not account for scr refresh
+            response2disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response2disk_8, 'tStartRefresh')  # time at next scr refresh
+            response2disk_8.setAutoDraw(True)
+        
+        # *response3disk_8* updates
+        if response3disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response3disk_8.frameNStart = frameN  # exact frame index
+            response3disk_8.tStart = t  # local t and not account for scr refresh
+            response3disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response3disk_8, 'tStartRefresh')  # time at next scr refresh
+            response3disk_8.setAutoDraw(True)
+        
+        # *response4disk_8* updates
+        if response4disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response4disk_8.frameNStart = frameN  # exact frame index
+            response4disk_8.tStart = t  # local t and not account for scr refresh
+            response4disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response4disk_8, 'tStartRefresh')  # time at next scr refresh
+            response4disk_8.setAutoDraw(True)
+        
+        # *response5disk_8* updates
+        if response5disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response5disk_8.frameNStart = frameN  # exact frame index
+            response5disk_8.tStart = t  # local t and not account for scr refresh
+            response5disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response5disk_8, 'tStartRefresh')  # time at next scr refresh
+            response5disk_8.setAutoDraw(True)
+        
+        # *response6disk_8* updates
+        if response6disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response6disk_8.frameNStart = frameN  # exact frame index
+            response6disk_8.tStart = t  # local t and not account for scr refresh
+            response6disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response6disk_8, 'tStartRefresh')  # time at next scr refresh
+            response6disk_8.setAutoDraw(True)
+        
+        # *response7disk_8* updates
+        if response7disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response7disk_8.frameNStart = frameN  # exact frame index
+            response7disk_8.tStart = t  # local t and not account for scr refresh
+            response7disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response7disk_8, 'tStartRefresh')  # time at next scr refresh
+            response7disk_8.setAutoDraw(True)
+        
+        # *response8disk_8* updates
+        if response8disk_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response8disk_8.frameNStart = frameN  # exact frame index
+            response8disk_8.tStart = t  # local t and not account for scr refresh
+            response8disk_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response8disk_8, 'tStartRefresh')  # time at next scr refresh
+            response8disk_8.setAutoDraw(True)
+        # *mouse_8* updates
+        if mouse_8.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            mouse_8.frameNStart = frameN  # exact frame index
+            mouse_8.tStart = t  # local t and not account for scr refresh
+            mouse_8.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse_8, 'tStartRefresh')  # time at next scr refresh
+            mouse_8.status = STARTED
+            mouse_8.mouseClock.reset()
+            prevButtonState = mouse_8.getPressed()  # if button is down already this ISN'T a new click
+        if mouse_8.status == STARTED:  # only update if started and not finished!
+            buttons = mouse_8.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # check if the mouse was inside our 'clickable' objects
+                    gotValidClick = False
+                    for obj in [rectangle]:
+                        if obj.contains(mouse_8):
+                            gotValidClick = True
+                            mouse_8.clicked_name.append(obj.name)
+                    if gotValidClick:  # abort routine on response
+                        continueRoutine = False
+        
+        # *rectangle_6* updates
+        if rectangle_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            rectangle_6.frameNStart = frameN  # exact frame index
+            rectangle_6.tStart = t  # local t and not account for scr refresh
+            rectangle_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(rectangle_6, 'tStartRefresh')  # time at next scr refresh
+            rectangle_6.setAutoDraw(True)
+        
+        # *text_34* updates
+        if text_34.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_34.frameNStart = frameN  # exact frame index
+            text_34.tStart = t  # local t and not account for scr refresh
+            text_34.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_34, 'tStartRefresh')  # time at next scr refresh
+            text_34.setAutoDraw(True)
+        
+        # *text_35* updates
+        if text_35.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_35.frameNStart = frameN  # exact frame index
+            text_35.tStart = t  # local t and not account for scr refresh
+            text_35.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_35, 'tStartRefresh')  # time at next scr refresh
+            text_35.setAutoDraw(True)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in summary1_pracComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "summary1_prac"-------
+    for thisComponent in summary1_pracComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_2.addData('response1disk_8.started', response1disk_8.tStartRefresh)
+    trials_2.addData('response1disk_8.stopped', response1disk_8.tStopRefresh)
+    trials_2.addData('response2disk_8.started', response2disk_8.tStartRefresh)
+    trials_2.addData('response2disk_8.stopped', response2disk_8.tStopRefresh)
+    trials_2.addData('response3disk_8.started', response3disk_8.tStartRefresh)
+    trials_2.addData('response3disk_8.stopped', response3disk_8.tStopRefresh)
+    trials_2.addData('response4disk_8.started', response4disk_8.tStartRefresh)
+    trials_2.addData('response4disk_8.stopped', response4disk_8.tStopRefresh)
+    trials_2.addData('response5disk_8.started', response5disk_8.tStartRefresh)
+    trials_2.addData('response5disk_8.stopped', response5disk_8.tStopRefresh)
+    trials_2.addData('response6disk_8.started', response6disk_8.tStartRefresh)
+    trials_2.addData('response6disk_8.stopped', response6disk_8.tStopRefresh)
+    trials_2.addData('response7disk_8.started', response7disk_8.tStartRefresh)
+    trials_2.addData('response7disk_8.stopped', response7disk_8.tStopRefresh)
+    trials_2.addData('response8disk_8.started', response8disk_8.tStartRefresh)
+    trials_2.addData('response8disk_8.stopped', response8disk_8.tStopRefresh)
+    # store data for trials_2 (TrialHandler)
+    x, y = mouse_8.getPos()
+    buttons = mouse_8.getPressed()
+    if sum(buttons):
+        # check if the mouse was inside our 'clickable' objects
+        gotValidClick = False
+        for obj in [rectangle]:
+            if obj.contains(mouse_8):
+                gotValidClick = True
+                mouse_8.clicked_name.append(obj.name)
+    trials_2.addData('mouse_8.x', x)
+    trials_2.addData('mouse_8.y', y)
+    trials_2.addData('mouse_8.leftButton', buttons[0])
+    trials_2.addData('mouse_8.midButton', buttons[1])
+    trials_2.addData('mouse_8.rightButton', buttons[2])
+    if len(mouse_8.clicked_name):
+        trials_2.addData('mouse_8.clicked_name', mouse_8.clicked_name[0])
+    trials_2.addData('mouse_8.started', mouse_8.tStart)
+    trials_2.addData('mouse_8.stopped', mouse_8.tStop)
+    trials_2.addData('rectangle_6.started', rectangle_6.tStartRefresh)
+    trials_2.addData('rectangle_6.stopped', rectangle_6.tStopRefresh)
+    trials_2.addData('text_34.started', text_34.tStartRefresh)
+    trials_2.addData('text_34.stopped', text_34.tStopRefresh)
+    trials_2.addData('text_35.started', text_35.tStartRefresh)
+    trials_2.addData('text_35.stopped', text_35.tStopRefresh)
+    # the Routine "summary1_prac" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "special_trial_prac"-------
+    continueRoutine = True
+    routineTimer.add(0.250000)
+    # update component parameters for each repeat
+    # keep track of which components have finished
+    special_trial_pracComponents = [text_36]
+    for thisComponent in special_trial_pracComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    special_trial_pracClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "special_trial_prac"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = special_trial_pracClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=special_trial_pracClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_36* updates
+        if text_36.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_36.frameNStart = frameN  # exact frame index
+            text_36.tStart = t  # local t and not account for scr refresh
+            text_36.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_36, 'tStartRefresh')  # time at next scr refresh
+            text_36.setAutoDraw(True)
+        if text_36.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_36.tStartRefresh + .250-frameTolerance:
+                # keep track of stop time/frame for later
+                text_36.tStop = t  # not accounting for scr refresh
+                text_36.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_36, 'tStopRefresh')  # time at next scr refresh
+                text_36.setAutoDraw(False)
+        # Run catch trials 
+        if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):
+            continueRoutine=False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in special_trial_pracComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "special_trial_prac"-------
+    for thisComponent in special_trial_pracComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_2.addData('text_36.started', text_36.tStartRefresh)
+    trials_2.addData('text_36.stopped', text_36.tStopRefresh)
+    
+    # ------Prepare to start Routine "catch_prac"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    # setup some python lists for storing info about the mouse_7
+    mouse_7.clicked_name = []
+    gotValidClick = False  # until a click is received
+    # Select random number for catch trial
+    
+    catchnumberprac = rnd.randint(0,7);
+    
+    catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'
+    text_32.setText(catchtext)
+    # keep track of which components have finished
+    catch_pracComponents = [response1disk_7, response2disk_7, response3disk_7, response4disk_7, response5disk_7, response6disk_7, response7disk_7, response8disk_7, mouse_7, text_32, rectangle_5]
+    for thisComponent in catch_pracComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    catch_pracClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "catch_prac"-------
+    while continueRoutine:
+        # get current time
+        t = catch_pracClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=catch_pracClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *response1disk_7* updates
+        if response1disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response1disk_7.frameNStart = frameN  # exact frame index
+            response1disk_7.tStart = t  # local t and not account for scr refresh
+            response1disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response1disk_7, 'tStartRefresh')  # time at next scr refresh
+            response1disk_7.setAutoDraw(True)
+        
+        # *response2disk_7* updates
+        if response2disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response2disk_7.frameNStart = frameN  # exact frame index
+            response2disk_7.tStart = t  # local t and not account for scr refresh
+            response2disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response2disk_7, 'tStartRefresh')  # time at next scr refresh
+            response2disk_7.setAutoDraw(True)
+        
+        # *response3disk_7* updates
+        if response3disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response3disk_7.frameNStart = frameN  # exact frame index
+            response3disk_7.tStart = t  # local t and not account for scr refresh
+            response3disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response3disk_7, 'tStartRefresh')  # time at next scr refresh
+            response3disk_7.setAutoDraw(True)
+        
+        # *response4disk_7* updates
+        if response4disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response4disk_7.frameNStart = frameN  # exact frame index
+            response4disk_7.tStart = t  # local t and not account for scr refresh
+            response4disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response4disk_7, 'tStartRefresh')  # time at next scr refresh
+            response4disk_7.setAutoDraw(True)
+        
+        # *response5disk_7* updates
+        if response5disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response5disk_7.frameNStart = frameN  # exact frame index
+            response5disk_7.tStart = t  # local t and not account for scr refresh
+            response5disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response5disk_7, 'tStartRefresh')  # time at next scr refresh
+            response5disk_7.setAutoDraw(True)
+        
+        # *response6disk_7* updates
+        if response6disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response6disk_7.frameNStart = frameN  # exact frame index
+            response6disk_7.tStart = t  # local t and not account for scr refresh
+            response6disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response6disk_7, 'tStartRefresh')  # time at next scr refresh
+            response6disk_7.setAutoDraw(True)
+        
+        # *response7disk_7* updates
+        if response7disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response7disk_7.frameNStart = frameN  # exact frame index
+            response7disk_7.tStart = t  # local t and not account for scr refresh
+            response7disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response7disk_7, 'tStartRefresh')  # time at next scr refresh
+            response7disk_7.setAutoDraw(True)
+        
+        # *response8disk_7* updates
+        if response8disk_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response8disk_7.frameNStart = frameN  # exact frame index
+            response8disk_7.tStart = t  # local t and not account for scr refresh
+            response8disk_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response8disk_7, 'tStartRefresh')  # time at next scr refresh
+            response8disk_7.setAutoDraw(True)
+        # *mouse_7* updates
+        if mouse_7.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            mouse_7.frameNStart = frameN  # exact frame index
+            mouse_7.tStart = t  # local t and not account for scr refresh
+            mouse_7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse_7, 'tStartRefresh')  # time at next scr refresh
+            mouse_7.status = STARTED
+            mouse_7.mouseClock.reset()
+            prevButtonState = mouse_7.getPressed()  # if button is down already this ISN'T a new click
+        if mouse_7.status == STARTED:  # only update if started and not finished!
+            buttons = mouse_7.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # check if the mouse was inside our 'clickable' objects
+                    gotValidClick = False
+                    for obj in [response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk,]:
+                        if obj.contains(mouse_7):
+                            gotValidClick = True
+                            mouse_7.clicked_name.append(obj.name)
+                    if gotValidClick:  # abort routine on response
+                        continueRoutine = False
+        # Run catch trials 
+        if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):
+            continueRoutine=False
+        
+        # *text_32* updates
+        if text_32.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_32.frameNStart = frameN  # exact frame index
+            text_32.tStart = t  # local t and not account for scr refresh
+            text_32.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_32, 'tStartRefresh')  # time at next scr refresh
+            text_32.setAutoDraw(True)
+        
+        # *rectangle_5* updates
+        if rectangle_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            rectangle_5.frameNStart = frameN  # exact frame index
+            rectangle_5.tStart = t  # local t and not account for scr refresh
+            rectangle_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(rectangle_5, 'tStartRefresh')  # time at next scr refresh
+            rectangle_5.setAutoDraw(True)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in catch_pracComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "catch_prac"-------
+    for thisComponent in catch_pracComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_2.addData('response1disk_7.started', response1disk_7.tStartRefresh)
+    trials_2.addData('response1disk_7.stopped', response1disk_7.tStopRefresh)
+    trials_2.addData('response2disk_7.started', response2disk_7.tStartRefresh)
+    trials_2.addData('response2disk_7.stopped', response2disk_7.tStopRefresh)
+    trials_2.addData('response3disk_7.started', response3disk_7.tStartRefresh)
+    trials_2.addData('response3disk_7.stopped', response3disk_7.tStopRefresh)
+    trials_2.addData('response4disk_7.started', response4disk_7.tStartRefresh)
+    trials_2.addData('response4disk_7.stopped', response4disk_7.tStopRefresh)
+    trials_2.addData('response5disk_7.started', response5disk_7.tStartRefresh)
+    trials_2.addData('response5disk_7.stopped', response5disk_7.tStopRefresh)
+    trials_2.addData('response6disk_7.started', response6disk_7.tStartRefresh)
+    trials_2.addData('response6disk_7.stopped', response6disk_7.tStopRefresh)
+    trials_2.addData('response7disk_7.started', response7disk_7.tStartRefresh)
+    trials_2.addData('response7disk_7.stopped', response7disk_7.tStopRefresh)
+    trials_2.addData('response8disk_7.started', response8disk_7.tStartRefresh)
+    trials_2.addData('response8disk_7.stopped', response8disk_7.tStopRefresh)
+    # store data for trials_2 (TrialHandler)
+    x, y = mouse_7.getPos()
+    buttons = mouse_7.getPressed()
+    if sum(buttons):
+        # check if the mouse was inside our 'clickable' objects
+        gotValidClick = False
+        for obj in [response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk,]:
+            if obj.contains(mouse_7):
+                gotValidClick = True
+                mouse_7.clicked_name.append(obj.name)
+    trials_2.addData('mouse_7.x', x)
+    trials_2.addData('mouse_7.y', y)
+    trials_2.addData('mouse_7.leftButton', buttons[0])
+    trials_2.addData('mouse_7.midButton', buttons[1])
+    trials_2.addData('mouse_7.rightButton', buttons[2])
+    if len(mouse_7.clicked_name):
+        trials_2.addData('mouse_7.clicked_name', mouse_7.clicked_name[0])
+    trials_2.addData('mouse_7.started', mouse_7.tStart)
+    trials_2.addData('mouse_7.stopped', mouse_7.tStop)
+    trials_2.addData('text_32.started', text_32.tStartRefresh)
+    trials_2.addData('text_32.stopped', text_32.tStopRefresh)
+    trials_2.addData('rectangle_5.started', rectangle_5.tStartRefresh)
+    trials_2.addData('rectangle_5.stopped', rectangle_5.tStopRefresh)
+    # the Routine "catch_prac" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "summary2_prac"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    # setup some python lists for storing info about the mouse_6
+    mouse_6.clicked_name = []
+    gotValidClick = False  # until a click is received
+    # Run catch trials 
+    if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):
+        continueRoutine=False
+    
+    pracnumbertext = f'You have finished {pracnumber} of 7 practice questions';
+    
+    
+    text_31.setText(pracnumbertext)
+    # keep track of which components have finished
+    summary2_pracComponents = [response1disk_6, response2disk_6, response3disk_6, response4disk_6, response5disk_6, response6disk_6, response7disk_6, response8disk_6, mouse_6, rectangle_4, text_30, text_31]
+    for thisComponent in summary2_pracComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    summary2_pracClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "summary2_prac"-------
+    while continueRoutine:
+        # get current time
+        t = summary2_pracClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=summary2_pracClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *response1disk_6* updates
+        if response1disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response1disk_6.frameNStart = frameN  # exact frame index
+            response1disk_6.tStart = t  # local t and not account for scr refresh
+            response1disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response1disk_6, 'tStartRefresh')  # time at next scr refresh
+            response1disk_6.setAutoDraw(True)
+        
+        # *response2disk_6* updates
+        if response2disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response2disk_6.frameNStart = frameN  # exact frame index
+            response2disk_6.tStart = t  # local t and not account for scr refresh
+            response2disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response2disk_6, 'tStartRefresh')  # time at next scr refresh
+            response2disk_6.setAutoDraw(True)
+        
+        # *response3disk_6* updates
+        if response3disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response3disk_6.frameNStart = frameN  # exact frame index
+            response3disk_6.tStart = t  # local t and not account for scr refresh
+            response3disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response3disk_6, 'tStartRefresh')  # time at next scr refresh
+            response3disk_6.setAutoDraw(True)
+        
+        # *response4disk_6* updates
+        if response4disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response4disk_6.frameNStart = frameN  # exact frame index
+            response4disk_6.tStart = t  # local t and not account for scr refresh
+            response4disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response4disk_6, 'tStartRefresh')  # time at next scr refresh
+            response4disk_6.setAutoDraw(True)
+        
+        # *response5disk_6* updates
+        if response5disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response5disk_6.frameNStart = frameN  # exact frame index
+            response5disk_6.tStart = t  # local t and not account for scr refresh
+            response5disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response5disk_6, 'tStartRefresh')  # time at next scr refresh
+            response5disk_6.setAutoDraw(True)
+        
+        # *response6disk_6* updates
+        if response6disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response6disk_6.frameNStart = frameN  # exact frame index
+            response6disk_6.tStart = t  # local t and not account for scr refresh
+            response6disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response6disk_6, 'tStartRefresh')  # time at next scr refresh
+            response6disk_6.setAutoDraw(True)
+        
+        # *response7disk_6* updates
+        if response7disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response7disk_6.frameNStart = frameN  # exact frame index
+            response7disk_6.tStart = t  # local t and not account for scr refresh
+            response7disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response7disk_6, 'tStartRefresh')  # time at next scr refresh
+            response7disk_6.setAutoDraw(True)
+        
+        # *response8disk_6* updates
+        if response8disk_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            response8disk_6.frameNStart = frameN  # exact frame index
+            response8disk_6.tStart = t  # local t and not account for scr refresh
+            response8disk_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response8disk_6, 'tStartRefresh')  # time at next scr refresh
+            response8disk_6.setAutoDraw(True)
+        # *mouse_6* updates
+        if mouse_6.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            mouse_6.frameNStart = frameN  # exact frame index
+            mouse_6.tStart = t  # local t and not account for scr refresh
+            mouse_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse_6, 'tStartRefresh')  # time at next scr refresh
+            mouse_6.status = STARTED
+            mouse_6.mouseClock.reset()
+            prevButtonState = mouse_6.getPressed()  # if button is down already this ISN'T a new click
+        if mouse_6.status == STARTED:  # only update if started and not finished!
+            buttons = mouse_6.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # check if the mouse was inside our 'clickable' objects
+                    gotValidClick = False
+                    for obj in [rectangle]:
+                        if obj.contains(mouse_6):
+                            gotValidClick = True
+                            mouse_6.clicked_name.append(obj.name)
+                    if gotValidClick:  # abort routine on response
+                        continueRoutine = False
+        
+        # *rectangle_4* updates
+        if rectangle_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            rectangle_4.frameNStart = frameN  # exact frame index
+            rectangle_4.tStart = t  # local t and not account for scr refresh
+            rectangle_4.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(rectangle_4, 'tStartRefresh')  # time at next scr refresh
+            rectangle_4.setAutoDraw(True)
+        
+        # *text_30* updates
+        if text_30.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_30.frameNStart = frameN  # exact frame index
+            text_30.tStart = t  # local t and not account for scr refresh
+            text_30.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_30, 'tStartRefresh')  # time at next scr refresh
+            text_30.setAutoDraw(True)
+        
+        # *text_31* updates
+        if text_31.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_31.frameNStart = frameN  # exact frame index
+            text_31.tStart = t  # local t and not account for scr refresh
+            text_31.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_31, 'tStartRefresh')  # time at next scr refresh
+            text_31.setAutoDraw(True)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in summary2_pracComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "summary2_prac"-------
+    for thisComponent in summary2_pracComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_2.addData('response1disk_6.started', response1disk_6.tStartRefresh)
+    trials_2.addData('response1disk_6.stopped', response1disk_6.tStopRefresh)
+    trials_2.addData('response2disk_6.started', response2disk_6.tStartRefresh)
+    trials_2.addData('response2disk_6.stopped', response2disk_6.tStopRefresh)
+    trials_2.addData('response3disk_6.started', response3disk_6.tStartRefresh)
+    trials_2.addData('response3disk_6.stopped', response3disk_6.tStopRefresh)
+    trials_2.addData('response4disk_6.started', response4disk_6.tStartRefresh)
+    trials_2.addData('response4disk_6.stopped', response4disk_6.tStopRefresh)
+    trials_2.addData('response5disk_6.started', response5disk_6.tStartRefresh)
+    trials_2.addData('response5disk_6.stopped', response5disk_6.tStopRefresh)
+    trials_2.addData('response6disk_6.started', response6disk_6.tStartRefresh)
+    trials_2.addData('response6disk_6.stopped', response6disk_6.tStopRefresh)
+    trials_2.addData('response7disk_6.started', response7disk_6.tStartRefresh)
+    trials_2.addData('response7disk_6.stopped', response7disk_6.tStopRefresh)
+    trials_2.addData('response8disk_6.started', response8disk_6.tStartRefresh)
+    trials_2.addData('response8disk_6.stopped', response8disk_6.tStopRefresh)
+    # store data for trials_2 (TrialHandler)
+    x, y = mouse_6.getPos()
+    buttons = mouse_6.getPressed()
+    if sum(buttons):
+        # check if the mouse was inside our 'clickable' objects
+        gotValidClick = False
+        for obj in [rectangle]:
+            if obj.contains(mouse_6):
+                gotValidClick = True
+                mouse_6.clicked_name.append(obj.name)
+    trials_2.addData('mouse_6.x', x)
+    trials_2.addData('mouse_6.y', y)
+    trials_2.addData('mouse_6.leftButton', buttons[0])
+    trials_2.addData('mouse_6.midButton', buttons[1])
+    trials_2.addData('mouse_6.rightButton', buttons[2])
+    if len(mouse_6.clicked_name):
+        trials_2.addData('mouse_6.clicked_name', mouse_6.clicked_name[0])
+    trials_2.addData('mouse_6.started', mouse_6.tStart)
+    trials_2.addData('mouse_6.stopped', mouse_6.tStop)
+    trials_2.addData('rectangle_4.started', rectangle_4.tStartRefresh)
+    trials_2.addData('rectangle_4.stopped', rectangle_4.tStopRefresh)
+    trials_2.addData('text_30.started', text_30.tStartRefresh)
+    trials_2.addData('text_30.stopped', text_30.tStopRefresh)
+    trials_2.addData('text_31.started', text_31.tStartRefresh)
+    trials_2.addData('text_31.stopped', text_31.tStopRefresh)
+    # the Routine "summary2_prac" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    thisExp.nextEntry()
+    
+# completed 1 repeats of 'trials_2'
+
+
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=2, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('Stimconditions.xlsx', selection='0:10'),
-    seed=randint(min,maxplusone), name='trials')
+    seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
@@ -804,7 +2482,7 @@ for thisTrial in trials:
     # Set circle colour
     if Colour_1 == 1:
         Circle1_col = (255, 0, 0);
-    elif Colour_2 == 2:
+    elif Colour_1 == 2:
         Circle1_col = (255, 170, 0);
     elif Colour_1 == 3:
         Circle1_col = (170, 255, 0);
@@ -1138,6 +2816,78 @@ for thisTrial in trials:
     trials.addData('text_23.stopped', text_23.tStopRefresh)
     # the Routine "response" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
+    
+    # ------Prepare to start Routine "special_trial"-------
+    continueRoutine = True
+    routineTimer.add(0.250000)
+    # update component parameters for each repeat
+    # keep track of which components have finished
+    special_trialComponents = [text_33]
+    for thisComponent in special_trialComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    special_trialClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "special_trial"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = special_trialClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=special_trialClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_33* updates
+        if text_33.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_33.frameNStart = frameN  # exact frame index
+            text_33.tStart = t  # local t and not account for scr refresh
+            text_33.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_33, 'tStartRefresh')  # time at next scr refresh
+            text_33.setAutoDraw(True)
+        if text_33.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_33.tStartRefresh + .250-frameTolerance:
+                # keep track of stop time/frame for later
+                text_33.tStop = t  # not accounting for scr refresh
+                text_33.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_33, 'tStopRefresh')  # time at next scr refresh
+                text_33.setAutoDraw(False)
+        # Run catch trials 
+        if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):
+            continueRoutine=False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in special_trialComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "special_trial"-------
+    for thisComponent in special_trialComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials.addData('text_33.started', text_33.tStartRefresh)
+    trials.addData('text_33.stopped', text_33.tStopRefresh)
     
     # ------Prepare to start Routine "catch_1"-------
     continueRoutine = True
@@ -1491,10 +3241,6 @@ for thisTrial in trials:
             rectangle.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(rectangle, 'tStartRefresh')  # time at next scr refresh
             rectangle.setAutoDraw(True)
-        # Run for catch trials
-        
-        if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):
-            continueRoutine=False
         
         # *text_25* updates
         if text_25.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1688,93 +3434,6 @@ thisExp.nextEntry()
 thisExp.addData('space.started', space.tStartRefresh)
 thisExp.addData('space.stopped', space.tStopRefresh)
 # the Routine "welcome_instr" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
-# ------Prepare to start Routine "screensize_calibration"-------
-continueRoutine = True
-# update component parameters for each repeat
-slider.reset()
-# keep track of which components have finished
-screensize_calibrationComponents = [image, slider]
-for thisComponent in screensize_calibrationComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-screensize_calibrationClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "screensize_calibration"-------
-while continueRoutine:
-    # get current time
-    t = screensize_calibrationClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=screensize_calibrationClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *image* updates
-    if image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        image.frameNStart = frameN  # exact frame index
-        image.tStart = t  # local t and not account for scr refresh
-        image.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
-        image.setAutoDraw(True)
-    if image.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image.tStartRefresh +  -frameTolerance:
-            # keep track of stop time/frame for later
-            image.tStop = t  # not accounting for scr refresh
-            image.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image, 'tStopRefresh')  # time at next scr refresh
-            image.setAutoDraw(False)
-    if image.status == STARTED:  # only update if drawing
-        image.setSize(slider.getRating(), log=False)
-    # *slider* updates
-    if slider.status == NOT_STARTED and t >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        slider.frameNStart = frameN  # exact frame index
-        slider.tStart = t  # local t and not account for scr refresh
-        slider.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(slider, 'tStartRefresh')  # time at next scr refresh
-        slider.setAutoDraw(True)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in screensize_calibrationComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "screensize_calibration"-------
-for thisComponent in screensize_calibrationComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData('image.started', image.tStartRefresh)
-thisExp.addData('image.stopped', image.tStopRefresh)
-# store data for thisExp (ExperimentHandler)
-thisExp.addData('slider.response', slider.getRating())
-thisExp.addData('slider.rt', slider.getRT())
-thisExp.nextEntry()
-thisExp.addData('slider.started', slider.tStart)
-thisExp.addData('slider.stopped', slider.tStop)
-# the Routine "screensize_calibration" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # ------Prepare to start Routine "instr_1"-------
