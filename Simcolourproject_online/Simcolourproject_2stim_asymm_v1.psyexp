@@ -20,7 +20,7 @@
     <Param name="Screen" updates="None" val="1" valType="num"/>
     <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
-    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Units" updates="None" val="pix" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
     <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
@@ -200,7 +200,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="loop" updates="None" val="True" valType="bool"/>
-        <Param name="movie" updates="set every repeat" val="/Users/bethfisher/Documents/Simcolourproject_online/calibrationinstructions_py.mov" valType="str"/>
+        <Param name="movie" updates="set every repeat" val="calibrationinstructions_py.mov" valType="str"/>
         <Param name="name" updates="None" val="movie" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -356,7 +356,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/calibrationline.png" valType="str"/>
+        <Param name="image" updates="constant" val="calibrationline.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="calibrationline" valType="code"/>
@@ -746,13 +746,13 @@
     </Routine>
     <Routine name="colour_circle_instr">
       <CodeComponent name="code">
-        <Param name="Begin Experiment" updates="constant" val="import pandas as pd&amp;#10;from psychopy import tools&amp;#10;import random as rnd&amp;#10;rnd.seed()&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="circle_position = [[(- 0.25), 0.25], [0, 0.25], [0.25, 0.25], [(- 0.25), 0], [0, 0], [0.25, 0], [0.25, (- 0.25)], [0, (- 0.25)], [(- 0.25), (- 0.25)]];&amp;#10;rnd.shuffle(circle_position);&amp;#10;console.log(circle_position);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Randomly place instruction circles &amp;#10;circle_position = [(-0.25,0.25),(0,0.25),(0.25,0.25),(-0.25,0),(0,0),(0.25,0),(0.25,-0.25),(0,-0.25),(-0.25,-0.25)]&amp;#10;rnd.shuffle(circle_position)&amp;#10;print(circle_position)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="circle_position = [[(- 0.25), 0.25], [0, 0.25], [0.25, 0.25], [(- 0.25), 0], [0, 0], [0.25, 0], [0.25, (- 0.25)], [0, (- 0.25)], [(- 0.25), (- 0.25)]];&amp;#10;random.shuffle(circle_position);&amp;#10;console.log(circle_position);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Randomly place instruction circles &amp;#10;circle_position = [(-0.25,0.25),(0,0.25),(0.25,0.25),(-0.25,0),(0,0),(0.25,0),(0.25,-0.25),(0,-0.25),(-0.25,-0.25)]&amp;#10;random.shuffle(circle_position)&amp;#10;print(circle_position)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="#for jj in range(len(instruction_3_color)):&amp;#10;#    circle[jj].draw()" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -781,8 +781,8 @@
       <PolygonComponent name="intructioncircle_1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[255, 0, 0]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1, 0, 0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -806,7 +806,7 @@
       <PolygonComponent name="instructioncircle_2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[255, 170, 0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1, 0.67, 0]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
@@ -831,10 +831,10 @@
       <PolygonComponent name="instructioncircle_3">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[170, 255, 0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0.67, 1, 0]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[170, 255, 0]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -856,8 +856,8 @@
       <PolygonComponent name="instructioncircle_4">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 255, 0]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0, 1, 0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -881,8 +881,8 @@
       <PolygonComponent name="instructioncircle_5">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 255, 169]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0, 1, 0.66]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -906,8 +906,8 @@
       <PolygonComponent name="insturctioncircle_6">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 169, 255]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0, 0.66, 1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -931,8 +931,8 @@
       <PolygonComponent name="instructioncircle_7">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 0, 255]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0, 0, 1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -956,8 +956,8 @@
       <PolygonComponent name="instructioncircle_8">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[170, 0, 255]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0.67, 0, 1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -981,8 +981,8 @@
       <PolygonComponent name="instructioncircle_9">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[255, 0, 170]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1, 0, 0.67]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2078,15 +2078,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2103,15 +2103,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response2disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2128,15 +2128,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2153,15 +2153,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response4disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2178,15 +2178,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2203,15 +2203,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response6disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2228,15 +2228,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2253,15 +2253,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response8disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2293,7 +2293,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="set every frame" val="$Circle2_col" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2305,7 +2305,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.1)" valType="code"/>
+        <Param name="size" updates="constant" val="(100, 100)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2317,8 +2317,8 @@
       <CodeComponent name="code_4">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="trialnumber = (trialnumber + 1);&amp;#10;if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [255, 0, 0];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [255, 170, 0];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [170, 255, 0];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [0, 255, 0];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [0, 255, 169];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [255, 0, 0];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [0, 0, 255];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [170, 0, 255];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [255, 0, 170];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;trialnumber =  trialnumber + 1;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (255, 0, 0);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (255, 170, 0);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (170, 255, 0);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (0, 255, 0);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (0, 255, 169);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (255, 0, 0);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (0, 0, 255);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (170, 0, 255);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (255, 0, 170);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialnumber = (trialnumber + 1);&amp;#10;if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;trialnumber =  trialnumber + 1;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2337,11 +2337,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_23" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2359,7 +2359,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="set every frame" val="$Circle1_col" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2408,8 +2408,8 @@
       <CodeComponent name="code_3">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="x = 100;&amp;#10;y = 100;&amp;#10;radius_F = 1;&amp;#10;radius_P = 1;&amp;#10;angle_1 = 0;&amp;#10;angle_2 = 0;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;if ((Colour_1 === 1)) {&amp;#10;    Circle1_col = [255, 0, 0];&amp;#10;} else {&amp;#10;    if ((Colour_1 === 2)) {&amp;#10;        Circle1_col = [255, 170, 0];&amp;#10;    } else {&amp;#10;        if ((Colour_1 === 3)) {&amp;#10;            Circle1_col = [170, 255, 0];&amp;#10;        } else {&amp;#10;            if ((Colour_1 === 4)) {&amp;#10;                Circle1_col = [0, 255, 0];&amp;#10;            } else {&amp;#10;                if ((Colour_1 === 5)) {&amp;#10;                    Circle1_col = [0, 255, 169];&amp;#10;                } else {&amp;#10;                    if ((Colour_1 === 6)) {&amp;#10;                        Circle1_col = [255, 0, 0];&amp;#10;                    } else {&amp;#10;                        if ((Colour_1 === 7)) {&amp;#10;                            Circle1_col = [0, 0, 255];&amp;#10;                        } else {&amp;#10;                            if ((Colour_1 === 8)) {&amp;#10;                                Circle1_col = [170, 0, 255];&amp;#10;                            } else {&amp;#10;                                if ((Colour_1 === 9)) {&amp;#10;                                    Circle1_col = [255, 0, 170];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 100&amp;#10;y = 100&amp;#10;&amp;#10;radius_F = 1 &amp;#10;radius_P = 1&amp;#10;&amp;#10;angle_1 = 0&amp;#10;angle_2 = 0&amp;#10;&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_1 == 1:&amp;#10;    Circle1_col = (255, 0, 0);&amp;#10;elif Colour_1 == 2:&amp;#10;    Circle1_col = (255, 170, 0);&amp;#10;elif Colour_1 == 3:&amp;#10;    Circle1_col = (170, 255, 0);&amp;#10;elif Colour_1 == 4:&amp;#10;    Circle1_col = (0, 255, 0);&amp;#10;elif Colour_1 == 5:&amp;#10;    Circle1_col = (0, 255, 169);&amp;#10;elif Colour_1 == 6:&amp;#10;    Circle1_col = (255, 0, 0);&amp;#10;elif Colour_1 == 7:&amp;#10;    Circle1_col = (0, 0, 255);&amp;#10;elif Colour_1 == 8:&amp;#10;    Circle1_col = (170, 0, 255);&amp;#10;elif Colour_1 == 9:&amp;#10;    Circle1_col = (255, 0, 170);" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="x = 100;&amp;#10;y = 100;&amp;#10;radius_F = 1;&amp;#10;radius_P = 1;&amp;#10;angle_1 = 0;&amp;#10;angle_2 = 0;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;if ((Colour_1 === 1)) {&amp;#10;    Circle1_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_1 === 2)) {&amp;#10;        Circle1_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_1 === 3)) {&amp;#10;            Circle1_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_1 === 4)) {&amp;#10;                Circle1_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_1 === 5)) {&amp;#10;                    Circle1_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_1 === 6)) {&amp;#10;                        Circle1_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_1 === 7)) {&amp;#10;                            Circle1_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_1 === 8)) {&amp;#10;                                Circle1_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_1 === 9)) {&amp;#10;                                    Circle1_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 100&amp;#10;y = 100&amp;#10;&amp;#10;radius_F = 1 &amp;#10;radius_P = 1&amp;#10;&amp;#10;angle_1 = 0&amp;#10;angle_2 = 0&amp;#10;&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_1 == 1:&amp;#10;    Circle1_col = (1, -1, -1);&amp;#10;elif Colour_1 == 2:&amp;#10;    Circle1_col = (1, 0.33, -1);&amp;#10;elif Colour_1 == 3:&amp;#10;    Circle1_col = (0.32, 1, -1);&amp;#10;elif Colour_1 == 4:&amp;#10;    Circle1_col = (-1, 1, -1);&amp;#10;elif Colour_1 == 5:&amp;#10;    Circle1_col = (-1, 1, 0.33);&amp;#10;elif Colour_1 == 6:&amp;#10;    Circle1_col = (-1, 0.32, 1);&amp;#10;elif Colour_1 == 7:&amp;#10;    Circle1_col = (-1, -1, 1);&amp;#10;elif Colour_1 == 8:&amp;#10;    Circle1_col = (0.33, -1, 1);&amp;#10;elif Colour_1 == 9:&amp;#10;    Circle1_col = (1, -1, 0.33)" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2429,15 +2429,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2454,15 +2454,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response2disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2479,15 +2479,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2504,15 +2504,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response4disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2529,15 +2529,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2554,15 +2554,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response6disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2579,15 +2579,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2604,15 +2604,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response8disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2656,7 +2656,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.08)" valType="code"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2688,11 +2688,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_25" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.27)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -270)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2702,7 +2702,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
       <TextComponent name="text_24">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -2712,11 +2712,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_24" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2743,9 +2743,9 @@
         <Param name="name" updates="None" val="response1disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2768,9 +2768,9 @@
         <Param name="name" updates="None" val="response2disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2793,9 +2793,9 @@
         <Param name="name" updates="None" val="response3disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2818,9 +2818,9 @@
         <Param name="name" updates="None" val="response4disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2843,9 +2843,9 @@
         <Param name="name" updates="None" val="response5disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2868,9 +2868,9 @@
         <Param name="name" updates="None" val="response6disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2893,9 +2893,9 @@
         <Param name="name" updates="None" val="response7disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2918,9 +2918,9 @@
         <Param name="name" updates="None" val="response8disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2931,7 +2931,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <MouseComponent name="mouse_3">
-        <Param name="clickable" updates="constant" val="response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk," valType="code"/>
+        <Param name="clickable" updates="constant" val="response1disk_3,response2disk_3,response3disk_3,response4disk_3,response5disk_3,response6disk_3,response7disk_3,response8disk_3," valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
@@ -2949,10 +2949,10 @@
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
       <CodeComponent name="code_6">
-        <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorder = []&amp;#10;for i in range(0,10):&amp;#10;    n = rnd.randint(1,162)&amp;#10;    catchtrialorder.append(n)&amp;#10;print(catchtrialorder)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorder = [];&amp;#10;for (var i = 0, _pj_a = 10; (i &lt; _pj_a); i += 1) {&amp;#10;    n = rnd.randint(1, 162);&amp;#10;    catchtrialorder.append(n);&amp;#10;}&amp;#10;console.log(catchtrialorder);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="catchnumber = rnd.randint(0, 7);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumber = rnd.randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumber}'" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorder = [3,4,6,7,8,10,44,99,76,56]&amp;#10;#for i in range(0,10):&amp;#10;#    n = [1,4,7,10,99]&amp;#10;#    catchtrialorder.append(n)&amp;#10;#print(catchtrialorder)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorder = [3, 4, 6, 7, 8, 10, 44, 99, 76, 56];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="catchnumber = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumber = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumber}'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
@@ -2971,11 +2971,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_26" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -3003,7 +3003,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.08)" valType="code"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3015,8 +3015,8 @@
     </Routine>
     <Routine name="startup">
       <CodeComponent name="code_7">
-        <Param name="Begin Experiment" updates="constant" val="import pandas as pd&amp;#10;from psychopy import tools&amp;#10;import random as rnd&amp;#10;rnd.seed()&amp;#10;&amp;#10;# Set path names for images&amp;#10;arrow1 = 'images/arrow1.png'&amp;#10;arrow2 = 'images/arrow2.png'&amp;#10;half_circle = 'images/circle_7.png'&amp;#10;half_circle_con = 'images/confidence_12.png'&amp;#10;trackpad1 = 'images/trackpad_button.png'&amp;#10;mouse_button1 = 'images/mouse_button.png'&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as pd from 'pandas';&amp;#10;import {tools} from 'psychopy';&amp;#10;import * as rnd from 'random';&amp;#10;var arrow1, arrow2, half_circle, half_circle_con, mouse_button1, trackpad1;&amp;#10;rnd.seed();&amp;#10;arrow1 = &quot;images/arrow1.png&quot;;&amp;#10;arrow2 = &quot;images/arrow2.png&quot;;&amp;#10;half_circle = &quot;images/circle_7.png&quot;;&amp;#10;half_circle_con = &quot;images/confidence_12.png&quot;;&amp;#10;trackpad1 = &quot;images/trackpad_button.png&quot;;&amp;#10;mouse_button1 = &quot;images/mouse_button.png&quot;;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import pandas as pd&amp;#10;from psychopy import tools&amp;#10;import random as rnd&amp;#10;rnd.seed()&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -3028,6 +3028,21 @@
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_7" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="js_code1">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// Code to convert python to javascript that is not automatically converted&amp;#10;&amp;#10;thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager&amp;#10;shuffle = function (a) {&amp;#10;    return util.shuffle(a);&amp;#10;}&amp;#10;random = function (a) {&amp;#10;    return Math.random();&amp;#10;}&amp;#10;range = function(start, end) {&amp;#10;    var ans = [];&amp;#10;    for (let i = start; i &lt;= end; i++) {&amp;#10;        ans.push(i);&amp;#10;    }&amp;#10;    return ans;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;randint = function(min, maxplusone) {&amp;#10;  return Math.floor(Math.random() * (maxplusone - min) ) + min;&amp;#10;}&amp;#10;&amp;#10;Array.prototype.append = [].push&amp;#10;&amp;#10;pi=Math.PI;&amp;#10;sin = Math.sin;&amp;#10;cos = Math.cos;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="js_code1" valType="code"/>
       </CodeComponent>
     </Routine>
     <Routine name="summary_1">
@@ -3342,8 +3357,8 @@
       <PolygonComponent name="Circle">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="set every frame" val="$Circle1_col" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="set every repeat" val="$Circle1_col" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -3392,8 +3407,8 @@
       <CodeComponent name="code_9">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="x = 100;&amp;#10;y = 100;&amp;#10;radius_F = 1;&amp;#10;radius_P = 1;&amp;#10;angle_1 = 0;&amp;#10;angle_2 = 0;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;Colour_1 = rnd.randint(1, 9);&amp;#10;if ((Colour_1 === 1)) {&amp;#10;    Circle1_col = [255, 0, 0];&amp;#10;} else {&amp;#10;    if ((Colour_1 === 2)) {&amp;#10;        Circle1_col = [255, 170, 0];&amp;#10;    } else {&amp;#10;        if ((Colour_1 === 3)) {&amp;#10;            Circle1_col = [170, 255, 0];&amp;#10;        } else {&amp;#10;            if ((Colour_1 === 4)) {&amp;#10;                Circle1_col = [0, 255, 0];&amp;#10;            } else {&amp;#10;                if ((Colour_1 === 5)) {&amp;#10;                    Circle1_col = [0, 255, 169];&amp;#10;                } else {&amp;#10;                    if ((Colour_1 === 6)) {&amp;#10;                        Circle1_col = [255, 0, 0];&amp;#10;                    } else {&amp;#10;                        if ((Colour_1 === 7)) {&amp;#10;                            Circle1_col = [0, 0, 255];&amp;#10;                        } else {&amp;#10;                            if ((Colour_1 === 8)) {&amp;#10;                                Circle1_col = [170, 0, 255];&amp;#10;                            } else {&amp;#10;                                if ((Colour_1 === 9)) {&amp;#10;                                    Circle1_col = [255, 0, 170];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 100&amp;#10;y = 100&amp;#10;&amp;#10;radius_F = 1 &amp;#10;radius_P = 1&amp;#10;&amp;#10;angle_1 = 0&amp;#10;angle_2 = 0&amp;#10;&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_1 = rnd.randint(1,9);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_1 == 1:&amp;#10;    Circle1_col = (255, 0, 0);&amp;#10;elif Colour_1 == 2:&amp;#10;    Circle1_col = (255, 170, 0);&amp;#10;elif Colour_1 == 3:&amp;#10;    Circle1_col = (170, 255, 0);&amp;#10;elif Colour_1 == 4:&amp;#10;    Circle1_col = (0, 255, 0);&amp;#10;elif Colour_1 == 5:&amp;#10;    Circle1_col = (0, 255, 169);&amp;#10;elif Colour_1 == 6:&amp;#10;    Circle1_col = (255, 0, 0);&amp;#10;elif Colour_1 == 7:&amp;#10;    Circle1_col = (0, 0, 255);&amp;#10;elif Colour_1 == 8:&amp;#10;    Circle1_col = (170, 0, 255);&amp;#10;elif Colour_1 == 9:&amp;#10;    Circle1_col = (255, 0, 170);" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="x = 100;&amp;#10;y = 100;&amp;#10;radius_F = 1;&amp;#10;radius_P = 1;&amp;#10;angle_1 = 0;&amp;#10;angle_2 = 0;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;Colour_1 = (Math.floor((Math.random() * ((10 - 1) + 1))) + 1);&amp;#10;if ((Colour_1 === 1)) {&amp;#10;    Circle1_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_1 === 2)) {&amp;#10;        Circle1_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_1 === 3)) {&amp;#10;            Circle1_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_1 === 4)) {&amp;#10;                Circle1_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_1 === 5)) {&amp;#10;                    Circle1_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_1 === 6)) {&amp;#10;                        Circle1_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_1 === 7)) {&amp;#10;                            Circle1_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_1 === 8)) {&amp;#10;                                Circle1_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_1 === 9)) {&amp;#10;                                    Circle1_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 100&amp;#10;y = 100&amp;#10;&amp;#10;radius_F = 1 &amp;#10;radius_P = 1&amp;#10;&amp;#10;angle_1 = 0&amp;#10;angle_2 = 0&amp;#10;&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_1 = randint(1,10);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_1 == 1:&amp;#10;    Circle1_col = (1, -1, -1);&amp;#10;elif Colour_1 == 2:&amp;#10;    Circle1_col = (1, 0.33, -1);&amp;#10;elif Colour_1 == 3:&amp;#10;    Circle1_col = (0.32, 1, -1);&amp;#10;elif Colour_1 == 4:&amp;#10;    Circle1_col = (-1, 1, -1);&amp;#10;elif Colour_1 == 5:&amp;#10;    Circle1_col = (-1, 1, 0.33);&amp;#10;elif Colour_1 == 6:&amp;#10;    Circle1_col = (-1, 0.32, 1);&amp;#10;elif Colour_1 == 7:&amp;#10;    Circle1_col = (-1, -1, 1);&amp;#10;elif Colour_1 == 8:&amp;#10;    Circle1_col = (0.33, -1, 1);&amp;#10;elif Colour_1 == 9:&amp;#10;    Circle1_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -3419,9 +3434,9 @@
         <Param name="name" updates="None" val="response1disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3444,9 +3459,9 @@
         <Param name="name" updates="None" val="response2disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3469,9 +3484,9 @@
         <Param name="name" updates="None" val="response3disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3494,9 +3509,9 @@
         <Param name="name" updates="None" val="response4disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3519,9 +3534,9 @@
         <Param name="name" updates="None" val="response5disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3544,9 +3559,9 @@
         <Param name="name" updates="None" val="response6disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3569,9 +3584,9 @@
         <Param name="name" updates="None" val="response7disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3594,9 +3609,9 @@
         <Param name="name" updates="None" val="response8disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3607,7 +3622,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <MouseComponent name="mouse_5">
-        <Param name="clickable" updates="constant" val="response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk," valType="code"/>
+        <Param name="clickable" updates="constant" val="response1disk_5,response2disk_5,response3disk_5,response4disk_5,response5disk_5,response6disk_5,response7disk_5,response8disk_5," valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
@@ -3628,7 +3643,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="set every frame" val="$Circle2_col" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
@@ -3640,7 +3655,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.1)" valType="code"/>
+        <Param name="size" updates="constant" val="(100,100)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3652,8 +3667,8 @@
       <CodeComponent name="code_10">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="pracnumber = (pracnumber + 1);&amp;#10;Colour_2 = rnd.randint(1, 9);&amp;#10;if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [255, 0, 0];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [255, 170, 0];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [170, 255, 0];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [0, 255, 0];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [0, 255, 169];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [255, 0, 0];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [0, 0, 255];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [170, 0, 255];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [255, 0, 170];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;pracnumber =  pracnumber + 1;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_2 = rnd.randint(1,9);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (255, 0, 0);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (255, 170, 0);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (170, 255, 0);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (0, 255, 0);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (0, 255, 169);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (255, 0, 0);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (0, 0, 255);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (170, 0, 255);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (255, 0, 170);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="pracnumber = (pracnumber + 1);&amp;#10;Colour_2 = (Math.floor((Math.random() * ((10 - 1) + 1))) + 1);&amp;#10;if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;pracnumber =  pracnumber + 1;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_2 = randint(1,10);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -3672,11 +3687,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_29" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -3697,15 +3712,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3722,15 +3737,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response2disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3747,15 +3762,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3772,15 +3787,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response4disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3797,15 +3812,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3822,15 +3837,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response6disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3847,15 +3862,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3872,15 +3887,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response8disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3891,7 +3906,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <MouseComponent name="mouse_7">
-        <Param name="clickable" updates="constant" val="response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk," valType="code"/>
+        <Param name="clickable" updates="constant" val="response1disk_7,response2disk_7,response3disk_7,response4disk_7,response5disk_7,response6disk_7,response7disk_7,response8disk_7," valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
@@ -3909,10 +3924,10 @@
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
       <CodeComponent name="code_12">
-        <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorderprac = []&amp;#10;for i in range(0,2):&amp;#10;    n = rnd.randint(1,7)&amp;#10;    catchtrialorderprac.append(n)&amp;#10;print(catchtrialorderprac)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorderprac = [];&amp;#10;for (var i = 0, _pj_a = 2; (i &lt; _pj_a); i += 1) {&amp;#10;    n = rnd.randint(1, 7);&amp;#10;    catchtrialorderprac.append(n);&amp;#10;}&amp;#10;console.log(catchtrialorderprac);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="catchnumberprac = rnd.randint(0, 7);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumberprac = rnd.randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorderprac = [1,2]&amp;#10;#for i in range(0,2):&amp;#10;#    n = [1,2]&amp;#10;#    catchtrialorderprac.append(n)&amp;#10;#print(catchtrialorderprac)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorderprac = [1, 2];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumberprac = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
@@ -3931,11 +3946,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_32" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -3963,7 +3978,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.08)" valType="code"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3982,7 +3997,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_33" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -4022,15 +4037,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150,150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4047,15 +4062,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response2disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response2disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4072,15 +4087,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4097,15 +4112,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response4disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response4disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150,150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4122,15 +4137,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4147,15 +4162,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response6disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response6disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4172,15 +4187,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4197,15 +4212,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="/Users/bethfisher/Documents/Simcolourproject_online/response8disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response8disk_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4216,12 +4231,12 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <MouseComponent name="mouse_8">
-        <Param name="clickable" updates="constant" val="rectangle" valType="code"/>
+        <Param name="clickable" updates="constant" val="rectangle_6" valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
         <Param name="name" updates="None" val="mouse_8" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
         <Param name="saveMouseState" updates="None" val="final" valType="str"/>
         <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
@@ -4249,7 +4264,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.08)" valType="code"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4281,11 +4296,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_34" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.27)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -270)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4295,7 +4310,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
       <TextComponent name="text_35">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -4305,11 +4320,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_35" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4336,9 +4351,9 @@
         <Param name="name" updates="None" val="response1disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4361,9 +4376,9 @@
         <Param name="name" updates="None" val="response2disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4386,9 +4401,9 @@
         <Param name="name" updates="None" val="response3disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4411,9 +4426,9 @@
         <Param name="name" updates="None" val="response4disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4436,9 +4451,9 @@
         <Param name="name" updates="None" val="response5disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4461,9 +4476,9 @@
         <Param name="name" updates="None" val="response6disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,-0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4486,9 +4501,9 @@
         <Param name="name" updates="None" val="response7disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4511,9 +4526,9 @@
         <Param name="name" updates="None" val="response8disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.09,0.09)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.15, 0.15)" valType="code"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4524,12 +4539,12 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <MouseComponent name="mouse_6">
-        <Param name="clickable" updates="constant" val="rectangle" valType="code"/>
+        <Param name="clickable" updates="constant" val="rectangle_4" valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
         <Param name="name" updates="None" val="mouse_6" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
         <Param name="saveMouseState" updates="None" val="final" valType="str"/>
         <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
@@ -4557,7 +4572,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.08)" valType="code"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4589,11 +4604,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_30" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.27)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -270)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4603,7 +4618,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
       <TextComponent name="text_31">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -4613,11 +4628,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_31" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4639,11 +4654,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_36" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4688,17 +4703,17 @@
         <Param name="name" updates="None" val="code_JS" valType="code"/>
       </CodeComponent>
       <CodeComponent name="code_16">
-        <Param name="Begin Experiment" updates="constant" val="oldt=0&amp;#10;x_size=8.560&amp;#10;y_size=5.398&amp;#10;screen_height=0&amp;#10;&amp;#10;if win.units=='norm':&amp;#10;    x_scale=.05&amp;#10;    y_scale=.1&amp;#10;    dbase = .0001&amp;#10;    unittext=' norm units'&amp;#10;    vsize=2&amp;#10;elif win.units=='pix':&amp;#10;    x_scale=60&amp;#10;    y_scale=40&amp;#10;    dbase = .1&amp;#10;    unittext=' pixels'&amp;#10;    vsize=win.size[1]&amp;#10;else:&amp;#10;    x_scale=.05&amp;#10;    y_scale=.05&amp;#10;    dbase = .0001&amp;#10;    unittext=' height units'&amp;#10;    vsize=1" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="oldt = 0;&amp;#10;x_size = 8.56;&amp;#10;y_size = 5.398;&amp;#10;screen_height = 0;&amp;#10;if ((win.units === &quot;norm&quot;)) {&amp;#10;    x_scale = 0.05;&amp;#10;    y_scale = 0.1;&amp;#10;    dbase = 0.0001;&amp;#10;    unittext = &quot; norm units&quot;;&amp;#10;    vsize = 2;&amp;#10;} else {&amp;#10;    if ((win.units === &quot;pix&quot;)) {&amp;#10;        x_scale = 60;&amp;#10;        y_scale = 40;&amp;#10;        dbase = 0.1;&amp;#10;        unittext = &quot; pixels&quot;;&amp;#10;        vsize = win.size[1];&amp;#10;    } else {&amp;#10;        x_scale = 0.05;&amp;#10;        y_scale = 0.05;&amp;#10;        dbase = 0.0001;&amp;#10;        unittext = &quot; height units&quot;;&amp;#10;        vsize = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="oldt=0&amp;#10;x_size=8.560&amp;#10;y_size=5.398&amp;#10;screen_height=0&amp;#10;&amp;#10;if win.units=='norm':&amp;#10;    x_scale=.05&amp;#10;    y_scale=.1&amp;#10;    dbase = .0001&amp;#10;    unittext=' norm units'&amp;#10;    vsize=2&amp;#10;elif win.units=='pix':&amp;#10;    x_scale=60&amp;#10;    dbase = .1&amp;#10;    unittext=' pixels'&amp;#10;    vsize=win.size[1]&amp;#10;else:&amp;#10;    x_scale=.05&amp;#10;    y_scale=.05&amp;#10;    dbase = .0001&amp;#10;    unittext=' height units'&amp;#10;    vsize=1" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="oldt = 0;&amp;#10;x_size = 8.56;&amp;#10;y_size = 5.398;&amp;#10;screen_height = 0;&amp;#10;if ((win.units === &quot;norm&quot;)) {&amp;#10;    x_scale = 0.05;&amp;#10;    y_scale = 0.1;&amp;#10;    dbase = 0.0001;&amp;#10;    unittext = &quot; norm units&quot;;&amp;#10;    vsize = 2;&amp;#10;} else {&amp;#10;    if ((win.units === &quot;pix&quot;)) {&amp;#10;        x_scale = 60;&amp;#10;        dbase = 0.1;&amp;#10;        unittext = &quot; pixels&quot;;&amp;#10;        vsize = win.size[1];&amp;#10;    } else {&amp;#10;        x_scale = 0.05;&amp;#10;        y_scale = 0.05;&amp;#10;        dbase = 0.0001;&amp;#10;        unittext = &quot; height units&quot;;&amp;#10;        vsize = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="keys=event.getKeys()&amp;#10;&amp;#10;if len(keys):&amp;#10;    if t-oldt&lt;.5:&amp;#10;        dscale=5*dbase&amp;#10;        oldt=t&amp;#10;    else:&amp;#10;        dscale=dbase&amp;#10;        oldt=t&amp;#10;    if 'space' in keys:&amp;#10;        continueRoutine=False&amp;#10;    elif 'left' in keys:&amp;#10;        x_scale=round((x_scale-dscale)*10000)/10000&amp;#10;    elif 'right' in keys:&amp;#10;        x_scale=round((x_scale+dscale)*10000)/10000&amp;#10;    screen_height=round(vsize*10/y_scale)/10&amp;#10;    ccimage.size=[x_size*x_scale, x_size*x_scale*0.62]&amp;#10;    " valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if (((t - oldt) &lt; 0.5)) {&amp;#10;        dscale = (5 * dbase);&amp;#10;        oldt = t;&amp;#10;    } else {&amp;#10;        dscale = dbase;&amp;#10;        oldt = t;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;            x_scale = (round(((x_scale - dscale) * 10000)) / 10000);&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;                x_scale = (round(((x_scale + dscale) * 10000)) / 10000);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    screen_height = (round(((vsize * 10) / y_scale)) / 10);&amp;#10;    ccimage.size = [(x_size * x_scale), ((x_size * x_scale) * 0.62)];&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="keys=event.getKeys()&amp;#10;&amp;#10;if len(keys):&amp;#10;    if t-oldt&lt;.5:&amp;#10;        dscale=5*dbase&amp;#10;        oldt=t&amp;#10;    else:&amp;#10;        dscale=dbase&amp;#10;        oldt=t&amp;#10;    if 'space' in keys:&amp;#10;        continueRoutine=False&amp;#10;    elif 'left' in keys:&amp;#10;        x_scale=round((x_scale-dscale)*10000)/10000&amp;#10;    elif 'right' in keys:&amp;#10;        x_scale=round((x_scale+dscale)*10000)/10000&amp;#10;    ccimage.size=[x_size*x_scale, x_size*x_scale*0.62]&amp;#10;&amp;#10;&amp;#10;ratio_pxpermm = ((x_scale*x_size)/85.6)&amp;#10;print(ratio_pxpermm)" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if (((t - oldt) &lt; 0.5)) {&amp;#10;        dscale = (5 * dbase);&amp;#10;        oldt = t;&amp;#10;    } else {&amp;#10;        dscale = dbase;&amp;#10;        oldt = t;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;            x_scale = (round(((x_scale - dscale) * 10000)) / 10000);&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;                x_scale = (round(((x_scale + dscale) * 10000)) / 10000);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    ccimage.size = [(x_size * x_scale), ((x_size * x_scale) * 0.62)];&amp;#10;}&amp;#10;ratio_pxpermm = ((x_scale * x_size) / 85.6);&amp;#10;console.log(ratio_pxpermm);&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;X Scale&quot;, x_scale);&amp;#10;thisExp.addData(&quot;Y Scale&quot;, y_scale);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData('X Scale',x_scale)&amp;#10;thisExp.addData('Y Scale',y_scale)&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="ratio_pxpermm = ((x_scale * x_size) / 85.6);&amp;#10;console.log(ratio_pxpermm);&amp;#10;thisExp.addData(&quot;X Scale&quot;, x_scale);&amp;#10;thisExp.addData(&quot;ratio_pxpermm&quot;, ratio_pxpermm);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="#Calculate ratio of pixels to mm&amp;#10;&amp;#10;ratio_pxpermm = ((x_scale*x_size)/85.6)&amp;#10;print(ratio_pxpermm)&amp;#10;thisExp.addData('X Scale',x_scale)&amp;#10;thisExp.addData('ratio_pxpermm',ratio_pxpermm)&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_16" valType="code"/>
       </CodeComponent>
@@ -4725,14 +4740,109 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
+      <TextComponent name="text_37">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="10" valType="code"/>
+        <Param name="name" updates="None" val="text_37" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="First, we need to determine the size of your screen.&amp;#10;Take a credit card (or a drivers license, library card, any equivalent card),&amp;#10;press it to the screen and adjust the image on your screen to be the same size as the card&amp;#10;&amp;#10;To increase the image width: press '&gt;' on your keyboard&amp;#10;To decrease the image width: press '&lt;' on your keyboard&amp;#10;&amp;#10;When you are done, press &lt;ENTER&gt;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="ball_calibration">
+      <PolygonComponent name="black_square2">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="black" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="black" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1.5" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="black_square2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(500,0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="set every repeat" val="(7.5*ratio_pxpermm, 7.5*ratio_pxpermm)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <KeyboardComponent name="key_resp_18">
+        <Param name="allowedKeys" updates="constant" val="'space','space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_18" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <PolygonComponent name="white_ball">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="white" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="1000" valType="int"/>
+        <Param name="name" updates="None" val="white_ball" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(450, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="set every repeat" val="(7.5*ratio_pxpermm, 7.5*ratio_pxpermm)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
     </Routine>
   </Routines>
   <Flow>
     <Routine name="startup"/>
     <Routine name="screen_scale"/>
-    <LoopInitiator loopType="TrialHandler" name="trials_2">
+    <Routine name="ball_calibration"/>
+    <LoopInitiator loopType="TrialHandler" name="duringprac">
       <Param name="Selected rows" updates="None" val="0:7" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="practrials.xlsx" valType="str"/>
@@ -4740,7 +4850,7 @@
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="trials_2" valType="code"/>
+      <Param name="name" updates="None" val="duringprac" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Stim1_display_prac"/>
@@ -4749,8 +4859,8 @@
     <Routine name="special_trial_prac"/>
     <Routine name="catch_prac"/>
     <Routine name="summary2_prac"/>
-    <LoopTerminator name="trials_2"/>
-    <LoopInitiator loopType="TrialHandler" name="trials">
+    <LoopTerminator name="duringprac"/>
+    <LoopInitiator loopType="TrialHandler" name="during">
       <Param name="Selected rows" updates="None" val="0:10" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Colour_1', 6), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 6), ('Ecc', 'PF')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="Stimconditions.xlsx" valType="str"/>
@@ -4758,7 +4868,7 @@
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="2" valType="code"/>
-      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="name" updates="None" val="during" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Stim1_display"/>
@@ -4766,7 +4876,7 @@
     <Routine name="special_trial"/>
     <Routine name="catch_1"/>
     <Routine name="response_2"/>
-    <LoopTerminator name="trials"/>
+    <LoopTerminator name="during"/>
     <Routine name="welcome_instr"/>
     <Routine name="instr_1"/>
     <Routine name="instr_3"/>
