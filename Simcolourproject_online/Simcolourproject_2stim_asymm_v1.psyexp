@@ -67,7 +67,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -90,7 +90,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
@@ -99,7 +99,6 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
-    <Routine name="consent"/>
     <Routine name="instr_1">
       <TextComponent name="text_1">
         <Param name="color" updates="constant" val="yellow" valType="str"/>
@@ -141,7 +140,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
@@ -184,7 +183,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -2207,10 +2206,10 @@
       </MouseComponent>
       <CodeComponent name="code_6">
         <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorder = [3,4,6,7,8,10,44,99,76,56]&amp;#10;#for i in range(0,10):&amp;#10;#    n = [1,4,7,10,99]&amp;#10;#    catchtrialorder.append(n)&amp;#10;#print(catchtrialorder)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorder = [3, 4, 6, 7, 8, 10, 44, 99, 76, 56];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// Set up catch trials&amp;#10;&amp;#10;catchtrialorder = Array.from({length: 20}, () =&gt; Math.floor(Math.random() * 162));&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="catchnumber = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumber = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumber}'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -2899,10 +2898,10 @@
       <PolygonComponent name="Circle_3">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="set every frame" val="$Circle2_col" valType="str"/>
+        <Param name="fillColor" updates="set every repeat" val="$Circle2_col" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="set every frame" val="$Circle2_col" valType="str"/>
+        <Param name="lineColor" updates="set every repeat" val="$Circle2_col" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -3182,10 +3181,10 @@
       </MouseComponent>
       <CodeComponent name="code_12">
         <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorderprac = [1,2]&amp;#10;#for i in range(0,2):&amp;#10;#    n = [1,2]&amp;#10;#    catchtrialorderprac.append(n)&amp;#10;#print(catchtrialorderprac)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorderprac = [1, 2];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// Set up catch trials&amp;#10;&amp;#10;catchtrialorderprac = Array.from({length: 2}, () =&gt; Math.floor(Math.random() * 7));&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumberprac = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -3960,12 +3959,12 @@
         <Param name="name" updates="None" val="code_JS" valType="code"/>
       </CodeComponent>
       <CodeComponent name="code_16">
-        <Param name="Begin Experiment" updates="constant" val="oldt=0&amp;#10;x_size=8.560&amp;#10;y_size=5.398&amp;#10;screen_height=0&amp;#10;&amp;#10;if win.units=='norm':&amp;#10;    x_scale=.05&amp;#10;    y_scale=.1&amp;#10;    dbase = .0001&amp;#10;    unittext=' norm units'&amp;#10;    vsize=2&amp;#10;elif win.units=='pix':&amp;#10;    x_scale=60&amp;#10;    dbase = .1&amp;#10;    unittext=' pixels'&amp;#10;    vsize=win.size[1]&amp;#10;else:&amp;#10;    x_scale=.05&amp;#10;    y_scale=.05&amp;#10;    dbase = .0001&amp;#10;    unittext=' height units'&amp;#10;    vsize=1" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="oldt = 0;&amp;#10;x_size = 8.56;&amp;#10;y_size = 5.398;&amp;#10;screen_height = 0;&amp;#10;if ((win.units === &quot;norm&quot;)) {&amp;#10;    x_scale = 0.05;&amp;#10;    y_scale = 0.1;&amp;#10;    dbase = 0.0001;&amp;#10;    unittext = &quot; norm units&quot;;&amp;#10;    vsize = 2;&amp;#10;} else {&amp;#10;    if ((win.units === &quot;pix&quot;)) {&amp;#10;        x_scale = 60;&amp;#10;        dbase = 0.1;&amp;#10;        unittext = &quot; pixels&quot;;&amp;#10;        vsize = win.size[1];&amp;#10;    } else {&amp;#10;        x_scale = 0.05;&amp;#10;        y_scale = 0.05;&amp;#10;        dbase = 0.0001;&amp;#10;        unittext = &quot; height units&quot;;&amp;#10;        vsize = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="oldt=0&amp;#10;x_size=8.560&amp;#10;y_size=5.398&amp;#10;screen_height=0&amp;#10;&amp;#10;if win.units=='norm':&amp;#10;    x_scale=.05&amp;#10;    y_scale=.1&amp;#10;    dbase = .0001&amp;#10;    unittext=' norm units'&amp;#10;    vsize=2&amp;#10;elif win.units=='pix':&amp;#10;    x_scale=60&amp;#10;    y_scale=40&amp;#10;    dbase = .1&amp;#10;    unittext=' pixels'&amp;#10;    vsize=win.size[1]&amp;#10;else:&amp;#10;    x_scale=.05&amp;#10;    y_scale=.05&amp;#10;    dbase = .0001&amp;#10;    unittext=' height units'&amp;#10;    vsize=1" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="oldt = 0;&amp;#10;x_size = 8.56;&amp;#10;y_size = 5.398;&amp;#10;screen_height = 0;&amp;#10;if ((win.units === &quot;norm&quot;)) {&amp;#10;    x_scale = 0.05;&amp;#10;    y_scale = 0.1;&amp;#10;    dbase = 0.0001;&amp;#10;    unittext = &quot; norm units&quot;;&amp;#10;    vsize = 2;&amp;#10;} else {&amp;#10;    if ((win.units === &quot;pix&quot;)) {&amp;#10;        x_scale = 60;&amp;#10;        y_scale = 40;&amp;#10;        dbase = 0.1;&amp;#10;        unittext = &quot; pixels&quot;;&amp;#10;        vsize = win.size[1];&amp;#10;    } else {&amp;#10;        x_scale = 0.05;&amp;#10;        y_scale = 0.05;&amp;#10;        dbase = 0.0001;&amp;#10;        unittext = &quot; height units&quot;;&amp;#10;        vsize = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="keys=event.getKeys()&amp;#10;&amp;#10;if len(keys):&amp;#10;    if t-oldt&lt;.5:&amp;#10;        dscale=5*dbase&amp;#10;        oldt=t&amp;#10;    else:&amp;#10;        dscale=dbase&amp;#10;        oldt=t&amp;#10;    if 'space' in keys:&amp;#10;        continueRoutine=False&amp;#10;    elif 'left' in keys:&amp;#10;        x_scale=round((x_scale-dscale)*10000)/10000&amp;#10;    elif 'right' in keys:&amp;#10;        x_scale=round((x_scale+dscale)*10000)/10000&amp;#10;    ccimage.size=[x_size*x_scale, x_size*x_scale*0.62]&amp;#10;&amp;#10;&amp;#10;ratio_pxpermm = ((x_scale*x_size)/85.6)&amp;#10;print(ratio_pxpermm)" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="keys=event.getKeys()&amp;#10;&amp;#10;if len(keys):&amp;#10;    if t-oldt&lt;.5:&amp;#10;        dscale=5*dbase&amp;#10;        oldt=t&amp;#10;    else:&amp;#10;        dscale=dbase&amp;#10;        oldt=t&amp;#10;    if 'space' in keys:&amp;#10;        continueRoutine=False&amp;#10;    elif 'left' in keys:&amp;#10;        x_scale=round((x_scale-dscale)*10000)/10000&amp;#10;    elif 'right' in keys:&amp;#10;        x_scale=round((x_scale+dscale)*10000)/10000&amp;#10;    ccimage.size=[x_size*x_scale, x_size*x_scale*0.62]&amp;#10;&amp;#10;&amp;#10;ratio_pxpermm = ((x_scale*x_size)/85.6)&amp;#10;print(ratio_pxpermm)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if (((t - oldt) &lt; 0.5)) {&amp;#10;        dscale = (5 * dbase);&amp;#10;        oldt = t;&amp;#10;    } else {&amp;#10;        dscale = dbase;&amp;#10;        oldt = t;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;            x_scale = (round(((x_scale - dscale) * 10000)) / 10000);&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;                x_scale = (round(((x_scale + dscale) * 10000)) / 10000);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    ccimage.size = [(x_size * x_scale), ((x_size * x_scale) * 0.62)];&amp;#10;}&amp;#10;ratio_pxpermm = ((x_scale * x_size) / 85.6);&amp;#10;console.log(ratio_pxpermm);&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -4098,8 +4097,8 @@
       <CodeComponent name="code">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="circle_position = [[(- 0.25), 0.25], [0, 0.25], [0.25, 0.25], [(- 0.25), 0], [0, 0], [0.25, 0], [0.25, (- 0.25)], [0, (- 0.25)], [(- 0.25), (- 0.25)]];&amp;#10;shuffle(circle_position);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Randomly place instruction circles &amp;#10;circle_position = [(-0.25,0.25),(0,0.25),(0.25,0.25),(-0.25,0),(0,0),(0.25,0),(0.25,-0.25),(0,-0.25),(-0.25,-0.25)]&amp;#10;shuffle(circle_position)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="circle_position = [[(- 230), 230], [0, 230], [230, 230], [(- 230), 0], [0, 0], [230, 0], [230, (- 230)], [0, (- 230)], [(- 230), (- 230)]];&amp;#10;shuffle(circle_position);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Randomly place instruction circles &amp;#10;circle_position = [[(- 230), 230], [0, 230], [230, 230], [(- 230), 0], [0, 0], [230, 0], [230, (- 230)], [0, (- 230)], [(-230), (- 230)]];&amp;#10;shuffle(circle_position)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -4131,10 +4130,10 @@
       <PolygonComponent name="intructioncircle_1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[1, 0, 0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1, -1, -1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1, -1, -1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4156,10 +4155,10 @@
       <PolygonComponent name="instructioncircle_2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[1, 0.67, 0]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1, 0.33, -1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1, 0.33, -1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4181,10 +4180,10 @@
       <PolygonComponent name="instructioncircle_3">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0.67, 1, 0]" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb255" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0.33, 1, -1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[0.33, 1, -1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4194,7 +4193,7 @@
         <Param name="pos" updates="set every frame" val="$circle_position[3]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.05, 0.05)" valType="code"/>
+        <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -4206,10 +4205,10 @@
       <PolygonComponent name="instructioncircle_4">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 1, 0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[-1, 1, -1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1, 1, -1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4231,10 +4230,10 @@
       <PolygonComponent name="instructioncircle_5">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 1, 0.66]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[-1, 1, 0.32]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1, 1, 0.32]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4256,10 +4255,10 @@
       <PolygonComponent name="insturctioncircle_6">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 0.66, 1]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[-1, 0.32, 1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1, 0.32, 1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4281,10 +4280,10 @@
       <PolygonComponent name="instructioncircle_7">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0, 0, 1]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[-1, -1, 1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1, -1, 1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4306,10 +4305,10 @@
       <PolygonComponent name="instructioncircle_8">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[0.67, 0, 1]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[0.33, -1, 1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[0.33, -1, 1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4331,10 +4330,10 @@
       <PolygonComponent name="instructioncircle_9">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[1, 0, 0.67]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1, -1, 0.33]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1, -1, 0.33]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -4361,7 +4360,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="space_9" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -4414,9 +4413,9 @@
         <Param name="name" updates="None" val="movie" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 100)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 120)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="(410,380)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="(380,340)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
@@ -4437,7 +4436,7 @@
         <Param name="name" updates="None" val="text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -180)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4479,7 +4478,7 @@
         <Param name="name" updates="None" val="text_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -250)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4489,7 +4488,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="1. Keeping your arm straight, please touch your thumb to the centre of the screen in the oval&amp;#10;2. While keeping your head in the same position, lower your arm.&amp;#10;3. Please keep your head in this position for the remainder of the experiment " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="500" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
       <TextComponent name="space_3">
         <Param name="color" updates="constant" val="yellow" valType="str"/>
@@ -4837,53 +4836,11 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
-    <Routine name="calibration">
-      <CodeComponent name="code_17">
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="/**&amp;#10; * Created by Qisheng Li in 11/2019.&amp;#10; */&amp;#10;&amp;#10;//Store all the configuration data in variable 'data'&amp;#10;var data = {&quot;dataType&quot;:&quot;configurationData&quot;};&amp;#10;data[&quot;ballPosition&quot;] = [];&amp;#10;data[&quot;fullScreenClicked&quot;] = false;&amp;#10;data[&quot;sliderClicked&quot;] = false;&amp;#10;&amp;#10;(function ( distanceSetup, $ ) {&amp;#10;&amp;#10;    distanceSetup.round = function(value, decimals) {&amp;#10;        return Number(Math.round(value+'e'+decimals)+'e-'+decimals);&amp;#10;    };&amp;#10;&amp;#10;    distanceSetup.px2mm = function(cardImageWidth) {&amp;#10;        const cardWidth = 85.6; //card dimension: 85.60 × 53.98 mm (3.370 × 2.125 in)&amp;#10;        var px2mm = cardImageWidth/cardWidth;&amp;#10;        data[&quot;px2mm&quot;] = distanceSetup.round(px2mm, 2);&amp;#10;        return px2mm; &amp;#10;    };&amp;#10;&amp;#10;}( window.distanceSetup = window.distanceSetup || {}, jQuery));&amp;#10;&amp;#10;&amp;#10;function getCardWidth() {&amp;#10;    var cardWidthPx = $('#card').width();&amp;#10;    data[&quot;cardWidthPx&quot;] = distanceSetup.round(cardWidthPx,2);&amp;#10;    return cardWidthPx&amp;#10;}&amp;#10;&amp;#10;&amp;#10;function configureBlindSpot() {&amp;#10;&amp;#10;    drawBall();&amp;#10;    $('#page-size').remove();&amp;#10;    $('#blind-spot').css({'visibility':'visible'});&amp;#10;    $(document).on('keydown', recordPosition);&amp;#10;&amp;#10;};&amp;#10;&amp;#10;&amp;#10;$( function() {&amp;#10;    $( &quot;#slider&quot; ).slider({value:&quot;50&quot;});&amp;#10;} );&amp;#10;&amp;#10;$(document).ready(function() {&amp;#10;    $( &quot;#slider&quot; ).on(&quot;slide&quot;, function (event, ui) {&amp;#10;        var cardWidth = ui.value + &quot;%&quot;;&amp;#10;        $(&quot;#card&quot;).css({&quot;width&quot;:cardWidth});&amp;#10;    });&amp;#10;&amp;#10;    $('#slider').on('slidechange', function(event, ui){&amp;#10;        data[&quot;sliderClicked&quot;] = true;&amp;#10;    });&amp;#10;&amp;#10;});&amp;#10;&amp;#10;&amp;#10;//=============================&amp;#10;//Ball Animation&amp;#10;&amp;#10;function drawBall(pos=180){&amp;#10;    // pos: define where the fixation square should be.&amp;#10;    var mySVG = SVG(&quot;svgDiv&quot;);&amp;#10;    const cardWidthPx = getCardWidth()&amp;#10;    const rectX = distanceSetup.px2mm(cardWidthPx)*pos;&amp;#10;    &amp;#10;    const ballX = rectX*0.6 // define where the ball is&amp;#10;    var ball = mySVG.circle(30).move(ballX, 50).fill(&quot;#f00&quot;); &amp;#10;    window.ball = ball;&amp;#10;    var square = mySVG.rect(30, 30).move(Math.min(rectX - 50, 950), 50); //square position&amp;#10;    data[&quot;squarePosition&quot;] = distanceSetup.round(square.cx(),2);&amp;#10;    data['rectX'] = rectX&amp;#10;    data['ballX'] = ballX&amp;#10;};&amp;#10;&amp;#10;&amp;#10;function animateBall(){&amp;#10;    ball.animate(7000).during(&amp;#10;        function(pos){&amp;#10;            moveX = - pos*data['ballX'];&amp;#10;            window.moveX = moveX;&amp;#10;            moveY = 0;&amp;#10;            ball.attr({transform:&quot;translate(&quot;+moveX+&quot;,&quot;+moveY+&quot;)&quot;});&amp;#10;&amp;#10;        }&amp;#10;    ).loop(true, false).&amp;#10;    after(function(){&amp;#10;        animateBall();&amp;#10;    });&amp;#10;&amp;#10;    //disbale the button after clicked once.&amp;#10;    $(&quot;#start&quot;).attr(&quot;disabled&quot;, true);&amp;#10;};&amp;#10;&amp;#10;function recordPosition(event, angle=13.5) {&amp;#10;    // angle: define horizontal blind spot entry point position in degrees.&amp;#10;    if (event.keyCode == '32') { //Press &quot;Space&quot;&amp;#10;&amp;#10;        data[&quot;ballPosition&quot;].push(distanceSetup.round((ball.cx() + moveX),2));&amp;#10;        var sum = data[&quot;ballPosition&quot;].reduce((a, b) =&gt; a + b, 0);&amp;#10;        var ballPosLen = data[&quot;ballPosition&quot;].length;&amp;#10;        data[&quot;avgBallPos&quot;] = distanceSetup.round(sum/ballPosLen, 2);&amp;#10;        var ball_sqr_distance = (data[&quot;squarePosition&quot;]-data[&quot;avgBallPos&quot;])/data[&quot;px2mm&quot;];&amp;#10;        var viewDistance = ball_sqr_distance/Math.radians(angle)&amp;#10;        console.log(Math.radians(angle))&amp;#10;        data[&quot;viewDistance_mm&quot;] = distanceSetup.round(viewDistance, 2);&amp;#10;&amp;#10;        //counter and stop&amp;#10;        var counter = Number($('#click').text());&amp;#10;        counter = counter - 1;&amp;#10;        $('#click').text(Math.max(counter, 0));&amp;#10;        if (counter &lt;= 0) {&amp;#10;&amp;#10;            ball.stop();&amp;#10;&amp;#10;            // Disable space key&amp;#10;            $('html').bind('keydown', function(e)&amp;#10;            {&amp;#10;               if (e.keyCode == 32) {return false;}&amp;#10;            });   &amp;#10;&amp;#10;            // You can then DO SOMETHING HERE TO PROCEED TO YOUR NEXT STEPS OF THE EXPERIMENT. For example, add a button to go to the next page.        &amp;#10;            return;&amp;#10;        }&amp;#10;&amp;#10;        ball.stop();&amp;#10;        animateBall();&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;//===================&amp;#10;//Helper Functions&amp;#10;function fullScreen(){&amp;#10;    doc = document.documentElement;&amp;#10;    if(doc.requestFullScreen) {&amp;#10;        doc.requestFullScreen();&amp;#10;    } else if(doc.mozRequestFullScreen) {&amp;#10;        doc.mozRequestFullScreen();&amp;#10;    } else if(doc.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT)) {&amp;#10;        doc.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);&amp;#10;    }&amp;#10;};&amp;#10;&amp;#10;function registerClick(){&amp;#10;    data[&quot;fullScreenClicked&quot;] = true;&amp;#10;}&amp;#10;&amp;#10;// Converts from degrees to radians.&amp;#10;Math.radians = function(degrees) {&amp;#10;  return degrees * Math.PI / 180;&amp;#10;};&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_17" valType="code"/>
-      </CodeComponent>
-      <ImageComponent name="image">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="card.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="image" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-    </Routine>
   </Routines>
   <Flow>
     <Routine name="startup"/>
+    <Routine name="screen_scale"/>
     <Routine name="welcome_instr"/>
-    <Routine name="calibration"/>
     <Routine name="instr_1"/>
     <Routine name="instr_2"/>
     <Routine name="instr_3"/>
@@ -4891,10 +4848,9 @@
     <Routine name="instr_5"/>
     <Routine name="instr_6"/>
     <Routine name="instr_7"/>
-    <Routine name="screen_scale"/>
     <Routine name="ball_calibration"/>
     <LoopInitiator loopType="TrialHandler" name="duringprac">
-      <Param name="Selected rows" updates="None" val="0:1" valType="str"/>
+      <Param name="Selected rows" updates="None" val="1:7" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="practrials.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
