@@ -2302,7 +2302,7 @@
       </CodeComponent>
       <CodeComponent name="js_code1">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="// Code to convert python to javascript that is not automatically converted&amp;#10;&amp;#10;thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager&amp;#10;shuffle = function (a) {&amp;#10;    return util.shuffle(a);&amp;#10;}&amp;#10;random = function (a) {&amp;#10;    return Math.random();&amp;#10;}&amp;#10;range = function(start, end) {&amp;#10;    var ans = [];&amp;#10;    for (let i = start; i &lt;= end; i++) {&amp;#10;        ans.push(i);&amp;#10;    }&amp;#10;    return ans;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;randint = function(min, maxplusone) {&amp;#10;  return Math.floor(Math.random() * (maxplusone - min) ) + min;&amp;#10;}&amp;#10;&amp;#10;viewerdistancetotal.append = [].push&amp;#10;&amp;#10;pi=Math.PI;&amp;#10;sin = Math.sin;&amp;#10;cos = Math.cos;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// Code to convert python to javascript that is not automatically converted&amp;#10;&amp;#10;thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager&amp;#10;shuffle = function (a) {&amp;#10;    return util.shuffle(a);&amp;#10;}&amp;#10;random = function (a) {&amp;#10;    return Math.random();&amp;#10;}&amp;#10;range = function(start, end) {&amp;#10;    var ans = [];&amp;#10;    for (let i = start; i &lt;= end; i++) {&amp;#10;        ans.push(i);&amp;#10;    }&amp;#10;    return ans;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;randint = function(min, maxplusone) {&amp;#10;  return Math.floor(Math.random() * (maxplusone - min) ) + min;&amp;#10;}&amp;#10;&amp;#10;Array.prototype.append = [].push&amp;#10;pi=Math.PI;&amp;#10;sin = Math.sin;&amp;#10;cos = Math.cos;&amp;#10;tan = Math.tan;&amp;#10;&amp;#10;sum = function (arr) {&amp;#10;return arr.reduce((a,b)=&gt;a+b)&amp;#10;}&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
@@ -3963,7 +3963,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="// Functions needed for Javascript&amp;#10;&amp;#10;event=psychoJS.eventManager;&amp;#10;thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;&amp;#10;round = function (a) {&amp;#10;    return Math.round(a);&amp;#10;}&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -4033,7 +4033,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="First, we need to determine the size of your screen.&amp;#10;Take a credit card (or a drivers license, library card, any equivalent card),&amp;#10;press it to the screen and adjust the image on your screen to be the same size as the card&amp;#10;&amp;#10;To increase the image width: press '&gt;' on your keyboard&amp;#10;To decrease the image width: press '&lt;' on your keyboard&amp;#10;&amp;#10;When you are done, press &lt;ENTER&gt;" valType="str"/>
+        <Param name="text" updates="constant" val="First, we need to determine the size of your screen.&amp;#10;Take a credit card (or a drivers license, library card, any equivalent card),&amp;#10;press it to the screen and adjust the image on your screen to be the same size as the card&amp;#10;&amp;#10;To increase the image width: press '&gt;' on your keyboard&amp;#10;To decrease the image width: press '&lt;' on your keyboard&amp;#10;&amp;#10;When you are done, press &lt;SPACE&gt;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -4130,12 +4130,12 @@
         <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;viewerdistancetotal = [];&amp;#10;calibrationcount = 0;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="blindspot_angle = 13.5;&amp;#10;radians_to_degrees = 57.2958;&amp;#10;calibrationcountext = `${calibrationcount} of 5 angle calibrations complete`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Blindspot angle&amp;#10;blindspot_angle = 13.5&amp;#10;# Convert radians to degrees&amp;#10;radians_to_degrees = 57.2958&amp;#10;calibrationcountext=f'{calibrationcount} of 5 angle calibrations complete'&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="ballposx = white_ball.pos[0];&amp;#10;squarepos = black_square2.pos[0];&amp;#10;viewer_distance = (((squarepos - ballposx) / ratio_pxpermm) / tan((blindspot_angle / radians_to_degrees)));&amp;#10;viewerdistancetotal.append(viewer_distance);&amp;#10;calibrationcount = (calibrationcount + 1);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="ballposx = white_ball.pos[0];&amp;#10;squarepos = black_square2.pos[0];&amp;#10;viewer_distance = (((squarepos - ballposx) / ratio_pxpermm) / tan((blindspot_angle / radians_to_degrees)));&amp;#10;viewerdistancetotal.append(viewer_distance);&amp;#10;calibrationcount = (calibrationcount + 1);&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="# Final x position of white ball&amp;#10;ballposx = white_ball.pos[0]&amp;#10;# X position of black square &amp;#10;squarepos = black_square2.pos[0]&amp;#10;# Calulcate the distance from the screen for this calibration&amp;#10;viewer_distance =  (((squarepos - ballposx))/ratio_pxpermm)/tan(blindspot_angle/radians_to_degrees)&amp;#10;# Store the distance in a list &amp;#10;viewerdistancetotal.append(viewer_distance);&amp;#10;# Calibration count &amp;#10;calibrationcount = calibrationcount + 1;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_18" valType="code"/>
@@ -4932,7 +4932,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
         <Param name="name" updates="None" val="text_38" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
