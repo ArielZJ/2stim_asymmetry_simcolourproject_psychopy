@@ -4967,7 +4967,6 @@
     <Routine name="ball_calibration"/>
     <LoopTerminator name="trials"/>
     <Routine name="viewerdistance"/>
-    <Routine name="calibration_example"/>
     <Routine name="welcome_instr"/>
     <Routine name="instr_1"/>
     <Routine name="instr_2"/>
