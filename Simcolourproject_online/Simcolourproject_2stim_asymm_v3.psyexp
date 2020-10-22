@@ -395,7 +395,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="5. During the calibration task, a flickering red ball will disappear as it moves from right to left.&amp;#10;Ignore the flickering.&amp;#10;Keep your right eye closed, stare at the black square and do not move your head.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="5. During the calibration task, a white ball will disappear as it moves from right to left.&amp;#10;Keep your right eye closed, stare at the black square and do not move your head.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -795,24 +795,6 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
       </PolygonComponent>
-      <KeyboardComponent name="key_resp_16">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_16" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
       <PolygonComponent name="black_square3">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -1001,6 +983,21 @@
       </CodeComponent>
     </Routine>
     <Routine name="response">
+      <CodeComponent name="code_4">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialnumber = (trialnumber + 1);&amp;#10;if ((Colour2 === 1)) {&amp;#10;    Circle2_colour = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour2 === 2)) {&amp;#10;        Circle2_colour = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour2 === 3)) {&amp;#10;            Circle2_colour = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour2 === 4)) {&amp;#10;                Circle2_colour = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour2 === 5)) {&amp;#10;                    Circle2_colour = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour2 === 6)) {&amp;#10;                        Circle2_colour = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour2 === 7)) {&amp;#10;                            Circle2_colour = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour2 === 8)) {&amp;#10;                                Circle2_colour = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour2 === 9)) {&amp;#10;                                    Circle2_colour = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;trialnumber =  trialnumber + 1;&amp;#10;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour2 == 1:&amp;#10;    Circle2_colour = (1, -1, -1);&amp;#10;elif Colour2 == 2:&amp;#10;    Circle2_colour = (1, 0.33, -1);&amp;#10;elif Colour2 == 3:&amp;#10;    Circle2_colour = (0.32, 1, -1);&amp;#10;elif Colour2 == 4:&amp;#10;    Circle2_colour = (-1, 1, -1);&amp;#10;elif Colour2 == 5:&amp;#10;    Circle2_colour = (-1, 1, 0.33);&amp;#10;elif Colour2 == 6:&amp;#10;    Circle2_colour = (-1, 0.32, 1);&amp;#10;elif Colour2 == 7:&amp;#10;    Circle2_colour = (-1, -1, 1);&amp;#10;elif Colour2 == 8:&amp;#10;    Circle2_colour = (0.33, -1, 1);&amp;#10;elif Colour2 == 9:&amp;#10;    Circle2_colour = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_4" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="response1disk">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1222,10 +1219,10 @@
       <PolygonComponent name="Circle_2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="set every frame" val="$Circle2_col" valType="str"/>
+        <Param name="fillColor" updates="set every repeat" val="$Circle2_colour" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="set every frame" val="$Circle2_col" valType="str"/>
+        <Param name="lineColor" updates="set every repeat" val="$Circle2_colour" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -1244,21 +1241,6 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
-      <CodeComponent name="code_4">
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="trialnumber = (trialnumber + 1);&amp;#10;if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;trialnumber =  trialnumber + 1;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_4" valType="code"/>
-      </CodeComponent>
       <TextComponent name="text_23">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1288,8 +1270,8 @@
       <CodeComponent name="code_3">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="x = 1;&amp;#10;y = 1;&amp;#10;angle_1 = 0;&amp;#10;angle_2 = 0;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;if ((Colour_1 === 1)) {&amp;#10;    Circle1_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_1 === 2)) {&amp;#10;        Circle1_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_1 === 3)) {&amp;#10;            Circle1_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_1 === 4)) {&amp;#10;                Circle1_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_1 === 5)) {&amp;#10;                    Circle1_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_1 === 6)) {&amp;#10;                        Circle1_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_1 === 7)) {&amp;#10;                            Circle1_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_1 === 8)) {&amp;#10;                                Circle1_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_1 === 9)) {&amp;#10;                                    Circle1_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 1&amp;#10;y = 1&amp;#10;&amp;#10;angle_1 = 0&amp;#10;angle_2 = 0&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_1 == 1:&amp;#10;    Circle1_col = (1, -1, -1);&amp;#10;elif Colour_1 == 2:&amp;#10;    Circle1_col = (1, 0.33, -1);&amp;#10;elif Colour_1 == 3:&amp;#10;    Circle1_col = (0.32, 1, -1);&amp;#10;elif Colour_1 == 4:&amp;#10;    Circle1_col = (-1, 1, -1);&amp;#10;elif Colour_1 == 5:&amp;#10;    Circle1_col = (-1, 1, 0.33);&amp;#10;elif Colour_1 == 6:&amp;#10;    Circle1_col = (-1, 0.32, 1);&amp;#10;elif Colour_1 == 7:&amp;#10;    Circle1_col = (-1, -1, 1);&amp;#10;elif Colour_1 == 8:&amp;#10;    Circle1_col = (0.33, -1, 1);&amp;#10;elif Colour_1 == 9:&amp;#10;    Circle1_col = (1, -1, 0.33)" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="x = 1;&amp;#10;y = 1;&amp;#10;angle_1 = 0;&amp;#10;angle_2 = 0;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Colour1 === 1)) {&amp;#10;    Circle1_colour = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour1 === 2)) {&amp;#10;        Circle1_colour = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour1 === 3)) {&amp;#10;            Circle1_colour = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour1 === 4)) {&amp;#10;                Circle1_colour = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour1 === 5)) {&amp;#10;                    Circle1_colour = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour1 === 6)) {&amp;#10;                        Circle1_colour = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour1 === 7)) {&amp;#10;                            Circle1_colour = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour1 === 8)) {&amp;#10;                                Circle1_colour = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour1 === 9)) {&amp;#10;                                    Circle1_colour = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 1&amp;#10;y = 1&amp;#10;&amp;#10;angle_1 = 0&amp;#10;angle_2 = 0&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour1 == 1:&amp;#10;    Circle1_colour = (1, -1, -1);&amp;#10;elif Colour1 == 2:&amp;#10;    Circle1_colour = (1, 0.33, -1);&amp;#10;elif Colour1 == 3:&amp;#10;    Circle1_colour = (0.32, 1, -1);&amp;#10;elif Colour1 == 4:&amp;#10;    Circle1_colour = (-1, 1, -1);&amp;#10;elif Colour1 == 5:&amp;#10;    Circle1_colour = (-1, 1, 0.33);&amp;#10;elif Colour1 == 6:&amp;#10;    Circle1_colour = (-1, 0.32, 1);&amp;#10;elif Colour1 == 7:&amp;#10;    Circle1_colour = (-1, -1, 1);&amp;#10;elif Colour1 == 8:&amp;#10;    Circle1_colour = (0.33, -1, 1);&amp;#10;elif Colour1 == 9:&amp;#10;    Circle1_colour = (1, -1, 0.33);&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1303,10 +1285,10 @@
       <PolygonComponent name="Circle_1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="set every repeat" val="$Circle1_col" valType="str"/>
+        <Param name="fillColor" updates="set every repeat" val="$Circle1_colour" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="set every repeat" val="$Circle1_col" valType="str"/>
+        <Param name="lineColor" updates="set every repeat" val="$Circle1_colour" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="1000" valType="int"/>
@@ -1880,11 +1862,11 @@
       </MouseComponent>
       <CodeComponent name="code_6">
         <Param name="Begin Experiment" updates="constant" val="catchtrialorder = []&amp;#10;for i in range(0,20):&amp;#10;    n = randint(0,324)&amp;#10;    catchtrialorder.append(n)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="// Set up catch trials&amp;#10;&amp;#10;catchtrialorder = Array.from({length: 10}, () =&gt; Math.floor(Math.random() * 162));&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// Set up catch trials&amp;#10;&amp;#10;catchtrialorder = Array.from({length: 20}, () =&gt; Math.floor(Math.random() * 324);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="catchnumber = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumber = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumber}'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9]) or (trialnumber == catchtrialorder[10]) or (trialnumber == catchtrialorder[11]) or (trialnumber == catchtrialorder[12]) or (trialnumber == catchtrialorder[13]) or or (trialnumber == catchtrialorder[14]) or or (trialnumber == catchtrialorder[15]) or or (trialnumber == catchtrialorder[16]) or or (trialnumber == catchtrialorder[17]) or or (trialnumber == catchtrialorder[18]) or (trialnumber == catchtrialorder[19])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -2294,8 +2276,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour_1)&quot;, Colour_1);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour_1)&quot;, Colour_1);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour_1&quot;, Colour_1);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour_1&quot;, Colour_1);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_9" valType="code"/>
       </CodeComponent>
@@ -2361,8 +2343,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_10" valType="code"/>
       </CodeComponent>
@@ -2855,10 +2837,10 @@
       </MouseComponent>
       <CodeComponent name="code_12">
         <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorderprac = []&amp;#10;for i in range(0,2):&amp;#10;    n = randint(0,7)&amp;#10;    catchtrialorderprac.append(n)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorderprac = [];&amp;#10;for (var i = 0, _pj_a = 2; (i &lt; _pj_a); i += 1) {&amp;#10;    n = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;    catchtrialorderprac.append(n);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="catchtrialorderprac = Array.from({length: 2}, () =&gt; Math.floor(Math.random() * 7));&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumberprac = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -2948,7 +2930,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -3853,7 +3835,7 @@
         <Param name="name" updates="None" val="intructioncircle_1" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[1]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[1]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -3878,7 +3860,7 @@
         <Param name="name" updates="None" val="instructioncircle_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[2]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[2]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -3903,7 +3885,7 @@
         <Param name="name" updates="None" val="instructioncircle_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[3]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[3]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -3928,7 +3910,7 @@
         <Param name="name" updates="None" val="instructioncircle_4" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[4]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[4]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -3953,7 +3935,7 @@
         <Param name="name" updates="None" val="instructioncircle_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[5]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[5]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -3978,7 +3960,7 @@
         <Param name="name" updates="None" val="insturctioncircle_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[6]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[6]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -4003,7 +3985,7 @@
         <Param name="name" updates="None" val="instructioncircle_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[7]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[7]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -4028,7 +4010,7 @@
         <Param name="name" updates="None" val="instructioncircle_8" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[8]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[8]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -4053,7 +4035,7 @@
         <Param name="name" updates="None" val="instructioncircle_9" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="$circle_position[0]" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$circle_position[0]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="constant" val="(50, 50)" valType="code"/>
@@ -4145,7 +4127,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="20" valType="code"/>
         <Param name="name" updates="None" val="text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -4187,7 +4169,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="20" valType="code"/>
         <Param name="name" updates="None" val="text_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -4249,7 +4231,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="1. While keeping your arm straight touch your thumb to the centre of the screen in the oval.&amp;#10;2. Keep yourhead in the same position, but lower and relax your arm.&amp;#10;3. Please keep your head in this position for the remainder of the experiment&amp;#10;4. Press SPACE to continue " valType="str"/>
+        <Param name="text" updates="constant" val="1. While keeping your arm straight touch your thumb to the centre of the screen in the oval.&amp;#10;2. Keep your head in the same position, but lower and relax your arm.&amp;#10;3. Please keep your head in this position for the remainder of the experiment.&amp;#10;4. Press SPACE to continue " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -4994,98 +4976,6 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="instr_11">
-      <KeyboardComponent name="key_resp_13">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_13" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-      <TextComponent name="space_12">
-        <Param name="color" updates="constant" val="yellow" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
-        <Param name="name" updates="None" val="space_12" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(350, -350)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press SPACE to continue " valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-      <TextComponent name="instr_only_6">
-        <Param name="color" updates="constant" val="yellow" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="40" valType="code"/>
-        <Param name="name" updates="None" val="instr_only_6" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 300)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="INSTRUCTIONS ONLY" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-      <TextComponent name="text_15">
-        <Param name="color" updates="constant" val="yellow" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
-        <Param name="name" updates="None" val="text_15" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="7. The next page will show you a demonstration of the calibration task for a few seconds.&amp;#10;During the actual calibration, you will need to press &lt;ENTER&gt; when the ball disappears.&amp;#10;&amp;#10;You will do this five times so we can make sure we get the right distance.&amp;#10;The ball will reset each time.&amp;#10;&amp;#10;Keep your right eye closed, stare at the black square and do not move your head." valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
-      </TextComponent>
-    </Routine>
     <Routine name="instr_10">
       <KeyboardComponent name="key_resp_18">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
@@ -5173,10 +5063,279 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="6. Press the &lt;ENTER&gt; key as soon as the ball dissapears properly from your eye sight (not due to running off screen)&amp;#10;Keep your right eye closed, stare at the black square, do not move your head." valType="str"/>
+        <Param name="text" updates="constant" val="6. Press the &lt;ENTER&gt; key as soon as the ball disappears properly from your eye sight (not due to running off screen)&amp;#10;Keep your right eye closed, stare at the black square, do not move your head." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
+    </Routine>
+    <Routine name="instr_12">
+      <KeyboardComponent name="key_resp_13">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_13" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="space_12">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="space_12" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(350, -350)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Press SPACE to continue " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="instr_only_6">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="instr_only_6" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 150)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="NEXT WILL BE THE ACTUAL CALIBRATION&amp;#10;&amp;#10;Remember to keep your right eye closed, stare at the black square and do not move your head.&amp;#10;&amp;#10;Press the &lt;ENTER&gt; key as soon as the ball disappears from your eye sight (not just due to running off the edge of the screen).&amp;#10;&amp;#10;When ready press SPACE to start viewing the distance calibration." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_15">
+        <Param name="color" updates="constant" val="red" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_15" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Warning! It is critical that these calibrations are done correctly or you will be unable to do the experiment and we will be unable to approve your payment!" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="instr_11">
+      <KeyboardComponent name="key_resp_21">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_21" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="space_18">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="space_18" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(350, -350)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Press SPACE to continue " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="instr_only_8">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="40" valType="code"/>
+        <Param name="name" updates="None" val="instr_only_8" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 300)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="INSTRUCTIONS ONLY" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_45">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_45" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="7. The next page will show you a demonstration of the calibration task for a few seconds.&amp;#10;During the actual calibration, you will need to press &lt;ENTER&gt; when the ball disappears.&amp;#10;&amp;#10;You will do this five times so we can make sure we get the right distance.&amp;#10;The ball will reset each time.&amp;#10;&amp;#10;Keep your right eye closed, stare at the black square and do not move your head." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="begin">
+      <TextComponent name="space_19">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="space_19" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(250, -250)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Press SPACE to continue " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_46">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_46" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You have finished the practice trial.&amp;#10;&amp;#10;Next page will be the formal test. &amp;#10;&amp;#10;If you are ready, please press SPACE button to start the experiment." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_22">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_22" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="consent">
+      <CodeComponent name="code_17">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="src = 'consent_form.html';&amp;#10;continue_routine = true; // Routines can't be ended from within Begin Routine&amp;#10;$(document).ready(function() {&amp;#10;    // Add custom contents from html file using an iframe:&amp;#10;    $('body').append('&lt;div id=&quot;iframe-o&quot; style=&quot;visibility: hidden; position: relative; display: table; margin: auto;&quot;&gt;&lt;div id=&quot;iframe-m&quot; style=&quot;display: table-cell; vertical-align: middle;&quot;&gt;&lt;div id=&quot;iframe-i&quot; style=&quot;display: inline-block; width:100%; overflow-y: auto; overflow-x: hidden;&quot;&gt;&lt;iframe id=&quot;iframe&quot; src=&quot;'+src+'&quot; style=&quot;width: 100%&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;');&amp;#10;&amp;#10;    $('#iframe').on('load',function(iframe){&amp;#10;        // Auto-adjust iframe size:&amp;#10;        $(this).contents().find('html').css({ 'display': 'table', 'width': '100%', 'overflow-x': 'hidden' });&amp;#10;        $('#iframe-o').height($(window).height()-20, true);&amp;#10;        $('#iframe-m').width($(this).contents().find('html').width()+20);&amp;#10;        $('#iframe-i').height ( Math.min ( $(this).contents().find('html').height()+20, $(window).height()-20 ), true );&amp;#10;        $(this).height($(this).contents().find('html').height());&amp;#10;        $('#iframe-o').css('visibility','visible');&amp;#10;&amp;#10;        // If iframe contains a form, then capture its output text:&amp;#10;        $(this).contents().find('form').on('submit',function(e){&amp;#10;            e.preventDefault();&amp;#10;            $.each($(this).serializeArray(),function(i, param){&amp;#10;                params[param.name] = param.value;&amp;#10;                psychoJS.experiment.addData(param.name, param.value);&amp;#10;            });&amp;#10;            console.log ( 'DEBUG:FRM', params );&amp;#10;            // Remove iframe and continue to next routine when done:&amp;#10;            $('#iframe-o').remove();&amp;#10;            continue_routine = false;&amp;#10;        });&amp;#10;    });&amp;#10;});&amp;#10;//$('#iframe').attr( 'src', function(i,val){ return val;} );&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="continueRoutine = continue_routine;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_17" valType="code"/>
+      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
@@ -5195,6 +5354,7 @@
     <Routine name="instr_10"/>
     <Routine name="instr_11"/>
     <Routine name="calibration_example"/>
+    <Routine name="instr_12"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -5216,7 +5376,7 @@
     <Routine name="colour_circle_instr_2"/>
     <Routine name="instr_prac"/>
     <LoopInitiator loopType="TrialHandler" name="duringprac">
-      <Param name="Selected rows" updates="None" val="1:7" valType="str"/>
+      <Param name="Selected rows" updates="None" val="0:7" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')]), OrderedDict([('Ecc', 'FF')]), OrderedDict([('Ecc', 'PF')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="practrials.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -5232,15 +5392,16 @@
     <Routine name="catch_prac"/>
     <Routine name="summary2_prac"/>
     <LoopTerminator name="duringprac"/>
-    <LoopInitiator loopType="TrialHandler" name="during">
-      <Param name="Selected rows" updates="None" val="0:20" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('Colour_1', 6), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 4), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 3), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 2), ('Colour_2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 1), ('Colour_2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 9), ('Colour_2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 7), ('Colour_2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 5), ('Colour_2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour_1', 6), ('Colour_2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour_1', 8), ('Colour_2', 6), ('Ecc', 'PF')])]" valType="str"/>
+    <Routine name="begin"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_2">
+      <Param name="Selected rows" updates="None" val="0:162" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('Colour1', 'six'), ('Colour2', 'six'), ('Ecc', 'PF')]), OrderedDict([('Colour1', 'one'), ('Colour2', 'three'), ('Ecc', 'PF')]), OrderedDict([('Colour1', 'one'), ('Colour2', 'two'), ('Ecc', 'FF')]), OrderedDict([('Colour1', 'three'), ('Colour2', 'eight'), ('Ecc', 'PF')]), OrderedDict([('Colour1', 'three'), ('Colour2', 'three'), ('Ecc', 'PF')]), OrderedDict([('Colour1', 6), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 1), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 6), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 3), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 8), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 3), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 8), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 6), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 8), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 6), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 8), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 3), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 3), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 3), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 3), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 4), ('Colour2', 6), ('Ecc', 'FF')]), OrderedDict([('Colour1', 1), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 4), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 3), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 6), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 6), ('Colour2', 8), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 9), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 7), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 1), ('Colour2', 4), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 2), ('Colour2', 2), ('Ecc', 'FF')]), OrderedDict([('Colour1', 3), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 1), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 2), ('Colour2', 5), ('Ecc', 'PF')]), OrderedDict([('Colour1', 9), ('Colour2', 6), ('Ecc', 'PF')]), OrderedDict([('Colour1', 5), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 7), ('Ecc', 'PF')]), OrderedDict([('Colour1', 1), ('Colour2', 1), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 8), ('Ecc', 'PF')]), OrderedDict([('Colour1', 8), ('Colour2', 3), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 7), ('Colour2', 5), ('Ecc', 'FF')]), OrderedDict([('Colour1', 9), ('Colour2', 2), ('Ecc', 'PF')]), OrderedDict([('Colour1', 7), ('Colour2', 4), ('Ecc', 'FF')]), OrderedDict([('Colour1', 5), ('Colour2', 1), ('Ecc', 'PF')]), OrderedDict([('Colour1', 6), ('Colour2', 9), ('Ecc', 'FF')]), OrderedDict([('Colour1', 8), ('Colour2', 6), ('Ecc', 'PF')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="Stimconditions.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="2" valType="code"/>
-      <Param name="name" updates="None" val="during" valType="code"/>
+      <Param name="name" updates="None" val="trials_2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Stim1_display"/>
@@ -5248,6 +5409,6 @@
     <Routine name="special_trial"/>
     <Routine name="catch_1"/>
     <Routine name="response_2"/>
-    <LoopTerminator name="during"/>
+    <LoopTerminator name="trials_2"/>
   </Flow>
 </PsychoPy2experiment>
