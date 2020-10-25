@@ -989,12 +989,12 @@
         <Param name="Begin JS Routine" updates="constant" val="trialnumber = (trialnumber + 1);&amp;#10;if ((Colour2 === 1)) {&amp;#10;    Circle2_colour = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour2 === 2)) {&amp;#10;        Circle2_colour = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour2 === 3)) {&amp;#10;            Circle2_colour = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour2 === 4)) {&amp;#10;                Circle2_colour = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour2 === 5)) {&amp;#10;                    Circle2_colour = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour2 === 6)) {&amp;#10;                        Circle2_colour = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour2 === 7)) {&amp;#10;                            Circle2_colour = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour2 === 8)) {&amp;#10;                                Circle2_colour = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour2 === 9)) {&amp;#10;                                    Circle2_colour = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;trialnumber =  trialnumber + 1;&amp;#10;&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour2 == 1:&amp;#10;    Circle2_colour = (1, -1, -1);&amp;#10;elif Colour2 == 2:&amp;#10;    Circle2_colour = (1, 0.33, -1);&amp;#10;elif Colour2 == 3:&amp;#10;    Circle2_colour = (0.32, 1, -1);&amp;#10;elif Colour2 == 4:&amp;#10;    Circle2_colour = (-1, 1, -1);&amp;#10;elif Colour2 == 5:&amp;#10;    Circle2_colour = (-1, 1, 0.33);&amp;#10;elif Colour2 == 6:&amp;#10;    Circle2_colour = (-1, 0.32, 1);&amp;#10;elif Colour2 == 7:&amp;#10;    Circle2_colour = (-1, -1, 1);&amp;#10;elif Colour2 == 8:&amp;#10;    Circle2_colour = (0.33, -1, 1);&amp;#10;elif Colour2 == 9:&amp;#10;    Circle2_colour = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour2&quot;, Colour2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour2&quot;, Colour2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;c1d = ((1 - a1d) - b1d);&amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165;&amp;#10;y22d = 165;&amp;#10;x23d = 165;&amp;#10;y23d = 15;&amp;#10;a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;c2d = ((1 - a2d) - b2d);&amp;#10;x31d = 15;&amp;#10;y31d = (- 15);&amp;#10;x32d = 165;&amp;#10;y32d = (- 15);&amp;#10;x33d = 165;&amp;#10;y33d = (- 165);&amp;#10;a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;c3d = ((1 - a3d) - b3d);&amp;#10;x41d = 15;&amp;#10;y41d = (- 15);&amp;#10;x42d = 165;&amp;#10;y42d = (- 165);&amp;#10;x43d = 15;&amp;#10;y43d = (- 165);&amp;#10;a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;c4d = ((1 - a4d) - b4d);&amp;#10;x51d = (- 165);&amp;#10;y51d = (- 165);&amp;#10;x52d = (- 15);&amp;#10;y52d = (- 15);&amp;#10;x53d = (- 15);&amp;#10;y53d = (- 165);&amp;#10;a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;c5d = ((1 - a5d) - b5d);&amp;#10;x61d = (- 165);&amp;#10;y61d = (- 15);&amp;#10;x62d = (- 15);&amp;#10;y62d = (- 15);&amp;#10;x63d = (- 165);&amp;#10;y63d = (- 165);&amp;#10;a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;c6d = ((1 - a6d) - b6d);&amp;#10;x71d = (- 165);&amp;#10;y71d = 165;&amp;#10;x72d = (- 15);&amp;#10;y72d = 15;&amp;#10;x73d = (- 165);&amp;#10;y73d = 15;&amp;#10;a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;c7d = ((1 - a7d) - b7d);&amp;#10;x81d = (- 165);&amp;#10;y81d = 165;&amp;#10;x82d = (- 15);&amp;#10;y82d = 165;&amp;#10;x83d = (- 15);&amp;#10;y83d = 15;&amp;#10;a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;c8d = ((1 - a8d) - b8d);&amp;#10;if (((((0 &lt;= a1d) &amp;&amp; (a1d &lt;= 1)) &amp;&amp; ((0 &lt;= b1d) &amp;&amp; (b1d &lt;= 1))) &amp;&amp; ((0 &lt;= c1d) &amp;&amp; (c1d &lt;= 1)))) {&amp;#10;    similarity = 7;&amp;#10;} else {&amp;#10;    if (((((0 &lt;= a2d) &amp;&amp; (a2d &lt;= 1)) &amp;&amp; ((0 &lt;= b2d) &amp;&amp; (b2d &lt;= 1))) &amp;&amp; ((0 &lt;= c2d) &amp;&amp; (c2d &lt;= 1)))) {&amp;#10;        similarity = 6;&amp;#10;    } else {&amp;#10;        if (((((0 &lt;= a3d) &amp;&amp; (a3d &lt;= 1)) &amp;&amp; ((0 &lt;= b3d) &amp;&amp; (b3d &lt;= 1))) &amp;&amp; ((0 &lt;= c3d) &amp;&amp; (c3d &lt;= 1)))) {&amp;#10;            similarity = 5;&amp;#10;        } else {&amp;#10;            if (((((0 &lt;= a4d) &amp;&amp; (a4d &lt;= 1)) &amp;&amp; ((0 &lt;= b4d) &amp;&amp; (b4d &lt;= 1))) &amp;&amp; ((0 &lt;= c4d) &amp;&amp; (c4d &lt;= 1)))) {&amp;#10;                similarity = 4;&amp;#10;            } else {&amp;#10;                if (((((0 &lt;= a5d) &amp;&amp; (a5d &lt;= 1)) &amp;&amp; ((0 &lt;= b5d) &amp;&amp; (b5d &lt;= 1))) &amp;&amp; ((0 &lt;= c5d) &amp;&amp; (c5d &lt;= 1)))) {&amp;#10;                    similarity = 3;&amp;#10;                } else {&amp;#10;                    if (((((0 &lt;= a6d) &amp;&amp; (a6d &lt;= 1)) &amp;&amp; ((0 &lt;= b6d) &amp;&amp; (b6d &lt;= 1))) &amp;&amp; ((0 &lt;= c6d) &amp;&amp; (c6d &lt;= 1)))) {&amp;#10;                        similarity = 2;&amp;#10;                    } else {&amp;#10;                        if (((((0 &lt;= a7d) &amp;&amp; (a7d &lt;= 1)) &amp;&amp; ((0 &lt;= b7d) &amp;&amp; (b7d &lt;= 1))) &amp;&amp; ((0 &lt;= c7d) &amp;&amp; (c7d &lt;= 1)))) {&amp;#10;                            similarity = 1;&amp;#10;                        } else {&amp;#10;                            if (((((0 &lt;= a8d) &amp;&amp; (a8d &lt;= 1)) &amp;&amp; ((0 &lt;= b8d) &amp;&amp; (b8d &lt;= 1))) &amp;&amp; ((0 &lt;= c8d) &amp;&amp; (c8d &lt;= 1)))) {&amp;#10;                                similarity = 0;&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;Colour2&quot;, Colour2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse.mouseClock.getTime());&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;# Triangle 7&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165&amp;#10;y22d = 165&amp;#10;x23d = 165&amp;#10;y23d = 15&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = 15&amp;#10;y31d = -15&amp;#10;x32d = 165&amp;#10;y32d = -15&amp;#10;x33d = 165&amp;#10;y33d = -165&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = 15&amp;#10;y41d = -15&amp;#10;x42d = 165&amp;#10;y42d = -165&amp;#10;x43d = 15&amp;#10;y43d = -165&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -165&amp;#10;y51d = -165&amp;#10;x52d = -15&amp;#10;y52d = -15&amp;#10;x53d = -15&amp;#10;y53d = -165&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -165&amp;#10;y61d = -15&amp;#10;x62d = -15&amp;#10;y62d = -15&amp;#10;x63d = -165&amp;#10;y63d = -165&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -165&amp;#10;y71d = 165&amp;#10;x72d = -15&amp;#10;y72d = 15&amp;#10;x73d = -165&amp;#10;y73d = 15&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -165&amp;#10;y81d = 165&amp;#10;x82d = -15&amp;#10;y82d = 165&amp;#10;x83d = -15&amp;#10;y83d = 15&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    similarity = 7&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    similarity = 6&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    similarity = 5&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    similarity = 4&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    similarity = 3&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    similarity = 2&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    similarity = 1&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    similarity = 0&amp;#10;&amp;#10;thisExp.addData(&quot;Colour2&quot;, Colour2);&amp;#10;thisExp.addData(&quot;Ecc&quot;, Ecc);&amp;#10;thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse.mouseClock.getTime())  # Save time relative to start of mouse&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_4" valType="code"/>
       </CodeComponent>
@@ -1865,13 +1865,13 @@
         <Param name="Begin JS Experiment" updates="constant" val="// Set up catch trials&amp;#10;&amp;#10;catchtrialorder = Array.from({length: 20}, () =&gt; Math.floor(Math.random() * 324));&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="catchnumber = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumber = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumber}'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9]) or (trialnumber == catchtrialorder[10]) or (trialnumber == catchtrialorder[11]) or (trialnumber == catchtrialorder[12]) or (trialnumber == catchtrialorder[13]) or (trialnumber == catchtrialorder[14]) or (trialnumber == catchtrialorder[15]) or (trialnumber == catchtrialorder[16]) or (trialnumber == catchtrialorder[17]) or (trialnumber == catchtrialorder[18]) or (trialnumber == catchtrialorder[19])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])) || (trialnumber === catchtrialorder[10])) || (trialnumber === catchtrialorder[11])) || (trialnumber === catchtrialorder[12])) || (trialnumber === catchtrialorder[13])) || (trialnumber === catchtrialorder[14])) || (trialnumber === catchtrialorder[15])) || (trialnumber === catchtrialorder[16])) || (trialnumber === catchtrialorder[17])) || (trialnumber === catchtrialorder[18])) || (trialnumber === catchtrialorder[19])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;catchtiral&quot;, catchnumber);&amp;#10;thisExp.addData(&quot;catchtiralorder&quot;, catchtrialorder);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;catchnumber&quot;, catchnumber);&amp;#10;thisExp.addData(&quot;catchtrialorder&quot;, catchtrialorder);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;c1d = ((1 - a1d) - b1d);&amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165;&amp;#10;y22d = 165;&amp;#10;x23d = 165;&amp;#10;y23d = 15;&amp;#10;a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;c2d = ((1 - a2d) - b2d);&amp;#10;x31d = 15;&amp;#10;y31d = (- 15);&amp;#10;x32d = 165;&amp;#10;y32d = (- 15);&amp;#10;x33d = 165;&amp;#10;y33d = (- 165);&amp;#10;a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;c3d = ((1 - a3d) - b3d);&amp;#10;x41d = 15;&amp;#10;y41d = (- 15);&amp;#10;x42d = 165;&amp;#10;y42d = (- 165);&amp;#10;x43d = 15;&amp;#10;y43d = (- 165);&amp;#10;a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;c4d = ((1 - a4d) - b4d);&amp;#10;x51d = (- 165);&amp;#10;y51d = (- 165);&amp;#10;x52d = (- 15);&amp;#10;y52d = (- 15);&amp;#10;x53d = (- 15);&amp;#10;y53d = (- 165);&amp;#10;a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;c5d = ((1 - a5d) - b5d);&amp;#10;x61d = (- 165);&amp;#10;y61d = (- 15);&amp;#10;x62d = (- 15);&amp;#10;y62d = (- 15);&amp;#10;x63d = (- 165);&amp;#10;y63d = (- 165);&amp;#10;a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;c6d = ((1 - a6d) - b6d);&amp;#10;x71d = (- 165);&amp;#10;y71d = 165;&amp;#10;x72d = (- 15);&amp;#10;y72d = 15;&amp;#10;x73d = (- 165);&amp;#10;y73d = 15;&amp;#10;a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;c7d = ((1 - a7d) - b7d);&amp;#10;x81d = (- 165);&amp;#10;y81d = 165;&amp;#10;x82d = (- 15);&amp;#10;y82d = 165;&amp;#10;x83d = (- 15);&amp;#10;y83d = 15;&amp;#10;a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;c8d = ((1 - a8d) - b8d);&amp;#10;if (((((0 &lt;= a1d) &amp;&amp; (a1d &lt;= 1)) &amp;&amp; ((0 &lt;= b1d) &amp;&amp; (b1d &lt;= 1))) &amp;&amp; ((0 &lt;= c1d) &amp;&amp; (c1d &lt;= 1)))) {&amp;#10;    catchanswer = 7;&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;} else {&amp;#10;    if (((((0 &lt;= a2d) &amp;&amp; (a2d &lt;= 1)) &amp;&amp; ((0 &lt;= b2d) &amp;&amp; (b2d &lt;= 1))) &amp;&amp; ((0 &lt;= c2d) &amp;&amp; (c2d &lt;= 1)))) {&amp;#10;        catchanswer = 6;&amp;#10;        thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;    } else {&amp;#10;        if (((((0 &lt;= a3d) &amp;&amp; (a3d &lt;= 1)) &amp;&amp; ((0 &lt;= b3d) &amp;&amp; (b3d &lt;= 1))) &amp;&amp; ((0 &lt;= c3d) &amp;&amp; (c3d &lt;= 1)))) {&amp;#10;            catchanswer = 5;&amp;#10;            thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;        } else {&amp;#10;            if (((((0 &lt;= a4d) &amp;&amp; (a4d &lt;= 1)) &amp;&amp; ((0 &lt;= b4d) &amp;&amp; (b4d &lt;= 1))) &amp;&amp; ((0 &lt;= c4d) &amp;&amp; (c4d &lt;= 1)))) {&amp;#10;                catchanswer = 4;&amp;#10;                thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;            } else {&amp;#10;                if (((((0 &lt;= a5d) &amp;&amp; (a5d &lt;= 1)) &amp;&amp; ((0 &lt;= b5d) &amp;&amp; (b5d &lt;= 1))) &amp;&amp; ((0 &lt;= c5d) &amp;&amp; (c5d &lt;= 1)))) {&amp;#10;                    catchanswer = 3;&amp;#10;                    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;                } else {&amp;#10;                    if (((((0 &lt;= a6d) &amp;&amp; (a6d &lt;= 1)) &amp;&amp; ((0 &lt;= b6d) &amp;&amp; (b6d &lt;= 1))) &amp;&amp; ((0 &lt;= c6d) &amp;&amp; (c6d &lt;= 1)))) {&amp;#10;                        catchanswer = 2;&amp;#10;                        thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;                    } else {&amp;#10;                        if (((((0 &lt;= a7d) &amp;&amp; (a7d &lt;= 1)) &amp;&amp; ((0 &lt;= b7d) &amp;&amp; (b7d &lt;= 1))) &amp;&amp; ((0 &lt;= c7d) &amp;&amp; (c7d &lt;= 1)))) {&amp;#10;                            catchanswer = 1;&amp;#10;                            thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;                        } else {&amp;#10;                            if (((((0 &lt;= a8d) &amp;&amp; (a8d &lt;= 1)) &amp;&amp; ((0 &lt;= b8d) &amp;&amp; (b8d &lt;= 1))) &amp;&amp; ((0 &lt;= c8d) &amp;&amp; (c8d &lt;= 1)))) {&amp;#10;                                catchanswer = 0;&amp;#10;                                thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;catchnumber&quot;, catchnumber);&amp;#10;thisExp.addData(&quot;catchtrialorder&quot;, catchtrialorder);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;# Triangle 7&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165&amp;#10;y22d = 165&amp;#10;x23d = 165&amp;#10;y23d = 15&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = 15&amp;#10;y31d = -15&amp;#10;x32d = 165&amp;#10;y32d = -15&amp;#10;x33d = 165&amp;#10;y33d = -165&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = 15&amp;#10;y41d = -15&amp;#10;x42d = 165&amp;#10;y42d = -165&amp;#10;x43d = 15&amp;#10;y43d = -165&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -165&amp;#10;y51d = -165&amp;#10;x52d = -15&amp;#10;y52d = -15&amp;#10;x53d = -15&amp;#10;y53d = -165&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -165&amp;#10;y61d = -15&amp;#10;x62d = -15&amp;#10;y62d = -15&amp;#10;x63d = -165&amp;#10;y63d = -165&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -165&amp;#10;y71d = 165&amp;#10;x72d = -15&amp;#10;y72d = 15&amp;#10;x73d = -165&amp;#10;y73d = 15&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -165&amp;#10;y81d = 165&amp;#10;x82d = -15&amp;#10;y82d = 165&amp;#10;x83d = -15&amp;#10;y83d = 15&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    catchanswer = 7&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    catchanswer = 6&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    catchanswer = 5&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    catchanswer = 4&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    catchanswer = 3&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    catchanswer = 2&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    catchanswer = 1&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    catchanswer = 0&amp;#10;    thisExp.addData(&quot;catchanswer&quot;, catchanswer);&amp;#10;&amp;#10;&amp;#10;&amp;#10;thisExp.addData(&quot;catchnumber&quot;, catchnumber);&amp;#10;thisExp.addData(&quot;catchtrialorder&quot;, catchtrialorder);&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_6" valType="code"/>
       </CodeComponent>
@@ -2271,7 +2271,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="x = 1;&amp;#10;y = 1;&amp;#10;angle_1 = 180;&amp;#10;angle_2 = 320;&amp;#10;theta_1 = (angle_1 * (pi / 180));&amp;#10;theta_2 = (angle_2 * (pi / 180));&amp;#10;deltax_1 = (radius_F * cos(theta_1));&amp;#10;deltay_1 = (radius_F * sin(theta_1));&amp;#10;deltax_2 = (radius_P * cos(theta_2));&amp;#10;deltay_2 = (radius_P * sin(theta_2));&amp;#10;a_1 = (x + deltax_1);&amp;#10;b_1 = (y + deltay_1);&amp;#10;a_2 = (x + deltax_2);&amp;#10;b_2 = (y + deltay_2);&amp;#10;if ((Ecc === &quot;FF&quot;)) {&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;} else {&amp;#10;    if ((Ecc === &quot;PF&quot;)) {&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;    }&amp;#10;}&amp;#10;Colour_1 = (Math.floor((Math.random() * ((9 - 1) + 1))) + 1);&amp;#10;if ((Colour_1 === 1)) {&amp;#10;    Circle1_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_1 === 2)) {&amp;#10;        Circle1_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_1 === 3)) {&amp;#10;            Circle1_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_1 === 4)) {&amp;#10;                Circle1_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_1 === 5)) {&amp;#10;                    Circle1_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_1 === 6)) {&amp;#10;                        Circle1_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_1 === 7)) {&amp;#10;                            Circle1_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_1 === 8)) {&amp;#10;                                Circle1_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_1 === 9)) {&amp;#10;                                    Circle1_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Circle position and size &amp;#10;&amp;#10;x = 1&amp;#10;y = 1&amp;#10;&amp;#10;angle_1 = 180&amp;#10;angle_2 = 320&amp;#10;&amp;#10;theta_1 = (angle_1)*(pi/180)&amp;#10;theta_2 = (angle_2)*(pi/180)&amp;#10;&amp;#10;deltax_1 = radius_F*cos(theta_1)&amp;#10;deltay_1 = radius_F*sin(theta_1)&amp;#10;deltax_2 = radius_P*cos(theta_2)&amp;#10;deltay_2 = radius_P*sin(theta_2)&amp;#10;&amp;#10;&amp;#10;a_1 = x + deltax_1&amp;#10;b_1 = y + deltay_1&amp;#10;a_2 = x + deltax_2&amp;#10;b_2 = y + deltay_2&amp;#10;&amp;#10;&amp;#10;# Set circle position &amp;#10;if Ecc == 'FF':&amp;#10;    circle1posx = a_1;&amp;#10;    circle1posy = b_1;&amp;#10;elif Ecc == 'PF':&amp;#10;        circle1posx = a_2;&amp;#10;        circle1posy = b_2;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_1 = randint(1,9);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_1 == 1:&amp;#10;    Circle1_col = (1, -1, -1);&amp;#10;elif Colour_1 == 2:&amp;#10;    Circle1_col = (1, 0.33, -1);&amp;#10;elif Colour_1 == 3:&amp;#10;    Circle1_col = (0.32, 1, -1);&amp;#10;elif Colour_1 == 4:&amp;#10;    Circle1_col = (-1, 1, -1);&amp;#10;elif Colour_1 == 5:&amp;#10;    Circle1_col = (-1, 1, 0.33);&amp;#10;elif Colour_1 == 6:&amp;#10;    Circle1_col = (-1, 0.32, 1);&amp;#10;elif Colour_1 == 7:&amp;#10;    Circle1_col = (-1, -1, 1);&amp;#10;elif Colour_1 == 8:&amp;#10;    Circle1_col = (0.33, -1, 1);&amp;#10;elif Colour_1 == 9:&amp;#10;    Circle1_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -2337,14 +2337,14 @@
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="pracnumber = (pracnumber + 1);&amp;#10;Colour_2 = (Math.floor((Math.random() * ((9 - 1) + 1))) + 1);&amp;#10;if ((Colour_2 === 1)) {&amp;#10;    Circle2_col = [1, (- 1), (- 1)];&amp;#10;} else {&amp;#10;    if ((Colour_2 === 2)) {&amp;#10;        Circle2_col = [1, 0.33, (- 1)];&amp;#10;    } else {&amp;#10;        if ((Colour_2 === 3)) {&amp;#10;            Circle2_col = [0.32, 1, (- 1)];&amp;#10;        } else {&amp;#10;            if ((Colour_2 === 4)) {&amp;#10;                Circle2_col = [(- 1), 1, (- 1)];&amp;#10;            } else {&amp;#10;                if ((Colour_2 === 5)) {&amp;#10;                    Circle2_col = [(- 1), 1, 0.33];&amp;#10;                } else {&amp;#10;                    if ((Colour_2 === 6)) {&amp;#10;                        Circle2_col = [(- 1), 0.32, 1];&amp;#10;                    } else {&amp;#10;                        if ((Colour_2 === 7)) {&amp;#10;                            Circle2_col = [(- 1), (- 1), 1];&amp;#10;                        } else {&amp;#10;                            if ((Colour_2 === 8)) {&amp;#10;                                Circle2_col = [0.33, (- 1), 1];&amp;#10;                            } else {&amp;#10;                                if ((Colour_2 === 9)) {&amp;#10;                                    Circle2_col = [1, (- 1), 0.33];&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;pracnumber =  pracnumber + 1;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_2 = randint(1,9);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Count trial numbers&amp;#10;&amp;#10;pracnumber =  pracnumber + 1;&amp;#10;&amp;#10;# Randomly select circle colour&amp;#10;&amp;#10;Colour_2 = randint(1,9);&amp;#10;&amp;#10;# Set circle colour&amp;#10;if Colour_2 == 1:&amp;#10;    Circle2_col = (1, -1, -1);&amp;#10;elif Colour_2 == 2:&amp;#10;    Circle2_col = (1, 0.33, -1);&amp;#10;elif Colour_2 == 3:&amp;#10;    Circle2_col = (0.32, 1, -1);&amp;#10;elif Colour_2 == 4:&amp;#10;    Circle2_col = (-1, 1, -1);&amp;#10;elif Colour_2 == 5:&amp;#10;    Circle2_col = (-1, 1, 0.33);&amp;#10;elif Colour_2 == 6:&amp;#10;    Circle2_col = (-1, 0.32, 1);&amp;#10;elif Colour_2 == 7:&amp;#10;    Circle2_col = (-1, -1, 1);&amp;#10;elif Colour_2 == 8:&amp;#10;    Circle2_col = (0.33, -1, 1);&amp;#10;elif Colour_2 == 9:&amp;#10;    Circle2_col = (1, -1, 0.33);&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;c1d = ((1 - a1d) - b1d);&amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165;&amp;#10;y22d = 165;&amp;#10;x23d = 165;&amp;#10;y23d = 15;&amp;#10;a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;c2d = ((1 - a2d) - b2d);&amp;#10;x31d = 15;&amp;#10;y31d = (- 15);&amp;#10;x32d = 165;&amp;#10;y32d = (- 15);&amp;#10;x33d = 165;&amp;#10;y33d = (- 165);&amp;#10;a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;c3d = ((1 - a3d) - b3d);&amp;#10;x41d = 15;&amp;#10;y41d = (- 15);&amp;#10;x42d = 165;&amp;#10;y42d = (- 165);&amp;#10;x43d = 15;&amp;#10;y43d = (- 165);&amp;#10;a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;c4d = ((1 - a4d) - b4d);&amp;#10;x51d = (- 165);&amp;#10;y51d = (- 165);&amp;#10;x52d = (- 15);&amp;#10;y52d = (- 15);&amp;#10;x53d = (- 15);&amp;#10;y53d = (- 165);&amp;#10;a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;c5d = ((1 - a5d) - b5d);&amp;#10;x61d = (- 165);&amp;#10;y61d = (- 15);&amp;#10;x62d = (- 15);&amp;#10;y62d = (- 15);&amp;#10;x63d = (- 165);&amp;#10;y63d = (- 165);&amp;#10;a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;c6d = ((1 - a6d) - b6d);&amp;#10;x71d = (- 165);&amp;#10;y71d = 165;&amp;#10;x72d = (- 15);&amp;#10;y72d = 15;&amp;#10;x73d = (- 165);&amp;#10;y73d = 15;&amp;#10;a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;c7d = ((1 - a7d) - b7d);&amp;#10;x81d = (- 165);&amp;#10;y81d = 165;&amp;#10;x82d = (- 15);&amp;#10;y82d = 165;&amp;#10;x83d = (- 15);&amp;#10;y83d = 15;&amp;#10;a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;c8d = ((1 - a8d) - b8d);&amp;#10;if (((((0 &lt;= a1d) &amp;&amp; (a1d &lt;= 1)) &amp;&amp; ((0 &lt;= b1d) &amp;&amp; (b1d &lt;= 1))) &amp;&amp; ((0 &lt;= c1d) &amp;&amp; (c1d &lt;= 1)))) {&amp;#10;    similarity = 7;&amp;#10;} else {&amp;#10;    if (((((0 &lt;= a2d) &amp;&amp; (a2d &lt;= 1)) &amp;&amp; ((0 &lt;= b2d) &amp;&amp; (b2d &lt;= 1))) &amp;&amp; ((0 &lt;= c2d) &amp;&amp; (c2d &lt;= 1)))) {&amp;#10;        similarity = 6;&amp;#10;    } else {&amp;#10;        if (((((0 &lt;= a3d) &amp;&amp; (a3d &lt;= 1)) &amp;&amp; ((0 &lt;= b3d) &amp;&amp; (b3d &lt;= 1))) &amp;&amp; ((0 &lt;= c3d) &amp;&amp; (c3d &lt;= 1)))) {&amp;#10;            similarity = 5;&amp;#10;        } else {&amp;#10;            if (((((0 &lt;= a4d) &amp;&amp; (a4d &lt;= 1)) &amp;&amp; ((0 &lt;= b4d) &amp;&amp; (b4d &lt;= 1))) &amp;&amp; ((0 &lt;= c4d) &amp;&amp; (c4d &lt;= 1)))) {&amp;#10;                similarity = 4;&amp;#10;            } else {&amp;#10;                if (((((0 &lt;= a5d) &amp;&amp; (a5d &lt;= 1)) &amp;&amp; ((0 &lt;= b5d) &amp;&amp; (b5d &lt;= 1))) &amp;&amp; ((0 &lt;= c5d) &amp;&amp; (c5d &lt;= 1)))) {&amp;#10;                    similarity = 3;&amp;#10;                } else {&amp;#10;                    if (((((0 &lt;= a6d) &amp;&amp; (a6d &lt;= 1)) &amp;&amp; ((0 &lt;= b6d) &amp;&amp; (b6d &lt;= 1))) &amp;&amp; ((0 &lt;= c6d) &amp;&amp; (c6d &lt;= 1)))) {&amp;#10;                        similarity = 2;&amp;#10;                    } else {&amp;#10;                        if (((((0 &lt;= a7d) &amp;&amp; (a7d &lt;= 1)) &amp;&amp; ((0 &lt;= b7d) &amp;&amp; (b7d &lt;= 1))) &amp;&amp; ((0 &lt;= c7d) &amp;&amp; (c7d &lt;= 1)))) {&amp;#10;                            similarity = 1;&amp;#10;                        } else {&amp;#10;                            if (((((0 &lt;= a8d) &amp;&amp; (a8d &lt;= 1)) &amp;&amp; ((0 &lt;= b8d) &amp;&amp; (b8d &lt;= 1))) &amp;&amp; ((0 &lt;= c8d) &amp;&amp; (c8d &lt;= 1)))) {&amp;#10;                                similarity = 0;&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse_5.mouseClock.getTime());&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;# Triangle 7&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165&amp;#10;y22d = 165&amp;#10;x23d = 165&amp;#10;y23d = 15&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = 15&amp;#10;y31d = -15&amp;#10;x32d = 165&amp;#10;y32d = -15&amp;#10;x33d = 165&amp;#10;y33d = -165&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = 15&amp;#10;y41d = -15&amp;#10;x42d = 165&amp;#10;y42d = -165&amp;#10;x43d = 15&amp;#10;y43d = -165&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -165&amp;#10;y51d = -165&amp;#10;x52d = -15&amp;#10;y52d = -15&amp;#10;x53d = -15&amp;#10;y53d = -165&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -165&amp;#10;y61d = -15&amp;#10;x62d = -15&amp;#10;y62d = -15&amp;#10;x63d = -165&amp;#10;y63d = -165&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -165&amp;#10;y71d = 165&amp;#10;x72d = -15&amp;#10;y72d = 15&amp;#10;x73d = -165&amp;#10;y73d = 15&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -165&amp;#10;y81d = 165&amp;#10;x82d = -15&amp;#10;y82d = 165&amp;#10;x83d = -15&amp;#10;y83d = 15&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    similarity = 7&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    similarity = 6&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    similarity = 5&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    similarity = 4&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    similarity = 3&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    similarity = 2&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    similarity = 1&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    similarity = 0&amp;#10;&amp;#10;&amp;#10;thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse_5.mouseClock.getTime())  # Save time relative to start of mouse&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_10" valType="code"/>
       </CodeComponent>
@@ -2840,13 +2840,13 @@
         <Param name="Begin JS Experiment" updates="constant" val="catchtrialorderprac = Array.from({length: 2}, () =&gt; Math.floor(Math.random() * 7));&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumberprac = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;c1d = ((1 - a1d) - b1d);&amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165;&amp;#10;y22d = 165;&amp;#10;x23d = 165;&amp;#10;y23d = 15;&amp;#10;a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;c2d = ((1 - a2d) - b2d);&amp;#10;x31d = 15;&amp;#10;y31d = (- 15);&amp;#10;x32d = 165;&amp;#10;y32d = (- 15);&amp;#10;x33d = 165;&amp;#10;y33d = (- 165);&amp;#10;a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;c3d = ((1 - a3d) - b3d);&amp;#10;x41d = 15;&amp;#10;y41d = (- 15);&amp;#10;x42d = 165;&amp;#10;y42d = (- 165);&amp;#10;x43d = 15;&amp;#10;y43d = (- 165);&amp;#10;a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;c4d = ((1 - a4d) - b4d);&amp;#10;x51d = (- 165);&amp;#10;y51d = (- 165);&amp;#10;x52d = (- 15);&amp;#10;y52d = (- 15);&amp;#10;x53d = (- 15);&amp;#10;y53d = (- 165);&amp;#10;a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;c5d = ((1 - a5d) - b5d);&amp;#10;x61d = (- 165);&amp;#10;y61d = (- 15);&amp;#10;x62d = (- 15);&amp;#10;y62d = (- 15);&amp;#10;x63d = (- 165);&amp;#10;y63d = (- 165);&amp;#10;a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;c6d = ((1 - a6d) - b6d);&amp;#10;x71d = (- 165);&amp;#10;y71d = 165;&amp;#10;x72d = (- 15);&amp;#10;y72d = 15;&amp;#10;x73d = (- 165);&amp;#10;y73d = 15;&amp;#10;a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;c7d = ((1 - a7d) - b7d);&amp;#10;x81d = (- 165);&amp;#10;y81d = 165;&amp;#10;x82d = (- 15);&amp;#10;y82d = 165;&amp;#10;x83d = (- 15);&amp;#10;y83d = 15;&amp;#10;a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;c8d = ((1 - a8d) - b8d);&amp;#10;if (((((0 &lt;= a1d) &amp;&amp; (a1d &lt;= 1)) &amp;&amp; ((0 &lt;= b1d) &amp;&amp; (b1d &lt;= 1))) &amp;&amp; ((0 &lt;= c1d) &amp;&amp; (c1d &lt;= 1)))) {&amp;#10;    catchprac = 7;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;} else {&amp;#10;    if (((((0 &lt;= a2d) &amp;&amp; (a2d &lt;= 1)) &amp;&amp; ((0 &lt;= b2d) &amp;&amp; (b2d &lt;= 1))) &amp;&amp; ((0 &lt;= c2d) &amp;&amp; (c2d &lt;= 1)))) {&amp;#10;        catchprac = 6;&amp;#10;        thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;    } else {&amp;#10;        if (((((0 &lt;= a3d) &amp;&amp; (a3d &lt;= 1)) &amp;&amp; ((0 &lt;= b3d) &amp;&amp; (b3d &lt;= 1))) &amp;&amp; ((0 &lt;= c3d) &amp;&amp; (c3d &lt;= 1)))) {&amp;#10;            catchprac = 5;&amp;#10;            thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;        } else {&amp;#10;            if (((((0 &lt;= a4d) &amp;&amp; (a4d &lt;= 1)) &amp;&amp; ((0 &lt;= b4d) &amp;&amp; (b4d &lt;= 1))) &amp;&amp; ((0 &lt;= c4d) &amp;&amp; (c4d &lt;= 1)))) {&amp;#10;                catchprac = 4;&amp;#10;                thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;            } else {&amp;#10;                if (((((0 &lt;= a5d) &amp;&amp; (a5d &lt;= 1)) &amp;&amp; ((0 &lt;= b5d) &amp;&amp; (b5d &lt;= 1))) &amp;&amp; ((0 &lt;= c5d) &amp;&amp; (c5d &lt;= 1)))) {&amp;#10;                    catchprac = 3;&amp;#10;                    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                } else {&amp;#10;                    if (((((0 &lt;= a6d) &amp;&amp; (a6d &lt;= 1)) &amp;&amp; ((0 &lt;= b6d) &amp;&amp; (b6d &lt;= 1))) &amp;&amp; ((0 &lt;= c6d) &amp;&amp; (c6d &lt;= 1)))) {&amp;#10;                        catchprac = 2;&amp;#10;                        thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                    } else {&amp;#10;                        if (((((0 &lt;= a7d) &amp;&amp; (a7d &lt;= 1)) &amp;&amp; ((0 &lt;= b7d) &amp;&amp; (b7d &lt;= 1))) &amp;&amp; ((0 &lt;= c7d) &amp;&amp; (c7d &lt;= 1)))) {&amp;#10;                            catchprac = 1;&amp;#10;                            thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                        } else {&amp;#10;                            if (((((0 &lt;= a8d) &amp;&amp; (a8d &lt;= 1)) &amp;&amp; ((0 &lt;= b8d) &amp;&amp; (b8d &lt;= 1))) &amp;&amp; ((0 &lt;= c8d) &amp;&amp; (c8d &lt;= 1)))) {&amp;#10;                                catchprac = 0;&amp;#10;                                thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;# Triangle 7&amp;#10;x11d = 15;&amp;#10;y11d = 165;&amp;#10;x12d = 165;&amp;#10;y12d = 165;&amp;#10;x13d = 15;&amp;#10;y13d = 15;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = 15;&amp;#10;y21d = 15;&amp;#10;x22d = 165&amp;#10;y22d = 165&amp;#10;x23d = 165&amp;#10;y23d = 15&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = 15&amp;#10;y31d = -15&amp;#10;x32d = 165&amp;#10;y32d = -15&amp;#10;x33d = 165&amp;#10;y33d = -165&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = 15&amp;#10;y41d = -15&amp;#10;x42d = 165&amp;#10;y42d = -165&amp;#10;x43d = 15&amp;#10;y43d = -165&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -165&amp;#10;y51d = -165&amp;#10;x52d = -15&amp;#10;y52d = -15&amp;#10;x53d = -15&amp;#10;y53d = -165&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -165&amp;#10;y61d = -15&amp;#10;x62d = -15&amp;#10;y62d = -15&amp;#10;x63d = -165&amp;#10;y63d = -165&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -165&amp;#10;y71d = 165&amp;#10;x72d = -15&amp;#10;y72d = 15&amp;#10;x73d = -165&amp;#10;y73d = 15&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -165&amp;#10;y81d = 165&amp;#10;x82d = -15&amp;#10;y82d = 165&amp;#10;x83d = -15&amp;#10;y83d = 15&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    catchprac = 7&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    catchprac = 6&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    catchprac = 5&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    catchprac = 4&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    catchprac = 3&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    catchprac = 2&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    catchprac = 1;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    catchprac = 0;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_12" valType="code"/>
       </CodeComponent>
@@ -2930,7 +2930,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -3499,8 +3499,8 @@
         <Param name="Begin JS Routine" updates="constant" val="pracnumbertext = `You have finished ${pracnumber} of 7 practice questions`;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="pracnumbertext = f'You have finished {pracnumber} of 7 practice questions';&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -5337,6 +5337,653 @@
         <Param name="name" updates="None" val="code_17" valType="code"/>
       </CodeComponent>
     </Routine>
+    <Routine name="form">
+      <SliderComponent name="slider">
+        <Param name="color" updates="constant" val="LightGray" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="HelveticaBold" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
+        <Param name="granularity" updates="constant" val="0" valType="code"/>
+        <Param name="labels" updates="constant" val="'yes','no'" valType="list"/>
+        <Param name="name" updates="None" val="slider" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(25,25)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="styles" updates="constant" val="['rating', 'whiteOnBlack']" valType="fixedList"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="ticks" updates="constant" val="(1, 2)" valType="list"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </SliderComponent>
+    </Routine>
+    <Routine name="response_3">
+      <ImageComponent name="response1disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response1disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response2disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response2disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response3disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response3disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response4disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response4disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response5disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response5disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response6disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response6disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response7disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response7disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response8disk_9">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response8disk_9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <MouseComponent name="mouse_9">
+        <Param name="clickable" updates="constant" val="rectangle" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_9" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
+      <PolygonComponent name="rectangle_7">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="green" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="green" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="1000" valType="int"/>
+        <Param name="name" updates="None" val="rectangle_7" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="rectangle" valType="str"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <CodeComponent name="code_22">
+        <Param name="Begin Experiment" updates="constant" val="trialnumber = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="trialnumber = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialnumbertext = `You have finished ${trialnumber} of 324 questions`;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="trialnumbertext = f'You have finished {trialnumber} of 324 questions';&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9]) or (trialnumber == catchtrialorder[10]) or (trialnumber == catchtrialorder[11]) or (trialnumber == catchtrialorder[12]) or (trialnumber == catchtrialorder[13]) or (trialnumber == catchtrialorder[14]) or (trialnumber == catchtrialorder[15]) or (trialnumber == catchtrialorder[16]) or (trialnumber == catchtrialorder[17]) or (trialnumber == catchtrialorder[18]) or (trialnumber == catchtrialorder[19])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((! ((((((((((((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])) || (trialnumber === catchtrialorder[10])) || (trialnumber === catchtrialorder[11])) || (trialnumber === catchtrialorder[12])) || (trialnumber === catchtrialorder[13])) || (trialnumber === catchtrialorder[14])) || (trialnumber === catchtrialorder[15])) || (trialnumber === catchtrialorder[16])) || (trialnumber === catchtrialorder[17])) || (trialnumber === catchtrialorder[18])) || (trialnumber === catchtrialorder[19])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_22" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="text_47">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_47" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -270)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_48">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_48" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$trialnumbertext" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="summary_prac">
+      <ImageComponent name="response1disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response1disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response2disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response2disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response3disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response3disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response4disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response4disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response5disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response5disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response6disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response6disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,-90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response7disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response7disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="response8disk_10">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="response8disk_10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-90,90)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(150, 150)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <MouseComponent name="mouse_10">
+        <Param name="clickable" updates="constant" val="rectangle_4" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_10" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
+      <PolygonComponent name="rectangle_8">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="green" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="green" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="1000" valType="int"/>
+        <Param name="name" updates="None" val="rectangle_8" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="rectangle" valType="str"/>
+        <Param name="size" updates="constant" val="(100, 80)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <CodeComponent name="code_23">
+        <Param name="Begin Experiment" updates="constant" val="pracnumber = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="pracnumber = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="pracnumbertext = `You have finished ${pracnumber} of 7 practice questions`;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="pracnumbertext = f'You have finished {pracnumber} of 7 practice questions';&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_23" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="text_49">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_49" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -270)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_50">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="25" valType="code"/>
+        <Param name="name" updates="None" val="text_50" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$pracnumbertext" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="startup"/>
@@ -5388,6 +6035,7 @@
     </LoopInitiator>
     <Routine name="Stim1_display_prac"/>
     <Routine name="response_prac"/>
+    <Routine name="summary_prac"/>
     <Routine name="special_trial_prac"/>
     <Routine name="catch_prac"/>
     <Routine name="summary2_prac"/>
@@ -5406,9 +6054,10 @@
     </LoopInitiator>
     <Routine name="Stim1_display"/>
     <Routine name="response"/>
+    <Routine name="response_2"/>
     <Routine name="special_trial"/>
     <Routine name="catch_1"/>
-    <Routine name="response_2"/>
+    <Routine name="response_3"/>
     <LoopTerminator name="trials_2"/>
   </Flow>
 </PsychoPy2experiment>
