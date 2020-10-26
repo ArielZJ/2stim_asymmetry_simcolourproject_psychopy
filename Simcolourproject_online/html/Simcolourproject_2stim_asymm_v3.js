@@ -6166,10 +6166,10 @@ function instr_pracRoutineEnd(trials) {
 }
 
 
-var x;
-var y;
 var angle_1;
 var angle_2;
+var x;
+var y;
 var theta_1;
 var theta_2;
 var deltax_1;
@@ -6182,6 +6182,8 @@ var a_2;
 var b_2;
 var circle1posx;
 var circle1posy;
+var circlesizeh;
+var circlesizew;
 var Colour_1;
 var Circle1_col;
 var Stim1_display_pracComponents;
@@ -6193,10 +6195,10 @@ function Stim1_display_pracRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(0.500000);
     // update component parameters for each repeat
+    angle_1 = (Math.floor((Math.random() * ((30 - (- 30)) + 1))) + (- 30));
+    angle_2 = (angle_1 + 180);
     x = 1;
     y = 1;
-    angle_1 = 180;
-    angle_2 = 320;
     theta_1 = (angle_1 * (pi / 180));
     theta_2 = (angle_2 * (pi / 180));
     deltax_1 = (radius_F * cos(theta_1));
@@ -6210,10 +6212,14 @@ function Stim1_display_pracRoutineBegin(trials) {
     if ((Ecc === "FF")) {
         circle1posx = a_1;
         circle1posy = b_1;
+        circlesizeh = (2 * r_F);
+        circlesizew = (2 * r_F);
     } else {
         if ((Ecc === "PF")) {
             circle1posx = a_2;
             circle1posy = b_2;
+            circlesizeh = (2 * R_P);
+            circlesizew = (2 * R_P);
         }
     }
     Colour_1 = (Math.floor((Math.random() * ((9 - 1) + 1))) + 1);
@@ -6254,7 +6260,7 @@ function Stim1_display_pracRoutineBegin(trials) {
     }
     
     Circle.setPos([circle1posx, circle1posy]);
-    Circle.setSize([(10 * ratio_pxpermm), (10 * ratio_pxpermm)]);
+    Circle.setSize([circlesizew, circlesizeh]);
     Circle.setFillColor(new util.Color(Circle1_col));
     Circle.setLineColor(new util.Color(Circle1_col));
     // keep track of which components have finished
@@ -6946,7 +6952,7 @@ function summary_pracRoutineEachFrame(trials) {
         if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
-          for (const obj of [rectangle_4]) {
+          for (const obj of [rectangle_8]) {
             if (obj.contains(mouse_10)) {
               gotValidClick = true;
               mouse_10.clicked_name.push(obj.name)
@@ -7862,8 +7868,8 @@ function Stim1_displayRoutineBegin(trials) {
     // update component parameters for each repeat
     x = 1;
     y = 1;
-    angle_1 = 180;
-    angle_2 = 320;
+    angle_1 = (Math.floor((Math.random() * ((30 - (- 30)) + 1))) + (- 30));
+    angle_2 = (angle_1 + 180);
     theta_1 = (angle_1 * (pi / 180));
     theta_2 = (angle_2 * (pi / 180));
     deltax_1 = (radius_F * cos(theta_1));
@@ -7912,15 +7918,19 @@ function Stim1_displayRoutineBegin(trials) {
     if ((Ecc === "FF")) {
         circle1posx = a_1;
         circle1posy = b_1;
+        circlesizeh = (2 * r_F);
+        circlesizew = (2 * r_F);
     } else {
         if ((Ecc === "PF")) {
             circle1posx = a_2;
             circle1posy = b_2;
+            circlesizeh = (2 * R_P);
+            circlesizew = (2 * R_P);
         }
     }
     
     Circle_1.setPos([circle1posx, circle1posy]);
-    Circle_1.setSize([(10 * ratio_pxpermm), (10 * ratio_pxpermm)]);
+    Circle_1.setSize([circlesizew, circlesizeh]);
     Circle_1.setFillColor(new util.Color(Circle1_colour));
     Circle_1.setLineColor(new util.Color(Circle1_colour));
     // keep track of which components have finished
@@ -8673,7 +8683,7 @@ function special_trialRoutineEachFrame(trials) {
     if (text_33.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       text_33.setAutoDraw(false);
     }
-    if ((! ((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])))) {
+    if ((! ((((((((((((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])) || (trialnumber === catchtrialorder[10])) || (trialnumber === catchtrialorder[11])) || (trialnumber === catchtrialorder[12])) || (trialnumber === catchtrialorder[13])) || (trialnumber === catchtrialorder[14])) || (trialnumber === catchtrialorder[15])) || (trialnumber === catchtrialorder[16])) || (trialnumber === catchtrialorder[17])) || (trialnumber === catchtrialorder[18])) || (trialnumber === catchtrialorder[19])))) {
         continueRoutine = false;
     }
     
@@ -9210,7 +9220,7 @@ function response_3RoutineEachFrame(trials) {
         if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
-          for (const obj of [rectangle]) {
+          for (const obj of [rectangle_7]) {
             if (obj.contains(mouse_9)) {
               gotValidClick = true;
               mouse_9.clicked_name.push(obj.name)
