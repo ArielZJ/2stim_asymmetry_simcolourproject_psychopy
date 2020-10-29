@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Mon Oct 26 17:06:52 2020
+    on Thu Oct 29 16:24:11 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/bethfisher/Documents/Simcolourproject_online/Simcolourproject_2stim_asymm_v3_lastrun.py',
+    originPath='/Users/bethfisher/Documents/Simcolourproject_online/Simcolourproject_2stim_asymm_v4_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -69,7 +69,7 @@ win = visual.Window(
     winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
-    units='pix')
+    units='norm')
 # store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()
 if expInfo['frameRate'] != None:
@@ -95,7 +95,7 @@ welcome_instrClock = core.Clock()
 welcome = visual.TextStim(win=win, name='welcome',
     text='Welcome to this experiment \n\nThis will take about 45 minutes ',
     font='Arial',
-    pos=(0, 0), height=70, wrapWidth=1000, ori=0, 
+    units='norm', pos=(0, 0), height=0.2, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -103,7 +103,7 @@ key_resp = keyboard.Keyboard()
 space = visual.TextStim(win=win, name='space',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -113,21 +113,21 @@ instr_1Clock = core.Clock()
 text_1 = visual.TextStim(win=win, name='text_1',
     text='Before starting the main experiment, we need to do some quick calibrations to ensure your screen is set up correctly.',
     font='Arial',
-    pos=(0, 250), height=30, wrapWidth=1000, ori=0, 
+    units='norm', pos=(0, 0.4), height=0.08, wrapWidth=1.5, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 space_2 = visual.TextStim(win=win, name='space_2',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=(0.7, -0.7), height=0.05, wrapWidth=1.5, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 text_2 = visual.TextStim(win=win, name='text_2',
     text='Warning! It is critical that these calibrations are done correctly or you will be unable to do the experiment and we will be unable to approve your payment!',
     font='Arial',
-    pos=(0,-250), height=30, wrapWidth=1000, ori=0, 
+    pos=(0,-0.4), height=0.08, wrapWidth=1.5, ori=0, 
     color='red', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -135,6 +135,14 @@ key_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "screen_scale"
 screen_scaleClock = core.Clock()
+ccimage = visual.ImageStim(
+    win=win,
+    name='ccimage', units='pix', 
+    image='card.png', mask=None,
+    ori=0, pos=(-150,150), size=1.0,
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
 # Set size of card
 
 oldt=0
@@ -142,13 +150,13 @@ x_size=8.560
 y_size=5.398
 
 
-if win.units=='norm':
+if ccimage.units=='norm':
     x_scale=.05
     y_scale=.1
     dbase = .0001
     unittext=' norm units'
     vsize=2
-elif win.units=='pix':
+elif ccimage.units=='pix':
     x_scale=60
     y_scale=40
     dbase = .1
@@ -160,18 +168,10 @@ else:
     dbase = .0001
     unittext=' height units'
     vsize=1
-ccimage = visual.ImageStim(
-    win=win,
-    name='ccimage', units='pix', 
-    image='card.png', mask=None,
-    ori=0, pos=(-150, 150), size=1.0,
-    color=[1,1,1], colorSpace='rgb', opacity=1,
-    flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
 text_37 = visual.TextStim(win=win, name='text_37',
-    text="First, we need to determine the size of your screen.\nTake a credit card (or a drivers license, library card, any equivalent card),\npress it to the screen and adjust the image on your screen to be the same size as the card\n\nTo increase the image width: press '>' on your keyboard\nTo decrease the image width: press '<' on your keyboard\n\nWhen you are done, press <ENTER>",
+    text="First, we need to determine the size of your screen.\nTake a credit card (or a drivers license, library card, any equivalent card),\npress it to the screen and adjust the image on your screen to be the same size as the card\n\nTo increase the image width: press 'k' on your keyboard\nTo decrease the image width: press 'j' on your keyboard\n\nWhen you are done, press <ENTER>",
     font='Arial',
-    pos=(0, -150), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.35), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -181,7 +181,7 @@ instr_2Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
     text='Next, we need to get you to keep your head a fixed distance from the screen.\nThis will ensure future images are the right size for your screen. On the next screen please:',
     font='Arial',
-    pos=(0, -150), height=20, wrapWidth=1000, ori=0, 
+    pos=(0,-0.2), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -189,14 +189,14 @@ key_resp_3 = keyboard.Keyboard()
 text_3 = visual.TextStim(win=win, name='text_3',
     text='1. Keeping your arm straight, please touch your thumb to the centre of the screen in the oval\n2. While keeping your head in the same position, lower your arm.\n3. Please keep your head in this position for the remainder of the experiment ',
     font='Arial',
-    pos=(0, -250), height=20, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 space_3 = visual.TextStim(win=win, name='space_3',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=20, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -206,7 +206,7 @@ instr_3Clock = core.Clock()
 text_4 = visual.TextStim(win=win, name='text_4',
     text='1. While keeping your arm straight touch your thumb to the centre of the screen in the oval.\n2. Keep your head in the same position, but lower and relax your arm.\n3. Please keep your head in this position for the remainder of the experiment.\n4. Press SPACE to continue ',
     font='Arial',
-    pos=(0, 200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, 0.5), height=0.07, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -214,7 +214,7 @@ key_resp_4 = keyboard.Keyboard()
 thumb_size = 20;
 calibrationline = visual.ImageStim(
     win=win,
-    name='calibrationline', 
+    name='calibrationline', units='pix', 
     image='calibrationline.png', mask=None,
     ori=0, pos=(0, 0), size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -226,7 +226,7 @@ instr_4Clock = core.Clock()
 text_5 = visual.TextStim(win=win, name='text_5',
     text='Lastly, we need to know how far your head is from the screen.\nPlease keep your head in the same position as before.\n\nOver the next few pages we will explain how we can work out how far you are sitting from the screen.\nPlease pay attention and follow all the instructions carefully.\n\nThese first few pages will be INSTRUCTIONS ONLY. You will be instructed when the calibrations start.\n\nWhen ready, press SPACE to continue and follow the instructions on the next page.\n',
     font='Arial',
-    pos=(0, 0), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, 0), height=0.07, wrapWidth=1.5, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -234,7 +234,7 @@ key_resp_5 = keyboard.Keyboard()
 space_4 = visual.TextStim(win=win, name='space_4',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -245,21 +245,21 @@ key_resp_6 = keyboard.Keyboard()
 space_5 = visual.TextStim(win=win, name='space_5',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only = visual.TextStim(win=win, name='instr_only',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=10000, ori=0, 
+    pos=(0, 0.6), height=0.1, wrapWidth=10000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_6 = visual.TextStim(win=win, name='text_6',
     text='1. Put a finger on <ENTER> on the keyboard.',
     font='Arial',
-    pos=(0, -250), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -270,21 +270,21 @@ key_resp_8 = keyboard.Keyboard()
 space_7 = visual.TextStim(win=win, name='space_7',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7,-0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_3 = visual.TextStim(win=win, name='instr_only_3',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=None, ori=0, 
+    pos=(0, 0.6), height=0.1, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_8 = visual.TextStim(win=win, name='text_8',
     text='2. Close your right eye',
     font='Arial',
-    pos=(0, -250), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.5), height=0.06, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -295,21 +295,21 @@ key_resp_7 = keyboard.Keyboard()
 space_6 = visual.TextStim(win=win, name='space_6',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_2 = visual.TextStim(win=win, name='instr_only_2',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=None, ori=0, 
+    pos=(0, 0.6), height=0.1, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_7 = visual.TextStim(win=win, name='text_7',
     text='3. Stare at the middle of the screen, keeping your head in the same position as before.\nKeep your right eye closed.',
     font='Arial',
-    pos=(0, -250), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.4), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -327,21 +327,21 @@ key_resp_12 = keyboard.Keyboard()
 space_11 = visual.TextStim(win=win, name='space_11',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_5 = visual.TextStim(win=win, name='instr_only_5',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=None, ori=0, 
+    pos=(0, 0.6), height=0.1, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_13 = visual.TextStim(win=win, name='text_13',
     text='4. Without moving your head or face, use your left eye to focus on the black square.\nKeep your right eye closed and do not move your head.',
     font='Arial',
-    pos=(0, -250), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -353,7 +353,7 @@ center_cross_3 = visual.ShapeStim(
     fillColor=[1,1,1], fillColorSpace='rgb',
     opacity=1, depth=-4.0, interpolate=True)
 black_square = visual.Rect(
-    win=win, name='black_square',
+    win=win, name='black_square',units='pix', 
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0, pos=(500,0),
     lineWidth=1.5, lineColor='black', lineColorSpace='rgb',
@@ -362,7 +362,7 @@ black_square = visual.Rect(
 text_14 = visual.TextStim(win=win, name='text_14',
     text='Stare at the square',
     font='Arial',
-    pos=(500, 30), height=15, wrapWidth=None, ori=0, 
+    pos=(0.75, 0.08), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-6.0);
@@ -373,21 +373,21 @@ key_resp_11 = keyboard.Keyboard()
 space_8 = visual.TextStim(win=win, name='space_8',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_4 = visual.TextStim(win=win, name='instr_only_4',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=None, ori=0, 
+    pos=(0, 0.6), height=0.1, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_11 = visual.TextStim(win=win, name='text_11',
     text='5. During the calibration task, a white ball will disappear as it moves from right to left.\nKeep your right eye closed, stare at the black square and do not move your head.\n',
     font='Arial',
-    pos=(0, -250), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -399,7 +399,7 @@ center_cross_2 = visual.ShapeStim(
     fillColor=[1,1,1], fillColorSpace='rgb',
     opacity=1, depth=-4.0, interpolate=True)
 black_square1 = visual.Rect(
-    win=win, name='black_square1',
+    win=win, name='black_square1',units='pix', 
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0, pos=(500,0),
     lineWidth=1.5, lineColor='black', lineColorSpace='rgb',
@@ -408,12 +408,12 @@ black_square1 = visual.Rect(
 text_12 = visual.TextStim(win=win, name='text_12',
     text='<--- Ball movement ',
     font='Arial',
-    pos=(480, 30), height=15, wrapWidth=None, ori=0, 
+    pos=(0.7, 0.08), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-6.0);
 white_ball2 = visual.Polygon(
-    win=win, name='white_ball2',
+    win=win, name='white_ball2',units='pix', 
     edges=1000, size=[1.0, 1.0],
     ori=0, pos=(400, 0),
     lineWidth=1, lineColor='white', lineColorSpace='rgb',
@@ -426,21 +426,21 @@ key_resp_18 = keyboard.Keyboard()
 space_17 = visual.TextStim(win=win, name='space_17',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_7 = visual.TextStim(win=win, name='instr_only_7',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=None, ori=0, 
+    pos=(0, 0.6), height=0.1, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_44 = visual.TextStim(win=win, name='text_44',
     text='6. Press the <ENTER> key as soon as the ball disappears properly from your eye sight (not due to running off screen)\nKeep your right eye closed, stare at the black square, do not move your head.',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.06, wrapWidth=1.5, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -451,21 +451,21 @@ key_resp_21 = keyboard.Keyboard()
 space_18 = visual.TextStim(win=win, name='space_18',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_8 = visual.TextStim(win=win, name='instr_only_8',
     text='INSTRUCTIONS ONLY',
     font='Arial',
-    pos=(0, 300), height=40, wrapWidth=None, ori=0, 
+    pos=(0,0.6), height=0.1, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_45 = visual.TextStim(win=win, name='text_45',
     text='7. The next page will show you a demonstration of the calibration task for a few seconds.\nDuring the actual calibration, you will need to press <ENTER> when the ball disappears.\n\nYou will do this five times so we can make sure we get the right distance.\nThe ball will reset each time.\n\nKeep your right eye closed, stare at the black square and do not move your head.',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.4), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -480,7 +480,7 @@ white_ball1 = visual.Polygon(
     fillColor='white', fillColorSpace='rgb',
     opacity=1, depth=0.0, interpolate=True)
 black_square3 = visual.Rect(
-    win=win, name='black_square3',
+    win=win, name='black_square3',units='pix', 
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0, pos=(500,0),
     lineWidth=1.5, lineColor='black', lineColorSpace='rgb',
@@ -489,14 +489,14 @@ black_square3 = visual.Rect(
 text_19 = visual.TextStim(win=win, name='text_19',
     text='VISIBLE',
     font='Arial',
-    pos=(0, 150), height=25, wrapWidth=None, ori=0, 
+    pos=(0, 0.5), height=0.05, wrapWidth=None, ori=0, 
     color='green', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_20 = visual.TextStim(win=win, name='text_20',
     text='INVISIBLE',
     font='Arial',
-    pos=(0, 150), height=25, wrapWidth=None, ori=0, 
+    pos=(0, 0.5), height=0.05, wrapWidth=None, ori=0, 
     color='red', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -510,14 +510,14 @@ white_ball12 = visual.Polygon(
 text_21 = visual.TextStim(win=win, name='text_21',
     text='VISIBLE',
     font='Arial',
-    pos=(0, 150), height=25, wrapWidth=None, ori=0, 
+    pos=(0, 0.5), height=0.05, wrapWidth=None, ori=0, 
     color='green', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-5.0);
 text_22 = visual.TextStim(win=win, name='text_22',
     text='Press <ENTER> now!',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.5), height=0.05, wrapWidth=None, ori=0, 
     color='green', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-6.0);
@@ -535,21 +535,21 @@ key_resp_13 = keyboard.Keyboard()
 space_12 = visual.TextStim(win=win, name='space_12',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 instr_only_6 = visual.TextStim(win=win, name='instr_only_6',
     text='NEXT WILL BE THE ACTUAL CALIBRATION\n\nRemember to keep your right eye closed, stare at the black square and do not move your head.\n\nPress the <ENTER> key as soon as the ball disappears from your eye sight (not just due to running off the edge of the screen).\n\nWhen ready press SPACE to start viewing the distance calibration.',
     font='Arial',
-    pos=(0, 150), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, 0.3), height=0.07, wrapWidth=1.5, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_15 = visual.TextStim(win=win, name='text_15',
     text='Warning! It is critical that these calibrations are done correctly or you will be unable to do the experiment and we will be unable to approve your payment!',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.4), height=0.06, wrapWidth=1.5, ori=0, 
     color='red', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -557,14 +557,14 @@ text_15 = visual.TextStim(win=win, name='text_15',
 # Initialize components for Routine "ball_calibration"
 ball_calibrationClock = core.Clock()
 black_square2 = visual.Rect(
-    win=win, name='black_square2',
+    win=win, name='black_square2',units='pix', 
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0, pos=[0,0],
     lineWidth=1.5, lineColor='black', lineColorSpace='rgb',
     fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=0.0, interpolate=True)
 white_ball = visual.Polygon(
-    win=win, name='white_ball',
+    win=win, name='white_ball',units='pix', 
     edges=1000, size=[1.0, 1.0],
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
@@ -578,7 +578,7 @@ calibrationcount = 0
 text_39 = visual.TextStim(win=win, name='text_39',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.6), height=0.06, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -595,25 +595,25 @@ screen_x_threshold = 230
 text_38 = visual.TextStim(win=win, name='text_38',
     text='default text',
     font='Arial',
-    pos=(0, -100), height=35, wrapWidth=None, ori=0, 
+    pos=(0, -0.2), height=0.08, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 text_40 = visual.TextStim(win=win, name='text_40',
     text='The calibrations were successful!',
     font='Arial',
-    pos=(0, 0), height=35, wrapWidth=10000, ori=0, 
+    pos=(0, 0), height=0.08, wrapWidth=10000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
-space_16 = visual.TextStim(win=win, name='space_16',
+key_resp_20 = keyboard.Keyboard()
+space_20 = visual.TextStim(win=win, name='space_20',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-3.0);
-key_resp_20 = keyboard.Keyboard()
+    depth=-4.0);
 
 # Initialize components for Routine "viewerdistance_unsucess"
 viewerdistance_unsucessClock = core.Clock()
@@ -642,26 +642,26 @@ text_43 = visual.TextStim(win=win, name='text_43',
 # Initialize components for Routine "stim1_instr"
 stim1_instrClock = core.Clock()
 stim1 = visual.MovieStim3(
-    win=win, name='stim1',units='pix', 
+    win=win, name='stim1',
     noAudio = False,
     filename='1stimmov.mp4',
-    ori=0, pos=(0, 100), opacity=1,
+    ori=0, pos=(0, 0.100), opacity=1,
     loop=True,
-    size=[580,400],
+    size=[0.6,0.4],
     depth=0.0,
     )
 key_resp_14 = keyboard.Keyboard()
 space_13 = visual.TextStim(win=win, name='space_13',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_16 = visual.TextStim(win=win, name='text_16',
     text='Throughout the experiment, focus on the cross at the centre of the screen.\nA circle will flash out quickly on the screen.',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.036, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -669,26 +669,26 @@ text_16 = visual.TextStim(win=win, name='text_16',
 # Initialize components for Routine "stim_response_instr"
 stim_response_instrClock = core.Clock()
 movie_2 = visual.MovieStim3(
-    win=win, name='movie_2',units='pix', 
+    win=win, name='movie_2',
     noAudio = False,
     filename='1stim_async_response_py.mp4',
-    ori=0, pos=(0, 100), opacity=1,
+    ori=0, pos=(0, 0.100), opacity=1,
     loop=True,
-    size=[580,400],
+    size=2,
     depth=0.0,
     )
 key_resp_15 = keyboard.Keyboard()
 space_14 = visual.TextStim(win=win, name='space_14',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=1000, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_17 = visual.TextStim(win=win, name='text_17',
     text='Sometimes you will need to decide the similarity levels of the previous circle to a circle on the next screen.\nIgnore any size differences.\n\n0 => most similar colour (least different colour)\n7 => most different colour (least similar colour)\n\nAfter choosing, move your cursor back to the centre and click the box to continue.',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.2), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -698,24 +698,24 @@ catch_insrtClock = core.Clock()
 space_15 = visual.TextStim(win=win, name='space_15',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(350, -350), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 key_resp_17 = keyboard.Keyboard()
 movie_3 = visual.MovieStim3(
-    win=win, name='movie_3',units='pix', 
+    win=win, name='movie_3',
     noAudio = False,
     filename='catch_py.mp4',
-    ori=0, pos=(0, 100), opacity=1,
+    ori=0, pos=(0, 0.100), opacity=1,
     loop=True,
-    size=[580,400],
+    size=2,
     depth=-2.0,
     )
 text_18 = visual.TextStim(win=win, name='text_18',
     text='Sometimes there will be a special trial where you will just be asked to click on a particular value.\nPlease click on the value for that trial.',
     font='Arial',
-    pos=(0, -200), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.2), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -724,63 +724,63 @@ text_18 = visual.TextStim(win=win, name='text_18',
 colour_circle_instr_2Clock = core.Clock()
 key_resp_9 = keyboard.Keyboard()
 intructioncircle_1 = visual.Polygon(
-    win=win, name='intructioncircle_1',
+    win=win, name='intructioncircle_1',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[1, -1, -1], lineColorSpace='rgb',
     fillColor=[1, -1, -1], fillColorSpace='rgb',
     opacity=1, depth=-2.0, interpolate=True)
 instructioncircle_2 = visual.Polygon(
-    win=win, name='instructioncircle_2',
+    win=win, name='instructioncircle_2',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[1, 0.33, -1], lineColorSpace='rgb',
     fillColor=[1, 0.33, -1], fillColorSpace='rgb',
     opacity=1, depth=-3.0, interpolate=True)
 instructioncircle_3 = visual.Polygon(
-    win=win, name='instructioncircle_3',
+    win=win, name='instructioncircle_3',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[0.33, 1, -1], lineColorSpace='rgb',
     fillColor=[0.33, 1, -1], fillColorSpace='rgb',
     opacity=1, depth=-4.0, interpolate=True)
 instructioncircle_4 = visual.Polygon(
-    win=win, name='instructioncircle_4',
+    win=win, name='instructioncircle_4',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[-1, 1, -1], lineColorSpace='rgb',
     fillColor=[-1, 1, -1], fillColorSpace='rgb',
     opacity=1, depth=-5.0, interpolate=True)
 instructioncircle_5 = visual.Polygon(
-    win=win, name='instructioncircle_5',
+    win=win, name='instructioncircle_5',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[-1, 1, 0.32], lineColorSpace='rgb',
     fillColor=[-1, 1, 0.32], fillColorSpace='rgb',
     opacity=1, depth=-6.0, interpolate=True)
 insturctioncircle_6 = visual.Polygon(
-    win=win, name='insturctioncircle_6',
+    win=win, name='insturctioncircle_6',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[-1, 0.32, 1], lineColorSpace='rgb',
     fillColor=[-1, 0.32, 1], fillColorSpace='rgb',
     opacity=1, depth=-7.0, interpolate=True)
 instructioncircle_7 = visual.Polygon(
-    win=win, name='instructioncircle_7',
+    win=win, name='instructioncircle_7',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[-1, -1, 1], lineColorSpace='rgb',
     fillColor=[-1, -1, 1], fillColorSpace='rgb',
     opacity=1, depth=-8.0, interpolate=True)
 instructioncircle_8 = visual.Polygon(
-    win=win, name='instructioncircle_8',
+    win=win, name='instructioncircle_8',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[0.33, -1, 1], lineColorSpace='rgb',
     fillColor=[0.33, -1, 1], fillColorSpace='rgb',
     opacity=1, depth=-9.0, interpolate=True)
 instructioncircle_9 = visual.Polygon(
-    win=win, name='instructioncircle_9',
+    win=win, name='instructioncircle_9',units='pix', 
     edges=1000, size=(50, 50),
     ori=0, pos=[0,0],
     lineWidth=1, lineColor=[1, -1, 0.33], lineColorSpace='rgb',
@@ -789,14 +789,14 @@ instructioncircle_9 = visual.Polygon(
 space_9 = visual.TextStim(win=win, name='space_9',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(300, -320), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
 text_9 = visual.TextStim(win=win, name='text_9',
     text='During the test, you will see these 9 colors below',
     font='Arial',
-    pos=(0, 300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, 0.8), height=0.06, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-12.0);
@@ -806,14 +806,14 @@ instr_pracClock = core.Clock()
 space_10 = visual.TextStim(win=win, name='space_10',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(250, -250), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 text_10 = visual.TextStim(win=win, name='text_10',
     text='You are going to do a few practice trials to make you be more familiar with the experiment.\nWhen you are ready, please press SPACE to start the practice trials',
     font='Arial',
-    pos=(0, 0), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, 0), height=0.06, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -840,65 +840,65 @@ centre_cross4_2 = visual.ShapeStim(
 response_pracClock = core.Clock()
 response1disk_5 = visual.ImageStim(
     win=win,
-    name='response1disk_5', 
+    name='response1disk_5', units='norm', 
     image='response1disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 response2disk_5 = visual.ImageStim(
     win=win,
-    name='response2disk_5', 
+    name='response2disk_5', units='norm', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 response3disk_5 = visual.ImageStim(
     win=win,
-    name='response3disk_5', 
+    name='response3disk_5', units='norm', 
     image='response3disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15, -0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
 response4disk_5 = visual.ImageStim(
     win=win,
-    name='response4disk_5', 
+    name='response4disk_5', units='norm', 
     image='response4disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15, -0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
 response5disk_5 = visual.ImageStim(
     win=win,
-    name='response5disk_5', 
+    name='response5disk_5', units='norm', 
     image='response5disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-5.0)
 response6disk_5 = visual.ImageStim(
     win=win,
-    name='response6disk_5', 
+    name='response6disk_5', units='norm', 
     image='response6disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
 response7disk_5 = visual.ImageStim(
     win=win,
-    name='response7disk_5', 
+    name='response7disk_5', units='norm', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
 response8disk_5 = visual.ImageStim(
     win=win,
-    name='response8disk_5', 
+    name='response8disk_5', units='norm', 
     image='response8disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-8.0)
@@ -906,7 +906,7 @@ mouse_5 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_5.mouseClock = core.Clock()
 Circle_3 = visual.Polygon(
-    win=win, name='Circle_3',
+    win=win, name='Circle_3',units='pix', 
     edges=1000, size=(100,100),
     ori=0, pos=(0, 0),
     lineWidth=1, lineColor=1.0, lineColorSpace='rgb',
@@ -915,7 +915,7 @@ Circle_3 = visual.Polygon(
 text_29 = visual.TextStim(win=win, name='text_29',
     text='Please choose the similarity level of the previously 2 cued circles\n0 => Most similar\n7 => Most different ',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
@@ -924,65 +924,65 @@ text_29 = visual.TextStim(win=win, name='text_29',
 summary_pracClock = core.Clock()
 response1disk_10 = visual.ImageStim(
     win=win,
-    name='response1disk_10', 
+    name='response1disk_10', units='norm', 
     image='response1disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 response2disk_10 = visual.ImageStim(
     win=win,
-    name='response2disk_10', 
+    name='response2disk_10', units='pix', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 response3disk_10 = visual.ImageStim(
     win=win,
-    name='response3disk_10', 
+    name='response3disk_10', units='norm', 
     image='response3disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 response4disk_10 = visual.ImageStim(
     win=win,
-    name='response4disk_10', 
+    name='response4disk_10', units='norm', 
     image='response4disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
 response5disk_10 = visual.ImageStim(
     win=win,
-    name='response5disk_10', 
+    name='response5disk_10', units='norm', 
     image='response5disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
 response6disk_10 = visual.ImageStim(
     win=win,
-    name='response6disk_10', 
+    name='response6disk_10', units='norm', 
     image='response6disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-5.0)
 response7disk_10 = visual.ImageStim(
     win=win,
-    name='response7disk_10', 
+    name='response7disk_10', units='pix', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
 response8disk_10 = visual.ImageStim(
     win=win,
-    name='response8disk_10', 
+    name='response8disk_10', units='norm', 
     image='response8disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
@@ -990,25 +990,25 @@ mouse_10 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_10.mouseClock = core.Clock()
 rectangle_8 = visual.Rect(
-    win=win, name='rectangle_8',
-    width=(100, 80)[0], height=(100, 80)[1],
+    win=win, name='rectangle_8',units='norm', 
+    width=(0.1, 0.08)[0], height=(0.1, 0.08)[1],
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor='green', lineColorSpace='rgb',
-    fillColor='green', fillColorSpace='rgb',
+    lineWidth=1, lineColor='white', lineColorSpace='rgb',
+    fillColor='grey', fillColorSpace='rgb',
     opacity=1, depth=-9.0, interpolate=True)
 pracnumber = 0;
 
 text_49 = visual.TextStim(win=win, name='text_49',
-    text='Please click on the green rectangle to continue',
+    text='Please click on the grey rectangle in the middle of the response numbers to continue',
     font='Arial',
-    pos=(0, -270), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.05, wrapWidth=1000, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
 text_50 = visual.TextStim(win=win, name='text_50',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-12.0);
@@ -1018,8 +1018,8 @@ special_trial_pracClock = core.Clock()
 text_36 = visual.TextStim(win=win, name='text_36',
     text='SPECIAL TRIAL',
     font='Arial',
-    pos=(0,0), height=25, wrapWidth=None, ori=0, 
-    color='RED', colorSpace='rgb', opacity=1, 
+    pos=(0,0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 
@@ -1037,7 +1037,7 @@ response2disk_7 = visual.ImageStim(
     win=win,
     name='response2disk_7', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -1077,7 +1077,7 @@ response7disk_7 = visual.ImageStim(
     win=win,
     name='response7disk_7', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
@@ -1094,24 +1094,25 @@ x, y = [None, None]
 mouse_7.mouseClock = core.Clock()
 # Set up catch trials 
 
-catchtrialorderprac = []
-for i in range(0,2):
-    n = randint(0,7)
-    catchtrialorderprac.append(n)
+#catchtrialorderprac = []
+#for i in range(0,2):
+#    n = randint(0,7)
+#    catchtrialorderprac.append(n)
 
+catchtrialorderprac = 9,11;
 text_32 = visual.TextStim(win=win, name='text_32',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.6), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-10.0);
 rectangle_5 = visual.Rect(
     win=win, name='rectangle_5',
-    width=(100, 80)[0], height=(100, 80)[1],
+    width=(0.1, 0.08)[0], height=(0.1, 0.08)[1],
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor='green', lineColorSpace='rgb',
-    fillColor='green', fillColorSpace='rgb',
+    lineWidth=1, lineColor='white', lineColorSpace='rgb',
+    fillColor='grey', fillColorSpace='rgb',
     opacity=1, depth=-11.0, interpolate=True)
 
 # Initialize components for Routine "summary2_prac"
@@ -1128,7 +1129,7 @@ response2disk_6 = visual.ImageStim(
     win=win,
     name='response2disk_6', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -1168,7 +1169,7 @@ response7disk_6 = visual.ImageStim(
     win=win,
     name='response7disk_6', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
@@ -1185,24 +1186,24 @@ x, y = [None, None]
 mouse_6.mouseClock = core.Clock()
 rectangle_4 = visual.Rect(
     win=win, name='rectangle_4',
-    width=(100, 80)[0], height=(100, 80)[1],
+    width=(0.1, 0.08)[0], height=(0.1, 0.08)[1],
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor='green', lineColorSpace='rgb',
-    fillColor='green', fillColorSpace='rgb',
+    lineWidth=1, lineColor='white', lineColorSpace='rgb',
+    fillColor='grey', fillColorSpace='rgb',
     opacity=1, depth=-9.0, interpolate=True)
 pracnumber = 0;
 
 text_30 = visual.TextStim(win=win, name='text_30',
     text='Please click on the green rectangle to continue',
     font='Arial',
-    pos=(0, -270), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.7), height=0.05, wrapWidth=1000, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
 text_31 = visual.TextStim(win=win, name='text_31',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.8), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-12.0);
@@ -1212,14 +1213,14 @@ beginClock = core.Clock()
 space_19 = visual.TextStim(win=win, name='space_19',
     text='Press SPACE to continue ',
     font='Arial',
-    pos=(250, -250), height=25, wrapWidth=None, ori=0, 
+    pos=(0.7, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 text_46 = visual.TextStim(win=win, name='text_46',
     text='You have finished the practice trial.\n\nNext page will be the formal test. \n\nIf you are ready, please press SPACE button to start the experiment.',
     font='Arial',
-    pos=(0, 0), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, 0), height=0.08, wrapWidth=1000, ori=0, 
     color='yellow', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -1248,7 +1249,7 @@ response1disk = visual.ImageStim(
     win=win,
     name='response1disk', 
     image='response1disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -1256,7 +1257,7 @@ response2disk = visual.ImageStim(
     win=win,
     name='response2disk', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -1264,7 +1265,7 @@ response3disk = visual.ImageStim(
     win=win,
     name='response3disk', 
     image='response3disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -1272,7 +1273,7 @@ response4disk = visual.ImageStim(
     win=win,
     name='response4disk', 
     image='response4disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
@@ -1280,7 +1281,7 @@ response5disk = visual.ImageStim(
     win=win,
     name='response5disk', 
     image='response5disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-5.0)
@@ -1288,7 +1289,7 @@ response6disk = visual.ImageStim(
     win=win,
     name='response6disk', 
     image='response6disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
@@ -1296,7 +1297,7 @@ response7disk = visual.ImageStim(
     win=win,
     name='response7disk', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
@@ -1304,7 +1305,7 @@ response8disk = visual.ImageStim(
     win=win,
     name='response8disk', 
     image='response8disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-8.0)
@@ -1312,7 +1313,7 @@ mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Circle_2 = visual.Polygon(
-    win=win, name='Circle_2',
+    win=win, name='Circle_2',units='pix', 
     edges=1000, size=(100, 100),
     ori=0, pos=(0, 0),
     lineWidth=1, lineColor=1.0, lineColorSpace='rgb',
@@ -1321,7 +1322,7 @@ Circle_2 = visual.Polygon(
 text_23 = visual.TextStim(win=win, name='text_23',
     text='Please choose the similarity level of the previously 2 cued circles\n0 => Most similar\n7 => Most different ',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.6), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
@@ -1332,7 +1333,7 @@ response1disk_2 = visual.ImageStim(
     win=win,
     name='response1disk_2', 
     image='response1disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -1340,7 +1341,7 @@ response2disk_2 = visual.ImageStim(
     win=win,
     name='response2disk_2', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -1348,7 +1349,7 @@ response3disk_2 = visual.ImageStim(
     win=win,
     name='response3disk_2', 
     image='response3disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -1356,7 +1357,7 @@ response4disk_2 = visual.ImageStim(
     win=win,
     name='response4disk_2', 
     image='response4disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -1364,7 +1365,7 @@ response5disk_2 = visual.ImageStim(
     win=win,
     name='response5disk_2', 
     image='response5disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
@@ -1372,7 +1373,7 @@ response6disk_2 = visual.ImageStim(
     win=win,
     name='response6disk_2', 
     image='response6disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-5.0)
@@ -1380,7 +1381,7 @@ response7disk_2 = visual.ImageStim(
     win=win,
     name='response7disk_2', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
@@ -1388,7 +1389,7 @@ response8disk_2 = visual.ImageStim(
     win=win,
     name='response8disk_2', 
     image='response8disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
@@ -1397,24 +1398,24 @@ x, y = [None, None]
 mouse_2.mouseClock = core.Clock()
 rectangle = visual.Rect(
     win=win, name='rectangle',
-    width=(100, 80)[0], height=(100, 80)[1],
+    width=(0.100, 0.080)[0], height=(0.100, 0.080)[1],
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor='green', lineColorSpace='rgb',
-    fillColor='green', fillColorSpace='rgb',
+    lineWidth=1, lineColor='white', lineColorSpace='rgb',
+    fillColor='grey', fillColorSpace='rgb',
     opacity=1, depth=-9.0, interpolate=True)
 trialnumber = 0;
 
 text_25 = visual.TextStim(win=win, name='text_25',
     text='Please click on the green rectangle to continue',
     font='Arial',
-    pos=(0, -270), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.05, wrapWidth=1000, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
 text_24 = visual.TextStim(win=win, name='text_24',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-12.0);
@@ -1424,8 +1425,8 @@ special_trialClock = core.Clock()
 text_33 = visual.TextStim(win=win, name='text_33',
     text='SPECIAL TRIAL',
     font='Arial',
-    pos=(0, 0), height=40, wrapWidth=None, ori=0, 
-    color='RED', colorSpace='rgb', opacity=1, 
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 
@@ -1435,7 +1436,7 @@ response1disk_3 = visual.ImageStim(
     win=win,
     name='response1disk_3', 
     image='response1disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -1443,7 +1444,7 @@ response2disk_3 = visual.ImageStim(
     win=win,
     name='response2disk_3', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -1451,7 +1452,7 @@ response3disk_3 = visual.ImageStim(
     win=win,
     name='response3disk_3', 
     image='response3disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -1459,7 +1460,7 @@ response4disk_3 = visual.ImageStim(
     win=win,
     name='response4disk_3', 
     image='response4disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -1467,7 +1468,7 @@ response5disk_3 = visual.ImageStim(
     win=win,
     name='response5disk_3', 
     image='response5disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
@@ -1475,7 +1476,7 @@ response6disk_3 = visual.ImageStim(
     win=win,
     name='response6disk_3', 
     image='response6disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-5.0)
@@ -1483,7 +1484,7 @@ response7disk_3 = visual.ImageStim(
     win=win,
     name='response7disk_3', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
@@ -1491,7 +1492,7 @@ response8disk_3 = visual.ImageStim(
     win=win,
     name='response8disk_3', 
     image='response8disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
@@ -1506,107 +1507,107 @@ for i in range(0,20):
 text_26 = visual.TextStim(win=win, name='text_26',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.6), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-10.0);
 rectangle_2 = visual.Rect(
     win=win, name='rectangle_2',
-    width=(100, 80)[0], height=(100, 80)[1],
+    width=(0.100, 0.80)[0], height=(0.100, 0.80)[1],
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor='green', lineColorSpace='rgb',
-    fillColor='green', fillColorSpace='rgb',
+    lineWidth=1, lineColor='white', lineColorSpace='rgb',
+    fillColor='grey', fillColorSpace='rgb',
     opacity=1, depth=-11.0, interpolate=True)
 
-# Initialize components for Routine "response_3"
-response_3Clock = core.Clock()
-response1disk_9 = visual.ImageStim(
+# Initialize components for Routine "response_sum"
+response_sumClock = core.Clock()
+response1disk_11 = visual.ImageStim(
     win=win,
-    name='response1disk_9', 
+    name='response1disk_11', 
     image='response1disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
-response2disk_9 = visual.ImageStim(
+response2disk_11 = visual.ImageStim(
     win=win,
-    name='response2disk_9', 
+    name='response2disk_11', 
     image='response2disks.png', mask=None,
-    ori=0, pos=(90,90), size=(150, 150),
+    ori=0, pos=(0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
-response3disk_9 = visual.ImageStim(
+response3disk_11 = visual.ImageStim(
     win=win,
-    name='response3disk_9', 
+    name='response3disk_11', 
     image='response3disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
-response4disk_9 = visual.ImageStim(
+response4disk_11 = visual.ImageStim(
     win=win,
-    name='response4disk_9', 
+    name='response4disk_11', 
     image='response4disks.png', mask=None,
-    ori=0, pos=(90,-90), size=(150, 150),
+    ori=0, pos=(0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
-response5disk_9 = visual.ImageStim(
+response5disk_11 = visual.ImageStim(
     win=win,
-    name='response5disk_9', 
+    name='response5disk_11', 
     image='response5disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
-response6disk_9 = visual.ImageStim(
+response6disk_11 = visual.ImageStim(
     win=win,
-    name='response6disk_9', 
+    name='response6disk_11', 
     image='response6disks.png', mask=None,
-    ori=0, pos=(-90,-90), size=(150, 150),
+    ori=0, pos=(-0.15,-0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-5.0)
-response7disk_9 = visual.ImageStim(
+response7disk_11 = visual.ImageStim(
     win=win,
-    name='response7disk_9', 
+    name='response7disk_11', 
     image='response7disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-6.0)
-response8disk_9 = visual.ImageStim(
+response8disk_11 = visual.ImageStim(
     win=win,
-    name='response8disk_9', 
+    name='response8disk_11', 
     image='response8disks.png', mask=None,
-    ori=0, pos=(-90,90), size=(150, 150),
+    ori=0, pos=(-0.15,0.15), size=(0.22, 0.28),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
-mouse_9 = event.Mouse(win=win)
+mouse_11 = event.Mouse(win=win)
 x, y = [None, None]
-mouse_9.mouseClock = core.Clock()
-rectangle_7 = visual.Rect(
-    win=win, name='rectangle_7',
-    width=(100, 80)[0], height=(100, 80)[1],
+mouse_11.mouseClock = core.Clock()
+rectangle_9 = visual.Rect(
+    win=win, name='rectangle_9',
+    width=(0.100, 0.080)[0], height=(0.100, 0.080)[1],
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor='green', lineColorSpace='rgb',
-    fillColor='green', fillColorSpace='rgb',
+    lineWidth=1, lineColor='white', lineColorSpace='rgb',
+    fillColor='grey', fillColorSpace='rgb',
     opacity=1, depth=-9.0, interpolate=True)
 trialnumber = 0;
 
-text_47 = visual.TextStim(win=win, name='text_47',
+text_51 = visual.TextStim(win=win, name='text_51',
     text='Please click on the green rectangle to continue',
     font='Arial',
-    pos=(0, -270), height=25, wrapWidth=1000, ori=0, 
+    pos=(0, -0.5), height=0.05, wrapWidth=1000, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
-text_48 = visual.TextStim(win=win, name='text_48',
+text_52 = visual.TextStim(win=win, name='text_52',
     text='default text',
     font='Arial',
-    pos=(0, -300), height=25, wrapWidth=None, ori=0, 
+    pos=(0, -0.7), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-12.0);
@@ -1768,8 +1769,6 @@ if key_resp.keys != None:  # we had a response
 thisExp.addData('key_resp.started', key_resp.tStartRefresh)
 thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('space.started', space.tStartRefresh)
-thisExp.addData('space.stopped', space.tStopRefresh)
 # the Routine "welcome_instr" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -1918,6 +1917,15 @@ while continueRoutine:
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
+    
+    # *ccimage* updates
+    if ccimage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        ccimage.frameNStart = frameN  # exact frame index
+        ccimage.tStart = t  # local t and not account for scr refresh
+        ccimage.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(ccimage, 'tStartRefresh')  # time at next scr refresh
+        ccimage.setAutoDraw(True)
     keys=event.getKeys()
     
     if len(keys):
@@ -1929,9 +1937,9 @@ while continueRoutine:
             oldt=t
         if 'return' in keys:
             continueRoutine=False
-        elif 'comma' in keys:
+        elif 'j' in keys:
             x_scale=round((x_scale-dscale)*10000)/10000
-        elif 'period' in keys:
+        elif 'k' in keys:
             x_scale=round((x_scale+dscale)*10000)/10000
         ccimage.size=[x_size*x_scale, x_size*x_scale*0.62]
     
@@ -1940,15 +1948,6 @@ while continueRoutine:
     
     
     
-    
-    # *ccimage* updates
-    if ccimage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        ccimage.frameNStart = frameN  # exact frame index
-        ccimage.tStart = t  # local t and not account for scr refresh
-        ccimage.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(ccimage, 'tStartRefresh')  # time at next scr refresh
-        ccimage.setAutoDraw(True)
     
     # *text_37* updates
     if text_37.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1980,8 +1979,9 @@ while continueRoutine:
 for thisComponent in screen_scaleComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+thisExp.addData('ccimage.started', ccimage.tStartRefresh)
+thisExp.addData('ccimage.stopped', ccimage.tStopRefresh)
 #Calculate ratio of pixels to mm
-
 ratio_pxpermm = ((x_scale*x_size)/85.6)
 
 thisExp.addData('X Scale',x_scale)
@@ -1992,8 +1992,6 @@ screen_size_y = (1 / ratio_pxpermm) * (win.size[1]);
 
 thisExp.addData('screen_size_x',screen_size_x)
 thisExp.addData('screen_size_y',screen_size_y)
-thisExp.addData('ccimage.started', ccimage.tStartRefresh)
-thisExp.addData('ccimage.stopped', ccimage.tStopRefresh)
 thisExp.addData('text_37.started', text_37.tStartRefresh)
 thisExp.addData('text_37.stopped', text_37.tStopRefresh)
 # the Routine "screen_scale" was not non-slip safe, so reset the non-slip timer
@@ -2003,12 +2001,12 @@ routineTimer.reset()
 continueRoutine = True
 # update component parameters for each repeat
 movie = visual.MovieStim3(
-    win=win, name='movie',units='pix', 
+    win=win, name='movie',units='norm', 
     noAudio = False,
     filename='calibrationinsrt.mp4',
-    ori=0, pos=(0, 120), opacity=1,
+    ori=0, pos=(0, 0.4), opacity=1,
     loop=True,
-    size=(380,340),
+    size=(0.38,0.35),
     depth=0.0,
     )
 key_resp_3.keys = []
@@ -3768,7 +3766,7 @@ key_resp_20.keys = []
 key_resp_20.rt = []
 _key_resp_20_allKeys = []
 # keep track of which components have finished
-viewerdistanceComponents = [text_38, text_40, space_16, key_resp_20]
+viewerdistanceComponents = [text_38, text_40, key_resp_20, space_20]
 for thisComponent in viewerdistanceComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -3815,15 +3813,6 @@ while continueRoutine:
         win.timeOnFlip(text_40, 'tStartRefresh')  # time at next scr refresh
         text_40.setAutoDraw(True)
     
-    # *space_16* updates
-    if space_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        space_16.frameNStart = frameN  # exact frame index
-        space_16.tStart = t  # local t and not account for scr refresh
-        space_16.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(space_16, 'tStartRefresh')  # time at next scr refresh
-        space_16.setAutoDraw(True)
-    
     # *key_resp_20* updates
     waitOnFlip = False
     if key_resp_20.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3845,6 +3834,15 @@ while continueRoutine:
             key_resp_20.rt = _key_resp_20_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
+    
+    # *space_20* updates
+    if space_20.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        # keep track of start time/frame for later
+        space_20.frameNStart = frameN  # exact frame index
+        space_20.tStart = t  # local t and not account for scr refresh
+        space_20.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(space_20, 'tStartRefresh')  # time at next scr refresh
+        space_20.setAutoDraw(True)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3877,8 +3875,6 @@ thisExp.addData('text_38.started', text_38.tStartRefresh)
 thisExp.addData('text_38.stopped', text_38.tStopRefresh)
 thisExp.addData('text_40.started', text_40.tStartRefresh)
 thisExp.addData('text_40.stopped', text_40.tStopRefresh)
-thisExp.addData('space_16.started', space_16.tStartRefresh)
-thisExp.addData('space_16.stopped', space_16.tStopRefresh)
 # check responses
 if key_resp_20.keys in ['', [], None]:  # No response was made
     key_resp_20.keys = None
@@ -3888,6 +3884,8 @@ if key_resp_20.keys != None:  # we had a response
 thisExp.addData('key_resp_20.started', key_resp_20.tStartRefresh)
 thisExp.addData('key_resp_20.stopped', key_resp_20.tStopRefresh)
 thisExp.nextEntry()
+thisExp.addData('space_20.started', space_20.tStartRefresh)
+thisExp.addData('space_20.stopped', space_20.tStopRefresh)
 # the Routine "viewerdistance" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -5033,101 +5031,99 @@ for thisDuringprac in duringprac:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # Save similarity rating 
-    mousexpos=mouse.getPos()[0]  # get x position of mouse
-    mouseypos=mouse.getPos()[1]  # get y position of mouse
+    mousexpos=mouse.getPos()[0]*100  # get x position of mouse
+    mouseypos=mouse.getPos()[1]*100  # get y position of mouse
     
     # Triangle 7
-    x11d = 15;
-    y11d = 165;
-    x12d = 165;
-    y12d = 165;
-    x13d = 15;
-    y13d = 15;
+    x11d = 4;
+    y11d = 29;
+    x12d = 26;
+    y12d = 29;
+    x13d = 4;
+    y13d = 1;
     a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     c1d = 1 - a1d - b1d;
     
     # Triangle 6 
-    x21d = 15;
-    y21d = 15;
-    x22d = 165
-    y22d = 165
-    x23d = 165
-    y23d = 15
+    x21d = 4;
+    y21d = 1;
+    x22d = 26
+    y22d = 29
+    x23d = 26
+    y23d = 1
     a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     c2d = 1 - a2d - b2d
     
     # Triangle 5
-    x31d = 15
-    y31d = -15
-    x32d = 165
-    y32d = -15
-    x33d = 165
-    y33d = -165
+    x31d = 4
+    y31d = -1
+    x32d = 28
+    y32d = -1
+    x33d = 28
+    y33d = -29
     a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     c3d = 1 - a3d - b3d
     
     
     # Triangle 4 
-    x41d = 15
-    y41d = -15
-    x42d = 165
-    y42d = -165
-    x43d = 15
-    y43d = -165
+    x41d = 4
+    y41d = -1
+    x42d = 26
+    y42d = -29
+    x43d = 4
+    y43d = -29
     a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     c4d = 1 - a4d - b4d
     
     #  Triangle 3
-    x51d = -165
-    y51d = -165
-    x52d = -15
-    y52d = -15
-    x53d = -15
-    y53d = -165
+    x51d = -26
+    y51d = -29
+    x52d = -4
+    y52d = -1
+    x53d = -4
+    y53d = -29
     a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     c5d = 1 - a5d - b5d
     
     # Triangle 2
-    x61d = -165
-    y61d = -15
-    x62d = -15
-    y62d = -15
-    x63d = -165
-    y63d = -165
+    x61d = -26
+    y61d = -29
+    x62d = -4
+    y62d = -1
+    x63d = -26
+    y63d = - 29
     a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     c6d = 1 - a6d - b6d
     
     # Triangle 1 
     
-    x71d = -165
-    y71d = 165
-    x72d = -15
-    y72d = 15
-    x73d = -165
-    y73d = 15
+    x71d = -26
+    y71d = 29
+    x72d = -4
+    y72d = 1
+    x73d = -26
+    y73d = 1
     a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     c7d = 1 - a7d - b7d
     
     
     # Triangle 0 
-    x81d = -165
-    y81d = 165
-    x82d = -15
-    y82d = 165
-    x83d = -15
-    y83d = 15
+    x81d = -26
+    y81d = 29
+    x82d = -4
+    y82d = 29
+    x83d = -4
+    y83d = 1
     a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     c8d = 1 - a8d - b8d
-    
-    
     
     
     if (0 <= a1d <= 1) and (0 <= b1d <= 1) and (0 <= c1d <= 1):
@@ -5317,7 +5313,7 @@ for thisDuringprac in duringprac:
                 if sum(buttons) > 0:  # state changed to a new click
                     # check if the mouse was inside our 'clickable' objects
                     gotValidClick = False
-                    for obj in [rectangle_4]:
+                    for obj in [rectangle_8]:
                         if obj.contains(mouse_10):
                             gotValidClick = True
                             mouse_10.clicked_name.append(obj.name)
@@ -5394,7 +5390,7 @@ for thisDuringprac in duringprac:
     if sum(buttons):
         # check if the mouse was inside our 'clickable' objects
         gotValidClick = False
-        for obj in [rectangle_4]:
+        for obj in [rectangle_8]:
             if obj.contains(mouse_10):
                 gotValidClick = True
                 mouse_10.clicked_name.append(obj.name)
@@ -5697,102 +5693,99 @@ for thisDuringprac in duringprac:
     duringprac.addData('mouse_7.started', mouse_7.tStart)
     duringprac.addData('mouse_7.stopped', mouse_7.tStop)
     # Save similarity rating 
-    mousexpos=mouse.getPos()[0]  # get x position of mouse
-    mouseypos=mouse.getPos()[1]  # get y position of mouse
+    mousexpos=mouse.getPos()[0]*100  # get x position of mouse
+    mouseypos=mouse.getPos()[1]*100  # get y position of mouse
     
     # Triangle 7
-    x11d = 15;
-    y11d = 165;
-    x12d = 165;
-    y12d = 165;
-    x13d = 15;
-    y13d = 15;
+    x11d = 4;
+    y11d = 29;
+    x12d = 26;
+    y12d = 29;
+    x13d = 4;
+    y13d = 1;
     a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     c1d = 1 - a1d - b1d;
     
     # Triangle 6 
-    x21d = 15;
-    y21d = 15;
-    x22d = 165
-    y22d = 165
-    x23d = 165
-    y23d = 15
+    x21d = 4;
+    y21d = 1;
+    x22d = 26
+    y22d = 29
+    x23d = 26
+    y23d = 1
     a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     c2d = 1 - a2d - b2d
     
     # Triangle 5
-    x31d = 15
-    y31d = -15
-    x32d = 165
-    y32d = -15
-    x33d = 165
-    y33d = -165
+    x31d = 4
+    y31d = -1
+    x32d = 28
+    y32d = -1
+    x33d = 28
+    y33d = -29
     a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     c3d = 1 - a3d - b3d
     
     
     # Triangle 4 
-    x41d = 15
-    y41d = -15
-    x42d = 165
-    y42d = -165
-    x43d = 15
-    y43d = -165
+    x41d = 4
+    y41d = -1
+    x42d = 26
+    y42d = -29
+    x43d = 4
+    y43d = -29
     a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     c4d = 1 - a4d - b4d
     
     #  Triangle 3
-    x51d = -165
-    y51d = -165
-    x52d = -15
-    y52d = -15
-    x53d = -15
-    y53d = -165
+    x51d = -26
+    y51d = -29
+    x52d = -4
+    y52d = -1
+    x53d = -4
+    y53d = -29
     a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     c5d = 1 - a5d - b5d
     
     # Triangle 2
-    x61d = -165
-    y61d = -15
-    x62d = -15
-    y62d = -15
-    x63d = -165
-    y63d = -165
+    x61d = -26
+    y61d = -29
+    x62d = -4
+    y62d = -1
+    x63d = -26
+    y63d = - 29
     a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     c6d = 1 - a6d - b6d
     
     # Triangle 1 
     
-    x71d = -165
-    y71d = 165
-    x72d = -15
-    y72d = 15
-    x73d = -165
-    y73d = 15
+    x71d = -26
+    y71d = 29
+    x72d = -4
+    y72d = 1
+    x73d = -26
+    y73d = 1
     a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     c7d = 1 - a7d - b7d
     
     
     # Triangle 0 
-    x81d = -165
-    y81d = 165
-    x82d = -15
-    y82d = 165
-    x83d = -15
-    y83d = 15
+    x81d = -26
+    y81d = 29
+    x82d = -4
+    y82d = 29
+    x83d = -4
+    y83d = 1
     a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     c8d = 1 - a8d - b8d
-    
-    
-    
     
     if (0 <= a1d <= 1) and (0 <= b1d <= 1) and (0 <= c1d <= 1):
         catchprac = 7
@@ -6530,99 +6523,100 @@ for thisTrial_2 in trials_2:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # Save similarity rating 
-    mousexpos=mouse.getPos()[0]  # get x position of mouse
-    mouseypos=mouse.getPos()[1]  # get y position of mouse
+    mousexpos=mouse.getPos()[0]*100  # get x position of mouse
+    mouseypos=mouse.getPos()[1]*100  # get y position of mouse
     
     # Triangle 7
-    x11d = 15;
-    y11d = 165;
-    x12d = 165;
-    y12d = 165;
-    x13d = 15;
-    y13d = 15;
+    x11d = 4;
+    y11d = 29;
+    x12d = 26;
+    y12d = 29;
+    x13d = 4;
+    y13d = 1;
     a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     c1d = 1 - a1d - b1d;
     
     # Triangle 6 
-    x21d = 15;
-    y21d = 15;
-    x22d = 165
-    y22d = 165
-    x23d = 165
-    y23d = 15
+    x21d = 4;
+    y21d = 1;
+    x22d = 26
+    y22d = 29
+    x23d = 26
+    y23d = 1
     a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     c2d = 1 - a2d - b2d
     
     # Triangle 5
-    x31d = 15
-    y31d = -15
-    x32d = 165
-    y32d = -15
-    x33d = 165
-    y33d = -165
+    x31d = 4
+    y31d = -1
+    x32d = 28
+    y32d = -1
+    x33d = 28
+    y33d = -29
     a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     c3d = 1 - a3d - b3d
     
     
     # Triangle 4 
-    x41d = 15
-    y41d = -15
-    x42d = 165
-    y42d = -165
-    x43d = 15
-    y43d = -165
+    x41d = 4
+    y41d = -1
+    x42d = 26
+    y42d = -29
+    x43d = 4
+    y43d = -29
     a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     c4d = 1 - a4d - b4d
     
     #  Triangle 3
-    x51d = -165
-    y51d = -165
-    x52d = -15
-    y52d = -15
-    x53d = -15
-    y53d = -165
+    x51d = -26
+    y51d = -29
+    x52d = -4
+    y52d = -1
+    x53d = -4
+    y53d = -29
     a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     c5d = 1 - a5d - b5d
     
     # Triangle 2
-    x61d = -165
-    y61d = -15
-    x62d = -15
-    y62d = -15
-    x63d = -165
-    y63d = -165
+    x61d = -26
+    y61d = -29
+    x62d = -4
+    y62d = -1
+    x63d = -26
+    y63d = - 29
     a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     c6d = 1 - a6d - b6d
     
     # Triangle 1 
     
-    x71d = -165
-    y71d = 165
-    x72d = -15
-    y72d = 15
-    x73d = -165
-    y73d = 15
+    x71d = -26
+    y71d = 29
+    x72d = -4
+    y72d = 1
+    x73d = -26
+    y73d = 1
     a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     c7d = 1 - a7d - b7d
     
     
     # Triangle 0 
-    x81d = -165
-    y81d = 165
-    x82d = -15
-    y82d = 165
-    x83d = -15
-    y83d = 15
+    x81d = -26
+    y81d = 29
+    x82d = -4
+    y82d = 29
+    x83d = -4
+    y83d = 1
     a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     c8d = 1 - a8d - b8d
+    
     
     
     
@@ -7194,96 +7188,96 @@ for thisTrial_2 in trials_2:
     trials_2.addData('mouse_3.started', mouse_3.tStart)
     trials_2.addData('mouse_3.stopped', mouse_3.tStop)
     # Save similarity rating 
-    mousexpos=mouse.getPos()[0]  # get x position of mouse
-    mouseypos=mouse.getPos()[1]  # get y position of mouse
+    mousexpos=mouse.getPos()[0]*100  # get x position of mouse
+    mouseypos=mouse.getPos()[1]*100  # get y position of mouse
     
     # Triangle 7
-    x11d = 15;
-    y11d = 165;
-    x12d = 165;
-    y12d = 165;
-    x13d = 15;
-    y13d = 15;
+    x11d = 4;
+    y11d = 29;
+    x12d = 26;
+    y12d = 29;
+    x13d = 4;
+    y13d = 1;
     a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
     c1d = 1 - a1d - b1d;
     
     # Triangle 6 
-    x21d = 15;
-    y21d = 15;
-    x22d = 165
-    y22d = 165
-    x23d = 165
-    y23d = 15
+    x21d = 4;
+    y21d = 1;
+    x22d = 26
+    y22d = 29
+    x23d = 26
+    y23d = 1
     a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
     c2d = 1 - a2d - b2d
     
     # Triangle 5
-    x31d = 15
-    y31d = -15
-    x32d = 165
-    y32d = -15
-    x33d = 165
-    y33d = -165
+    x31d = 4
+    y31d = -1
+    x32d = 28
+    y32d = -1
+    x33d = 28
+    y33d = -29
     a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
     c3d = 1 - a3d - b3d
     
     
     # Triangle 4 
-    x41d = 15
-    y41d = -15
-    x42d = 165
-    y42d = -165
-    x43d = 15
-    y43d = -165
+    x41d = 4
+    y41d = -1
+    x42d = 26
+    y42d = -29
+    x43d = 4
+    y43d = -29
     a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
     c4d = 1 - a4d - b4d
     
     #  Triangle 3
-    x51d = -165
-    y51d = -165
-    x52d = -15
-    y52d = -15
-    x53d = -15
-    y53d = -165
+    x51d = -26
+    y51d = -29
+    x52d = -4
+    y52d = -1
+    x53d = -4
+    y53d = -29
     a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
     c5d = 1 - a5d - b5d
     
     # Triangle 2
-    x61d = -165
-    y61d = -15
-    x62d = -15
-    y62d = -15
-    x63d = -165
-    y63d = -165
+    x61d = -26
+    y61d = -29
+    x62d = -4
+    y62d = -1
+    x63d = -26
+    y63d = - 29
     a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
     c6d = 1 - a6d - b6d
     
     # Triangle 1 
     
-    x71d = -165
-    y71d = 165
-    x72d = -15
-    y72d = 15
-    x73d = -165
-    y73d = 15
+    x71d = -26
+    y71d = 29
+    x72d = -4
+    y72d = 1
+    x73d = -26
+    y73d = 1
     a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
     c7d = 1 - a7d - b7d
     
     
     # Triangle 0 
-    x81d = -165
-    y81d = 165
-    x82d = -15
-    y82d = 165
-    x83d = -15
-    y83d = 15
+    x81d = -26
+    y81d = 29
+    x82d = -4
+    y82d = 29
+    x83d = -4
+    y83d = 1
     a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
     c8d = 1 - a8d - b8d
@@ -7292,35 +7286,21 @@ for thisTrial_2 in trials_2:
     
     
     if (0 <= a1d <= 1) and (0 <= b1d <= 1) and (0 <= c1d <= 1):
-        catchanswer = 7
-        thisExp.addData("catchanswer", catchanswer);
-    
+        similarity = 7
     elif (0 <= a2d <= 1) and (0 <= b2d <= 1) and (0 <= c2d <= 1):
-        catchanswer = 6
-        thisExp.addData("catchanswer", catchanswer);
-    
+        similarity = 6
     elif (0 <= a3d <= 1) and (0 <= b3d <= 1) and (0 <= c3d <= 1):
-        catchanswer = 5
-        thisExp.addData("catchanswer", catchanswer);
-    
+        similarity = 5
     elif (0 <= a4d <= 1) and (0 <= b4d <= 1) and (0 <= c4d <= 1):
-        catchanswer = 4
-        thisExp.addData("catchanswer", catchanswer);
-    
+        similarity = 4
     elif (0 <= a5d <= 1) and (0 <= b5d <= 1) and (0 <= c5d <= 1):
-        catchanswer = 3
-        thisExp.addData("catchanswer", catchanswer);
-    
+        similarity = 3
     elif (0 <= a6d <= 1) and (0 <= b6d <= 1) and (0 <= c6d <= 1):
-        catchanswer = 2
-        thisExp.addData("catchanswer", catchanswer);
-    
+        similarity = 2
     elif (0 <= a7d <= 1) and (0 <= b7d <= 1) and (0 <= c7d <= 1):
-        catchanswer = 1
-        thisExp.addData("catchanswer", catchanswer);
+        similarity = 1
     elif (0 <= a8d <= 1) and (0 <= b8d <= 1) and (0 <= c8d <= 1):
-        catchanswer = 0
-        thisExp.addData("catchanswer", catchanswer);
+        similarity = 0
     
     
     
@@ -7334,19 +7314,19 @@ for thisTrial_2 in trials_2:
     # the Routine "catch_1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # ------Prepare to start Routine "response_3"-------
+    # ------Prepare to start Routine "response_sum"-------
     continueRoutine = True
     # update component parameters for each repeat
-    # setup some python lists for storing info about the mouse_9
-    mouse_9.clicked_name = []
+    # setup some python lists for storing info about the mouse_11
+    mouse_11.clicked_name = []
     gotValidClick = False  # until a click is received
     trialnumbertext = f'You have finished {trialnumber} of 324 questions';
     
     
-    text_48.setText(trialnumbertext)
+    text_52.setText(trialnumbertext)
     # keep track of which components have finished
-    response_3Components = [response1disk_9, response2disk_9, response3disk_9, response4disk_9, response5disk_9, response6disk_9, response7disk_9, response8disk_9, mouse_9, rectangle_7, text_47, text_48]
-    for thisComponent in response_3Components:
+    response_sumComponents = [response1disk_11, response2disk_11, response3disk_11, response4disk_11, response5disk_11, response6disk_11, response7disk_11, response8disk_11, mouse_11, rectangle_9, text_51, text_52]
+    for thisComponent in response_sumComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -7356,142 +7336,142 @@ for thisTrial_2 in trials_2:
     # reset timers
     t = 0
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    response_3Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    response_sumClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
     frameN = -1
     
-    # -------Run Routine "response_3"-------
+    # -------Run Routine "response_sum"-------
     while continueRoutine:
         # get current time
-        t = response_3Clock.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=response_3Clock)
+        t = response_sumClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=response_sumClock)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *response1disk_9* updates
-        if response1disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response1disk_11* updates
+        if response1disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response1disk_9.frameNStart = frameN  # exact frame index
-            response1disk_9.tStart = t  # local t and not account for scr refresh
-            response1disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response1disk_9, 'tStartRefresh')  # time at next scr refresh
-            response1disk_9.setAutoDraw(True)
+            response1disk_11.frameNStart = frameN  # exact frame index
+            response1disk_11.tStart = t  # local t and not account for scr refresh
+            response1disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response1disk_11, 'tStartRefresh')  # time at next scr refresh
+            response1disk_11.setAutoDraw(True)
         
-        # *response2disk_9* updates
-        if response2disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response2disk_11* updates
+        if response2disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response2disk_9.frameNStart = frameN  # exact frame index
-            response2disk_9.tStart = t  # local t and not account for scr refresh
-            response2disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response2disk_9, 'tStartRefresh')  # time at next scr refresh
-            response2disk_9.setAutoDraw(True)
+            response2disk_11.frameNStart = frameN  # exact frame index
+            response2disk_11.tStart = t  # local t and not account for scr refresh
+            response2disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response2disk_11, 'tStartRefresh')  # time at next scr refresh
+            response2disk_11.setAutoDraw(True)
         
-        # *response3disk_9* updates
-        if response3disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response3disk_11* updates
+        if response3disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response3disk_9.frameNStart = frameN  # exact frame index
-            response3disk_9.tStart = t  # local t and not account for scr refresh
-            response3disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response3disk_9, 'tStartRefresh')  # time at next scr refresh
-            response3disk_9.setAutoDraw(True)
+            response3disk_11.frameNStart = frameN  # exact frame index
+            response3disk_11.tStart = t  # local t and not account for scr refresh
+            response3disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response3disk_11, 'tStartRefresh')  # time at next scr refresh
+            response3disk_11.setAutoDraw(True)
         
-        # *response4disk_9* updates
-        if response4disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response4disk_11* updates
+        if response4disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response4disk_9.frameNStart = frameN  # exact frame index
-            response4disk_9.tStart = t  # local t and not account for scr refresh
-            response4disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response4disk_9, 'tStartRefresh')  # time at next scr refresh
-            response4disk_9.setAutoDraw(True)
+            response4disk_11.frameNStart = frameN  # exact frame index
+            response4disk_11.tStart = t  # local t and not account for scr refresh
+            response4disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response4disk_11, 'tStartRefresh')  # time at next scr refresh
+            response4disk_11.setAutoDraw(True)
         
-        # *response5disk_9* updates
-        if response5disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response5disk_11* updates
+        if response5disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response5disk_9.frameNStart = frameN  # exact frame index
-            response5disk_9.tStart = t  # local t and not account for scr refresh
-            response5disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response5disk_9, 'tStartRefresh')  # time at next scr refresh
-            response5disk_9.setAutoDraw(True)
+            response5disk_11.frameNStart = frameN  # exact frame index
+            response5disk_11.tStart = t  # local t and not account for scr refresh
+            response5disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response5disk_11, 'tStartRefresh')  # time at next scr refresh
+            response5disk_11.setAutoDraw(True)
         
-        # *response6disk_9* updates
-        if response6disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response6disk_11* updates
+        if response6disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response6disk_9.frameNStart = frameN  # exact frame index
-            response6disk_9.tStart = t  # local t and not account for scr refresh
-            response6disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response6disk_9, 'tStartRefresh')  # time at next scr refresh
-            response6disk_9.setAutoDraw(True)
+            response6disk_11.frameNStart = frameN  # exact frame index
+            response6disk_11.tStart = t  # local t and not account for scr refresh
+            response6disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response6disk_11, 'tStartRefresh')  # time at next scr refresh
+            response6disk_11.setAutoDraw(True)
         
-        # *response7disk_9* updates
-        if response7disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response7disk_11* updates
+        if response7disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response7disk_9.frameNStart = frameN  # exact frame index
-            response7disk_9.tStart = t  # local t and not account for scr refresh
-            response7disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response7disk_9, 'tStartRefresh')  # time at next scr refresh
-            response7disk_9.setAutoDraw(True)
+            response7disk_11.frameNStart = frameN  # exact frame index
+            response7disk_11.tStart = t  # local t and not account for scr refresh
+            response7disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response7disk_11, 'tStartRefresh')  # time at next scr refresh
+            response7disk_11.setAutoDraw(True)
         
-        # *response8disk_9* updates
-        if response8disk_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *response8disk_11* updates
+        if response8disk_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            response8disk_9.frameNStart = frameN  # exact frame index
-            response8disk_9.tStart = t  # local t and not account for scr refresh
-            response8disk_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(response8disk_9, 'tStartRefresh')  # time at next scr refresh
-            response8disk_9.setAutoDraw(True)
-        # *mouse_9* updates
-        if mouse_9.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            response8disk_11.frameNStart = frameN  # exact frame index
+            response8disk_11.tStart = t  # local t and not account for scr refresh
+            response8disk_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(response8disk_11, 'tStartRefresh')  # time at next scr refresh
+            response8disk_11.setAutoDraw(True)
+        # *mouse_11* updates
+        if mouse_11.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            mouse_9.frameNStart = frameN  # exact frame index
-            mouse_9.tStart = t  # local t and not account for scr refresh
-            mouse_9.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(mouse_9, 'tStartRefresh')  # time at next scr refresh
-            mouse_9.status = STARTED
-            mouse_9.mouseClock.reset()
-            prevButtonState = mouse_9.getPressed()  # if button is down already this ISN'T a new click
-        if mouse_9.status == STARTED:  # only update if started and not finished!
-            buttons = mouse_9.getPressed()
+            mouse_11.frameNStart = frameN  # exact frame index
+            mouse_11.tStart = t  # local t and not account for scr refresh
+            mouse_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse_11, 'tStartRefresh')  # time at next scr refresh
+            mouse_11.status = STARTED
+            mouse_11.mouseClock.reset()
+            prevButtonState = mouse_11.getPressed()  # if button is down already this ISN'T a new click
+        if mouse_11.status == STARTED:  # only update if started and not finished!
+            buttons = mouse_11.getPressed()
             if buttons != prevButtonState:  # button state changed?
                 prevButtonState = buttons
                 if sum(buttons) > 0:  # state changed to a new click
                     # check if the mouse was inside our 'clickable' objects
                     gotValidClick = False
                     for obj in [rectangle]:
-                        if obj.contains(mouse_9):
+                        if obj.contains(mouse_11):
                             gotValidClick = True
-                            mouse_9.clicked_name.append(obj.name)
+                            mouse_11.clicked_name.append(obj.name)
                     if gotValidClick:  # abort routine on response
                         continueRoutine = False
         
-        # *rectangle_7* updates
-        if rectangle_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *rectangle_9* updates
+        if rectangle_9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            rectangle_7.frameNStart = frameN  # exact frame index
-            rectangle_7.tStart = t  # local t and not account for scr refresh
-            rectangle_7.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(rectangle_7, 'tStartRefresh')  # time at next scr refresh
-            rectangle_7.setAutoDraw(True)
+            rectangle_9.frameNStart = frameN  # exact frame index
+            rectangle_9.tStart = t  # local t and not account for scr refresh
+            rectangle_9.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(rectangle_9, 'tStartRefresh')  # time at next scr refresh
+            rectangle_9.setAutoDraw(True)
         # Run catch trials 
         if not ((trialnumber == catchtrialorder[0]) or (trialnumber == catchtrialorder[1]) or (trialnumber == catchtrialorder[2]) or (trialnumber == catchtrialorder[3]) or (trialnumber == catchtrialorder[4]) or (trialnumber == catchtrialorder[5]) or (trialnumber == catchtrialorder[6]) or (trialnumber == catchtrialorder[7]) or (trialnumber == catchtrialorder[8]) or (trialnumber == catchtrialorder[9]) or (trialnumber == catchtrialorder[10]) or (trialnumber == catchtrialorder[11]) or (trialnumber == catchtrialorder[12]) or (trialnumber == catchtrialorder[13]) or (trialnumber == catchtrialorder[14]) or (trialnumber == catchtrialorder[15]) or (trialnumber == catchtrialorder[16]) or (trialnumber == catchtrialorder[17]) or (trialnumber == catchtrialorder[18]) or (trialnumber == catchtrialorder[19])):
             continueRoutine=False
         
-        # *text_47* updates
-        if text_47.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *text_51* updates
+        if text_51.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_47.frameNStart = frameN  # exact frame index
-            text_47.tStart = t  # local t and not account for scr refresh
-            text_47.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_47, 'tStartRefresh')  # time at next scr refresh
-            text_47.setAutoDraw(True)
+            text_51.frameNStart = frameN  # exact frame index
+            text_51.tStart = t  # local t and not account for scr refresh
+            text_51.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_51, 'tStartRefresh')  # time at next scr refresh
+            text_51.setAutoDraw(True)
         
-        # *text_48* updates
-        if text_48.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *text_52* updates
+        if text_52.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_48.frameNStart = frameN  # exact frame index
-            text_48.tStart = t  # local t and not account for scr refresh
-            text_48.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_48, 'tStartRefresh')  # time at next scr refresh
-            text_48.setAutoDraw(True)
+            text_52.frameNStart = frameN  # exact frame index
+            text_52.tStart = t  # local t and not account for scr refresh
+            text_52.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_52, 'tStartRefresh')  # time at next scr refresh
+            text_52.setAutoDraw(True)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -7501,7 +7481,7 @@ for thisTrial_2 in trials_2:
         if not continueRoutine:  # a component has requested a forced-end of Routine
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in response_3Components:
+        for thisComponent in response_sumComponents:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -7510,52 +7490,52 @@ for thisTrial_2 in trials_2:
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # -------Ending Routine "response_3"-------
-    for thisComponent in response_3Components:
+    # -------Ending Routine "response_sum"-------
+    for thisComponent in response_sumComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials_2.addData('response1disk_9.started', response1disk_9.tStartRefresh)
-    trials_2.addData('response1disk_9.stopped', response1disk_9.tStopRefresh)
-    trials_2.addData('response2disk_9.started', response2disk_9.tStartRefresh)
-    trials_2.addData('response2disk_9.stopped', response2disk_9.tStopRefresh)
-    trials_2.addData('response3disk_9.started', response3disk_9.tStartRefresh)
-    trials_2.addData('response3disk_9.stopped', response3disk_9.tStopRefresh)
-    trials_2.addData('response4disk_9.started', response4disk_9.tStartRefresh)
-    trials_2.addData('response4disk_9.stopped', response4disk_9.tStopRefresh)
-    trials_2.addData('response5disk_9.started', response5disk_9.tStartRefresh)
-    trials_2.addData('response5disk_9.stopped', response5disk_9.tStopRefresh)
-    trials_2.addData('response6disk_9.started', response6disk_9.tStartRefresh)
-    trials_2.addData('response6disk_9.stopped', response6disk_9.tStopRefresh)
-    trials_2.addData('response7disk_9.started', response7disk_9.tStartRefresh)
-    trials_2.addData('response7disk_9.stopped', response7disk_9.tStopRefresh)
-    trials_2.addData('response8disk_9.started', response8disk_9.tStartRefresh)
-    trials_2.addData('response8disk_9.stopped', response8disk_9.tStopRefresh)
+    trials_2.addData('response1disk_11.started', response1disk_11.tStartRefresh)
+    trials_2.addData('response1disk_11.stopped', response1disk_11.tStopRefresh)
+    trials_2.addData('response2disk_11.started', response2disk_11.tStartRefresh)
+    trials_2.addData('response2disk_11.stopped', response2disk_11.tStopRefresh)
+    trials_2.addData('response3disk_11.started', response3disk_11.tStartRefresh)
+    trials_2.addData('response3disk_11.stopped', response3disk_11.tStopRefresh)
+    trials_2.addData('response4disk_11.started', response4disk_11.tStartRefresh)
+    trials_2.addData('response4disk_11.stopped', response4disk_11.tStopRefresh)
+    trials_2.addData('response5disk_11.started', response5disk_11.tStartRefresh)
+    trials_2.addData('response5disk_11.stopped', response5disk_11.tStopRefresh)
+    trials_2.addData('response6disk_11.started', response6disk_11.tStartRefresh)
+    trials_2.addData('response6disk_11.stopped', response6disk_11.tStopRefresh)
+    trials_2.addData('response7disk_11.started', response7disk_11.tStartRefresh)
+    trials_2.addData('response7disk_11.stopped', response7disk_11.tStopRefresh)
+    trials_2.addData('response8disk_11.started', response8disk_11.tStartRefresh)
+    trials_2.addData('response8disk_11.stopped', response8disk_11.tStopRefresh)
     # store data for trials_2 (TrialHandler)
-    x, y = mouse_9.getPos()
-    buttons = mouse_9.getPressed()
+    x, y = mouse_11.getPos()
+    buttons = mouse_11.getPressed()
     if sum(buttons):
         # check if the mouse was inside our 'clickable' objects
         gotValidClick = False
         for obj in [rectangle]:
-            if obj.contains(mouse_9):
+            if obj.contains(mouse_11):
                 gotValidClick = True
-                mouse_9.clicked_name.append(obj.name)
-    trials_2.addData('mouse_9.x', x)
-    trials_2.addData('mouse_9.y', y)
-    trials_2.addData('mouse_9.leftButton', buttons[0])
-    trials_2.addData('mouse_9.midButton', buttons[1])
-    trials_2.addData('mouse_9.rightButton', buttons[2])
-    if len(mouse_9.clicked_name):
-        trials_2.addData('mouse_9.clicked_name', mouse_9.clicked_name[0])
-    trials_2.addData('mouse_9.started', mouse_9.tStart)
-    trials_2.addData('mouse_9.stopped', mouse_9.tStop)
-    trials_2.addData('rectangle_7.started', rectangle_7.tStartRefresh)
-    trials_2.addData('rectangle_7.stopped', rectangle_7.tStopRefresh)
-    trials_2.addData('text_47.started', text_47.tStartRefresh)
-    trials_2.addData('text_47.stopped', text_47.tStopRefresh)
-    trials_2.addData('text_48.started', text_48.tStartRefresh)
-    trials_2.addData('text_48.stopped', text_48.tStopRefresh)
-    # the Routine "response_3" was not non-slip safe, so reset the non-slip timer
+                mouse_11.clicked_name.append(obj.name)
+    trials_2.addData('mouse_11.x', x)
+    trials_2.addData('mouse_11.y', y)
+    trials_2.addData('mouse_11.leftButton', buttons[0])
+    trials_2.addData('mouse_11.midButton', buttons[1])
+    trials_2.addData('mouse_11.rightButton', buttons[2])
+    if len(mouse_11.clicked_name):
+        trials_2.addData('mouse_11.clicked_name', mouse_11.clicked_name[0])
+    trials_2.addData('mouse_11.started', mouse_11.tStart)
+    trials_2.addData('mouse_11.stopped', mouse_11.tStop)
+    trials_2.addData('rectangle_9.started', rectangle_9.tStartRefresh)
+    trials_2.addData('rectangle_9.stopped', rectangle_9.tStopRefresh)
+    trials_2.addData('text_51.started', text_51.tStartRefresh)
+    trials_2.addData('text_51.stopped', text_51.tStopRefresh)
+    trials_2.addData('text_52.started', text_52.tStartRefresh)
+    trials_2.addData('text_52.stopped', text_52.tStopRefresh)
+    # the Routine "response_sum" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
     
