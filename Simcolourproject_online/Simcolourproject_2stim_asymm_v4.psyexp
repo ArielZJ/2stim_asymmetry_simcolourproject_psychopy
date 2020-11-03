@@ -783,7 +783,7 @@
         <Param name="name" updates="None" val="white_ball1" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="[(-frameN+200), 0]" valType="code"/>
+        <Param name="pos" updates="set every frame" val="[((-frameN*(window.innerWidth*0.003))+ballpos), 0]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every frame" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -808,7 +808,7 @@
         <Param name="name" updates="None" val="black_square3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(500,0)" valType="code"/>
+        <Param name="pos" updates="set every frame" val="((window.innerWidth/2)*0.8,0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every repeat" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -881,7 +881,7 @@
         <Param name="name" updates="None" val="white_ball12" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="[(-frameN-50), 0]" valType="code"/>
+        <Param name="pos" updates="set every frame" val="[((-frameN*(window.innerWidth*0.003))+(-(window.innerWidth/2)*0.05)), 0]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every frame" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -954,7 +954,7 @@
         <Param name="name" updates="None" val="white_ball13" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="[(-frameN+700), 0]" valType="code"/>
+        <Param name="pos" updates="set every frame" val="[(((-frameN+500)*(window.innerWidth*0.003))+ballpos), 0]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every frame" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -969,8 +969,8 @@
       <CodeComponent name="code_2">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="ballpos = ((window.innerWidth / 2) * 0.75);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="ballpos = (window.innerWidth/2)*0.75;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if frameN == 700:&amp;#10;    continueRoutine = False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((frameN === 700)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
@@ -1612,7 +1612,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
+        <Param name="text" updates="constant" val="Please click on the grey rectangle to continue" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -1946,7 +1946,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="// Code to convert python to javascript that is not automatically converted&amp;#10;&amp;#10;thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager&amp;#10;shuffle = function (a) {&amp;#10;    return util.shuffle(a);&amp;#10;}&amp;#10;random = function (a) {&amp;#10;    return Math.random();&amp;#10;}&amp;#10;range = function(start, end) {&amp;#10;    var ans = [];&amp;#10;    for (let i = start; i &lt;= end; i++) {&amp;#10;        ans.push(i);&amp;#10;    }&amp;#10;    return ans;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;randint = function(min, maxplusone) {&amp;#10;  return Math.floor(Math.random() * (maxplusone - min) ) + min;&amp;#10;}&amp;#10;&amp;#10;Array.prototype.append = [].push&amp;#10;pi=Math.PI;&amp;#10;sin = Math.sin;&amp;#10;cos = Math.cos;&amp;#10;tan = Math.tan;&amp;#10;&amp;#10;sum = function (arr) {&amp;#10;return arr.reduce((a,b)=&gt;a+b)&amp;#10;}&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -3528,7 +3528,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
+        <Param name="text" updates="constant" val="Please click on the grey rectangle to continue" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -3641,7 +3641,7 @@
       </CodeComponent>
       <CodeComponent name="code_16">
         <Param name="Begin Experiment" updates="constant" val="# Set size of card&amp;#10;&amp;#10;oldt=0&amp;#10;x_size=8.560&amp;#10;y_size=5.398&amp;#10;&amp;#10;&amp;#10;if ccimage.units=='norm':&amp;#10;    x_scale=.05&amp;#10;    y_scale=.1&amp;#10;    dbase = .0001&amp;#10;    unittext=' norm units'&amp;#10;    vsize=2&amp;#10;elif ccimage.units=='pix':&amp;#10;    x_scale=60&amp;#10;    y_scale=40&amp;#10;    dbase = .1&amp;#10;    unittext=' pixels'&amp;#10;    vsize=win.size[1]&amp;#10;else:&amp;#10;    x_scale=.05&amp;#10;    y_scale=.05&amp;#10;    dbase = .0001&amp;#10;    unittext=' height units'&amp;#10;    vsize=1" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="oldt = 0;&amp;#10;x_size = 8.56;&amp;#10;y_size = 5.398;&amp;#10;if ((ccimage.units === &quot;norm&quot;)) {&amp;#10;    x_scale = 0.05;&amp;#10;    y_scale = 0.1;&amp;#10;    dbase = 0.0001;&amp;#10;    unittext = &quot; norm units&quot;;&amp;#10;    vsize = 2;&amp;#10;} else {&amp;#10;    if ((ccimage.units === &quot;pix&quot;)) {&amp;#10;        x_scale = 60;&amp;#10;        y_scale = 40;&amp;#10;        dbase = 0.1;&amp;#10;        unittext = &quot; pixels&quot;;&amp;#10;        vsize = win.size[1];&amp;#10;    } else {&amp;#10;        x_scale = 0.05;&amp;#10;        y_scale = 0.05;&amp;#10;        dbase = 0.0001;&amp;#10;        unittext = &quot; height units&quot;;&amp;#10;        vsize = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="oldt = 0;&amp;#10;x_size = 8.56;&amp;#10;y_size = 5.398;&amp;#10;if ((ccimage.units === &quot;norm&quot;)) {&amp;#10;    x_scale = 0.05;&amp;#10;    y_scale = 0.1;&amp;#10;    dbase = 0.0001;&amp;#10;    unittext = &quot; norm units&quot;;&amp;#10;    vsize = 2;&amp;#10;} else {&amp;#10;    if ((ccimage.units === &quot;pix&quot;)) {&amp;#10;        x_scale = 60;&amp;#10;        y_scale = 40;&amp;#10;        dbase = 0.1;&amp;#10;        unittext = &quot; pixels&quot;;&amp;#10;        vsize = screen.height;&amp;#10;    } else {&amp;#10;        x_scale = 0.05;&amp;#10;        y_scale = 0.05;&amp;#10;        dbase = 0.0001;&amp;#10;        unittext = &quot; height units&quot;;&amp;#10;        vsize = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -3649,7 +3649,7 @@
         <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if (((t - oldt) &lt; 0.5)) {&amp;#10;        dscale = (5 * dbase);&amp;#10;        oldt = t;&amp;#10;    } else {&amp;#10;        dscale = dbase;&amp;#10;        oldt = t;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;return&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;j&quot;, keys)) {&amp;#10;            x_scale = (round(((x_scale - dscale) * 10000)) / 10000);&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;k&quot;, keys)) {&amp;#10;                x_scale = (round(((x_scale + dscale) * 10000)) / 10000);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    ccimage.size = [(x_size * x_scale), ((x_size * x_scale) * 0.62)];&amp;#10;}&amp;#10;ratio_pxpermm = ((x_scale * x_size) / 85.6);&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="ratio_pxpermm = ((x_scale * x_size) / 85.6);&amp;#10;thisExp.addData(&quot;X Scale&quot;, x_scale);&amp;#10;thisExp.addData(&quot;ratio_pxpermm&quot;, ratio_pxpermm);&amp;#10;screen_size_x = ((1 / ratio_pxpermm) * win.size[0]);&amp;#10;screen_size_y = ((1 / ratio_pxpermm) * win.size[1]);&amp;#10;thisExp.addData(&quot;screen_size_x&quot;, screen_size_x);&amp;#10;thisExp.addData(&quot;screen_size_y&quot;, screen_size_y);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="ratio_pxpermm = ((x_scale * x_size) / 85.6);&amp;#10;thisExp.addData(&quot;X Scale&quot;, x_scale);&amp;#10;thisExp.addData(&quot;ratio_pxpermm&quot;, ratio_pxpermm);&amp;#10;screen_size_x = ((1 / ratio_pxpermm) * psychoJS.window.size[0]);&amp;#10;screen_size_y = ((1 / ratio_pxpermm) * screen.height);&amp;#10;thisExp.addData(&quot;screen_size_x&quot;, screen_size_x);&amp;#10;thisExp.addData(&quot;screen_size_y&quot;, screen_size_y);&amp;#10;thisExp.addData('testsize', psychoJS.window.size[0]);&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="#Calculate ratio of pixels to mm&amp;#10;ratio_pxpermm = ((x_scale*x_size)/85.6)&amp;#10;&amp;#10;thisExp.addData('X Scale',x_scale)&amp;#10;thisExp.addData('ratio_pxpermm',ratio_pxpermm)&amp;#10;&amp;#10;screen_size_x = (1 / ratio_pxpermm) * (win.size[0]);&amp;#10;screen_size_y = (1 / ratio_pxpermm) * (win.size[1]);&amp;#10;&amp;#10;thisExp.addData('screen_size_x',screen_size_x)&amp;#10;thisExp.addData('screen_size_y',screen_size_y)" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_16" valType="code"/>
@@ -3693,7 +3693,7 @@
         <Param name="name" updates="None" val="black_square2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="(500,0)" valType="code"/>
+        <Param name="pos" updates="set every frame" val="(((window.innerWidth/2)*0.8),0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every repeat" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -3718,7 +3718,7 @@
         <Param name="name" updates="None" val="white_ball" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="[(-frameN+350), 0]" valType="code"/>
+        <Param name="pos" updates="set every frame" val="[((-frameN*(window.innerWidth*0.003))+ballpos), 0]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every repeat" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -3751,8 +3751,8 @@
       <CodeComponent name="code_18">
         <Param name="Begin Experiment" updates="constant" val="# Store each calibration&amp;#10;viewerdistancetotal = []&amp;#10;# Count calibrations&amp;#10;calibrationcount = 0" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;viewerdistancetotal = [];&amp;#10;calibrationcount = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="blindspot_angle = 13.5;&amp;#10;radians_to_degrees = 57.2958;&amp;#10;calibrationcountext = `${calibrationcount} of 5 angle calibrations complete`;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Blindspot angle&amp;#10;blindspot_angle = 13.5&amp;#10;# Convert radians to degrees&amp;#10;radians_to_degrees = 57.2958&amp;#10;calibrationcountext=f'{calibrationcount} of 5 angle calibrations complete'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="blindspot_angle = 13.5;&amp;#10;ballpos = ((window.innerWidth / 2) * 0.75);&amp;#10;radians_to_degrees = 57.2958;&amp;#10;calibrationcountext = `${calibrationcount} of 5 angle calibrations complete`;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Blindspot angle&amp;#10;blindspot_angle = 13.5&amp;#10;ballpos = (window.innerWidth/2)*0.75;&amp;#10;# Convert radians to degrees&amp;#10;radians_to_degrees = 57.2958&amp;#10;calibrationcountext=f'{calibrationcount} of 5 angle calibrations complete'&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -6263,7 +6263,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please click on the green rectangle to continue" valType="str"/>
+        <Param name="text" updates="constant" val="Please click on the grey rectangle to continue" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
