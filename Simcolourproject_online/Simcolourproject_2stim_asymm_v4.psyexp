@@ -881,7 +881,7 @@
         <Param name="name" updates="None" val="white_ball12" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every frame" val="[((-frameN*(window.innerWidth*0.003))+(-(window.innerWidth/2)*0.05)), 0]" valType="code"/>
+        <Param name="pos" updates="set every frame" val="[((-frameN*(window.innerWidth*0.003))+((window.innerWidth/2)*0.05)), 0]" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
         <Param name="size" updates="set every frame" val="(8.5*ratio_pxpermm, 8.5*ratio_pxpermm)" valType="code"/>
@@ -2361,9 +2361,9 @@
         <Param name="name" updates="None" val="response1disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.15,0.15)" valType="code"/>
+        <Param name="pos" updates="set every frame" val="((window.innerWidth/2)*0.10),((window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every frame" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2371,7 +2371,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response2disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2386,9 +2386,9 @@
         <Param name="name" updates="None" val="response2disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.15,0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="((window.innerWidth/2)*0.10),((window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2396,7 +2396,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response3disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2411,9 +2411,9 @@
         <Param name="name" updates="None" val="response3disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.15, -0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="((window.innerWidth/2)*0.10),(-(window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2421,7 +2421,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response4disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2436,9 +2436,9 @@
         <Param name="name" updates="None" val="response4disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.15, -0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="((window.innerWidth/2)*0.10),(-(window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2446,7 +2446,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response5disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2461,9 +2461,9 @@
         <Param name="name" updates="None" val="response5disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.15,-0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(-(window.innerWidth/2)*0.10),(-(window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2471,7 +2471,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response6disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2486,9 +2486,9 @@
         <Param name="name" updates="None" val="response6disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.15,-0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(-(window.innerWidth/2)*0.10),(-(window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2496,7 +2496,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response7disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2511,9 +2511,9 @@
         <Param name="name" updates="None" val="response7disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.15,0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(-(window.innerWidth/2)*0.10),((window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2521,7 +2521,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response8disk_5">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2536,9 +2536,9 @@
         <Param name="name" updates="None" val="response8disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.15,0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="((window.innerWidth/2)*0.10),((window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2546,7 +2546,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <MouseComponent name="mouse_5">
         <Param name="clickable" updates="constant" val="response1disk_5,response2disk_5,response3disk_5,response4disk_5,response5disk_5,response6disk_5,response7disk_5,response8disk_5," valType="code"/>
@@ -5690,9 +5690,9 @@
         <Param name="name" updates="None" val="response1disk_10" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.15,0.15)" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="((window.innerWidth/2)*0.10),((window.innerWidth/2)*0.10)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -5700,7 +5700,7 @@
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <ImageComponent name="response2disk_10">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -5742,7 +5742,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0.15,-0.15)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.22, 0.28)" valType="code"/>
+        <Param name="size" updates="set every frame" val="((window.innerWidth/2)*0.158),((window.innerWidth/2)*0.158)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
