@@ -1612,7 +1612,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please click on the grey rectangle to continue" valType="str"/>
+        <Param name="text" updates="constant" val="Please click on the grey rectangle in the middle of the response numbers to continue" valType="str"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -3528,7 +3528,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please click on the grey rectangle to continue" valType="str"/>
+        <Param name="text" updates="constant" val="Please click on the grey rectangle in the middle of the response numbers to continue" valType="str"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
@@ -4677,7 +4677,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
         <Param name="name" updates="None" val="text_41" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -4701,7 +4701,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
         <Param name="name" updates="None" val="text_42" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -4725,7 +4725,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
         <Param name="name" updates="None" val="text_43" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -6263,7 +6263,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please click on the grey rectangle to continue" valType="str"/>
+        <Param name="text" updates="constant" val="Please click on the grey rectangle in the middle of the response numbers to continue" valType="str"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
       </TextComponent>
