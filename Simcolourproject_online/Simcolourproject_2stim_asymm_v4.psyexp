@@ -962,7 +962,7 @@
         <Param name="startType" updates="None" val="frame N" valType="str"/>
         <Param name="startVal" updates="None" val="400" valType="code"/>
         <Param name="stopType" updates="None" val="frame N" valType="str"/>
-        <Param name="stopVal" updates="constant" val="700" valType="code"/>
+        <Param name="stopVal" updates="constant" val="550" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
       </PolygonComponent>
@@ -972,8 +972,8 @@
         <Param name="Begin JS Routine" updates="constant" val="ballpos = ((window.innerWidth / 2) * 0.75);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="ballpos = (window.innerWidth/2)*0.75;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if frameN == 700:&amp;#10;    continueRoutine = False" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((frameN === 700)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if frameN == 550:&amp;#10;    continueRoutine = False" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((frameN === 550)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -1323,7 +1323,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="cross" valType="str"/>
-        <Param name="size" updates="constant" val="(0.05, 0.05)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.03, 0.03)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
@@ -2322,7 +2322,7 @@
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="cross" valType="str"/>
-        <Param name="size" updates="constant" val="(0.05, 0.05)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.03, 0.03)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
