@@ -126,12 +126,14 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
+
 
 var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2020.1.2';
+  expInfo['psychopyVersion'] = '2020.2.4';
   expInfo['OS'] = window.navigator.platform;
 
   // store frame rate of monitor if we can measure it successfully
@@ -2137,7 +2139,7 @@ function experimentInit() {
 var t;
 var frameN;
 var startupComponents;
-function startupRoutineBegin(trials) {
+function startupRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'startup'-------
     t = 0;
@@ -2158,7 +2160,7 @@ function startupRoutineBegin(trials) {
 
 
 var continueRoutine;
-function startupRoutineEachFrame(trials) {
+function startupRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'startup'-------
     let continueRoutine = true; // until we're told otherwise
@@ -2193,7 +2195,7 @@ function startupRoutineEachFrame(trials) {
 }
 
 
-function startupRoutineEnd(trials) {
+function startupRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'startup'-------
     startupComponents.forEach( function(thisComponent) {
@@ -2211,7 +2213,7 @@ function startupRoutineEnd(trials) {
 
 var _key_resp_allKeys;
 var welcome_instrComponents;
-function welcome_instrRoutineBegin(trials) {
+function welcome_instrRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'welcome_instr'-------
     t = 0;
@@ -2237,7 +2239,7 @@ function welcome_instrRoutineBegin(trials) {
 }
 
 
-function welcome_instrRoutineEachFrame(trials) {
+function welcome_instrRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'welcome_instr'-------
     let continueRoutine = true; // until we're told otherwise
@@ -2316,7 +2318,7 @@ function welcome_instrRoutineEachFrame(trials) {
 }
 
 
-function welcome_instrRoutineEnd(trials) {
+function welcome_instrRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'welcome_instr'-------
     welcome_instrComponents.forEach( function(thisComponent) {
@@ -2341,7 +2343,7 @@ function welcome_instrRoutineEnd(trials) {
 
 var _key_resp_2_allKeys;
 var instr_1Components;
-function instr_1RoutineBegin(trials) {
+function instr_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_1'-------
     t = 0;
@@ -2368,7 +2370,7 @@ function instr_1RoutineBegin(trials) {
 }
 
 
-function instr_1RoutineEachFrame(trials) {
+function instr_1RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_1'-------
     let continueRoutine = true; // until we're told otherwise
@@ -2457,7 +2459,7 @@ function instr_1RoutineEachFrame(trials) {
 }
 
 
-function instr_1RoutineEnd(trials) {
+function instr_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_1'-------
     instr_1Components.forEach( function(thisComponent) {
@@ -2481,7 +2483,7 @@ function instr_1RoutineEnd(trials) {
 
 
 var screen_scaleComponents;
-function screen_scaleRoutineBegin(trials) {
+function screen_scaleRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'screen_scale'-------
     t = 0;
@@ -2508,7 +2510,7 @@ var _pj;
 var keys;
 var dscale;
 var ratio_pxpermm;
-function screen_scaleRoutineEachFrame(trials) {
+function screen_scaleRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'screen_scale'-------
     let continueRoutine = true; // until we're told otherwise
@@ -2607,7 +2609,7 @@ function screen_scaleRoutineEachFrame(trials) {
 
 var screen_size_x;
 var screen_size_y;
-function screen_scaleRoutineEnd(trials) {
+function screen_scaleRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'screen_scale'-------
     screen_scaleComponents.forEach( function(thisComponent) {
@@ -2637,7 +2639,7 @@ var movieClock;
 var movie;
 var _key_resp_3_allKeys;
 var instr_2Components;
-function instr_2RoutineBegin(trials) {
+function instr_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_2'-------
     t = 0;
@@ -2679,7 +2681,7 @@ function instr_2RoutineBegin(trials) {
 
 
 var frameRemains;
-function instr_2RoutineEachFrame(trials) {
+function instr_2RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_2'-------
     let continueRoutine = true; // until we're told otherwise
@@ -2695,6 +2697,7 @@ function instr_2RoutineEachFrame(trials) {
       movie.frameNStart = frameN;  // exact frame index
       
       movie.setAutoDraw(true);
+      movie.play();
     }
 
     frameRemains = 0 + undefined - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
@@ -2786,7 +2789,7 @@ function instr_2RoutineEachFrame(trials) {
 }
 
 
-function instr_2RoutineEnd(trials) {
+function instr_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_2'-------
     instr_2Components.forEach( function(thisComponent) {
@@ -2794,6 +2797,7 @@ function instr_2RoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     });
+    movie.stop();
     psychoJS.experiment.addData('key_resp_3.keys', key_resp_3.keys);
     if (typeof key_resp_3.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_3.rt', key_resp_3.rt);
@@ -2812,7 +2816,7 @@ function instr_2RoutineEnd(trials) {
 var _key_resp_4_allKeys;
 var line_size;
 var instr_3Components;
-function instr_3RoutineBegin(trials) {
+function instr_3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_3'-------
     t = 0;
@@ -2841,7 +2845,7 @@ function instr_3RoutineBegin(trials) {
 }
 
 
-function instr_3RoutineEachFrame(trials) {
+function instr_3RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_3'-------
     let continueRoutine = true; // until we're told otherwise
@@ -2919,7 +2923,7 @@ function instr_3RoutineEachFrame(trials) {
 }
 
 
-function instr_3RoutineEnd(trials) {
+function instr_3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_3'-------
     instr_3Components.forEach( function(thisComponent) {
@@ -2946,7 +2950,7 @@ function instr_3RoutineEnd(trials) {
 
 var _key_resp_5_allKeys;
 var instr_4Components;
-function instr_4RoutineBegin(trials) {
+function instr_4RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_4'-------
     t = 0;
@@ -2972,7 +2976,7 @@ function instr_4RoutineBegin(trials) {
 }
 
 
-function instr_4RoutineEachFrame(trials) {
+function instr_4RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_4'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3051,7 +3055,7 @@ function instr_4RoutineEachFrame(trials) {
 }
 
 
-function instr_4RoutineEnd(trials) {
+function instr_4RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_4'-------
     instr_4Components.forEach( function(thisComponent) {
@@ -3076,7 +3080,7 @@ function instr_4RoutineEnd(trials) {
 
 var _key_resp_6_allKeys;
 var instr_5Components;
-function instr_5RoutineBegin(trials) {
+function instr_5RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_5'-------
     t = 0;
@@ -3103,7 +3107,7 @@ function instr_5RoutineBegin(trials) {
 }
 
 
-function instr_5RoutineEachFrame(trials) {
+function instr_5RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_5'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3192,7 +3196,7 @@ function instr_5RoutineEachFrame(trials) {
 }
 
 
-function instr_5RoutineEnd(trials) {
+function instr_5RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_5'-------
     instr_5Components.forEach( function(thisComponent) {
@@ -3217,7 +3221,7 @@ function instr_5RoutineEnd(trials) {
 
 var _key_resp_8_allKeys;
 var instr_6Components;
-function instr_6RoutineBegin(trials) {
+function instr_6RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_6'-------
     t = 0;
@@ -3244,7 +3248,7 @@ function instr_6RoutineBegin(trials) {
 }
 
 
-function instr_6RoutineEachFrame(trials) {
+function instr_6RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_6'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3333,7 +3337,7 @@ function instr_6RoutineEachFrame(trials) {
 }
 
 
-function instr_6RoutineEnd(trials) {
+function instr_6RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_6'-------
     instr_6Components.forEach( function(thisComponent) {
@@ -3358,7 +3362,7 @@ function instr_6RoutineEnd(trials) {
 
 var _key_resp_7_allKeys;
 var instr_7Components;
-function instr_7RoutineBegin(trials) {
+function instr_7RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_7'-------
     t = 0;
@@ -3386,7 +3390,7 @@ function instr_7RoutineBegin(trials) {
 }
 
 
-function instr_7RoutineEachFrame(trials) {
+function instr_7RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_7'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3485,7 +3489,7 @@ function instr_7RoutineEachFrame(trials) {
 }
 
 
-function instr_7RoutineEnd(trials) {
+function instr_7RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_7'-------
     instr_7Components.forEach( function(thisComponent) {
@@ -3510,7 +3514,7 @@ function instr_7RoutineEnd(trials) {
 
 var _key_resp_12_allKeys;
 var instr_8Components;
-function instr_8RoutineBegin(trials) {
+function instr_8RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_8'-------
     t = 0;
@@ -3541,7 +3545,7 @@ function instr_8RoutineBegin(trials) {
 }
 
 
-function instr_8RoutineEachFrame(trials) {
+function instr_8RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_8'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3660,7 +3664,7 @@ function instr_8RoutineEachFrame(trials) {
 }
 
 
-function instr_8RoutineEnd(trials) {
+function instr_8RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_8'-------
     instr_8Components.forEach( function(thisComponent) {
@@ -3685,7 +3689,7 @@ function instr_8RoutineEnd(trials) {
 
 var _key_resp_11_allKeys;
 var instr_9Components;
-function instr_9RoutineBegin(trials) {
+function instr_9RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_9'-------
     t = 0;
@@ -3718,7 +3722,7 @@ function instr_9RoutineBegin(trials) {
 }
 
 
-function instr_9RoutineEachFrame(trials) {
+function instr_9RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_9'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3847,7 +3851,7 @@ function instr_9RoutineEachFrame(trials) {
 }
 
 
-function instr_9RoutineEnd(trials) {
+function instr_9RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_9'-------
     instr_9Components.forEach( function(thisComponent) {
@@ -3872,7 +3876,7 @@ function instr_9RoutineEnd(trials) {
 
 var _key_resp_18_allKeys;
 var instr_10Components;
-function instr_10RoutineBegin(trials) {
+function instr_10RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_10'-------
     t = 0;
@@ -3899,7 +3903,7 @@ function instr_10RoutineBegin(trials) {
 }
 
 
-function instr_10RoutineEachFrame(trials) {
+function instr_10RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_10'-------
     let continueRoutine = true; // until we're told otherwise
@@ -3988,7 +3992,7 @@ function instr_10RoutineEachFrame(trials) {
 }
 
 
-function instr_10RoutineEnd(trials) {
+function instr_10RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_10'-------
     instr_10Components.forEach( function(thisComponent) {
@@ -4013,7 +4017,7 @@ function instr_10RoutineEnd(trials) {
 
 var _key_resp_21_allKeys;
 var instr_11Components;
-function instr_11RoutineBegin(trials) {
+function instr_11RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_11'-------
     t = 0;
@@ -4040,7 +4044,7 @@ function instr_11RoutineBegin(trials) {
 }
 
 
-function instr_11RoutineEachFrame(trials) {
+function instr_11RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_11'-------
     let continueRoutine = true; // until we're told otherwise
@@ -4129,7 +4133,7 @@ function instr_11RoutineEachFrame(trials) {
 }
 
 
-function instr_11RoutineEnd(trials) {
+function instr_11RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_11'-------
     instr_11Components.forEach( function(thisComponent) {
@@ -4154,7 +4158,7 @@ function instr_11RoutineEnd(trials) {
 
 var ballpos;
 var calibration_exampleComponents;
-function calibration_exampleRoutineBegin(trials) {
+function calibration_exampleRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'calibration_example'-------
     t = 0;
@@ -4185,7 +4189,7 @@ function calibration_exampleRoutineBegin(trials) {
 }
 
 
-function calibration_exampleRoutineEachFrame(trials) {
+function calibration_exampleRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'calibration_example'-------
     let continueRoutine = true; // until we're told otherwise
@@ -4341,7 +4345,7 @@ function calibration_exampleRoutineEachFrame(trials) {
 }
 
 
-function calibration_exampleRoutineEnd(trials) {
+function calibration_exampleRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'calibration_example'-------
     calibration_exampleComponents.forEach( function(thisComponent) {
@@ -4359,7 +4363,7 @@ function calibration_exampleRoutineEnd(trials) {
 
 var _key_resp_13_allKeys;
 var instr_12Components;
-function instr_12RoutineBegin(trials) {
+function instr_12RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_12'-------
     t = 0;
@@ -4386,7 +4390,7 @@ function instr_12RoutineBegin(trials) {
 }
 
 
-function instr_12RoutineEachFrame(trials) {
+function instr_12RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_12'-------
     let continueRoutine = true; // until we're told otherwise
@@ -4475,7 +4479,7 @@ function instr_12RoutineEachFrame(trials) {
 }
 
 
-function instr_12RoutineEnd(trials) {
+function instr_12RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_12'-------
     instr_12Components.forEach( function(thisComponent) {
@@ -4500,7 +4504,7 @@ function instr_12RoutineEnd(trials) {
 
 var trials;
 var currentLoop;
-function trialsLoopBegin(thisScheduler) {
+function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
     psychoJS: psychoJS,
@@ -4516,11 +4520,11 @@ function trialsLoopBegin(thisScheduler) {
   trials.forEach(function() {
     const snapshot = trials.getSnapshot();
 
-    thisScheduler.add(importConditions(snapshot));
-    thisScheduler.add(ball_calibrationRoutineBegin(snapshot));
-    thisScheduler.add(ball_calibrationRoutineEachFrame(snapshot));
-    thisScheduler.add(ball_calibrationRoutineEnd(snapshot));
-    thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
+    trialsLoopScheduler.add(importConditions(snapshot));
+    trialsLoopScheduler.add(ball_calibrationRoutineBegin(snapshot));
+    trialsLoopScheduler.add(ball_calibrationRoutineEachFrame(snapshot));
+    trialsLoopScheduler.add(ball_calibrationRoutineEnd(snapshot));
+    trialsLoopScheduler.add(endLoopIteration(trialsLoopScheduler, snapshot));
   });
 
   return Scheduler.Event.NEXT;
@@ -4535,7 +4539,7 @@ function trialsLoopEnd() {
 
 
 var duringprac;
-function duringpracLoopBegin(thisScheduler) {
+function duringpracLoopBegin(duringpracLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   duringprac = new TrialHandler({
     psychoJS: psychoJS,
@@ -4551,26 +4555,26 @@ function duringpracLoopBegin(thisScheduler) {
   duringprac.forEach(function() {
     const snapshot = duringprac.getSnapshot();
 
-    thisScheduler.add(importConditions(snapshot));
-    thisScheduler.add(Stim1_display_pracRoutineBegin(snapshot));
-    thisScheduler.add(Stim1_display_pracRoutineEachFrame(snapshot));
-    thisScheduler.add(Stim1_display_pracRoutineEnd(snapshot));
-    thisScheduler.add(response_pracRoutineBegin(snapshot));
-    thisScheduler.add(response_pracRoutineEachFrame(snapshot));
-    thisScheduler.add(response_pracRoutineEnd(snapshot));
-    thisScheduler.add(summary_pracRoutineBegin(snapshot));
-    thisScheduler.add(summary_pracRoutineEachFrame(snapshot));
-    thisScheduler.add(summary_pracRoutineEnd(snapshot));
-    thisScheduler.add(special_trial_pracRoutineBegin(snapshot));
-    thisScheduler.add(special_trial_pracRoutineEachFrame(snapshot));
-    thisScheduler.add(special_trial_pracRoutineEnd(snapshot));
-    thisScheduler.add(catch_pracRoutineBegin(snapshot));
-    thisScheduler.add(catch_pracRoutineEachFrame(snapshot));
-    thisScheduler.add(catch_pracRoutineEnd(snapshot));
-    thisScheduler.add(summary2_pracRoutineBegin(snapshot));
-    thisScheduler.add(summary2_pracRoutineEachFrame(snapshot));
-    thisScheduler.add(summary2_pracRoutineEnd(snapshot));
-    thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
+    duringpracLoopScheduler.add(importConditions(snapshot));
+    duringpracLoopScheduler.add(Stim1_display_pracRoutineBegin(snapshot));
+    duringpracLoopScheduler.add(Stim1_display_pracRoutineEachFrame(snapshot));
+    duringpracLoopScheduler.add(Stim1_display_pracRoutineEnd(snapshot));
+    duringpracLoopScheduler.add(response_pracRoutineBegin(snapshot));
+    duringpracLoopScheduler.add(response_pracRoutineEachFrame(snapshot));
+    duringpracLoopScheduler.add(response_pracRoutineEnd(snapshot));
+    duringpracLoopScheduler.add(summary_pracRoutineBegin(snapshot));
+    duringpracLoopScheduler.add(summary_pracRoutineEachFrame(snapshot));
+    duringpracLoopScheduler.add(summary_pracRoutineEnd(snapshot));
+    duringpracLoopScheduler.add(special_trial_pracRoutineBegin(snapshot));
+    duringpracLoopScheduler.add(special_trial_pracRoutineEachFrame(snapshot));
+    duringpracLoopScheduler.add(special_trial_pracRoutineEnd(snapshot));
+    duringpracLoopScheduler.add(catch_pracRoutineBegin(snapshot));
+    duringpracLoopScheduler.add(catch_pracRoutineEachFrame(snapshot));
+    duringpracLoopScheduler.add(catch_pracRoutineEnd(snapshot));
+    duringpracLoopScheduler.add(summary2_pracRoutineBegin(snapshot));
+    duringpracLoopScheduler.add(summary2_pracRoutineEachFrame(snapshot));
+    duringpracLoopScheduler.add(summary2_pracRoutineEnd(snapshot));
+    duringpracLoopScheduler.add(endLoopIteration(duringpracLoopScheduler, snapshot));
   });
 
   return Scheduler.Event.NEXT;
@@ -4585,7 +4589,7 @@ function duringpracLoopEnd() {
 
 
 var trials_2;
-function trials_2LoopBegin(thisScheduler) {
+function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
     psychoJS: psychoJS,
@@ -4601,26 +4605,26 @@ function trials_2LoopBegin(thisScheduler) {
   trials_2.forEach(function() {
     const snapshot = trials_2.getSnapshot();
 
-    thisScheduler.add(importConditions(snapshot));
-    thisScheduler.add(Stim1_displayRoutineBegin(snapshot));
-    thisScheduler.add(Stim1_displayRoutineEachFrame(snapshot));
-    thisScheduler.add(Stim1_displayRoutineEnd(snapshot));
-    thisScheduler.add(responseRoutineBegin(snapshot));
-    thisScheduler.add(responseRoutineEachFrame(snapshot));
-    thisScheduler.add(responseRoutineEnd(snapshot));
-    thisScheduler.add(response_2RoutineBegin(snapshot));
-    thisScheduler.add(response_2RoutineEachFrame(snapshot));
-    thisScheduler.add(response_2RoutineEnd(snapshot));
-    thisScheduler.add(special_trialRoutineBegin(snapshot));
-    thisScheduler.add(special_trialRoutineEachFrame(snapshot));
-    thisScheduler.add(special_trialRoutineEnd(snapshot));
-    thisScheduler.add(catch_1RoutineBegin(snapshot));
-    thisScheduler.add(catch_1RoutineEachFrame(snapshot));
-    thisScheduler.add(catch_1RoutineEnd(snapshot));
-    thisScheduler.add(response_sumRoutineBegin(snapshot));
-    thisScheduler.add(response_sumRoutineEachFrame(snapshot));
-    thisScheduler.add(response_sumRoutineEnd(snapshot));
-    thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
+    trials_2LoopScheduler.add(importConditions(snapshot));
+    trials_2LoopScheduler.add(Stim1_displayRoutineBegin(snapshot));
+    trials_2LoopScheduler.add(Stim1_displayRoutineEachFrame(snapshot));
+    trials_2LoopScheduler.add(Stim1_displayRoutineEnd(snapshot));
+    trials_2LoopScheduler.add(responseRoutineBegin(snapshot));
+    trials_2LoopScheduler.add(responseRoutineEachFrame(snapshot));
+    trials_2LoopScheduler.add(responseRoutineEnd(snapshot));
+    trials_2LoopScheduler.add(response_2RoutineBegin(snapshot));
+    trials_2LoopScheduler.add(response_2RoutineEachFrame(snapshot));
+    trials_2LoopScheduler.add(response_2RoutineEnd(snapshot));
+    trials_2LoopScheduler.add(special_trialRoutineBegin(snapshot));
+    trials_2LoopScheduler.add(special_trialRoutineEachFrame(snapshot));
+    trials_2LoopScheduler.add(special_trialRoutineEnd(snapshot));
+    trials_2LoopScheduler.add(catch_1RoutineBegin(snapshot));
+    trials_2LoopScheduler.add(catch_1RoutineEachFrame(snapshot));
+    trials_2LoopScheduler.add(catch_1RoutineEnd(snapshot));
+    trials_2LoopScheduler.add(response_sumRoutineBegin(snapshot));
+    trials_2LoopScheduler.add(response_sumRoutineEachFrame(snapshot));
+    trials_2LoopScheduler.add(response_sumRoutineEnd(snapshot));
+    trials_2LoopScheduler.add(endLoopIteration(trials_2LoopScheduler, snapshot));
   });
 
   return Scheduler.Event.NEXT;
@@ -4639,7 +4643,7 @@ var blindspot_angle;
 var radians_to_degrees;
 var calibrationcountext;
 var ball_calibrationComponents;
-function ball_calibrationRoutineBegin(trials) {
+function ball_calibrationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'ball_calibration'-------
     t = 0;
@@ -4674,7 +4678,7 @@ function ball_calibrationRoutineBegin(trials) {
 }
 
 
-function ball_calibrationRoutineEachFrame(trials) {
+function ball_calibrationRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'ball_calibration'-------
     let continueRoutine = true; // until we're told otherwise
@@ -4774,7 +4778,7 @@ function ball_calibrationRoutineEachFrame(trials) {
 var ballposx;
 var squarepos;
 var viewer_distance;
-function ball_calibrationRoutineEnd(trials) {
+function ball_calibrationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'ball_calibration'-------
     ball_calibrationComponents.forEach( function(thisComponent) {
@@ -4814,7 +4818,7 @@ var r_F;
 var R_P;
 var _key_resp_20_allKeys;
 var viewerdistanceComponents;
-function viewerdistanceRoutineBegin(trials) {
+function viewerdistanceRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'viewerdistance'-------
     t = 0;
@@ -4850,7 +4854,7 @@ function viewerdistanceRoutineBegin(trials) {
 }
 
 
-function viewerdistanceRoutineEachFrame(trials) {
+function viewerdistanceRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'viewerdistance'-------
     let continueRoutine = true; // until we're told otherwise
@@ -4946,7 +4950,7 @@ function viewerdistanceRoutineEachFrame(trials) {
 }
 
 
-function viewerdistanceRoutineEnd(trials) {
+function viewerdistanceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'viewerdistance'-------
     viewerdistanceComponents.forEach( function(thisComponent) {
@@ -4977,7 +4981,7 @@ function viewerdistanceRoutineEnd(trials) {
 
 
 var viewerdistance_unsucessComponents;
-function viewerdistance_unsucessRoutineBegin(trials) {
+function viewerdistance_unsucessRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'viewerdistance_unsucess'-------
     t = 0;
@@ -5004,7 +5008,7 @@ function viewerdistance_unsucessRoutineBegin(trials) {
 }
 
 
-function viewerdistance_unsucessRoutineEachFrame(trials) {
+function viewerdistance_unsucessRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'viewerdistance_unsucess'-------
     let continueRoutine = true; // until we're told otherwise
@@ -5073,7 +5077,7 @@ function viewerdistance_unsucessRoutineEachFrame(trials) {
 }
 
 
-function viewerdistance_unsucessRoutineEnd(trials) {
+function viewerdistance_unsucessRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'viewerdistance_unsucess'-------
     viewerdistance_unsucessComponents.forEach( function(thisComponent) {
@@ -5091,7 +5095,7 @@ function viewerdistance_unsucessRoutineEnd(trials) {
 
 var _key_resp_14_allKeys;
 var stim1_instrComponents;
-function stim1_instrRoutineBegin(trials) {
+function stim1_instrRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'stim1_instr'-------
     t = 0;
@@ -5118,7 +5122,7 @@ function stim1_instrRoutineBegin(trials) {
 }
 
 
-function stim1_instrRoutineEachFrame(trials) {
+function stim1_instrRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'stim1_instr'-------
     let continueRoutine = true; // until we're told otherwise
@@ -5134,6 +5138,7 @@ function stim1_instrRoutineEachFrame(trials) {
       stim1.frameNStart = frameN;  // exact frame index
       
       stim1.setAutoDraw(true);
+      stim1.play();
     }
 
     
@@ -5207,7 +5212,7 @@ function stim1_instrRoutineEachFrame(trials) {
 }
 
 
-function stim1_instrRoutineEnd(trials) {
+function stim1_instrRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'stim1_instr'-------
     stim1_instrComponents.forEach( function(thisComponent) {
@@ -5215,6 +5220,7 @@ function stim1_instrRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     });
+    stim1.stop();
     psychoJS.experiment.addData('key_resp_14.keys', key_resp_14.keys);
     if (typeof key_resp_14.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_14.rt', key_resp_14.rt);
@@ -5232,7 +5238,7 @@ function stim1_instrRoutineEnd(trials) {
 
 var _key_resp_15_allKeys;
 var stim_response_instrComponents;
-function stim_response_instrRoutineBegin(trials) {
+function stim_response_instrRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'stim_response_instr'-------
     t = 0;
@@ -5259,7 +5265,7 @@ function stim_response_instrRoutineBegin(trials) {
 }
 
 
-function stim_response_instrRoutineEachFrame(trials) {
+function stim_response_instrRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'stim_response_instr'-------
     let continueRoutine = true; // until we're told otherwise
@@ -5275,6 +5281,7 @@ function stim_response_instrRoutineEachFrame(trials) {
       movie_2.frameNStart = frameN;  // exact frame index
       
       movie_2.setAutoDraw(true);
+      movie_2.play();
     }
 
     
@@ -5348,7 +5355,7 @@ function stim_response_instrRoutineEachFrame(trials) {
 }
 
 
-function stim_response_instrRoutineEnd(trials) {
+function stim_response_instrRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'stim_response_instr'-------
     stim_response_instrComponents.forEach( function(thisComponent) {
@@ -5356,6 +5363,7 @@ function stim_response_instrRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     });
+    movie_2.stop();
     psychoJS.experiment.addData('key_resp_15.keys', key_resp_15.keys);
     if (typeof key_resp_15.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_15.rt', key_resp_15.rt);
@@ -5373,7 +5381,7 @@ function stim_response_instrRoutineEnd(trials) {
 
 var _key_resp_17_allKeys;
 var catch_insrtComponents;
-function catch_insrtRoutineBegin(trials) {
+function catch_insrtRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'catch_insrt'-------
     t = 0;
@@ -5400,7 +5408,7 @@ function catch_insrtRoutineBegin(trials) {
 }
 
 
-function catch_insrtRoutineEachFrame(trials) {
+function catch_insrtRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'catch_insrt'-------
     let continueRoutine = true; // until we're told otherwise
@@ -5450,6 +5458,7 @@ function catch_insrtRoutineEachFrame(trials) {
       movie_3.frameNStart = frameN;  // exact frame index
       
       movie_3.setAutoDraw(true);
+      movie_3.play();
     }
 
     
@@ -5489,7 +5498,7 @@ function catch_insrtRoutineEachFrame(trials) {
 }
 
 
-function catch_insrtRoutineEnd(trials) {
+function catch_insrtRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'catch_insrt'-------
     catch_insrtComponents.forEach( function(thisComponent) {
@@ -5504,6 +5513,7 @@ function catch_insrtRoutineEnd(trials) {
         }
     
     key_resp_17.stop();
+    movie_3.stop();
     // the Routine "catch_insrt" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -5515,7 +5525,7 @@ function catch_insrtRoutineEnd(trials) {
 var circle_position;
 var _key_resp_9_allKeys;
 var colour_circle_instr_2Components;
-function colour_circle_instr_2RoutineBegin(trials) {
+function colour_circle_instr_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'colour_circle_instr_2'-------
     t = 0;
@@ -5562,7 +5572,7 @@ function colour_circle_instr_2RoutineBegin(trials) {
 }
 
 
-function colour_circle_instr_2RoutineEachFrame(trials) {
+function colour_circle_instr_2RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'colour_circle_instr_2'-------
     let continueRoutine = true; // until we're told otherwise
@@ -5731,7 +5741,7 @@ function colour_circle_instr_2RoutineEachFrame(trials) {
 }
 
 
-function colour_circle_instr_2RoutineEnd(trials) {
+function colour_circle_instr_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'colour_circle_instr_2'-------
     colour_circle_instr_2Components.forEach( function(thisComponent) {
@@ -5756,7 +5766,7 @@ function colour_circle_instr_2RoutineEnd(trials) {
 
 var _key_resp_10_allKeys;
 var instr_pracComponents;
-function instr_pracRoutineBegin(trials) {
+function instr_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instr_prac'-------
     t = 0;
@@ -5782,7 +5792,7 @@ function instr_pracRoutineBegin(trials) {
 }
 
 
-function instr_pracRoutineEachFrame(trials) {
+function instr_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'instr_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -5861,7 +5871,7 @@ function instr_pracRoutineEachFrame(trials) {
 }
 
 
-function instr_pracRoutineEnd(trials) {
+function instr_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instr_prac'-------
     instr_pracComponents.forEach( function(thisComponent) {
@@ -5905,7 +5915,7 @@ var circlesizew;
 var Colour_1;
 var Circle1_col;
 var Stim1_display_pracComponents;
-function Stim1_display_pracRoutineBegin(trials) {
+function Stim1_display_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Stim1_display_prac'-------
     t = 0;
@@ -5996,7 +6006,7 @@ function Stim1_display_pracRoutineBegin(trials) {
 }
 
 
-function Stim1_display_pracRoutineEachFrame(trials) {
+function Stim1_display_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Stim1_display_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -6059,7 +6069,7 @@ function Stim1_display_pracRoutineEachFrame(trials) {
 }
 
 
-function Stim1_display_pracRoutineEnd(trials) {
+function Stim1_display_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Stim1_display_prac'-------
     Stim1_display_pracComponents.forEach( function(thisComponent) {
@@ -6079,7 +6089,7 @@ var gotValidClick;
 var Colour_2;
 var Circle2_col;
 var response_pracComponents;
-function response_pracRoutineBegin(trials) {
+function response_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'response_prac'-------
     t = 0;
@@ -6152,7 +6162,8 @@ function response_pracRoutineBegin(trials) {
 
 
 var prevButtonState;
-function response_pracRoutineEachFrame(trials) {
+var _mouseButtons;
+function response_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'response_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -6171,10 +6182,10 @@ function response_pracRoutineEachFrame(trials) {
       prevButtonState = mouse_5.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_5.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_5.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_5.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [response1disk_5,response3disk_5,response5disk_5,response7disk_5,]) {
@@ -6276,9 +6287,10 @@ function response_pracRoutineEachFrame(trials) {
 }
 
 
+var _mouseXYs;
 var mousexpos;
 var mouseypos;
-function response_pracRoutineEnd(trials) {
+function response_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'response_prac'-------
     response_pracComponents.forEach( function(thisComponent) {
@@ -6287,13 +6299,13 @@ function response_pracRoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_5.getPos();
-    const buttons = mouse_5.getPressed();
-    psychoJS.experiment.addData('mouse_5.x', xys[0]);
-    psychoJS.experiment.addData('mouse_5.y', xys[1]);
-    psychoJS.experiment.addData('mouse_5.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_5.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_5.rightButton', buttons[2]);
+    _mouseXYs = mouse_5.getPos();
+    _mouseButtons = mouse_5.getPressed();
+    psychoJS.experiment.addData('mouse_5.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_5.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_5.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_5.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_5.rightButton', _mouseButtons[2]);
     if (mouse_5.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_5.clicked_name', mouse_5.clicked_name[0]);}
     mousexpos = mouse.getPos()[0];
@@ -6420,7 +6432,7 @@ function response_pracRoutineEnd(trials) {
 
 var pracnumbertext;
 var summary_pracComponents;
-function summary_pracRoutineBegin(trials) {
+function summary_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'summary_prac'-------
     t = 0;
@@ -6456,7 +6468,7 @@ function summary_pracRoutineBegin(trials) {
 }
 
 
-function summary_pracRoutineEachFrame(trials) {
+function summary_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'summary_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -6475,10 +6487,10 @@ function summary_pracRoutineEachFrame(trials) {
       prevButtonState = mouse_10.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_10.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_10.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_10.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [rectangle_8]) {
@@ -6590,7 +6602,7 @@ function summary_pracRoutineEachFrame(trials) {
 }
 
 
-function summary_pracRoutineEnd(trials) {
+function summary_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'summary_prac'-------
     summary_pracComponents.forEach( function(thisComponent) {
@@ -6599,13 +6611,13 @@ function summary_pracRoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_10.getPos();
-    const buttons = mouse_10.getPressed();
-    psychoJS.experiment.addData('mouse_10.x', xys[0]);
-    psychoJS.experiment.addData('mouse_10.y', xys[1]);
-    psychoJS.experiment.addData('mouse_10.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_10.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_10.rightButton', buttons[2]);
+    _mouseXYs = mouse_10.getPos();
+    _mouseButtons = mouse_10.getPressed();
+    psychoJS.experiment.addData('mouse_10.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_10.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_10.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_10.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_10.rightButton', _mouseButtons[2]);
     if (mouse_10.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_10.clicked_name', mouse_10.clicked_name[0]);}
     // the Routine "summary_prac" was not non-slip safe, so reset the non-slip timer
@@ -6617,7 +6629,7 @@ function summary_pracRoutineEnd(trials) {
 
 
 var special_trial_pracComponents;
-function special_trial_pracRoutineBegin(trials) {
+function special_trial_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'special_trial_prac'-------
     t = 0;
@@ -6639,7 +6651,7 @@ function special_trial_pracRoutineBegin(trials) {
 }
 
 
-function special_trial_pracRoutineEachFrame(trials) {
+function special_trial_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'special_trial_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -6692,7 +6704,7 @@ function special_trial_pracRoutineEachFrame(trials) {
 }
 
 
-function special_trial_pracRoutineEnd(trials) {
+function special_trial_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'special_trial_prac'-------
     special_trial_pracComponents.forEach( function(thisComponent) {
@@ -6707,7 +6719,7 @@ function special_trial_pracRoutineEnd(trials) {
 
 var catchtext;
 var catch_pracComponents;
-function catch_pracRoutineBegin(trials) {
+function catch_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'catch_prac'-------
     t = 0;
@@ -6742,7 +6754,7 @@ function catch_pracRoutineBegin(trials) {
 }
 
 
-function catch_pracRoutineEachFrame(trials) {
+function catch_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'catch_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -6761,10 +6773,10 @@ function catch_pracRoutineEachFrame(trials) {
       prevButtonState = mouse_7.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_7.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_7.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_7.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [response1disk_7,response3disk_7,response5disk_7,response7disk_7]) {
@@ -6870,7 +6882,7 @@ function catch_pracRoutineEachFrame(trials) {
 }
 
 
-function catch_pracRoutineEnd(trials) {
+function catch_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'catch_prac'-------
     catch_pracComponents.forEach( function(thisComponent) {
@@ -6879,13 +6891,13 @@ function catch_pracRoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_7.getPos();
-    const buttons = mouse_7.getPressed();
-    psychoJS.experiment.addData('mouse_7.x', xys[0]);
-    psychoJS.experiment.addData('mouse_7.y', xys[1]);
-    psychoJS.experiment.addData('mouse_7.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_7.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_7.rightButton', buttons[2]);
+    _mouseXYs = mouse_7.getPos();
+    _mouseButtons = mouse_7.getPressed();
+    psychoJS.experiment.addData('mouse_7.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_7.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_7.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_7.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_7.rightButton', _mouseButtons[2]);
     if (mouse_7.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_7.clicked_name', mouse_7.clicked_name[0]);}
     mousexpos = mouse.getPos()[0];
@@ -7018,7 +7030,7 @@ function catch_pracRoutineEnd(trials) {
 
 
 var summary2_pracComponents;
-function summary2_pracRoutineBegin(trials) {
+function summary2_pracRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'summary2_prac'-------
     t = 0;
@@ -7061,7 +7073,7 @@ function summary2_pracRoutineBegin(trials) {
 }
 
 
-function summary2_pracRoutineEachFrame(trials) {
+function summary2_pracRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'summary2_prac'-------
     let continueRoutine = true; // until we're told otherwise
@@ -7080,10 +7092,10 @@ function summary2_pracRoutineEachFrame(trials) {
       prevButtonState = mouse_6.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_6.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_6.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_6.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [rectangle_4]) {
@@ -7199,7 +7211,7 @@ function summary2_pracRoutineEachFrame(trials) {
 }
 
 
-function summary2_pracRoutineEnd(trials) {
+function summary2_pracRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'summary2_prac'-------
     summary2_pracComponents.forEach( function(thisComponent) {
@@ -7208,13 +7220,13 @@ function summary2_pracRoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_6.getPos();
-    const buttons = mouse_6.getPressed();
-    psychoJS.experiment.addData('mouse_6.x', xys[0]);
-    psychoJS.experiment.addData('mouse_6.y', xys[1]);
-    psychoJS.experiment.addData('mouse_6.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_6.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_6.rightButton', buttons[2]);
+    _mouseXYs = mouse_6.getPos();
+    _mouseButtons = mouse_6.getPressed();
+    psychoJS.experiment.addData('mouse_6.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_6.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_6.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_6.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_6.rightButton', _mouseButtons[2]);
     if (mouse_6.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_6.clicked_name', mouse_6.clicked_name[0]);}
     // the Routine "summary2_prac" was not non-slip safe, so reset the non-slip timer
@@ -7227,7 +7239,7 @@ function summary2_pracRoutineEnd(trials) {
 
 var _key_resp_22_allKeys;
 var beginComponents;
-function beginRoutineBegin(trials) {
+function beginRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'begin'-------
     t = 0;
@@ -7253,7 +7265,7 @@ function beginRoutineBegin(trials) {
 }
 
 
-function beginRoutineEachFrame(trials) {
+function beginRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'begin'-------
     let continueRoutine = true; // until we're told otherwise
@@ -7332,7 +7344,7 @@ function beginRoutineEachFrame(trials) {
 }
 
 
-function beginRoutineEnd(trials) {
+function beginRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'begin'-------
     beginComponents.forEach( function(thisComponent) {
@@ -7357,7 +7369,7 @@ function beginRoutineEnd(trials) {
 
 var Circle1_colour;
 var Stim1_displayComponents;
-function Stim1_displayRoutineBegin(trials) {
+function Stim1_displayRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Stim1_display'-------
     t = 0;
@@ -7447,7 +7459,7 @@ function Stim1_displayRoutineBegin(trials) {
 }
 
 
-function Stim1_displayRoutineEachFrame(trials) {
+function Stim1_displayRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Stim1_display'-------
     let continueRoutine = true; // until we're told otherwise
@@ -7510,7 +7522,7 @@ function Stim1_displayRoutineEachFrame(trials) {
 }
 
 
-function Stim1_displayRoutineEnd(trials) {
+function Stim1_displayRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Stim1_display'-------
     Stim1_displayComponents.forEach( function(thisComponent) {
@@ -7528,7 +7540,7 @@ function Stim1_displayRoutineEnd(trials) {
 
 var Circle2_colour;
 var responseComponents;
-function responseRoutineBegin(trials) {
+function responseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'response'-------
     t = 0;
@@ -7599,7 +7611,7 @@ function responseRoutineBegin(trials) {
 }
 
 
-function responseRoutineEachFrame(trials) {
+function responseRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'response'-------
     let continueRoutine = true; // until we're told otherwise
@@ -7618,10 +7630,10 @@ function responseRoutineEachFrame(trials) {
       prevButtonState = mouse.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [response1disk,response3disk,response5disk,response7disk]) {
@@ -7796,7 +7808,7 @@ var a8d;
 var b8d;
 var c8d;
 var similarity;
-function responseRoutineEnd(trials) {
+function responseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'response'-------
     responseComponents.forEach( function(thisComponent) {
@@ -7805,13 +7817,13 @@ function responseRoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse.getPos();
-    const buttons = mouse.getPressed();
-    psychoJS.experiment.addData('mouse.x', xys[0]);
-    psychoJS.experiment.addData('mouse.y', xys[1]);
-    psychoJS.experiment.addData('mouse.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse.rightButton', buttons[2]);
+    _mouseXYs = mouse.getPos();
+    _mouseButtons = mouse.getPressed();
+    psychoJS.experiment.addData('mouse.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse.rightButton', _mouseButtons[2]);
     if (mouse.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
     mousexpos = mouse.getPos()[0];
@@ -7934,7 +7946,7 @@ function responseRoutineEnd(trials) {
 
 var trialnumbertext;
 var response_2Components;
-function response_2RoutineBegin(trials) {
+function response_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'response_2'-------
     t = 0;
@@ -7970,7 +7982,7 @@ function response_2RoutineBegin(trials) {
 }
 
 
-function response_2RoutineEachFrame(trials) {
+function response_2RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'response_2'-------
     let continueRoutine = true; // until we're told otherwise
@@ -7989,10 +8001,10 @@ function response_2RoutineEachFrame(trials) {
       prevButtonState = mouse_2.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_2.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_2.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_2.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [rectangle]) {
@@ -8104,7 +8116,7 @@ function response_2RoutineEachFrame(trials) {
 }
 
 
-function response_2RoutineEnd(trials) {
+function response_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'response_2'-------
     response_2Components.forEach( function(thisComponent) {
@@ -8113,13 +8125,13 @@ function response_2RoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_2.getPos();
-    const buttons = mouse_2.getPressed();
-    psychoJS.experiment.addData('mouse_2.x', xys[0]);
-    psychoJS.experiment.addData('mouse_2.y', xys[1]);
-    psychoJS.experiment.addData('mouse_2.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_2.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_2.rightButton', buttons[2]);
+    _mouseXYs = mouse_2.getPos();
+    _mouseButtons = mouse_2.getPressed();
+    psychoJS.experiment.addData('mouse_2.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_2.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_2.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_2.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_2.rightButton', _mouseButtons[2]);
     if (mouse_2.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_2.clicked_name', mouse_2.clicked_name[0]);}
     // the Routine "response_2" was not non-slip safe, so reset the non-slip timer
@@ -8131,7 +8143,7 @@ function response_2RoutineEnd(trials) {
 
 
 var special_trialComponents;
-function special_trialRoutineBegin(trials) {
+function special_trialRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'special_trial'-------
     t = 0;
@@ -8153,7 +8165,7 @@ function special_trialRoutineBegin(trials) {
 }
 
 
-function special_trialRoutineEachFrame(trials) {
+function special_trialRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'special_trial'-------
     let continueRoutine = true; // until we're told otherwise
@@ -8206,7 +8218,7 @@ function special_trialRoutineEachFrame(trials) {
 }
 
 
-function special_trialRoutineEnd(trials) {
+function special_trialRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'special_trial'-------
     special_trialComponents.forEach( function(thisComponent) {
@@ -8221,7 +8233,7 @@ function special_trialRoutineEnd(trials) {
 
 var catchnumber;
 var catch_1Components;
-function catch_1RoutineBegin(trials) {
+function catch_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'catch_1'-------
     t = 0;
@@ -8256,7 +8268,7 @@ function catch_1RoutineBegin(trials) {
 }
 
 
-function catch_1RoutineEachFrame(trials) {
+function catch_1RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'catch_1'-------
     let continueRoutine = true; // until we're told otherwise
@@ -8275,10 +8287,10 @@ function catch_1RoutineEachFrame(trials) {
       prevButtonState = mouse_3.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_3.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_3.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_3.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [response1disk_3,response3disk_3,response5disk_3,response7disk_3,]) {
@@ -8384,7 +8396,7 @@ function catch_1RoutineEachFrame(trials) {
 }
 
 
-function catch_1RoutineEnd(trials) {
+function catch_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'catch_1'-------
     catch_1Components.forEach( function(thisComponent) {
@@ -8393,13 +8405,13 @@ function catch_1RoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_3.getPos();
-    const buttons = mouse_3.getPressed();
-    psychoJS.experiment.addData('mouse_3.x', xys[0]);
-    psychoJS.experiment.addData('mouse_3.y', xys[1]);
-    psychoJS.experiment.addData('mouse_3.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_3.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_3.rightButton', buttons[2]);
+    _mouseXYs = mouse_3.getPos();
+    _mouseButtons = mouse_3.getPressed();
+    psychoJS.experiment.addData('mouse_3.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_3.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_3.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_3.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_3.rightButton', _mouseButtons[2]);
     if (mouse_3.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_3.clicked_name', mouse_3.clicked_name[0]);}
     mousexpos = mouse.getPos()[0];
@@ -8519,7 +8531,7 @@ function catch_1RoutineEnd(trials) {
 
 
 var response_sumComponents;
-function response_sumRoutineBegin(trials) {
+function response_sumRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'response_sum'-------
     t = 0;
@@ -8558,7 +8570,7 @@ function response_sumRoutineBegin(trials) {
 }
 
 
-function response_sumRoutineEachFrame(trials) {
+function response_sumRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'response_sum'-------
     let continueRoutine = true; // until we're told otherwise
@@ -8577,10 +8589,10 @@ function response_sumRoutineEachFrame(trials) {
       prevButtonState = mouse_11.getPressed();  // if button is down already this ISN'T a new click
       }
     if (mouse_11.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_11.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+      _mouseButtons = mouse_11.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
           for (const obj of [rectangle]) {
@@ -8696,7 +8708,7 @@ function response_sumRoutineEachFrame(trials) {
 }
 
 
-function response_sumRoutineEnd(trials) {
+function response_sumRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'response_sum'-------
     response_sumComponents.forEach( function(thisComponent) {
@@ -8705,13 +8717,13 @@ function response_sumRoutineEnd(trials) {
       }
     });
     // store data for thisExp (ExperimentHandler)
-    const xys = mouse_11.getPos();
-    const buttons = mouse_11.getPressed();
-    psychoJS.experiment.addData('mouse_11.x', xys[0]);
-    psychoJS.experiment.addData('mouse_11.y', xys[1]);
-    psychoJS.experiment.addData('mouse_11.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse_11.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse_11.rightButton', buttons[2]);
+    _mouseXYs = mouse_11.getPos();
+    _mouseButtons = mouse_11.getPressed();
+    psychoJS.experiment.addData('mouse_11.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse_11.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse_11.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse_11.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse_11.rightButton', _mouseButtons[2]);
     if (mouse_11.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_11.clicked_name', mouse_11.clicked_name[0]);}
     // the Routine "response_sum" was not non-slip safe, so reset the non-slip timer
@@ -8722,21 +8734,21 @@ function response_sumRoutineEnd(trials) {
 }
 
 
-function endLoopIteration(thisScheduler, loop) {
+function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
   return function () {
-    if (typeof loop !== 'undefined') {
+    if (typeof snapshot !== 'undefined') {
       // ------Check if user ended loop early------
-      if (loop.finished) {
+      if (snapshot.finished) {
         // Check for and save orphaned data
         if (psychoJS.experiment.isEntryEmpty()) {
-          psychoJS.experiment.nextEntry(loop);
+          psychoJS.experiment.nextEntry(snapshot);
         }
-      thisScheduler.stop();
+        scheduler.stop();
       } else {
-        const thisTrial = loop.getCurrentTrial();
+        const thisTrial = snapshot.getCurrentTrial();
         if (typeof thisTrial === 'undefined' || !('isTrials' in thisTrial) || thisTrial.isTrials) {
-          psychoJS.experiment.nextEntry(loop);
+          psychoJS.experiment.nextEntry(snapshot);
         }
       }
     return Scheduler.Event.NEXT;
@@ -8745,9 +8757,9 @@ function endLoopIteration(thisScheduler, loop) {
 }
 
 
-function importConditions(trials) {
+function importConditions(currentLoop) {
   return function () {
-    psychoJS.importAttributes(trials.getCurrentTrial());
+    psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
