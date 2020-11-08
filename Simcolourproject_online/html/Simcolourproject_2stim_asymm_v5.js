@@ -1,6 +1,14 @@
 ﻿/**************************************** 
- * Simcolourproject_2Stim_Asymm_V4 Test *
+ * Simcolourproject_2Stim_Asymm_V5 Test *
  ****************************************/
+
+import { PsychoJS } from './lib/core-2020.1.js';
+import * as core from './lib/core-2020.1.js';
+import { TrialHandler } from './lib/data-2020.1.js';
+import { Scheduler } from './lib/util-2020.1.js';
+import * as util from './lib/util-2020.1.js';
+import * as visual from './lib/visual-2020.1.js';
+import * as sound from './lib/sound-2020.1.js';
 
 // init psychoJS:
 const psychoJS = new PsychoJS({
@@ -16,7 +24,7 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'Simcolourproject_2stim_asymm_v4';  // from the Builder filename that created this script
+let expName = 'Simcolourproject_2stim_asymm_v5';  // from the Builder filename that created this script
 let expInfo = {'participant': '', 'session': '001'};
 
 // schedule the experiment:
@@ -327,13 +335,9 @@ var text_29;
 var summary_pracClock;
 var mouse_10;
 var response1disk_10;
-var response2disk_10;
 var response3disk_10;
-var response4disk_10;
 var response5disk_10;
-var response6disk_10;
 var response7disk_10;
-var response8disk_10;
 var rectangle_8;
 var pracnumber;
 var text_49;
@@ -343,13 +347,9 @@ var text_36;
 var catch_pracClock;
 var mouse_7;
 var response1disk_7;
-var response2disk_7;
 var response3disk_7;
-var response4disk_7;
 var response5disk_7;
-var response6disk_7;
 var response7disk_7;
-var response8disk_7;
 var catchtrialorderprac;
 var catchnumberprac;
 var text_32;
@@ -357,13 +357,9 @@ var rectangle_5;
 var summary2_pracClock;
 var mouse_6;
 var response1disk_6;
-var response2disk_6;
 var response3disk_6;
-var response4disk_6;
 var response5disk_6;
-var response6disk_6;
 var response7disk_6;
-var response8disk_6;
 var rectangle_4;
 var text_30;
 var text_31;
@@ -377,25 +373,17 @@ var centre_cross4;
 var responseClock;
 var mouse;
 var response1disk;
-var response2disk;
 var response3disk;
-var response4disk;
 var response5disk;
-var response6disk;
 var response7disk;
-var response8disk;
 var Circle_2;
 var text_23;
 var response_2Clock;
 var mouse_2;
 var response1disk_2;
-var response2disk_2;
 var response3disk_2;
-var response4disk_2;
 var response5disk_2;
-var response6disk_2;
 var response7disk_2;
-var response8disk_2;
 var rectangle;
 var trialnumber;
 var grey;
@@ -406,26 +394,18 @@ var text_33;
 var catch_1Clock;
 var mouse_3;
 var response1disk_3;
-var response2disk_3;
 var response3disk_3;
-var response4disk_3;
 var response5disk_3;
-var response6disk_3;
 var response7disk_3;
-var response8disk_3;
 var catchtrialorder;
 var text_26;
 var rectangle_2;
 var response_sumClock;
 var mouse_11;
 var response1disk_11;
-var response2disk_11;
 var response3disk_11;
-var response4disk_11;
 var response5disk_11;
-var response6disk_11;
 var response7disk_11;
-var response8disk_11;
 var rectangle_9;
 var text_51;
 var text_52;
@@ -1559,7 +1539,7 @@ function experimentInit() {
   response7disk_5 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_5', units : 'pix', 
-    image : 'response7disks.png', mask : undefined,
+    image : 'response01.png', mask : undefined,
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1594,74 +1574,38 @@ function experimentInit() {
   response1disk_10 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_10', units : 'pix', 
-    image : 'response1disks.png', mask : undefined,
+    image : 'response67.png', mask : undefined,
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
-  response2disk_10 = new visual.ImageStim({
+  response3disk_10 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk_10', units : 'pix', 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response3disk_10', units : 'pix', 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response3disk_10 = new visual.ImageStim({
+  response5disk_10 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_10', units : 'pix', 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [a, (- a)], size : [b, b],
+    name : 'response5disk_10', units : 'pix', 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_10', units : 'pix', 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [a, (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response5disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_10', units : 'pix', 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- a), (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response6disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_10', units : 'pix', 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- a), (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
   response7disk_10 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_10', units : 'pix', 
-    image : 'response7disks.png', mask : undefined,
+    image : 'response01.png', mask : undefined,
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_10', units : 'pix', 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- a), a], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   rectangle_8 = new visual.Rect ({
     win: psychoJS.window, name: 'rectangle_8', units : 'norm', 
@@ -1669,7 +1613,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -9, interpolate: true,
+    opacity: 1, depth: -5, interpolate: true,
   });
   
   pracnumber = 0;
@@ -1682,7 +1626,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -11.0 
+    depth: -7.0 
   });
   
   text_50 = new visual.TextStim({
@@ -1693,7 +1637,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -12.0 
+    depth: -8.0 
   });
   
   // Initialize components for Routine "special_trial_prac"
@@ -1718,74 +1662,38 @@ function experimentInit() {
   response1disk_7 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_7', units : 'pix', 
-    image : 'response1disks.png', mask : undefined,
+    image : 'response67.png', mask : undefined,
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
-  response2disk_7 = new visual.ImageStim({
+  response3disk_7 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk_7', units : 'pix', 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [a, a], size : [b, b],
+    name : 'response3disk_7', units : 'pix', 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response3disk_7 = new visual.ImageStim({
+  response5disk_7 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_7', units : 'pix', 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [a, (- a)], size : [b, b],
+    name : 'response5disk_7', units : 'pix', 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_7', units : 'pix', 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [a, (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response5disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_7', units : 'pix', 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- a), (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response6disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_7', units : 'pix', 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- a), (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
   response7disk_7 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_7', units : 'pix', 
-    image : 'response7disks.png', mask : undefined,
+    image : 'response01.png', mask : undefined,
     ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_7', units : 'pix', 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- a), a], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   
   
@@ -1801,7 +1709,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.6)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -10.0 
+    depth: -6.0 
   });
   
   rectangle_5 = new visual.Rect ({
@@ -1810,7 +1718,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -11, interpolate: true,
+    opacity: 1, depth: -7, interpolate: true,
   });
   
   // Initialize components for Routine "summary2_prac"
@@ -1822,74 +1730,38 @@ function experimentInit() {
   response1disk_6 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_6', units : 'pix', 
-    image : 'response1disks.png', mask : undefined,
+    image : 'response67.png', mask : undefined,
     ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
-  response2disk_6 = new visual.ImageStim({
+  response3disk_6 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk_6', units : 'pix', 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [a, a], size : [b, b],
+    name : 'response3disk_6', units : 'pix', 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response3disk_6 = new visual.ImageStim({
+  response5disk_6 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_6', units : 'pix', 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response5disk_6', units : 'pix', 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_6', units : 'pix', 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [a, (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response5disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_6', units : 'pix', 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- a), (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response6disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_6', units : 'pix', 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- a), (- a)], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
   response7disk_6 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_6', units : 'pix', 
-    image : 'response7disks.png', mask : undefined,
+    image : 'response01.png', mask : undefined,
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_6', units : 'pix', 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- a), a], size : [b, b],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   rectangle_4 = new visual.Rect ({
     win: psychoJS.window, name: 'rectangle_4', units : 'norm', 
@@ -1897,7 +1769,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -9, interpolate: true,
+    opacity: 1, depth: -5, interpolate: true,
   });
   
   pracnumber = 0;
@@ -1910,7 +1782,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -11.0 
+    depth: -7.0 
   });
   
   text_31 = new visual.TextStim({
@@ -1921,7 +1793,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.8)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -12.0 
+    depth: -8.0 
   });
   
   // Initialize components for Routine "begin"
@@ -1979,74 +1851,38 @@ function experimentInit() {
   response1disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk', units : undefined, 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response67.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response2disk = new visual.ImageStim({
+  response3disk = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk', units : undefined, 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response3disk', units : undefined, 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response3disk = new visual.ImageStim({
+  response5disk = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk', units : undefined, 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response5disk', units : undefined, 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -4.0 
   });
-  response4disk = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk', units : undefined, 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response5disk = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk', units : undefined, 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
-  response6disk = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk', units : undefined, 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
   response7disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk', units : undefined, 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response01.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
-  });
-  response8disk = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk', units : undefined, 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -9.0 
+    texRes : 128, interpolate : true, depth : -5.0 
   });
   Circle_2 = new visual.Polygon ({
     win: psychoJS.window, name: 'Circle_2', units : 'pix', 
@@ -2054,7 +1890,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color(1.0),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -10, interpolate: true,
+    opacity: 1, depth: -6, interpolate: true,
   });
   
   text_23 = new visual.TextStim({
@@ -2065,7 +1901,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.6)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -11.0 
+    depth: -7.0 
   });
   
   // Initialize components for Routine "response_2"
@@ -2077,74 +1913,38 @@ function experimentInit() {
   response1disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_2', units : undefined, 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response67.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
-  response2disk_2 = new visual.ImageStim({
+  response3disk_2 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk_2', units : undefined, 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response3disk_2', units : undefined, 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response3disk_2 = new visual.ImageStim({
+  response5disk_2 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_2', units : undefined, 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response5disk_2', units : undefined, 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_2 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_2', units : undefined, 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response5disk_2 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_2', units : undefined, 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response6disk_2 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_2', units : undefined, 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
   response7disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_2', units : undefined, 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response01.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_2 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_2', units : undefined, 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   rectangle = new visual.Rect ({
     win: psychoJS.window, name: 'rectangle', units : 'norm', 
@@ -2152,7 +1952,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -9, interpolate: true,
+    opacity: 1, depth: -5, interpolate: true,
   });
   
   trialnumber = 0;
@@ -2166,7 +1966,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -11.0 
+    depth: -7.0 
   });
   
   text_24 = new visual.TextStim({
@@ -2177,7 +1977,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -12.0 
+    depth: -8.0 
   });
   
   // Initialize components for Routine "special_trial"
@@ -2202,74 +2002,38 @@ function experimentInit() {
   response1disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_3', units : undefined, 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response67.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
-  response2disk_3 = new visual.ImageStim({
+  response3disk_3 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk_3', units : undefined, 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response3disk_3', units : undefined, 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response3disk_3 = new visual.ImageStim({
+  response5disk_3 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_3', units : undefined, 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response5disk_3', units : undefined, 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_3 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_3', units : undefined, 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response5disk_3 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_3', units : undefined, 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response6disk_3 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_3', units : undefined, 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
   response7disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_3', units : undefined, 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response01.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_3 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_3', units : undefined, 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   // Set up catch trials
   
@@ -2283,7 +2047,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.6)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -10.0 
+    depth: -6.0 
   });
   
   rectangle_2 = new visual.Rect ({
@@ -2292,7 +2056,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
     fillColor: new util.Color(grey),
-    opacity: 1, depth: -11, interpolate: true,
+    opacity: 1, depth: -7, interpolate: true,
   });
   
   // Initialize components for Routine "response_sum"
@@ -2304,74 +2068,38 @@ function experimentInit() {
   response1disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_11', units : undefined, 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response67.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
-  response2disk_11 = new visual.ImageStim({
+  response3disk_11 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response2disk_11', units : undefined, 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response3disk_11', units : undefined, 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
-  response3disk_11 = new visual.ImageStim({
+  response5disk_11 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_11', units : undefined, 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    name : 'response5disk_11', units : undefined, 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_11 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_11', units : undefined, 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response5disk_11 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_11', units : undefined, 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response6disk_11 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_11', units : undefined, 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
   response7disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_11', units : undefined, 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
+    image : 'response01.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_11 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_11', units : undefined, 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : 1.0,
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   rectangle_9 = new visual.Rect ({
     win: psychoJS.window, name: 'rectangle_9', units : 'norm', 
@@ -2379,7 +2107,7 @@ function experimentInit() {
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -9, interpolate: true,
+    opacity: 1, depth: -5, interpolate: true,
   });
   
   trialnumber = 0;
@@ -2392,7 +2120,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -11.0 
+    depth: -7.0 
   });
   
   text_52 = new visual.TextStim({
@@ -2403,7 +2131,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -12.0 
+    depth: -8.0 
   });
   
   // Create some handy timers
@@ -2427,10 +2155,9 @@ function startupRoutineBegin(trials) {
     // keep track of which components have finished
     startupComponents = [];
     
-    startupComponents.forEach( function(thisComponent) {
+    for (const thisComponent of startupComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -2457,11 +2184,11 @@ function startupRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    startupComponents.forEach( function(thisComponent) {
+    for (const thisComponent of startupComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2476,11 +2203,11 @@ function startupRoutineEachFrame(trials) {
 function startupRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'startup'-------
-    startupComponents.forEach( function(thisComponent) {
+    for (const thisComponent of startupComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // the Routine "startup" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -2507,10 +2234,9 @@ function welcome_instrRoutineBegin(trials) {
     welcome_instrComponents.push(key_resp);
     welcome_instrComponents.push(space);
     
-    welcome_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of welcome_instrComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -2580,11 +2306,11 @@ function welcome_instrRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    welcome_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of welcome_instrComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2599,11 +2325,11 @@ function welcome_instrRoutineEachFrame(trials) {
 function welcome_instrRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'welcome_instr'-------
-    welcome_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of welcome_instrComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
     if (typeof key_resp.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp.rt', key_resp.rt);
@@ -2638,10 +2364,9 @@ function instr_1RoutineBegin(trials) {
     instr_1Components.push(text_2);
     instr_1Components.push(key_resp_2);
     
-    instr_1Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_1Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -2721,11 +2446,11 @@ function instr_1RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_1Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_1Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2740,11 +2465,11 @@ function instr_1RoutineEachFrame(trials) {
 function instr_1RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_1'-------
-    instr_1Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_1Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_2.keys', key_resp_2.keys);
     if (typeof key_resp_2.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_2.rt', key_resp_2.rt);
@@ -2774,10 +2499,9 @@ function screen_scaleRoutineBegin(trials) {
     screen_scaleComponents.push(ccimage);
     screen_scaleComponents.push(text_37);
     
-    screen_scaleComponents.forEach( function(thisComponent) {
+    for (const thisComponent of screen_scaleComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -2869,11 +2593,11 @@ function screen_scaleRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    screen_scaleComponents.forEach( function(thisComponent) {
+    for (const thisComponent of screen_scaleComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2890,11 +2614,11 @@ var screen_size_y;
 function screen_scaleRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'screen_scale'-------
-    screen_scaleComponents.forEach( function(thisComponent) {
+    for (const thisComponent of screen_scaleComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     ratio_pxpermm = ((x_scale * x_size) / 85.6);
     thisExp.addData("X Scale", x_scale);
     thisExp.addData("ratio_pxpermm", ratio_pxpermm);
@@ -2948,10 +2672,9 @@ function instr_2RoutineBegin(trials) {
     instr_2Components.push(text_3);
     instr_2Components.push(space_3);
     
-    instr_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3050,11 +2773,11 @@ function instr_2RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_2Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3069,11 +2792,11 @@ function instr_2RoutineEachFrame(trials) {
 function instr_2RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_2'-------
-    instr_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_2Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_3.keys', key_resp_3.keys);
     if (typeof key_resp_3.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_3.rt', key_resp_3.rt);
@@ -3111,10 +2834,9 @@ function instr_3RoutineBegin(trials) {
     instr_3Components.push(key_resp_4);
     instr_3Components.push(calibrationline);
     
-    instr_3Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_3Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3183,11 +2905,11 @@ function instr_3RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_3Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_3Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3202,11 +2924,11 @@ function instr_3RoutineEachFrame(trials) {
 function instr_3RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_3'-------
-    instr_3Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_3Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_4.keys', key_resp_4.keys);
     if (typeof key_resp_4.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_4.rt', key_resp_4.rt);
@@ -3242,10 +2964,9 @@ function instr_4RoutineBegin(trials) {
     instr_4Components.push(key_resp_5);
     instr_4Components.push(space_4);
     
-    instr_4Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_4Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3315,11 +3036,11 @@ function instr_4RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_4Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_4Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3334,11 +3055,11 @@ function instr_4RoutineEachFrame(trials) {
 function instr_4RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_4'-------
-    instr_4Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_4Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_5.keys', key_resp_5.keys);
     if (typeof key_resp_5.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_5.rt', key_resp_5.rt);
@@ -3373,10 +3094,9 @@ function instr_5RoutineBegin(trials) {
     instr_5Components.push(instr_only);
     instr_5Components.push(text_6);
     
-    instr_5Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_5Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3456,11 +3176,11 @@ function instr_5RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_5Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_5Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3475,11 +3195,11 @@ function instr_5RoutineEachFrame(trials) {
 function instr_5RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_5'-------
-    instr_5Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_5Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_6.keys', key_resp_6.keys);
     if (typeof key_resp_6.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_6.rt', key_resp_6.rt);
@@ -3514,10 +3234,9 @@ function instr_6RoutineBegin(trials) {
     instr_6Components.push(instr_only_3);
     instr_6Components.push(text_8);
     
-    instr_6Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_6Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3597,11 +3316,11 @@ function instr_6RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_6Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_6Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3616,11 +3335,11 @@ function instr_6RoutineEachFrame(trials) {
 function instr_6RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_6'-------
-    instr_6Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_6Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_8.keys', key_resp_8.keys);
     if (typeof key_resp_8.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_8.rt', key_resp_8.rt);
@@ -3656,10 +3375,9 @@ function instr_7RoutineBegin(trials) {
     instr_7Components.push(text_7);
     instr_7Components.push(center_cross);
     
-    instr_7Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_7Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3749,11 +3467,11 @@ function instr_7RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_7Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_7Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3768,11 +3486,11 @@ function instr_7RoutineEachFrame(trials) {
 function instr_7RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_7'-------
-    instr_7Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_7Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_7.keys', key_resp_7.keys);
     if (typeof key_resp_7.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_7.rt', key_resp_7.rt);
@@ -3811,10 +3529,9 @@ function instr_8RoutineBegin(trials) {
     instr_8Components.push(black_square);
     instr_8Components.push(text_14);
     
-    instr_8Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_8Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -3924,11 +3641,11 @@ function instr_8RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_8Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_8Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3943,11 +3660,11 @@ function instr_8RoutineEachFrame(trials) {
 function instr_8RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_8'-------
-    instr_8Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_8Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_12.keys', key_resp_12.keys);
     if (typeof key_resp_12.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_12.rt', key_resp_12.rt);
@@ -3988,10 +3705,9 @@ function instr_9RoutineBegin(trials) {
     instr_9Components.push(text_12);
     instr_9Components.push(white_ball2);
     
-    instr_9Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_9Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -4111,11 +3827,11 @@ function instr_9RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_9Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_9Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4130,11 +3846,11 @@ function instr_9RoutineEachFrame(trials) {
 function instr_9RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_9'-------
-    instr_9Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_9Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_11.keys', key_resp_11.keys);
     if (typeof key_resp_11.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_11.rt', key_resp_11.rt);
@@ -4169,10 +3885,9 @@ function instr_10RoutineBegin(trials) {
     instr_10Components.push(instr_only_7);
     instr_10Components.push(text_44);
     
-    instr_10Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_10Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -4252,11 +3967,11 @@ function instr_10RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_10Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_10Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4271,11 +3986,11 @@ function instr_10RoutineEachFrame(trials) {
 function instr_10RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_10'-------
-    instr_10Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_10Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_18.keys', key_resp_18.keys);
     if (typeof key_resp_18.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_18.rt', key_resp_18.rt);
@@ -4310,10 +4025,9 @@ function instr_11RoutineBegin(trials) {
     instr_11Components.push(instr_only_8);
     instr_11Components.push(text_45);
     
-    instr_11Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_11Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -4393,11 +4107,11 @@ function instr_11RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_11Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_11Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4412,11 +4126,11 @@ function instr_11RoutineEachFrame(trials) {
 function instr_11RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_11'-------
-    instr_11Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_11Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_21.keys', key_resp_21.keys);
     if (typeof key_resp_21.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_21.rt', key_resp_21.rt);
@@ -4455,10 +4169,9 @@ function calibration_exampleRoutineBegin(trials) {
     calibration_exampleComponents.push(text_22);
     calibration_exampleComponents.push(white_ball13);
     
-    calibration_exampleComponents.forEach( function(thisComponent) {
+    for (const thisComponent of calibration_exampleComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -4605,11 +4318,11 @@ function calibration_exampleRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    calibration_exampleComponents.forEach( function(thisComponent) {
+    for (const thisComponent of calibration_exampleComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4624,11 +4337,11 @@ function calibration_exampleRoutineEachFrame(trials) {
 function calibration_exampleRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'calibration_example'-------
-    calibration_exampleComponents.forEach( function(thisComponent) {
+    for (const thisComponent of calibration_exampleComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // the Routine "calibration_example" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -4656,10 +4369,9 @@ function instr_12RoutineBegin(trials) {
     instr_12Components.push(instr_only_6);
     instr_12Components.push(text_15);
     
-    instr_12Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_12Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -4739,11 +4451,11 @@ function instr_12RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_12Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_12Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4758,11 +4470,11 @@ function instr_12RoutineEachFrame(trials) {
 function instr_12RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_12'-------
-    instr_12Components.forEach( function(thisComponent) {
+    for (const thisComponent of instr_12Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_13.keys', key_resp_13.keys);
     if (typeof key_resp_13.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_13.rt', key_resp_13.rt);
@@ -4793,15 +4505,14 @@ function trialsLoopBegin(thisScheduler) {
   currentLoop = trials;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
-  trials.forEach(function() {
+  for (const thisTrial of trials) {
     const snapshot = trials.getSnapshot();
-
     thisScheduler.add(importConditions(snapshot));
     thisScheduler.add(ball_calibrationRoutineBegin(snapshot));
     thisScheduler.add(ball_calibrationRoutineEachFrame(snapshot));
     thisScheduler.add(ball_calibrationRoutineEnd(snapshot));
     thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
-  });
+  }
 
   return Scheduler.Event.NEXT;
 }
@@ -4828,9 +4539,8 @@ function duringpracLoopBegin(thisScheduler) {
   currentLoop = duringprac;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
-  duringprac.forEach(function() {
+  for (const thisDuringprac of duringprac) {
     const snapshot = duringprac.getSnapshot();
-
     thisScheduler.add(importConditions(snapshot));
     thisScheduler.add(Stim1_display_pracRoutineBegin(snapshot));
     thisScheduler.add(Stim1_display_pracRoutineEachFrame(snapshot));
@@ -4851,7 +4561,7 @@ function duringpracLoopBegin(thisScheduler) {
     thisScheduler.add(summary2_pracRoutineEachFrame(snapshot));
     thisScheduler.add(summary2_pracRoutineEnd(snapshot));
     thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
-  });
+  }
 
   return Scheduler.Event.NEXT;
 }
@@ -4878,9 +4588,8 @@ function trials_2LoopBegin(thisScheduler) {
   currentLoop = trials_2;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
-  trials_2.forEach(function() {
+  for (const thisTrial_2 of trials_2) {
     const snapshot = trials_2.getSnapshot();
-
     thisScheduler.add(importConditions(snapshot));
     thisScheduler.add(Stim1_displayRoutineBegin(snapshot));
     thisScheduler.add(Stim1_displayRoutineEachFrame(snapshot));
@@ -4901,7 +4610,7 @@ function trials_2LoopBegin(thisScheduler) {
     thisScheduler.add(response_sumRoutineEachFrame(snapshot));
     thisScheduler.add(response_sumRoutineEnd(snapshot));
     thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
-  });
+  }
 
   return Scheduler.Event.NEXT;
 }
@@ -4944,10 +4653,9 @@ function ball_calibrationRoutineBegin(trials) {
     ball_calibrationComponents.push(key_resp_19);
     ball_calibrationComponents.push(text_39);
     
-    ball_calibrationComponents.forEach( function(thisComponent) {
+    for (const thisComponent of ball_calibrationComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5035,11 +4743,11 @@ function ball_calibrationRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    ball_calibrationComponents.forEach( function(thisComponent) {
+    for (const thisComponent of ball_calibrationComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5057,11 +4765,11 @@ var viewer_distance;
 function ball_calibrationRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'ball_calibration'-------
-    ball_calibrationComponents.forEach( function(thisComponent) {
+    for (const thisComponent of ball_calibrationComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_19.keys', key_resp_19.keys);
     if (typeof key_resp_19.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_19.rt', key_resp_19.rt);
@@ -5120,10 +4828,9 @@ function viewerdistanceRoutineBegin(trials) {
     viewerdistanceComponents.push(key_resp_20);
     viewerdistanceComponents.push(space_20);
     
-    viewerdistanceComponents.forEach( function(thisComponent) {
+    for (const thisComponent of viewerdistanceComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5210,11 +4917,11 @@ function viewerdistanceRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    viewerdistanceComponents.forEach( function(thisComponent) {
+    for (const thisComponent of viewerdistanceComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5229,11 +4936,11 @@ function viewerdistanceRoutineEachFrame(trials) {
 function viewerdistanceRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'viewerdistance'-------
-    viewerdistanceComponents.forEach( function(thisComponent) {
+    for (const thisComponent of viewerdistanceComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     thisExp.addData("viewerdistancecm", viewerdistancecm);
     thisExp.addData("DVA_to_distance", DVA_to_distance);
     thisExp.addData("radius_F", radius_F);
@@ -5274,10 +4981,9 @@ function viewerdistance_unsucessRoutineBegin(trials) {
     viewerdistance_unsucessComponents.push(text_42);
     viewerdistance_unsucessComponents.push(text_43);
     
-    viewerdistance_unsucessComponents.forEach( function(thisComponent) {
+    for (const thisComponent of viewerdistance_unsucessComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5337,11 +5043,11 @@ function viewerdistance_unsucessRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    viewerdistance_unsucessComponents.forEach( function(thisComponent) {
+    for (const thisComponent of viewerdistance_unsucessComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5356,11 +5062,11 @@ function viewerdistance_unsucessRoutineEachFrame(trials) {
 function viewerdistance_unsucessRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'viewerdistance_unsucess'-------
-    viewerdistance_unsucessComponents.forEach( function(thisComponent) {
+    for (const thisComponent of viewerdistance_unsucessComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // the Routine "viewerdistance_unsucess" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -5388,10 +5094,9 @@ function stim1_instrRoutineBegin(trials) {
     stim1_instrComponents.push(space_13);
     stim1_instrComponents.push(text_16);
     
-    stim1_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stim1_instrComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5471,11 +5176,11 @@ function stim1_instrRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    stim1_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stim1_instrComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5490,11 +5195,11 @@ function stim1_instrRoutineEachFrame(trials) {
 function stim1_instrRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'stim1_instr'-------
-    stim1_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stim1_instrComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_14.keys', key_resp_14.keys);
     if (typeof key_resp_14.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_14.rt', key_resp_14.rt);
@@ -5529,10 +5234,9 @@ function stim_response_instrRoutineBegin(trials) {
     stim_response_instrComponents.push(space_14);
     stim_response_instrComponents.push(text_17);
     
-    stim_response_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stim_response_instrComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5612,11 +5316,11 @@ function stim_response_instrRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    stim_response_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stim_response_instrComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5631,11 +5335,11 @@ function stim_response_instrRoutineEachFrame(trials) {
 function stim_response_instrRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'stim_response_instr'-------
-    stim_response_instrComponents.forEach( function(thisComponent) {
+    for (const thisComponent of stim_response_instrComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_15.keys', key_resp_15.keys);
     if (typeof key_resp_15.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_15.rt', key_resp_15.rt);
@@ -5670,10 +5374,9 @@ function catch_insrtRoutineBegin(trials) {
     catch_insrtComponents.push(movie_3);
     catch_insrtComponents.push(text_18);
     
-    catch_insrtComponents.forEach( function(thisComponent) {
+    for (const thisComponent of catch_insrtComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5753,11 +5456,11 @@ function catch_insrtRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    catch_insrtComponents.forEach( function(thisComponent) {
+    for (const thisComponent of catch_insrtComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5772,11 +5475,11 @@ function catch_insrtRoutineEachFrame(trials) {
 function catch_insrtRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'catch_insrt'-------
-    catch_insrtComponents.forEach( function(thisComponent) {
+    for (const thisComponent of catch_insrtComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_17.keys', key_resp_17.keys);
     if (typeof key_resp_17.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_17.rt', key_resp_17.rt);
@@ -5832,10 +5535,9 @@ function colour_circle_instr_2RoutineBegin(trials) {
     colour_circle_instr_2Components.push(space_9);
     colour_circle_instr_2Components.push(text_9);
     
-    colour_circle_instr_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of colour_circle_instr_2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -5995,11 +5697,11 @@ function colour_circle_instr_2RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    colour_circle_instr_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of colour_circle_instr_2Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -6014,11 +5716,11 @@ function colour_circle_instr_2RoutineEachFrame(trials) {
 function colour_circle_instr_2RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'colour_circle_instr_2'-------
-    colour_circle_instr_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of colour_circle_instr_2Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_9.keys', key_resp_9.keys);
     if (typeof key_resp_9.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_9.rt', key_resp_9.rt);
@@ -6052,10 +5754,9 @@ function instr_pracRoutineBegin(trials) {
     instr_pracComponents.push(text_10);
     instr_pracComponents.push(key_resp_10);
     
-    instr_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of instr_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -6125,11 +5826,11 @@ function instr_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    instr_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of instr_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -6144,11 +5845,11 @@ function instr_pracRoutineEachFrame(trials) {
 function instr_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'instr_prac'-------
-    instr_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of instr_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_10.keys', key_resp_10.keys);
     if (typeof key_resp_10.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_10.rt', key_resp_10.rt);
@@ -6266,10 +5967,9 @@ function Stim1_display_pracRoutineBegin(trials) {
     Stim1_display_pracComponents.push(Circle);
     Stim1_display_pracComponents.push(centre_cross4_2);
     
-    Stim1_display_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of Stim1_display_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -6323,11 +6023,11 @@ function Stim1_display_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    Stim1_display_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of Stim1_display_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -6342,11 +6042,11 @@ function Stim1_display_pracRoutineEachFrame(trials) {
 function Stim1_display_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Stim1_display_prac'-------
-    Stim1_display_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of Stim1_display_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     thisExp.addData("Colour_1", Colour_1);
     thisExp.addData("Ecc", Ecc);
     
@@ -6421,10 +6121,9 @@ function response_pracRoutineBegin(trials) {
     response_pracComponents.push(Circle_3);
     response_pracComponents.push(text_29);
     
-    response_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of response_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -6441,7 +6140,7 @@ function response_pracRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // *mouse_5* updates
-    if (t >= 0.01 && mouse_5.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && mouse_5.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       mouse_5.tStart = t;  // (not accounting for frame time here)
       mouse_5.frameNStart = frameN;  // exact frame index
@@ -6540,11 +6239,11 @@ function response_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    response_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of response_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -6561,11 +6260,11 @@ var mouseypos;
 function response_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'response_prac'-------
-    response_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of response_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_5.getPos();
     const buttons = mouse_5.getPressed();
@@ -6710,8 +6409,6 @@ function summary_pracRoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_10
     mouse_10.clicked_name = [];
     gotValidClick = false; // until a click is received
-    response2disk_10.setPos([a, a]);
-    response2disk_10.setSize([b, b]);
     rectangle_8.setFillColor(new util.Color(grey));
     pracnumbertext = `You have finished ${pracnumber} of 7 practice questions`;
     event.clearEvents();
@@ -6721,21 +6418,16 @@ function summary_pracRoutineBegin(trials) {
     summary_pracComponents = [];
     summary_pracComponents.push(mouse_10);
     summary_pracComponents.push(response1disk_10);
-    summary_pracComponents.push(response2disk_10);
     summary_pracComponents.push(response3disk_10);
-    summary_pracComponents.push(response4disk_10);
     summary_pracComponents.push(response5disk_10);
-    summary_pracComponents.push(response6disk_10);
     summary_pracComponents.push(response7disk_10);
-    summary_pracComponents.push(response8disk_10);
     summary_pracComponents.push(rectangle_8);
     summary_pracComponents.push(text_49);
     summary_pracComponents.push(text_50);
     
-    summary_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of summary_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -6790,16 +6482,6 @@ function summary_pracRoutineEachFrame(trials) {
     }
 
     
-    // *response2disk_10* updates
-    if (t >= 0.0 && response2disk_10.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_10.tStart = t;  // (not accounting for frame time here)
-      response2disk_10.frameNStart = frameN;  // exact frame index
-      
-      response2disk_10.setAutoDraw(true);
-    }
-
-    
     // *response3disk_10* updates
     if (t >= 0.0 && response3disk_10.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -6807,16 +6489,6 @@ function summary_pracRoutineEachFrame(trials) {
       response3disk_10.frameNStart = frameN;  // exact frame index
       
       response3disk_10.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_10* updates
-    if (t >= 0.0 && response4disk_10.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_10.tStart = t;  // (not accounting for frame time here)
-      response4disk_10.frameNStart = frameN;  // exact frame index
-      
-      response4disk_10.setAutoDraw(true);
     }
 
     
@@ -6830,16 +6502,6 @@ function summary_pracRoutineEachFrame(trials) {
     }
 
     
-    // *response6disk_10* updates
-    if (t >= 0.0 && response6disk_10.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_10.tStart = t;  // (not accounting for frame time here)
-      response6disk_10.frameNStart = frameN;  // exact frame index
-      
-      response6disk_10.setAutoDraw(true);
-    }
-
-    
     // *response7disk_10* updates
     if (t >= 0.0 && response7disk_10.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -6847,16 +6509,6 @@ function summary_pracRoutineEachFrame(trials) {
       response7disk_10.frameNStart = frameN;  // exact frame index
       
       response7disk_10.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_10* updates
-    if (t >= 0.0 && response8disk_10.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_10.tStart = t;  // (not accounting for frame time here)
-      response8disk_10.frameNStart = frameN;  // exact frame index
-      
-      response8disk_10.setAutoDraw(true);
     }
 
     
@@ -6900,11 +6552,11 @@ function summary_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    summary_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of summary_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -6919,11 +6571,11 @@ function summary_pracRoutineEachFrame(trials) {
 function summary_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'summary_prac'-------
-    summary_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of summary_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_10.getPos();
     const buttons = mouse_10.getPressed();
@@ -6955,10 +6607,9 @@ function special_trial_pracRoutineBegin(trials) {
     special_trial_pracComponents = [];
     special_trial_pracComponents.push(text_36);
     
-    special_trial_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of special_trial_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -7002,11 +6653,11 @@ function special_trial_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    special_trial_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of special_trial_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -7021,11 +6672,11 @@ function special_trial_pracRoutineEachFrame(trials) {
 function special_trial_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'special_trial_prac'-------
-    special_trial_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of special_trial_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -7052,20 +6703,15 @@ function catch_pracRoutineBegin(trials) {
     catch_pracComponents = [];
     catch_pracComponents.push(mouse_7);
     catch_pracComponents.push(response1disk_7);
-    catch_pracComponents.push(response2disk_7);
     catch_pracComponents.push(response3disk_7);
-    catch_pracComponents.push(response4disk_7);
     catch_pracComponents.push(response5disk_7);
-    catch_pracComponents.push(response6disk_7);
     catch_pracComponents.push(response7disk_7);
-    catch_pracComponents.push(response8disk_7);
     catch_pracComponents.push(text_32);
     catch_pracComponents.push(rectangle_5);
     
-    catch_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of catch_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -7097,7 +6743,7 @@ function catch_pracRoutineEachFrame(trials) {
         if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
-          for (const obj of [response1disk_7,response2disk_7,response3disk_7,response4disk_7,response5disk_7,response6disk_7,response7disk_7,response8disk_7,]) {
+          for (const obj of [response1disk_7,response3disk_7,response5disk_7,response7disk_7]) {
             if (obj.contains(mouse_7)) {
               gotValidClick = true;
               mouse_7.clicked_name.push(obj.name)
@@ -7120,16 +6766,6 @@ function catch_pracRoutineEachFrame(trials) {
     }
 
     
-    // *response2disk_7* updates
-    if (t >= 0.0 && response2disk_7.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_7.tStart = t;  // (not accounting for frame time here)
-      response2disk_7.frameNStart = frameN;  // exact frame index
-      
-      response2disk_7.setAutoDraw(true);
-    }
-
-    
     // *response3disk_7* updates
     if (t >= 0.0 && response3disk_7.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -7137,16 +6773,6 @@ function catch_pracRoutineEachFrame(trials) {
       response3disk_7.frameNStart = frameN;  // exact frame index
       
       response3disk_7.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_7* updates
-    if (t >= 0.0 && response4disk_7.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_7.tStart = t;  // (not accounting for frame time here)
-      response4disk_7.frameNStart = frameN;  // exact frame index
-      
-      response4disk_7.setAutoDraw(true);
     }
 
     
@@ -7160,16 +6786,6 @@ function catch_pracRoutineEachFrame(trials) {
     }
 
     
-    // *response6disk_7* updates
-    if (t >= 0.0 && response6disk_7.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_7.tStart = t;  // (not accounting for frame time here)
-      response6disk_7.frameNStart = frameN;  // exact frame index
-      
-      response6disk_7.setAutoDraw(true);
-    }
-
-    
     // *response7disk_7* updates
     if (t >= 0.0 && response7disk_7.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -7177,16 +6793,6 @@ function catch_pracRoutineEachFrame(trials) {
       response7disk_7.frameNStart = frameN;  // exact frame index
       
       response7disk_7.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_7* updates
-    if (t >= 0.0 && response8disk_7.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_7.tStart = t;  // (not accounting for frame time here)
-      response8disk_7.frameNStart = frameN;  // exact frame index
-      
-      response8disk_7.setAutoDraw(true);
     }
 
     if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {
@@ -7224,11 +6830,11 @@ function catch_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    catch_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of catch_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -7243,11 +6849,11 @@ function catch_pracRoutineEachFrame(trials) {
 function catch_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'catch_prac'-------
-    catch_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of catch_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_7.getPos();
     const buttons = mouse_7.getPressed();
@@ -7414,21 +7020,16 @@ function summary2_pracRoutineBegin(trials) {
     summary2_pracComponents = [];
     summary2_pracComponents.push(mouse_6);
     summary2_pracComponents.push(response1disk_6);
-    summary2_pracComponents.push(response2disk_6);
     summary2_pracComponents.push(response3disk_6);
-    summary2_pracComponents.push(response4disk_6);
     summary2_pracComponents.push(response5disk_6);
-    summary2_pracComponents.push(response6disk_6);
     summary2_pracComponents.push(response7disk_6);
-    summary2_pracComponents.push(response8disk_6);
     summary2_pracComponents.push(rectangle_4);
     summary2_pracComponents.push(text_30);
     summary2_pracComponents.push(text_31);
     
-    summary2_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of summary2_pracComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -7483,16 +7084,6 @@ function summary2_pracRoutineEachFrame(trials) {
     }
 
     
-    // *response2disk_6* updates
-    if (t >= 0.0 && response2disk_6.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_6.tStart = t;  // (not accounting for frame time here)
-      response2disk_6.frameNStart = frameN;  // exact frame index
-      
-      response2disk_6.setAutoDraw(true);
-    }
-
-    
     // *response3disk_6* updates
     if (t >= 0.0 && response3disk_6.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -7500,16 +7091,6 @@ function summary2_pracRoutineEachFrame(trials) {
       response3disk_6.frameNStart = frameN;  // exact frame index
       
       response3disk_6.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_6* updates
-    if (t >= 0.0 && response4disk_6.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_6.tStart = t;  // (not accounting for frame time here)
-      response4disk_6.frameNStart = frameN;  // exact frame index
-      
-      response4disk_6.setAutoDraw(true);
     }
 
     
@@ -7523,16 +7104,6 @@ function summary2_pracRoutineEachFrame(trials) {
     }
 
     
-    // *response6disk_6* updates
-    if (t >= 0.0 && response6disk_6.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_6.tStart = t;  // (not accounting for frame time here)
-      response6disk_6.frameNStart = frameN;  // exact frame index
-      
-      response6disk_6.setAutoDraw(true);
-    }
-
-    
     // *response7disk_6* updates
     if (t >= 0.0 && response7disk_6.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -7540,16 +7111,6 @@ function summary2_pracRoutineEachFrame(trials) {
       response7disk_6.frameNStart = frameN;  // exact frame index
       
       response7disk_6.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_6* updates
-    if (t >= 0.0 && response8disk_6.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_6.tStart = t;  // (not accounting for frame time here)
-      response8disk_6.frameNStart = frameN;  // exact frame index
-      
-      response8disk_6.setAutoDraw(true);
     }
 
     
@@ -7597,11 +7158,11 @@ function summary2_pracRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    summary2_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of summary2_pracComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -7616,11 +7177,11 @@ function summary2_pracRoutineEachFrame(trials) {
 function summary2_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'summary2_prac'-------
-    summary2_pracComponents.forEach( function(thisComponent) {
+    for (const thisComponent of summary2_pracComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_6.getPos();
     const buttons = mouse_6.getPressed();
@@ -7657,10 +7218,9 @@ function beginRoutineBegin(trials) {
     beginComponents.push(text_46);
     beginComponents.push(key_resp_22);
     
-    beginComponents.forEach( function(thisComponent) {
+    for (const thisComponent of beginComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -7730,11 +7290,11 @@ function beginRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    beginComponents.forEach( function(thisComponent) {
+    for (const thisComponent of beginComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -7749,11 +7309,11 @@ function beginRoutineEachFrame(trials) {
 function beginRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'begin'-------
-    beginComponents.forEach( function(thisComponent) {
+    for (const thisComponent of beginComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     psychoJS.experiment.addData('key_resp_22.keys', key_resp_22.keys);
     if (typeof key_resp_22.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_22.rt', key_resp_22.rt);
@@ -7851,10 +7411,9 @@ function Stim1_displayRoutineBegin(trials) {
     Stim1_displayComponents.push(Circle_1);
     Stim1_displayComponents.push(centre_cross4);
     
-    Stim1_displayComponents.forEach( function(thisComponent) {
+    for (const thisComponent of Stim1_displayComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -7908,11 +7467,11 @@ function Stim1_displayRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    Stim1_displayComponents.forEach( function(thisComponent) {
+    for (const thisComponent of Stim1_displayComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -7927,11 +7486,11 @@ function Stim1_displayRoutineEachFrame(trials) {
 function Stim1_displayRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Stim1_display'-------
-    Stim1_displayComponents.forEach( function(thisComponent) {
+    for (const thisComponent of Stim1_displayComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     thisExp.addData("Colour1", Colour1);
     thisExp.addData("Ecc", Ecc);
     
@@ -7990,22 +7549,6 @@ function responseRoutineBegin(trials) {
         }
     }
     
-    response1disk.setPos([a, a]);
-    response1disk.setSize([b, b]);
-    response2disk.setPos([a, a]);
-    response2disk.setSize([b, b]);
-    response3disk.setPos([a, (- a)]);
-    response3disk.setSize([b, b]);
-    response4disk.setPos([a, (- a)]);
-    response4disk.setSize([b, b]);
-    response5disk.setPos([(- a), (- a)]);
-    response5disk.setSize([b, b]);
-    response6disk.setPos([(- a), (- a)]);
-    response6disk.setSize([b, b]);
-    response7disk.setPos([(- a), a]);
-    response7disk.setSize([b, b]);
-    response8disk.setPos([(- a), a]);
-    response8disk.setSize([b, b]);
     Circle_2.setSize([(15 * ratio_pxpermm), (15 * ratio_pxpermm)]);
     Circle_2.setFillColor(new util.Color(Circle2_colour));
     Circle_2.setLineColor(new util.Color(Circle2_colour));
@@ -8013,20 +7556,15 @@ function responseRoutineBegin(trials) {
     responseComponents = [];
     responseComponents.push(mouse);
     responseComponents.push(response1disk);
-    responseComponents.push(response2disk);
     responseComponents.push(response3disk);
-    responseComponents.push(response4disk);
     responseComponents.push(response5disk);
-    responseComponents.push(response6disk);
     responseComponents.push(response7disk);
-    responseComponents.push(response8disk);
     responseComponents.push(Circle_2);
     responseComponents.push(text_23);
     
-    responseComponents.forEach( function(thisComponent) {
+    for (const thisComponent of responseComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -8081,16 +7619,6 @@ function responseRoutineEachFrame(trials) {
     }
 
     
-    // *response2disk* updates
-    if (t >= 0.0 && response2disk.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk.tStart = t;  // (not accounting for frame time here)
-      response2disk.frameNStart = frameN;  // exact frame index
-      
-      response2disk.setAutoDraw(true);
-    }
-
-    
     // *response3disk* updates
     if (t >= 0.0 && response3disk.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -8098,16 +7626,6 @@ function responseRoutineEachFrame(trials) {
       response3disk.frameNStart = frameN;  // exact frame index
       
       response3disk.setAutoDraw(true);
-    }
-
-    
-    // *response4disk* updates
-    if (t >= 0.0 && response4disk.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk.tStart = t;  // (not accounting for frame time here)
-      response4disk.frameNStart = frameN;  // exact frame index
-      
-      response4disk.setAutoDraw(true);
     }
 
     
@@ -8121,16 +7639,6 @@ function responseRoutineEachFrame(trials) {
     }
 
     
-    // *response6disk* updates
-    if (t >= 0.0 && response6disk.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk.tStart = t;  // (not accounting for frame time here)
-      response6disk.frameNStart = frameN;  // exact frame index
-      
-      response6disk.setAutoDraw(true);
-    }
-
-    
     // *response7disk* updates
     if (t >= 0.0 && response7disk.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -8138,16 +7646,6 @@ function responseRoutineEachFrame(trials) {
       response7disk.frameNStart = frameN;  // exact frame index
       
       response7disk.setAutoDraw(true);
-    }
-
-    
-    // *response8disk* updates
-    if (t >= 0.0 && response8disk.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk.tStart = t;  // (not accounting for frame time here)
-      response8disk.frameNStart = frameN;  // exact frame index
-      
-      response8disk.setAutoDraw(true);
     }
 
     
@@ -8181,11 +7679,11 @@ function responseRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    responseComponents.forEach( function(thisComponent) {
+    for (const thisComponent of responseComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -8273,11 +7771,11 @@ var similarity;
 function responseRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'response'-------
-    responseComponents.forEach( function(thisComponent) {
+    for (const thisComponent of responseComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse.getPos();
     const buttons = mouse.getPressed();
@@ -8418,22 +7916,6 @@ function response_2RoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_2
     mouse_2.clicked_name = [];
     gotValidClick = false; // until a click is received
-    response1disk_2.setPos([a, a]);
-    response1disk_2.setSize([b, b]);
-    response2disk_2.setPos([a, a]);
-    response2disk_2.setSize([b, b]);
-    response3disk_2.setPos([a, (- a)]);
-    response3disk_2.setSize([b, b]);
-    response4disk_2.setPos([a, (- a)]);
-    response4disk_2.setSize([b, b]);
-    response5disk_2.setPos([(- a), (- a)]);
-    response5disk_2.setSize([b, b]);
-    response6disk_2.setPos([(- a), (- a)]);
-    response6disk_2.setSize([b, b]);
-    response7disk_2.setPos([(- a), a]);
-    response7disk_2.setSize([b, b]);
-    response8disk_2.setPos([(- a), a]);
-    response8disk_2.setSize([b, b]);
     rectangle.setFillColor(new util.Color(grey));
     trialnumbertext = `You have finished ${trialnumber} of 324 questions`;
     event.clearEvents();
@@ -8443,21 +7925,16 @@ function response_2RoutineBegin(trials) {
     response_2Components = [];
     response_2Components.push(mouse_2);
     response_2Components.push(response1disk_2);
-    response_2Components.push(response2disk_2);
     response_2Components.push(response3disk_2);
-    response_2Components.push(response4disk_2);
     response_2Components.push(response5disk_2);
-    response_2Components.push(response6disk_2);
     response_2Components.push(response7disk_2);
-    response_2Components.push(response8disk_2);
     response_2Components.push(rectangle);
     response_2Components.push(text_25);
     response_2Components.push(text_24);
     
-    response_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of response_2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -8512,16 +7989,6 @@ function response_2RoutineEachFrame(trials) {
     }
 
     
-    // *response2disk_2* updates
-    if (t >= 0.0 && response2disk_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_2.tStart = t;  // (not accounting for frame time here)
-      response2disk_2.frameNStart = frameN;  // exact frame index
-      
-      response2disk_2.setAutoDraw(true);
-    }
-
-    
     // *response3disk_2* updates
     if (t >= 0.0 && response3disk_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -8529,16 +7996,6 @@ function response_2RoutineEachFrame(trials) {
       response3disk_2.frameNStart = frameN;  // exact frame index
       
       response3disk_2.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_2* updates
-    if (t >= 0.0 && response4disk_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_2.tStart = t;  // (not accounting for frame time here)
-      response4disk_2.frameNStart = frameN;  // exact frame index
-      
-      response4disk_2.setAutoDraw(true);
     }
 
     
@@ -8552,16 +8009,6 @@ function response_2RoutineEachFrame(trials) {
     }
 
     
-    // *response6disk_2* updates
-    if (t >= 0.0 && response6disk_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_2.tStart = t;  // (not accounting for frame time here)
-      response6disk_2.frameNStart = frameN;  // exact frame index
-      
-      response6disk_2.setAutoDraw(true);
-    }
-
-    
     // *response7disk_2* updates
     if (t >= 0.0 && response7disk_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -8569,16 +8016,6 @@ function response_2RoutineEachFrame(trials) {
       response7disk_2.frameNStart = frameN;  // exact frame index
       
       response7disk_2.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_2* updates
-    if (t >= 0.0 && response8disk_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_2.tStart = t;  // (not accounting for frame time here)
-      response8disk_2.frameNStart = frameN;  // exact frame index
-      
-      response8disk_2.setAutoDraw(true);
     }
 
     
@@ -8622,11 +8059,11 @@ function response_2RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    response_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of response_2Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -8641,11 +8078,11 @@ function response_2RoutineEachFrame(trials) {
 function response_2RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'response_2'-------
-    response_2Components.forEach( function(thisComponent) {
+    for (const thisComponent of response_2Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_2.getPos();
     const buttons = mouse_2.getPressed();
@@ -8677,10 +8114,9 @@ function special_trialRoutineBegin(trials) {
     special_trialComponents = [];
     special_trialComponents.push(text_33);
     
-    special_trialComponents.forEach( function(thisComponent) {
+    for (const thisComponent of special_trialComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -8724,11 +8160,11 @@ function special_trialRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    special_trialComponents.forEach( function(thisComponent) {
+    for (const thisComponent of special_trialComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -8743,11 +8179,11 @@ function special_trialRoutineEachFrame(trials) {
 function special_trialRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'special_trial'-------
-    special_trialComponents.forEach( function(thisComponent) {
+    for (const thisComponent of special_trialComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     return Scheduler.Event.NEXT;
   };
 }
@@ -8765,22 +8201,6 @@ function catch_1RoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_3
     mouse_3.clicked_name = [];
     gotValidClick = false; // until a click is received
-    response1disk_3.setPos([a, a]);
-    response1disk_3.setSize([b, b]);
-    response2disk_3.setPos([a, a]);
-    response2disk_3.setSize([b, b]);
-    response3disk_3.setPos([a, (- a)]);
-    response3disk_3.setSize([b, b]);
-    response4disk_3.setPos([a, (- a)]);
-    response4disk_3.setSize([b, b]);
-    response5disk_3.setPos([(- a), (- a)]);
-    response5disk_3.setSize([b, b]);
-    response6disk_3.setPos([(- a), (- a)]);
-    response6disk_3.setSize([b, b]);
-    response7disk_3.setPos([(- a), a]);
-    response7disk_3.setSize([b, b]);
-    response8disk_3.setPos([(- a), a]);
-    response8disk_3.setSize([b, b]);
     catchnumber = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);
     event.clearEvents();
     catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;
@@ -8790,20 +8210,15 @@ function catch_1RoutineBegin(trials) {
     catch_1Components = [];
     catch_1Components.push(mouse_3);
     catch_1Components.push(response1disk_3);
-    catch_1Components.push(response2disk_3);
     catch_1Components.push(response3disk_3);
-    catch_1Components.push(response4disk_3);
     catch_1Components.push(response5disk_3);
-    catch_1Components.push(response6disk_3);
     catch_1Components.push(response7disk_3);
-    catch_1Components.push(response8disk_3);
     catch_1Components.push(text_26);
     catch_1Components.push(rectangle_2);
     
-    catch_1Components.forEach( function(thisComponent) {
+    for (const thisComponent of catch_1Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -8835,7 +8250,7 @@ function catch_1RoutineEachFrame(trials) {
         if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
-          for (const obj of [response1disk_3,response2disk_3,response3disk_3,response4disk_3,response5disk_3,response6disk_3,response7disk_3,response8disk_3,]) {
+          for (const obj of [response1disk_3,response3disk_3,response5disk_3,response7disk_3,]) {
             if (obj.contains(mouse_3)) {
               gotValidClick = true;
               mouse_3.clicked_name.push(obj.name)
@@ -8858,16 +8273,6 @@ function catch_1RoutineEachFrame(trials) {
     }
 
     
-    // *response2disk_3* updates
-    if (t >= 0.0 && response2disk_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_3.tStart = t;  // (not accounting for frame time here)
-      response2disk_3.frameNStart = frameN;  // exact frame index
-      
-      response2disk_3.setAutoDraw(true);
-    }
-
-    
     // *response3disk_3* updates
     if (t >= 0.0 && response3disk_3.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -8875,16 +8280,6 @@ function catch_1RoutineEachFrame(trials) {
       response3disk_3.frameNStart = frameN;  // exact frame index
       
       response3disk_3.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_3* updates
-    if (t >= 0.0 && response4disk_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_3.tStart = t;  // (not accounting for frame time here)
-      response4disk_3.frameNStart = frameN;  // exact frame index
-      
-      response4disk_3.setAutoDraw(true);
     }
 
     
@@ -8898,16 +8293,6 @@ function catch_1RoutineEachFrame(trials) {
     }
 
     
-    // *response6disk_3* updates
-    if (t >= 0.0 && response6disk_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_3.tStart = t;  // (not accounting for frame time here)
-      response6disk_3.frameNStart = frameN;  // exact frame index
-      
-      response6disk_3.setAutoDraw(true);
-    }
-
-    
     // *response7disk_3* updates
     if (t >= 0.0 && response7disk_3.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -8915,16 +8300,6 @@ function catch_1RoutineEachFrame(trials) {
       response7disk_3.frameNStart = frameN;  // exact frame index
       
       response7disk_3.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_3* updates
-    if (t >= 0.0 && response8disk_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_3.tStart = t;  // (not accounting for frame time here)
-      response8disk_3.frameNStart = frameN;  // exact frame index
-      
-      response8disk_3.setAutoDraw(true);
     }
 
     if ((! ((((((((((((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])) || (trialnumber === catchtrialorder[10])) || (trialnumber === catchtrialorder[11])) || (trialnumber === catchtrialorder[12])) || (trialnumber === catchtrialorder[13])) || (trialnumber === catchtrialorder[14])) || (trialnumber === catchtrialorder[15])) || (trialnumber === catchtrialorder[16])) || (trialnumber === catchtrialorder[17])) || (trialnumber === catchtrialorder[18])) || (trialnumber === catchtrialorder[19])))) {
@@ -8962,11 +8337,11 @@ function catch_1RoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    catch_1Components.forEach( function(thisComponent) {
+    for (const thisComponent of catch_1Components)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -8981,11 +8356,11 @@ function catch_1RoutineEachFrame(trials) {
 function catch_1RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'catch_1'-------
-    catch_1Components.forEach( function(thisComponent) {
+    for (const thisComponent of catch_1Components) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_3.getPos();
     const buttons = mouse_3.getPressed();
@@ -9123,22 +8498,6 @@ function response_sumRoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_11
     mouse_11.clicked_name = [];
     gotValidClick = false; // until a click is received
-    response1disk_11.setPos([a, a]);
-    response1disk_11.setSize([b, b]);
-    response2disk_11.setPos([a, a]);
-    response2disk_11.setSize([b, b]);
-    response3disk_11.setPos([a, (- a)]);
-    response3disk_11.setSize([b, b]);
-    response4disk_11.setPos([a, (- a)]);
-    response4disk_11.setSize([b, b]);
-    response5disk_11.setPos([(- a), (- a)]);
-    response5disk_11.setSize([b, b]);
-    response6disk_11.setPos([(- a), (- a)]);
-    response6disk_11.setSize([b, b]);
-    response7disk_11.setPos([(- a), a]);
-    response7disk_11.setSize([b, b]);
-    response8disk_11.setPos([(- a), a]);
-    response8disk_11.setSize([b, b]);
     rectangle_9.setFillColor(new util.Color(grey));
     trialnumbertext = `You have finished ${trialnumber} of 324 questions`;
     event.clearEvents();
@@ -9151,21 +8510,16 @@ function response_sumRoutineBegin(trials) {
     response_sumComponents = [];
     response_sumComponents.push(mouse_11);
     response_sumComponents.push(response1disk_11);
-    response_sumComponents.push(response2disk_11);
     response_sumComponents.push(response3disk_11);
-    response_sumComponents.push(response4disk_11);
     response_sumComponents.push(response5disk_11);
-    response_sumComponents.push(response6disk_11);
     response_sumComponents.push(response7disk_11);
-    response_sumComponents.push(response8disk_11);
     response_sumComponents.push(rectangle_9);
     response_sumComponents.push(text_51);
     response_sumComponents.push(text_52);
     
-    response_sumComponents.forEach( function(thisComponent) {
+    for (const thisComponent of response_sumComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
     
     return Scheduler.Event.NEXT;
   };
@@ -9220,16 +8574,6 @@ function response_sumRoutineEachFrame(trials) {
     }
 
     
-    // *response2disk_11* updates
-    if (t >= 0.0 && response2disk_11.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_11.tStart = t;  // (not accounting for frame time here)
-      response2disk_11.frameNStart = frameN;  // exact frame index
-      
-      response2disk_11.setAutoDraw(true);
-    }
-
-    
     // *response3disk_11* updates
     if (t >= 0.0 && response3disk_11.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -9237,16 +8581,6 @@ function response_sumRoutineEachFrame(trials) {
       response3disk_11.frameNStart = frameN;  // exact frame index
       
       response3disk_11.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_11* updates
-    if (t >= 0.0 && response4disk_11.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_11.tStart = t;  // (not accounting for frame time here)
-      response4disk_11.frameNStart = frameN;  // exact frame index
-      
-      response4disk_11.setAutoDraw(true);
     }
 
     
@@ -9260,16 +8594,6 @@ function response_sumRoutineEachFrame(trials) {
     }
 
     
-    // *response6disk_11* updates
-    if (t >= 0.0 && response6disk_11.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_11.tStart = t;  // (not accounting for frame time here)
-      response6disk_11.frameNStart = frameN;  // exact frame index
-      
-      response6disk_11.setAutoDraw(true);
-    }
-
-    
     // *response7disk_11* updates
     if (t >= 0.0 && response7disk_11.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -9277,16 +8601,6 @@ function response_sumRoutineEachFrame(trials) {
       response7disk_11.frameNStart = frameN;  // exact frame index
       
       response7disk_11.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_11* updates
-    if (t >= 0.0 && response8disk_11.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_11.tStart = t;  // (not accounting for frame time here)
-      response8disk_11.frameNStart = frameN;  // exact frame index
-      
-      response8disk_11.setAutoDraw(true);
     }
 
     
@@ -9334,11 +8648,11 @@ function response_sumRoutineEachFrame(trials) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    response_sumComponents.forEach( function(thisComponent) {
+    for (const thisComponent of response_sumComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
+        break;
       }
-    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -9353,11 +8667,11 @@ function response_sumRoutineEachFrame(trials) {
 function response_sumRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'response_sum'-------
-    response_sumComponents.forEach( function(thisComponent) {
+    for (const thisComponent of response_sumComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    });
+    }
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_11.getPos();
     const buttons = mouse_11.getPressed();

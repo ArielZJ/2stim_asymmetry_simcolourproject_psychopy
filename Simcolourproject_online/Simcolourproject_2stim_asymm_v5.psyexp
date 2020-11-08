@@ -1023,40 +1023,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1073,40 +1048,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1123,40 +1073,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1173,40 +1098,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1359,40 +1259,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_2">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_2" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1409,40 +1284,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_2">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_2" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1459,40 +1309,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_2">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_2" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1509,40 +1334,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_2">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_2" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1643,7 +1443,7 @@
     </Routine>
     <Routine name="catch_1">
       <MouseComponent name="mouse_3">
-        <Param name="clickable" updates="constant" val="response1disk_3,response2disk_3,response3disk_3,response4disk_3,response5disk_3,response6disk_3,response7disk_3,response8disk_3," valType="code"/>
+        <Param name="clickable" updates="constant" val="response1disk_3,response3disk_3,response5disk_3,response7disk_3," valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
@@ -1667,40 +1467,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_3">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_3" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1717,40 +1492,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_3">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_3" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1767,40 +1517,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_3">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_3" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1817,40 +1542,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_3">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_3" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2345,10 +2045,10 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
       <CodeComponent name="code_10">
@@ -2361,8 +2061,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;x11d = (a - (b / 2));&amp;#10;y11d = (a + (b / 2));&amp;#10;x12d = (a + (b / 2));&amp;#10;y12d = (a + (b / 2));&amp;#10;x13d = (a - (b / 2));&amp;#10;y13d = (a - (b / 2));&amp;#10;a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;c1d = ((1 - a1d) - b1d);&amp;#10;x21d = (a - (b / 2));&amp;#10;y21d = (a - (b / 2));&amp;#10;x22d = (a + (b / 2));&amp;#10;y22d = (a + (b / 2));&amp;#10;x23d = (a + (b / 2));&amp;#10;y23d = (a - (b / 2));&amp;#10;a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;c2d = ((1 - a2d) - b2d);&amp;#10;x31d = (a - (b / 2));&amp;#10;y31d = (- (a - (b / 2)));&amp;#10;x32d = (a + (b / 2));&amp;#10;y32d = (- (a - (b / 2)));&amp;#10;x33d = (a + (b / 2));&amp;#10;y33d = (- (a + (b / 2)));&amp;#10;a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;c3d = ((1 - a3d) - b3d);&amp;#10;x41d = (a - (b / 2));&amp;#10;y41d = (- (a - (b / 2)));&amp;#10;x42d = (a + (b / 2));&amp;#10;y42d = (- (a + (b / 2)));&amp;#10;x43d = (a - (b / 2));&amp;#10;y43d = (- (a + (b / 2)));&amp;#10;a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;c4d = ((1 - a4d) - b4d);&amp;#10;x51d = (- (a + (b / 2)));&amp;#10;y51d = (- (a + (b / 2)));&amp;#10;x52d = (- (a - (b / 2)));&amp;#10;y52d = (- (a - (b / 2)));&amp;#10;x53d = (- (a - (b / 2)));&amp;#10;y53d = (- (a + (b / 2)));&amp;#10;a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;c5d = ((1 - a5d) - b5d);&amp;#10;x61d = (- (a + (b / 2)));&amp;#10;y61d = (- (a + (b / 2)));&amp;#10;x62d = (- (a - (b / 2)));&amp;#10;y62d = (- (a - (b / 2)));&amp;#10;x63d = (- (a + (b / 2)));&amp;#10;y63d = (- (a + (b / 2)));&amp;#10;a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;c6d = ((1 - a6d) - b6d);&amp;#10;x71d = (- (a + (b / 2)));&amp;#10;y71d = (a + (b / 2));&amp;#10;x72d = (- (a - (b / 2)));&amp;#10;y72d = (a - (b / 2));&amp;#10;x73d = (- (a + (b / 2)));&amp;#10;y73d = (a - (b / 2));&amp;#10;a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;c7d = ((1 - a7d) - b7d);&amp;#10;x81d = (- (a + (b / 2)));&amp;#10;y81d = (a + (b / 2));&amp;#10;x82d = (- (a - (b / 2)));&amp;#10;y82d = (a + (b / 2));&amp;#10;x83d = (- (a - (b / 2)));&amp;#10;y83d = (a - (b / 2));&amp;#10;a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;c8d = ((1 - a8d) - b8d);&amp;#10;if (((((0 &lt;= a1d) &amp;&amp; (a1d &lt;= 1)) &amp;&amp; ((0 &lt;= b1d) &amp;&amp; (b1d &lt;= 1))) &amp;&amp; ((0 &lt;= c1d) &amp;&amp; (c1d &lt;= 1)))) {&amp;#10;    similarity = 7;&amp;#10;} else {&amp;#10;    if (((((0 &lt;= a2d) &amp;&amp; (a2d &lt;= 1)) &amp;&amp; ((0 &lt;= b2d) &amp;&amp; (b2d &lt;= 1))) &amp;&amp; ((0 &lt;= c2d) &amp;&amp; (c2d &lt;= 1)))) {&amp;#10;        similarity = 6;&amp;#10;    } else {&amp;#10;        if (((((0 &lt;= a3d) &amp;&amp; (a3d &lt;= 1)) &amp;&amp; ((0 &lt;= b3d) &amp;&amp; (b3d &lt;= 1))) &amp;&amp; ((0 &lt;= c3d) &amp;&amp; (c3d &lt;= 1)))) {&amp;#10;            similarity = 5;&amp;#10;        } else {&amp;#10;            if (((((0 &lt;= a4d) &amp;&amp; (a4d &lt;= 1)) &amp;&amp; ((0 &lt;= b4d) &amp;&amp; (b4d &lt;= 1))) &amp;&amp; ((0 &lt;= c4d) &amp;&amp; (c4d &lt;= 1)))) {&amp;#10;                similarity = 4;&amp;#10;            } else {&amp;#10;                if (((((0 &lt;= a5d) &amp;&amp; (a5d &lt;= 1)) &amp;&amp; ((0 &lt;= b5d) &amp;&amp; (b5d &lt;= 1))) &amp;&amp; ((0 &lt;= c5d) &amp;&amp; (c5d &lt;= 1)))) {&amp;#10;                    similarity = 3;&amp;#10;                } else {&amp;#10;                    if (((((0 &lt;= a6d) &amp;&amp; (a6d &lt;= 1)) &amp;&amp; ((0 &lt;= b6d) &amp;&amp; (b6d &lt;= 1))) &amp;&amp; ((0 &lt;= c6d) &amp;&amp; (c6d &lt;= 1)))) {&amp;#10;                        similarity = 2;&amp;#10;                    } else {&amp;#10;                        if (((((0 &lt;= a7d) &amp;&amp; (a7d &lt;= 1)) &amp;&amp; ((0 &lt;= b7d) &amp;&amp; (b7d &lt;= 1))) &amp;&amp; ((0 &lt;= c7d) &amp;&amp; (c7d &lt;= 1)))) {&amp;#10;                            similarity = 1;&amp;#10;                        } else {&amp;#10;                            if (((((0 &lt;= a8d) &amp;&amp; (a8d &lt;= 1)) &amp;&amp; ((0 &lt;= b8d) &amp;&amp; (b8d &lt;= 1))) &amp;&amp; ((0 &lt;= c8d) &amp;&amp; (c8d &lt;= 1)))) {&amp;#10;                                similarity = 0;&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse_5.mouseClock.getTime());&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;&amp;#10;# Triangle 7&amp;#10;x11d = a - b/2;&amp;#10;y11d = a + b/2;&amp;#10;x12d = a + b/2;&amp;#10;y12d = a + b/2;&amp;#10;x13d = a - b/2;&amp;#10;y13d = a - b/2;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = a - b/2;&amp;#10;y21d = a - b/2&amp;#10;x22d = a + b/2&amp;#10;y22d = a + b/2&amp;#10;x23d = a + b/2&amp;#10;y23d = a - b/2&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = a - b/2&amp;#10;y31d = -(a - b/2)&amp;#10;x32d = a + b/2&amp;#10;y32d = -(a - b/2) &amp;#10;x33d = a + b/2&amp;#10;y33d = -(a + b/2)&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = a - b/2&amp;#10;y41d = -(a - b/2)&amp;#10;x42d = a + b/2&amp;#10;y42d = -(a + b/2)&amp;#10;x43d = a - b/2&amp;#10;y43d = -(a + b/2)&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -(a + b/2)&amp;#10;y51d = -(a + b/2)&amp;#10;x52d = -(a - b/2)&amp;#10;y52d = -(a - b/2)&amp;#10;x53d = -(a - b/2)&amp;#10;y53d = -(a + b/2)&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -(a+b/2)&amp;#10;y61d = -(a+b/2)&amp;#10;x62d = -(a-b/2)&amp;#10;y62d = -(a-b/2)&amp;#10;x63d = -(a+b/2)&amp;#10;y63d = - (a+b/2)&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -(a + b/2)&amp;#10;y71d = a + b/2&amp;#10;x72d = -(a - b/2)&amp;#10;y72d = a - b/2&amp;#10;x73d = -(a + b/2)&amp;#10;y73d = a - b/2&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -(a + b/2)&amp;#10;y81d = a + b/2&amp;#10;x82d = -(a - b/2)&amp;#10;y82d = a + b/2&amp;#10;x83d = -(a - b/2)&amp;#10;y83d = a - b/2&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    similarity = 7&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    similarity = 6&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    similarity = 5&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    similarity = 4&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    similarity = 3&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    similarity = 2&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    similarity = 1&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    similarity = 0&amp;#10;&amp;#10;&amp;#10;thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse_5.mouseClock.getTime())  # Save time relative to start of mouse&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;/*&amp;#10;# Triangle 7&amp;#10;x11d = a - b/2;&amp;#10;y11d = a + b/2;&amp;#10;x12d = a + b/2;&amp;#10;y12d = a + b/2;&amp;#10;x13d = a - b/2;&amp;#10;y13d = a - b/2;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6&amp;#10;x21d = a - b/2;&amp;#10;y21d = a - b/2&amp;#10;x22d = a + b/2&amp;#10;y22d = a + b/2&amp;#10;x23d = a + b/2&amp;#10;y23d = a - b/2&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = a - b/2&amp;#10;y31d = -(a - b/2)&amp;#10;x32d = a + b/2&amp;#10;y32d = -(a - b/2)&amp;#10;x33d = a + b/2&amp;#10;y33d = -(a + b/2)&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4&amp;#10;x41d = a - b/2&amp;#10;y41d = -(a - b/2)&amp;#10;x42d = a + b/2&amp;#10;y42d = -(a + b/2)&amp;#10;x43d = a - b/2&amp;#10;y43d = -(a + b/2)&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -(a + b/2)&amp;#10;y51d = -(a + b/2)&amp;#10;x52d = -(a - b/2)&amp;#10;y52d = -(a - b/2)&amp;#10;x53d = -(a - b/2)&amp;#10;y53d = -(a + b/2)&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -(a+b/2)&amp;#10;y61d = -(a+b/2)&amp;#10;x62d = -(a-b/2)&amp;#10;y62d = -(a-b/2)&amp;#10;x63d = -(a+b/2)&amp;#10;y63d = - (a+b/2)&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1&amp;#10;&amp;#10;x71d = -(a + b/2)&amp;#10;y71d = a + b/2&amp;#10;x72d = -(a - b/2)&amp;#10;y72d = a - b/2&amp;#10;x73d = -(a + b/2)&amp;#10;y73d = a - b/2&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0&amp;#10;x81d = -(a + b/2)&amp;#10;y81d = a + b/2&amp;#10;x82d = -(a - b/2)&amp;#10;y82d = a + b/2&amp;#10;x83d = -(a - b/2)&amp;#10;y83d = a - b/2&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;similarity = 7&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;similarity = 6&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;similarity = 5&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;similarity = 4&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;similarity = 3&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;similarity = 2&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;similarity = 1&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;similarity = 0*/&amp;#10;thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse_5.mouseClock.getTime());&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;# Triangle 7     &amp;#10;x11d = a - b/2;&amp;#10;y11d = a + b/2;&amp;#10;x12d = a + b/2;&amp;#10;y12d = a + b/2;&amp;#10;x13d = a - b/2;&amp;#10;y13d = a - b/2;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = a - b/2;&amp;#10;y21d = a - b/2&amp;#10;x22d = a + b/2&amp;#10;y22d = a + b/2&amp;#10;x23d = a + b/2&amp;#10;y23d = a - b/2&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = a - b/2&amp;#10;y31d = -(a - b/2)&amp;#10;x32d = a + b/2&amp;#10;y32d = -(a - b/2) &amp;#10;x33d = a + b/2&amp;#10;y33d = -(a + b/2)&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = a - b/2&amp;#10;y41d = -(a - b/2)&amp;#10;x42d = a + b/2&amp;#10;y42d = -(a + b/2)&amp;#10;x43d = a - b/2&amp;#10;y43d = -(a + b/2)&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -(a + b/2)&amp;#10;y51d = -(a + b/2)&amp;#10;x52d = -(a - b/2)&amp;#10;y52d = -(a - b/2)&amp;#10;x53d = -(a - b/2)&amp;#10;y53d = -(a + b/2)&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -(a+b/2)&amp;#10;y61d = -(a+b/2)&amp;#10;x62d = -(a-b/2)&amp;#10;y62d = -(a-b/2)&amp;#10;x63d = -(a+b/2)&amp;#10;y63d = - (a+b/2)&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -(a + b/2)&amp;#10;y71d = a + b/2&amp;#10;x72d = -(a - b/2)&amp;#10;y72d = a - b/2&amp;#10;x73d = -(a + b/2)&amp;#10;y73d = a - b/2&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -(a + b/2)&amp;#10;y81d = a + b/2&amp;#10;x82d = -(a - b/2)&amp;#10;y82d = a + b/2&amp;#10;x83d = -(a - b/2)&amp;#10;y83d = a - b/2&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    similarity = 7&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    similarity = 6&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    similarity = 5&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    similarity = 4&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    similarity = 3&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    similarity = 2&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    similarity = 1&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    similarity = 0&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;thisExp.addData(&quot;Colour_2&quot;, Colour_2);&amp;#10;#thisExp.addData(&quot;similarity&quot;, similarity);&amp;#10;thisExp.addData(&quot;response_time&quot;, mouse_5.mouseClock.getTime())  # Save time relative to start of mouse&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_10" valType="code"/>
       </CodeComponent>
@@ -2373,40 +2073,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_5">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_5" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2423,40 +2098,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_5">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_5" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2473,40 +2123,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_5">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_5" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2523,40 +2148,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_5" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_5">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_5" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2618,7 +2218,7 @@
     </Routine>
     <Routine name="catch_prac">
       <MouseComponent name="mouse_7">
-        <Param name="clickable" updates="constant" val="response1disk_7,response2disk_7,response3disk_7,response4disk_7,response5disk_7,response6disk_7,response7disk_7,response8disk_7," valType="code"/>
+        <Param name="clickable" updates="constant" val="response1disk_7,response3disk_7,response5disk_7,response7disk_7" valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
@@ -2632,7 +2232,7 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
       <ImageComponent name="response1disk_7">
@@ -2642,40 +2242,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_7">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_7" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2692,40 +2267,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_7">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_7" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2742,40 +2292,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_7">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_7" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2792,40 +2317,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_7" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_7">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_7" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -2836,17 +2336,17 @@
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <CodeComponent name="code_12">
-        <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorderprac = []&amp;#10;for i in range(0,2):&amp;#10;    n = randint(0,7)&amp;#10;    catchtrialorderprac.append(n)&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;&amp;#10;catchtrialorderprac = Array.from({length: 2}, () =&gt; Math.floor(Math.random() * 7));&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;event.clearEvents();&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;catchnumberprac = randint(0,7);&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'&amp;#10;&amp;#10;event.clearEvents()" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin Experiment" updates="constant" val="# Set up catch trials &amp;#10;&amp;#10;catchtrialorderprac = []&amp;#10;for i in range(0,2):&amp;#10;    n = randint(0,7)&amp;#10;    catchtrialorderprac.append(n)&amp;#10;&amp;#10;catchnumberprac = randint(0,7);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;&amp;#10;catchtrialorderprac = Array.from({length: 2}, () =&gt; Math.floor(Math.random() * 7));&amp;#10;&amp;#10;catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;&amp;#10;event.clearEvents();&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Select random number for catch trial&amp;#10;&amp;#10;&amp;#10;&amp;#10;catchtext = f'SPECIAL TRIAL PLEASE JUST SELECT {catchnumberprac}'&amp;#10;&amp;#10;event.clearEvents()" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="# Run catch trials &amp;#10;if not ((pracnumber == catchtrialorderprac[0]) or (pracnumber == catchtrialorderprac[1])):&amp;#10;    continueRoutine=False" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;x11d = (a - (b / 2));&amp;#10;y11d = (a + (b / 2));&amp;#10;x12d = (a + (b / 2));&amp;#10;y12d = (a + (b / 2));&amp;#10;x13d = (a - (b / 2));&amp;#10;y13d = (a - (b / 2));&amp;#10;a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));&amp;#10;c1d = ((1 - a1d) - b1d);&amp;#10;x21d = (a - (b / 2));&amp;#10;y21d = (a - (b / 2));&amp;#10;x22d = (a + (b / 2));&amp;#10;y22d = (a + (b / 2));&amp;#10;x23d = (a + (b / 2));&amp;#10;y23d = (a - (b / 2));&amp;#10;a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));&amp;#10;c2d = ((1 - a2d) - b2d);&amp;#10;x31d = (a - (b / 2));&amp;#10;y31d = (- (a - (b / 2)));&amp;#10;x32d = (a + (b / 2));&amp;#10;y32d = (- (a - (b / 2)));&amp;#10;x33d = (a + (b / 2));&amp;#10;y33d = (- (a + (b / 2)));&amp;#10;a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));&amp;#10;c3d = ((1 - a3d) - b3d);&amp;#10;x41d = (a - (b / 2));&amp;#10;y41d = (- (a - (b / 2)));&amp;#10;x42d = (a + (b / 2));&amp;#10;y42d = (- (a + (b / 2)));&amp;#10;x43d = (a - (b / 2));&amp;#10;y43d = (- (a + (b / 2)));&amp;#10;a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));&amp;#10;c4d = ((1 - a4d) - b4d);&amp;#10;x51d = (- (a + (b / 2)));&amp;#10;y51d = (- (a + (b / 2)));&amp;#10;x52d = (- (a - (b / 2)));&amp;#10;y52d = (- (a - (b / 2)));&amp;#10;x53d = (- (a - (b / 2)));&amp;#10;y53d = (- (a + (b / 2)));&amp;#10;a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));&amp;#10;c5d = ((1 - a5d) - b5d);&amp;#10;x61d = (- (a + (b / 2)));&amp;#10;y61d = (- (a + (b / 2)));&amp;#10;x62d = (- (a - (b / 2)));&amp;#10;y62d = (- (a - (b / 2)));&amp;#10;x63d = (- (a + (b / 2)));&amp;#10;y63d = (- (a + (b / 2)));&amp;#10;a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));&amp;#10;c6d = ((1 - a6d) - b6d);&amp;#10;x71d = (- (a + (b / 2)));&amp;#10;y71d = (a + (b / 2));&amp;#10;x72d = (- (a - (b / 2)));&amp;#10;y72d = (a - (b / 2));&amp;#10;x73d = (- (a + (b / 2)));&amp;#10;y73d = (a - (b / 2));&amp;#10;a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));&amp;#10;c7d = ((1 - a7d) - b7d);&amp;#10;x81d = (- (a + (b / 2)));&amp;#10;y81d = (a + (b / 2));&amp;#10;x82d = (- (a - (b / 2)));&amp;#10;y82d = (a + (b / 2));&amp;#10;x83d = (- (a - (b / 2)));&amp;#10;y83d = (a - (b / 2));&amp;#10;a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));&amp;#10;c8d = ((1 - a8d) - b8d);&amp;#10;if (((((0 &lt;= a1d) &amp;&amp; (a1d &lt;= 1)) &amp;&amp; ((0 &lt;= b1d) &amp;&amp; (b1d &lt;= 1))) &amp;&amp; ((0 &lt;= c1d) &amp;&amp; (c1d &lt;= 1)))) {&amp;#10;    catchprac = 7;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;} else {&amp;#10;    if (((((0 &lt;= a2d) &amp;&amp; (a2d &lt;= 1)) &amp;&amp; ((0 &lt;= b2d) &amp;&amp; (b2d &lt;= 1))) &amp;&amp; ((0 &lt;= c2d) &amp;&amp; (c2d &lt;= 1)))) {&amp;#10;        catchprac = 6;&amp;#10;        thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;    } else {&amp;#10;        if (((((0 &lt;= a3d) &amp;&amp; (a3d &lt;= 1)) &amp;&amp; ((0 &lt;= b3d) &amp;&amp; (b3d &lt;= 1))) &amp;&amp; ((0 &lt;= c3d) &amp;&amp; (c3d &lt;= 1)))) {&amp;#10;            catchprac = 5;&amp;#10;            thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;        } else {&amp;#10;            if (((((0 &lt;= a4d) &amp;&amp; (a4d &lt;= 1)) &amp;&amp; ((0 &lt;= b4d) &amp;&amp; (b4d &lt;= 1))) &amp;&amp; ((0 &lt;= c4d) &amp;&amp; (c4d &lt;= 1)))) {&amp;#10;                catchprac = 4;&amp;#10;                thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;            } else {&amp;#10;                if (((((0 &lt;= a5d) &amp;&amp; (a5d &lt;= 1)) &amp;&amp; ((0 &lt;= b5d) &amp;&amp; (b5d &lt;= 1))) &amp;&amp; ((0 &lt;= c5d) &amp;&amp; (c5d &lt;= 1)))) {&amp;#10;                    catchprac = 3;&amp;#10;                    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                } else {&amp;#10;                    if (((((0 &lt;= a6d) &amp;&amp; (a6d &lt;= 1)) &amp;&amp; ((0 &lt;= b6d) &amp;&amp; (b6d &lt;= 1))) &amp;&amp; ((0 &lt;= c6d) &amp;&amp; (c6d &lt;= 1)))) {&amp;#10;                        catchprac = 2;&amp;#10;                        thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                    } else {&amp;#10;                        if (((((0 &lt;= a7d) &amp;&amp; (a7d &lt;= 1)) &amp;&amp; ((0 &lt;= b7d) &amp;&amp; (b7d &lt;= 1))) &amp;&amp; ((0 &lt;= c7d) &amp;&amp; (c7d &lt;= 1)))) {&amp;#10;                            catchprac = 1;&amp;#10;                            thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                        } else {&amp;#10;                            if (((((0 &lt;= a8d) &amp;&amp; (a8d &lt;= 1)) &amp;&amp; ((0 &lt;= b8d) &amp;&amp; (b8d &lt;= 1))) &amp;&amp; ((0 &lt;= c8d) &amp;&amp; (c8d &lt;= 1)))) {&amp;#10;                                catchprac = 0;&amp;#10;                                thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;# Triangle 7&amp;#10;x11d = a - b/2;&amp;#10;y11d = a + b/2;&amp;#10;x12d = a + b/2;&amp;#10;y12d = a + b/2;&amp;#10;x13d = a - b/2;&amp;#10;y13d = a - b/2;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = a - b/2;&amp;#10;y21d = a - b/2&amp;#10;x22d = a + b/2&amp;#10;y22d = a + b/2&amp;#10;x23d = a + b/2&amp;#10;y23d = a - b/2&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = a - b/2&amp;#10;y31d = -(a - b/2)&amp;#10;x32d = a + b/2&amp;#10;y32d = -(a - b/2) &amp;#10;x33d = a + b/2&amp;#10;y33d = -(a + b/2)&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = a - b/2&amp;#10;y41d = -(a - b/2)&amp;#10;x42d = a + b/2&amp;#10;y42d = -(a + b/2)&amp;#10;x43d = a - b/2&amp;#10;y43d = -(a + b/2)&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -(a + b/2)&amp;#10;y51d = -(a + b/2)&amp;#10;x52d = -(a - b/2)&amp;#10;y52d = -(a - b/2)&amp;#10;x53d = -(a - b/2)&amp;#10;y53d = -(a + b/2)&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -(a+b/2)&amp;#10;y61d = -(a+b/2)&amp;#10;x62d = -(a-b/2)&amp;#10;y62d = -(a-b/2)&amp;#10;x63d = -(a+b/2)&amp;#10;y63d = - (a+b/2)&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -(a + b/2)&amp;#10;y71d = a + b/2&amp;#10;x72d = -(a - b/2)&amp;#10;y72d = a - b/2&amp;#10;x73d = -(a + b/2)&amp;#10;y73d = a - b/2&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -(a + b/2)&amp;#10;y81d = a + b/2&amp;#10;x82d = -(a - b/2)&amp;#10;y82d = a + b/2&amp;#10;x83d = -(a - b/2)&amp;#10;y83d = a - b/2&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    catchprac = 7&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    catchprac = 6&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    catchprac = 5&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    catchprac = 4&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    catchprac = 3&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    catchprac = 2&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    catchprac = 1;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    catchprac = 0;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="mousexpos = mouse.getPos()[0];&amp;#10;mouseypos = mouse.getPos()[1];&amp;#10;/*&amp;#10;# Triangle 7&amp;#10;x11d = a - b/2;&amp;#10;y11d = a + b/2;&amp;#10;x12d = a + b/2;&amp;#10;y12d = a + b/2;&amp;#10;x13d = a - b/2;&amp;#10;y13d = a - b/2;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6&amp;#10;x21d = a - b/2;&amp;#10;y21d = a - b/2&amp;#10;x22d = a + b/2&amp;#10;y22d = a + b/2&amp;#10;x23d = a + b/2&amp;#10;y23d = a - b/2&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = a - b/2&amp;#10;y31d = -(a - b/2)&amp;#10;x32d = a + b/2&amp;#10;y32d = -(a - b/2)&amp;#10;x33d = a + b/2&amp;#10;y33d = -(a + b/2)&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4&amp;#10;x41d = a - b/2&amp;#10;y41d = -(a - b/2)&amp;#10;x42d = a + b/2&amp;#10;y42d = -(a + b/2)&amp;#10;x43d = a - b/2&amp;#10;y43d = -(a + b/2)&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -(a + b/2)&amp;#10;y51d = -(a + b/2)&amp;#10;x52d = -(a - b/2)&amp;#10;y52d = -(a - b/2)&amp;#10;x53d = -(a - b/2)&amp;#10;y53d = -(a + b/2)&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -(a+b/2)&amp;#10;y61d = -(a+b/2)&amp;#10;x62d = -(a-b/2)&amp;#10;y62d = -(a-b/2)&amp;#10;x63d = -(a+b/2)&amp;#10;y63d = - (a+b/2)&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1&amp;#10;&amp;#10;x71d = -(a + b/2)&amp;#10;y71d = a + b/2&amp;#10;x72d = -(a - b/2)&amp;#10;y72d = a - b/2&amp;#10;x73d = -(a + b/2)&amp;#10;y73d = a - b/2&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0&amp;#10;x81d = -(a + b/2)&amp;#10;y81d = a + b/2&amp;#10;x82d = -(a - b/2)&amp;#10;y82d = a + b/2&amp;#10;x83d = -(a - b/2)&amp;#10;y83d = a - b/2&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;catchprac = 7&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;catchprac = 6&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;catchprac = 5&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;catchprac = 4&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;catchprac = 3&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;catchprac = 2&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;catchprac = 1;&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;catchprac = 0;&amp;#10;thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;*/&amp;#10;thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# Save similarity rating &amp;#10;mousexpos=mouse.getPos()[0]  # get x position of mouse&amp;#10;mouseypos=mouse.getPos()[1]  # get y position of mouse&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;# Triangle 7&amp;#10;x11d = a - b/2;&amp;#10;y11d = a + b/2;&amp;#10;x12d = a + b/2;&amp;#10;y12d = a + b/2;&amp;#10;x13d = a - b/2;&amp;#10;y13d = a - b/2;&amp;#10;a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))&amp;#10;c1d = 1 - a1d - b1d;&amp;#10;&amp;#10;# Triangle 6 &amp;#10;x21d = a - b/2;&amp;#10;y21d = a - b/2&amp;#10;x22d = a + b/2&amp;#10;y22d = a + b/2&amp;#10;x23d = a + b/2&amp;#10;y23d = a - b/2&amp;#10;a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))&amp;#10;c2d = 1 - a2d - b2d&amp;#10;&amp;#10;# Triangle 5&amp;#10;x31d = a - b/2&amp;#10;y31d = -(a - b/2)&amp;#10;x32d = a + b/2&amp;#10;y32d = -(a - b/2) &amp;#10;x33d = a + b/2&amp;#10;y33d = -(a + b/2)&amp;#10;a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))&amp;#10;c3d = 1 - a3d - b3d&amp;#10;&amp;#10;&amp;#10;# Triangle 4 &amp;#10;x41d = a - b/2&amp;#10;y41d = -(a - b/2)&amp;#10;x42d = a + b/2&amp;#10;y42d = -(a + b/2)&amp;#10;x43d = a - b/2&amp;#10;y43d = -(a + b/2)&amp;#10;a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))&amp;#10;c4d = 1 - a4d - b4d&amp;#10;&amp;#10;#  Triangle 3&amp;#10;x51d = -(a + b/2)&amp;#10;y51d = -(a + b/2)&amp;#10;x52d = -(a - b/2)&amp;#10;y52d = -(a - b/2)&amp;#10;x53d = -(a - b/2)&amp;#10;y53d = -(a + b/2)&amp;#10;a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))&amp;#10;c5d = 1 - a5d - b5d&amp;#10;&amp;#10;# Triangle 2&amp;#10;x61d = -(a+b/2)&amp;#10;y61d = -(a+b/2)&amp;#10;x62d = -(a-b/2)&amp;#10;y62d = -(a-b/2)&amp;#10;x63d = -(a+b/2)&amp;#10;y63d = - (a+b/2)&amp;#10;a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))&amp;#10;c6d = 1 - a6d - b6d&amp;#10;&amp;#10;# Triangle 1 &amp;#10;&amp;#10;x71d = -(a + b/2)&amp;#10;y71d = a + b/2&amp;#10;x72d = -(a - b/2)&amp;#10;y72d = a - b/2&amp;#10;x73d = -(a + b/2)&amp;#10;y73d = a - b/2&amp;#10;a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))&amp;#10;c7d = 1 - a7d - b7d&amp;#10;&amp;#10;&amp;#10;# Triangle 0 &amp;#10;x81d = -(a + b/2)&amp;#10;y81d = a + b/2&amp;#10;x82d = -(a - b/2)&amp;#10;y82d = a + b/2&amp;#10;x83d = -(a - b/2)&amp;#10;y83d = a - b/2&amp;#10;a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))&amp;#10;c8d = 1 - a8d - b8d&amp;#10;&amp;#10;if (0 &lt;= a1d &lt;= 1) and (0 &lt;= b1d &lt;= 1) and (0 &lt;= c1d &lt;= 1):&amp;#10;    catchprac = 7&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a2d &lt;= 1) and (0 &lt;= b2d &lt;= 1) and (0 &lt;= c2d &lt;= 1):&amp;#10;    catchprac = 6&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a3d &lt;= 1) and (0 &lt;= b3d &lt;= 1) and (0 &lt;= c3d &lt;= 1):&amp;#10;    catchprac = 5&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a4d &lt;= 1) and (0 &lt;= b4d &lt;= 1) and (0 &lt;= c4d &lt;= 1):&amp;#10;    catchprac = 4&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a5d &lt;= 1) and (0 &lt;= b5d &lt;= 1) and (0 &lt;= c5d &lt;= 1):&amp;#10;    catchprac = 3&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a6d &lt;= 1) and (0 &lt;= b6d &lt;= 1) and (0 &lt;= c6d &lt;= 1):&amp;#10;    catchprac = 2&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a7d &lt;= 1) and (0 &lt;= b7d &lt;= 1) and (0 &lt;= c7d &lt;= 1):&amp;#10;    catchprac = 1;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;elif (0 &lt;= a8d &lt;= 1) and (0 &lt;= b8d &lt;= 1) and (0 &lt;= c8d &lt;= 1):&amp;#10;    catchprac = 0;&amp;#10;    thisExp.addData(&quot;catchprac&quot;, catchprac);&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;&amp;#10;thisExp.addData(&quot;catchnumberprac&quot;, catchnumberprac);&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_12" valType="code"/>
       </CodeComponent>
@@ -3265,7 +2765,7 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
       <ImageComponent name="response1disk_6">
@@ -3275,40 +2775,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_6">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_6" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3325,35 +2800,10 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_6" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_6">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
@@ -3375,40 +2825,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_6">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_6" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -3425,35 +2850,10 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_6" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_6">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_6" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
@@ -5692,7 +5092,7 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
       <ImageComponent name="response1disk_10">
@@ -5702,40 +5102,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_10" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_10">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_10" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -5752,40 +5127,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_10" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_10">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_10" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -5802,40 +5152,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_10" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_10">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_10" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -5852,40 +5177,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_10" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_10">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_10" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -6010,40 +5310,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response1disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response67.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response1disk_11" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response2disk_11">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response2disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response2disk_11" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -6060,40 +5335,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response3disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response45.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response3disk_11" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response4disk_11">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response4disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response4disk_11" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -6110,40 +5360,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response5disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response23.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response5disk_11" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,-a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response6disk_11">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response6disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response6disk_11" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,-a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -6160,40 +5385,15 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response7disks.png" valType="str"/>
+        <Param name="image" updates="constant" val="response01.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="response7disk_11" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
+        <Param name="pos" updates="constant" val="-a,a" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ImageComponent>
-      <ImageComponent name="response8disk_11">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="response8disks.png" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="response8disk_11" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="-a,a" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="set every repeat" val="b,b" valType="code"/>
+        <Param name="size" updates="constant" val="b,b" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>

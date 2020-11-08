@@ -19,7 +19,7 @@ const psychoJS = new PsychoJS({
 psychoJS.openWindow({
   fullscr: true,
   color: new util.Color([0, 0, 0]),
-  units: 'norm',
+  units: 'pix',
   waitBlanking: true
 });
 
@@ -323,18 +323,17 @@ var Stim1_display_pracClock;
 var Circle;
 var centre_cross4_2;
 var response_pracClock;
-var response1disk_5;
-var response2disk_5;
-var response3disk_5;
-var response4disk_5;
-var response5disk_5;
-var response6disk_5;
-var response7disk_5;
-var response8disk_5;
 var mouse_5;
+var a;
+var b;
+var response1disk_5;
+var response3disk_5;
+var response5disk_5;
+var response7disk_5;
 var Circle_3;
 var text_29;
 var summary_pracClock;
+var mouse_10;
 var response1disk_10;
 var response2disk_10;
 var response3disk_10;
@@ -343,7 +342,6 @@ var response5disk_10;
 var response6disk_10;
 var response7disk_10;
 var response8disk_10;
-var mouse_10;
 var rectangle_8;
 var pracnumber;
 var text_49;
@@ -351,6 +349,7 @@ var text_50;
 var special_trial_pracClock;
 var text_36;
 var catch_pracClock;
+var mouse_7;
 var response1disk_7;
 var response2disk_7;
 var response3disk_7;
@@ -359,11 +358,12 @@ var response5disk_7;
 var response6disk_7;
 var response7disk_7;
 var response8disk_7;
-var mouse_7;
 var catchtrialorderprac;
+var catchnumberprac;
 var text_32;
 var rectangle_5;
 var summary2_pracClock;
+var mouse_6;
 var response1disk_6;
 var response2disk_6;
 var response3disk_6;
@@ -372,7 +372,6 @@ var response5disk_6;
 var response6disk_6;
 var response7disk_6;
 var response8disk_6;
-var mouse_6;
 var rectangle_4;
 var text_30;
 var text_31;
@@ -384,6 +383,7 @@ var Stim1_displayClock;
 var Circle_1;
 var centre_cross4;
 var responseClock;
+var mouse;
 var response1disk;
 var response2disk;
 var response3disk;
@@ -392,10 +392,10 @@ var response5disk;
 var response6disk;
 var response7disk;
 var response8disk;
-var mouse;
 var Circle_2;
 var text_23;
 var response_2Clock;
+var mouse_2;
 var response1disk_2;
 var response2disk_2;
 var response3disk_2;
@@ -404,7 +404,6 @@ var response5disk_2;
 var response6disk_2;
 var response7disk_2;
 var response8disk_2;
-var mouse_2;
 var rectangle;
 var trialnumber;
 var grey;
@@ -413,6 +412,7 @@ var text_24;
 var special_trialClock;
 var text_33;
 var catch_1Clock;
+var mouse_3;
 var response1disk_3;
 var response2disk_3;
 var response3disk_3;
@@ -421,11 +421,11 @@ var response5disk_3;
 var response6disk_3;
 var response7disk_3;
 var response8disk_3;
-var mouse_3;
 var catchtrialorder;
 var text_26;
 var rectangle_2;
 var response_sumClock;
+var mouse_11;
 var response1disk_11;
 var response2disk_11;
 var response3disk_11;
@@ -434,7 +434,6 @@ var response5disk_11;
 var response6disk_11;
 var response7disk_11;
 var response8disk_11;
-var mouse_11;
 var rectangle_9;
 var text_51;
 var text_52;
@@ -534,7 +533,7 @@ function experimentInit() {
     name: 'text_2',
     text: 'Warning! It is critical that these calibrations are done correctly or you will be unable to do the experiment and we will be unable to approve your payment!',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.4)], height: 0.08,  wrapWidth: 1.5, ori: 0,
     color: new util.Color('red'),  opacity: 1,
     depth: -2.0 
@@ -579,7 +578,7 @@ function experimentInit() {
           y_scale = 40;
           dbase = 0.1;
           unittext = " pixels";
-          vsize = win.size[1];
+          vsize = screen.height;
       } else {
           x_scale = 0.05;
           y_scale = 0.05;
@@ -594,7 +593,7 @@ function experimentInit() {
     name: 'text_37',
     text: "First, we need to determine the size of your screen.\nTake a credit card (or a drivers license, library card, any equivalent card),\npress it to the screen and adjust the image on your screen to be the same size as the card\n\nTo increase the image width: press 'k' on your keyboard\nTo decrease the image width: press 'j' on your keyboard\n\nWhen you are done, press <ENTER>",
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.35)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -607,7 +606,7 @@ function experimentInit() {
     name: 'text',
     text: 'Next, we need to get you to keep your head a fixed distance from the screen.\nThis will ensure future images are the right size for your screen. On the next screen please:',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.2)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -620,7 +619,7 @@ function experimentInit() {
     name: 'text_3',
     text: '1. Keeping your arm straight, please touch your thumb to the centre of the screen in the oval\n2. While keeping your head in the same position, lower your arm.\n3. Please keep your head in this position for the remainder of the experiment ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -631,7 +630,7 @@ function experimentInit() {
     name: 'space_3',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -4.0 
@@ -644,7 +643,7 @@ function experimentInit() {
     name: 'text_4',
     text: '1. While keeping your arm straight touch your thumb to the centre of the screen in the oval.\n2. Keep your head in the same position, but lower and relax your arm.\n3. Please keep your head in this position for the remainder of the experiment.\n4. Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.5], height: 0.07,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: 0.0 
@@ -670,7 +669,7 @@ function experimentInit() {
     name: 'text_5',
     text: 'Lastly, we need to know how far your head is from the screen.\nPlease keep your head in the same position as before.\n\nOver the next few pages we will explain how we can work out how far you are sitting from the screen.\nPlease pay attention and follow all the instructions carefully.\n\nThese first few pages will be INSTRUCTIONS ONLY. You will be instructed when the calibrations start.\n\nWhen ready, press SPACE to continue and follow the instructions on the next page.\n',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0], height: 0.07,  wrapWidth: 1.5, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: 0.0 
@@ -683,7 +682,7 @@ function experimentInit() {
     name: 'space_4',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -698,7 +697,7 @@ function experimentInit() {
     name: 'space_5',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -709,7 +708,7 @@ function experimentInit() {
     name: 'instr_only',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: 10000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -720,7 +719,7 @@ function experimentInit() {
     name: 'text_6',
     text: '1. Put a finger on <ENTER> on the keyboard.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -735,7 +734,7 @@ function experimentInit() {
     name: 'space_7',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -746,7 +745,7 @@ function experimentInit() {
     name: 'instr_only_3',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -757,7 +756,7 @@ function experimentInit() {
     name: 'text_8',
     text: '2. Close your right eye',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -772,7 +771,7 @@ function experimentInit() {
     name: 'space_6',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -783,7 +782,7 @@ function experimentInit() {
     name: 'instr_only_2',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -794,7 +793,7 @@ function experimentInit() {
     name: 'text_7',
     text: '3. Stare at the middle of the screen, keeping your head in the same position as before.\nKeep your right eye closed.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.4)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -818,7 +817,7 @@ function experimentInit() {
     name: 'space_11',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -829,7 +828,7 @@ function experimentInit() {
     name: 'instr_only_5',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -840,7 +839,7 @@ function experimentInit() {
     name: 'text_13',
     text: '4. Without moving your head or face, use your left eye to focus on the black square.\nKeep your right eye closed and do not move your head.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -869,7 +868,7 @@ function experimentInit() {
     name: 'text_14',
     text: 'Stare at the square',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.75, 0.08], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -6.0 
@@ -884,7 +883,7 @@ function experimentInit() {
     name: 'space_8',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -895,7 +894,7 @@ function experimentInit() {
     name: 'instr_only_4',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -906,7 +905,7 @@ function experimentInit() {
     name: 'text_11',
     text: '5. During the calibration task, a white ball will disappear as it moves from right to left.\nKeep your right eye closed, stare at the black square and do not move your head.\n',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -935,7 +934,7 @@ function experimentInit() {
     name: 'text_12',
     text: '<--- Ball movement ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, 0.08], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -6.0 
@@ -959,7 +958,7 @@ function experimentInit() {
     name: 'space_17',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -970,7 +969,7 @@ function experimentInit() {
     name: 'instr_only_7',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -981,7 +980,7 @@ function experimentInit() {
     name: 'text_44',
     text: '6. Press the <ENTER> key as soon as the ball disappears properly from your eye sight (not due to running off screen)\nKeep your right eye closed, stare at the black square, do not move your head.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1.5, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -996,7 +995,7 @@ function experimentInit() {
     name: 'space_18',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -1007,7 +1006,7 @@ function experimentInit() {
     name: 'instr_only_8',
     text: 'INSTRUCTIONS ONLY',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.6], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -1018,7 +1017,7 @@ function experimentInit() {
     name: 'text_45',
     text: '7. The next page will show you a demonstration of the calibration task for a few seconds.\nDuring the actual calibration, you will need to press <ENTER> when the ball disappears.\n\nYou will do this five times so we can make sure we get the right distance.\nThe ball will reset each time.\n\nKeep your right eye closed, stare at the black square and do not move your head.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.4)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -1038,7 +1037,7 @@ function experimentInit() {
   black_square3 = new visual.Rect ({
     win: psychoJS.window, name: 'black_square3', units : 'pix', 
     width: [1.0, 1.0][0], height: [1.0, 1.0][1],
-    ori: 0, pos: [500, 0],
+    ori: 0, pos: [0, 0],
     lineWidth: 1.5, lineColor: new util.Color('black'),
     fillColor: new util.Color('black'),
     opacity: 1, depth: -1, interpolate: true,
@@ -1049,7 +1048,7 @@ function experimentInit() {
     name: 'text_19',
     text: 'VISIBLE',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.5], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1060,7 +1059,7 @@ function experimentInit() {
     name: 'text_20',
     text: 'INVISIBLE',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.5], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('red'),  opacity: 1,
     depth: -3.0 
@@ -1080,7 +1079,7 @@ function experimentInit() {
     name: 'text_21',
     text: 'VISIBLE',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.5], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('green'),  opacity: 1,
     depth: -5.0 
@@ -1091,7 +1090,7 @@ function experimentInit() {
     name: 'text_22',
     text: 'Press <ENTER> now!',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('green'),  opacity: 1,
     depth: -6.0 
@@ -1115,7 +1114,7 @@ function experimentInit() {
     name: 'space_12',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -1126,7 +1125,7 @@ function experimentInit() {
     name: 'instr_only_6',
     text: 'NEXT WILL BE THE ACTUAL CALIBRATION\n\nRemember to keep your right eye closed, stare at the black square and do not move your head.\n\nPress the <ENTER> key as soon as the ball disappears from your eye sight (not just due to running off the edge of the screen).\n\nWhen ready press SPACE to start viewing the distance calibration.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.3], height: 0.07,  wrapWidth: 1.5, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -1137,7 +1136,7 @@ function experimentInit() {
     name: 'text_15',
     text: 'Warning! It is critical that these calibrations are done correctly or you will be unable to do the experiment and we will be unable to approve your payment!',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.4)], height: 0.06,  wrapWidth: 1.5, ori: 0,
     color: new util.Color('red'),  opacity: 1,
     depth: -3.0 
@@ -1174,7 +1173,7 @@ function experimentInit() {
     name: 'text_39',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.6)], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -4.0 
@@ -1195,7 +1194,7 @@ function experimentInit() {
     name: 'text_38',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.2)], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -1206,7 +1205,7 @@ function experimentInit() {
     name: 'text_40',
     text: 'The calibrations were successful!',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0], height: 0.08,  wrapWidth: 10000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -1219,10 +1218,10 @@ function experimentInit() {
     name: 'space_20',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
-    depth: -1.0 
+    depth: -4.0 
   });
   
   // Initialize components for Routine "viewerdistance_unsucess"
@@ -1232,8 +1231,8 @@ function experimentInit() {
     name: 'text_41',
     text: 'Unfortunately the calibrations were unsuccessful.',
     font: 'Arial',
-    units: undefined, 
-    pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0.1], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('red'),  opacity: 1,
     depth: -1.0 
   });
@@ -1243,8 +1242,8 @@ function experimentInit() {
     name: 'text_42',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('red'),  opacity: 1,
     depth: -2.0 
   });
@@ -1254,8 +1253,8 @@ function experimentInit() {
     name: 'text_43',
     text: 'Please exit the experiment',
     font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 0.1)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, (- 0.1)], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('red'),  opacity: 1,
     depth: -3.0 
   });
@@ -1268,8 +1267,8 @@ function experimentInit() {
     name: 'stim1',
     units: undefined,
     movie: '1stimmov.mp4',
-    pos: [0, 0.2],
-    size: [0.6, 0.4],
+    pos: [0, 100],
+    size: [600, 400],
     ori: 0,
     opacity: 1,
     loop: true,
@@ -1282,7 +1281,7 @@ function experimentInit() {
     name: 'space_13',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -1293,7 +1292,7 @@ function experimentInit() {
     name: 'text_16',
     text: 'Throughout the experiment, focus on the cross at the centre of the screen.\nA circle will flash out quickly on the screen.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -1307,8 +1306,8 @@ function experimentInit() {
     name: 'movie_2',
     units: undefined,
     movie: '1stim_async_response_py.mp4',
-    pos: [0, 0.2],
-    size: [0.6, 0.4],
+    pos: [0, 100],
+    size: [600, 400],
     ori: 0,
     opacity: 1,
     loop: true,
@@ -1321,7 +1320,7 @@ function experimentInit() {
     name: 'space_14',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -2.0 
@@ -1332,7 +1331,7 @@ function experimentInit() {
     name: 'text_17',
     text: 'Sometimes you will need to decide the similarity levels of the previous circle to a circle on the next screen.\nIgnore any size differences.\n\n0 => most similar colour (least different colour)\n7 => most different colour (least similar colour)\n\nAfter choosing, move your cursor back to the centre and click the box to continue.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.4)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
@@ -1345,7 +1344,7 @@ function experimentInit() {
     name: 'space_15',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: 0.0 
@@ -1357,10 +1356,10 @@ function experimentInit() {
   movie_3 = new visual.MovieStim({
     win: psychoJS.window,
     name: 'movie_3',
-    units: 'norm',
+    units: undefined,
     movie: 'catch_py.mp4',
-    pos: [0, 0.1],
-    size: [0.6, 0.4],
+    pos: [0, 100],
+    size: [600, 400],
     ori: 0,
     opacity: 1,
     loop: true,
@@ -1371,8 +1370,8 @@ function experimentInit() {
     name: 'text_18',
     text: 'Sometimes there will be a special trial where you will just be asked to click on a particular value.\nPlease click on the value for that trial.',
     font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 0.2)], height: 0.06,  wrapWidth: 1000, ori: 0,
+    units: 'norm', 
+    pos: [0, (- 0.5)], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -3.0 
   });
@@ -1467,7 +1466,7 @@ function experimentInit() {
     name: 'space_9',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -11.0 
@@ -1478,7 +1477,7 @@ function experimentInit() {
     name: 'text_9',
     text: 'During the test, you will see these 9 colors below',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0.8], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -12.0 
@@ -1491,7 +1490,7 @@ function experimentInit() {
     name: 'space_10',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: 0.0 
@@ -1502,7 +1501,7 @@ function experimentInit() {
     name: 'text_10',
     text: 'You are going to do a few practice trials to make you be more familiar with the experiment.\nWhen you are ready, please press SPACE to start the practice trials',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0], height: 0.06,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -1523,7 +1522,7 @@ function experimentInit() {
   
   centre_cross4_2 = new visual.ShapeStim ({
     win: psychoJS.window, name: 'centre_cross4_2', units : 'norm', 
-    vertices: 'cross', size:[0.05, 0.05],
+    vertices: 'cross', size:[0.03, 0.03],
     ori: 0, pos: [0, 0],
     lineWidth: 1.5, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([1, 1, 1]),
@@ -1532,89 +1531,55 @@ function experimentInit() {
   
   // Initialize components for Routine "response_prac"
   response_pracClock = new util.Clock();
+  mouse_5 = new core.Mouse({
+    win: psychoJS.window,
+  });
+  mouse_5.mouseClock = new util.Clock();
+  a = ((window.innerWidth / 2) * 0.1);
+  b = ((window.innerWidth / 2) * 0.158);
   response1disk_5 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response1disk_5', units : 'norm', 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
-  });
-  response2disk_5 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response2disk_5', units : 'norm', 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    name : 'response1disk_5', units : 'pix', 
+    image : 'response67.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
   response3disk_5 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response3disk_5', units : 'norm', 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    name : 'response3disk_5', units : 'pix', 
+    image : 'response45.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
-  response4disk_5 = new visual.ImageStim({
+  response5disk_5 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response4disk_5', units : 'norm', 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    name : 'response5disk_5', units : 'pix', 
+    image : 'response23.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -4.0 
   });
-  response5disk_5 = new visual.ImageStim({
+  response7disk_5 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'response5disk_5', units : 'norm', 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    name : 'response7disk_5', units : 'pix', 
+    image : 'response7disks.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -5.0 
   });
-  response6disk_5 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_5', units : 'norm', 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
-  response7disk_5 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response7disk_5', units : 'norm', 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
-  response8disk_5 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_5', units : 'norm', 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
-  });
-  mouse_5 = new core.Mouse({
-    win: psychoJS.window,
-  });
-  mouse_5.mouseClock = new util.Clock();
   Circle_3 = new visual.Polygon ({
     win: psychoJS.window, name: 'Circle_3', units : 'pix', 
     edges: 1000, size:[1.0, 1.0],
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color(1.0),
     fillColor: new util.Color(1.0),
-    opacity: 1, depth: -10, interpolate: true,
+    opacity: 1, depth: -6, interpolate: true,
   });
   
   text_29 = new visual.TextStim({
@@ -1622,90 +1587,90 @@ function experimentInit() {
     name: 'text_29',
     text: 'Please choose the similarity level of the previously 2 cued circles\n0 => Most similar\n7 => Most different ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -11.0 
+    depth: -7.0 
   });
   
   // Initialize components for Routine "summary_prac"
   summary_pracClock = new util.Clock();
-  response1disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response1disk_10', units : 'norm', 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
-  });
-  response2disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response2disk_10', units : 'norm', 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
-  });
-  response3disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response3disk_10', units : 'norm', 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
-  });
-  response4disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_10', units : 'norm', 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
-  });
-  response5disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_10', units : 'norm', 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response6disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_10', units : 'norm', 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response7disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response7disk_10', units : 'norm', 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
-  response8disk_10 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_10', units : 'norm', 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
   mouse_10 = new core.Mouse({
     win: psychoJS.window,
   });
   mouse_10.mouseClock = new util.Clock();
+  response1disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response1disk_10', units : 'pix', 
+    image : 'response1disks.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
+  });
+  response2disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response2disk_10', units : 'pix', 
+    image : 'response2disks.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
+  response3disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response3disk_10', units : 'pix', 
+    image : 'response3disks.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -3.0 
+  });
+  response4disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response4disk_10', units : 'pix', 
+    image : 'response4disks.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -4.0 
+  });
+  response5disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response5disk_10', units : 'pix', 
+    image : 'response5disks.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -5.0 
+  });
+  response6disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response6disk_10', units : 'pix', 
+    image : 'response6disks.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -6.0 
+  });
+  response7disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response7disk_10', units : 'pix', 
+    image : 'response7disks.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -7.0 
+  });
+  response8disk_10 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response8disk_10', units : 'pix', 
+    image : 'response8disks.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -8.0 
+  });
   rectangle_8 = new visual.Rect ({
     win: psychoJS.window, name: 'rectangle_8', units : 'norm', 
     width: [0.1, 0.08][0], height: [0.1, 0.08][1],
@@ -1722,7 +1687,7 @@ function experimentInit() {
     name: 'text_49',
     text: 'Please click on the grey rectangle in the middle of the response numbers to continue',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -11.0 
@@ -1733,7 +1698,7 @@ function experimentInit() {
     name: 'text_50',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -12.0 
@@ -1746,7 +1711,7 @@ function experimentInit() {
     name: 'text_36',
     text: 'SPECIAL TRIAL',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
@@ -1754,99 +1719,101 @@ function experimentInit() {
   
   // Initialize components for Routine "catch_prac"
   catch_pracClock = new util.Clock();
-  response1disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response1disk_7', units : undefined, 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
-  });
-  response2disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response2disk_7', units : undefined, 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
-  });
-  response3disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response3disk_7', units : undefined, 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
-  });
-  response4disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_7', units : undefined, 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
-  });
-  response5disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_7', units : undefined, 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response6disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_7', units : undefined, 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response7disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response7disk_7', units : undefined, 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
-  response8disk_7 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_7', units : undefined, 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
   mouse_7 = new core.Mouse({
     win: psychoJS.window,
   });
   mouse_7.mouseClock = new util.Clock();
+  response1disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response1disk_7', units : 'pix', 
+    image : 'response1disks.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
+  });
+  response2disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response2disk_7', units : 'pix', 
+    image : 'response2disks.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
+  response3disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response3disk_7', units : 'pix', 
+    image : 'response3disks.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -3.0 
+  });
+  response4disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response4disk_7', units : 'pix', 
+    image : 'response4disks.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -4.0 
+  });
+  response5disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response5disk_7', units : 'pix', 
+    image : 'response5disks.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -5.0 
+  });
+  response6disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response6disk_7', units : 'pix', 
+    image : 'response6disks.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -6.0 
+  });
+  response7disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response7disk_7', units : 'pix', 
+    image : 'response7disks.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -7.0 
+  });
+  response8disk_7 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response8disk_7', units : 'pix', 
+    image : 'response8disks.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -8.0 
+  });
   
   
   catchtrialorderprac = Array.from({length: 2}, () => Math.floor(Math.random() * 7));
+  
+  catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);
   
   text_32 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_32',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.6)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -10.0 
   });
   
   rectangle_5 = new visual.Rect ({
-    win: psychoJS.window, name: 'rectangle_5', 
+    win: psychoJS.window, name: 'rectangle_5', units : 'norm', 
     width: [0.1, 0.08][0], height: [0.1, 0.08][1],
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
@@ -1856,84 +1823,84 @@ function experimentInit() {
   
   // Initialize components for Routine "summary2_prac"
   summary2_pracClock = new util.Clock();
-  response1disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response1disk_6', units : undefined, 
-    image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
-  });
-  response2disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response2disk_6', units : undefined, 
-    image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
-  });
-  response3disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response3disk_6', units : undefined, 
-    image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
-  });
-  response4disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response4disk_6', units : undefined, 
-    image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
-  });
-  response5disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response5disk_6', units : undefined, 
-    image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
-  });
-  response6disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response6disk_6', units : undefined, 
-    image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
-  });
-  response7disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response7disk_6', units : undefined, 
-    image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
-  });
-  response8disk_6 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'response8disk_6', units : undefined, 
-    image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
-  });
   mouse_6 = new core.Mouse({
     win: psychoJS.window,
   });
   mouse_6.mouseClock = new util.Clock();
+  response1disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response1disk_6', units : 'pix', 
+    image : 'response1disks.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
+  });
+  response2disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response2disk_6', units : 'pix', 
+    image : 'response2disks.png', mask : undefined,
+    ori : 0, pos : [a, a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
+  response3disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response3disk_6', units : 'pix', 
+    image : 'response3disks.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -3.0 
+  });
+  response4disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response4disk_6', units : 'pix', 
+    image : 'response4disks.png', mask : undefined,
+    ori : 0, pos : [a, (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -4.0 
+  });
+  response5disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response5disk_6', units : 'pix', 
+    image : 'response5disks.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -5.0 
+  });
+  response6disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response6disk_6', units : 'pix', 
+    image : 'response6disks.png', mask : undefined,
+    ori : 0, pos : [(- a), (- a)], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -6.0 
+  });
+  response7disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response7disk_6', units : 'pix', 
+    image : 'response7disks.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -7.0 
+  });
+  response8disk_6 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'response8disk_6', units : 'pix', 
+    image : 'response8disks.png', mask : undefined,
+    ori : 0, pos : [(- a), a], size : [b, b],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -8.0 
+  });
   rectangle_4 = new visual.Rect ({
-    win: psychoJS.window, name: 'rectangle_4', 
+    win: psychoJS.window, name: 'rectangle_4', units : 'norm', 
     width: [0.1, 0.08][0], height: [0.1, 0.08][1],
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
@@ -1946,9 +1913,9 @@ function experimentInit() {
   text_30 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_30',
-    text: 'Please click on the green rectangle to continue',
+    text: 'Please click on the grey rectangle in the middle of the response numbers to continue',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -11.0 
@@ -1959,7 +1926,7 @@ function experimentInit() {
     name: 'text_31',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.8)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -12.0 
@@ -1972,7 +1939,7 @@ function experimentInit() {
     name: 'space_19',
     text: 'Press SPACE to continue ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0.7, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: 0.0 
@@ -1983,7 +1950,7 @@ function experimentInit() {
     name: 'text_46',
     text: 'You have finished the practice trial.\n\nNext page will be the formal test. \n\nIf you are ready, please press SPACE button to start the experiment.',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0], height: 0.08,  wrapWidth: 1000, ori: 0,
     color: new util.Color('yellow'),  opacity: 1,
     depth: -1.0 
@@ -2004,7 +1971,7 @@ function experimentInit() {
   
   centre_cross4 = new visual.ShapeStim ({
     win: psychoJS.window, name: 'centre_cross4', units : 'norm', 
-    vertices: 'cross', size:[0.05, 0.05],
+    vertices: 'cross', size:[0.03, 0.03],
     ori: 0, pos: [0, 0],
     lineWidth: 1.5, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([1, 1, 1]),
@@ -2013,82 +1980,82 @@ function experimentInit() {
   
   // Initialize components for Routine "response"
   responseClock = new util.Clock();
+  mouse = new core.Mouse({
+    win: psychoJS.window,
+  });
+  mouse.mouseClock = new util.Clock();
   response1disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk', units : undefined, 
     image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : -2.0 
   });
   response2disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response2disk', units : undefined, 
     image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
+    texRes : 128, interpolate : true, depth : -3.0 
   });
   response3disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response3disk', units : undefined, 
     image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   response4disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response4disk', units : undefined, 
     image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
+    texRes : 128, interpolate : true, depth : -5.0 
   });
   response5disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response5disk', units : undefined, 
     image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
+    texRes : 128, interpolate : true, depth : -6.0 
   });
   response6disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response6disk', units : undefined, 
     image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
+    texRes : 128, interpolate : true, depth : -7.0 
   });
   response7disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk', units : undefined, 
     image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
+    texRes : 128, interpolate : true, depth : -8.0 
   });
   response8disk = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response8disk', units : undefined, 
     image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -8.0 
+    texRes : 128, interpolate : true, depth : -9.0 
   });
-  mouse = new core.Mouse({
-    win: psychoJS.window,
-  });
-  mouse.mouseClock = new util.Clock();
   Circle_2 = new visual.Polygon ({
     win: psychoJS.window, name: 'Circle_2', units : 'pix', 
     edges: 1000, size:[1.0, 1.0],
@@ -2103,7 +2070,7 @@ function experimentInit() {
     name: 'text_23',
     text: 'Please choose the similarity level of the previously 2 cued circles\n0 => Most similar\n7 => Most different ',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.6)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -11.0 
@@ -2111,84 +2078,84 @@ function experimentInit() {
   
   // Initialize components for Routine "response_2"
   response_2Clock = new util.Clock();
+  mouse_2 = new core.Mouse({
+    win: psychoJS.window,
+  });
+  mouse_2.mouseClock = new util.Clock();
   response1disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_2', units : undefined, 
     image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   response2disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response2disk_2', units : undefined, 
     image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : -2.0 
   });
   response3disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response3disk_2', units : undefined, 
     image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
+    texRes : 128, interpolate : true, depth : -3.0 
   });
   response4disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response4disk_2', units : undefined, 
     image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   response5disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response5disk_2', units : undefined, 
     image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
+    texRes : 128, interpolate : true, depth : -5.0 
   });
   response6disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response6disk_2', units : undefined, 
     image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
+    texRes : 128, interpolate : true, depth : -6.0 
   });
   response7disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_2', units : undefined, 
     image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
+    texRes : 128, interpolate : true, depth : -7.0 
   });
   response8disk_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response8disk_2', units : undefined, 
     image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
+    texRes : 128, interpolate : true, depth : -8.0 
   });
-  mouse_2 = new core.Mouse({
-    win: psychoJS.window,
-  });
-  mouse_2.mouseClock = new util.Clock();
   rectangle = new visual.Rect ({
-    win: psychoJS.window, name: 'rectangle', 
+    win: psychoJS.window, name: 'rectangle', units : 'norm', 
     width: [0.1, 0.08][0], height: [0.1, 0.08][1],
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
@@ -2202,9 +2169,9 @@ function experimentInit() {
   text_25 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_25',
-    text: 'Please click on the green rectangle to continue',
+    text: 'Please click on the grey rectangle in the middle of the response numbers to continue',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -11.0 
@@ -2215,7 +2182,7 @@ function experimentInit() {
     name: 'text_24',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -12.0 
@@ -2228,7 +2195,7 @@ function experimentInit() {
     name: 'text_33',
     text: 'SPECIAL TRIAL',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
@@ -2236,82 +2203,82 @@ function experimentInit() {
   
   // Initialize components for Routine "catch_1"
   catch_1Clock = new util.Clock();
+  mouse_3 = new core.Mouse({
+    win: psychoJS.window,
+  });
+  mouse_3.mouseClock = new util.Clock();
   response1disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_3', units : undefined, 
     image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   response2disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response2disk_3', units : undefined, 
     image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : -2.0 
   });
   response3disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response3disk_3', units : undefined, 
     image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
+    texRes : 128, interpolate : true, depth : -3.0 
   });
   response4disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response4disk_3', units : undefined, 
     image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   response5disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response5disk_3', units : undefined, 
     image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
+    texRes : 128, interpolate : true, depth : -5.0 
   });
   response6disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response6disk_3', units : undefined, 
     image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
+    texRes : 128, interpolate : true, depth : -6.0 
   });
   response7disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_3', units : undefined, 
     image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
+    texRes : 128, interpolate : true, depth : -7.0 
   });
   response8disk_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response8disk_3', units : undefined, 
     image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
+    texRes : 128, interpolate : true, depth : -8.0 
   });
-  mouse_3 = new core.Mouse({
-    win: psychoJS.window,
-  });
-  mouse_3.mouseClock = new util.Clock();
   // Set up catch trials
   
   catchtrialorder = Array.from({length: 20}, () => Math.floor(Math.random() * 324));
@@ -2321,14 +2288,14 @@ function experimentInit() {
     name: 'text_26',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.6)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -10.0 
   });
   
   rectangle_2 = new visual.Rect ({
-    win: psychoJS.window, name: 'rectangle_2', 
+    win: psychoJS.window, name: 'rectangle_2', units : 'norm', 
     width: [0.1, 0.08][0], height: [0.1, 0.08][1],
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
@@ -2338,84 +2305,84 @@ function experimentInit() {
   
   // Initialize components for Routine "response_sum"
   response_sumClock = new util.Clock();
+  mouse_11 = new core.Mouse({
+    win: psychoJS.window,
+  });
+  mouse_11.mouseClock = new util.Clock();
   response1disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response1disk_11', units : undefined, 
     image : 'response1disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   response2disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response2disk_11', units : undefined, 
     image : 'response2disks.png', mask : undefined,
-    ori : 0, pos : [0.15, 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : -2.0 
   });
   response3disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response3disk_11', units : undefined, 
     image : 'response3disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
+    texRes : 128, interpolate : true, depth : -3.0 
   });
   response4disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response4disk_11', units : undefined, 
     image : 'response4disks.png', mask : undefined,
-    ori : 0, pos : [0.15, (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -3.0 
+    texRes : 128, interpolate : true, depth : -4.0 
   });
   response5disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response5disk_11', units : undefined, 
     image : 'response5disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -4.0 
+    texRes : 128, interpolate : true, depth : -5.0 
   });
   response6disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response6disk_11', units : undefined, 
     image : 'response6disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), (- 0.15)], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -5.0 
+    texRes : 128, interpolate : true, depth : -6.0 
   });
   response7disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response7disk_11', units : undefined, 
     image : 'response7disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -6.0 
+    texRes : 128, interpolate : true, depth : -7.0 
   });
   response8disk_11 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'response8disk_11', units : undefined, 
     image : 'response8disks.png', mask : undefined,
-    ori : 0, pos : [(- 0.15), 0.15], size : [0.22, 0.28],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -7.0 
+    texRes : 128, interpolate : true, depth : -8.0 
   });
-  mouse_11 = new core.Mouse({
-    win: psychoJS.window,
-  });
-  mouse_11.mouseClock = new util.Clock();
   rectangle_9 = new visual.Rect ({
-    win: psychoJS.window, name: 'rectangle_9', 
+    win: psychoJS.window, name: 'rectangle_9', units : 'norm', 
     width: [0.1, 0.08][0], height: [0.1, 0.08][1],
     ori: 0, pos: [0, 0],
     lineWidth: 1, lineColor: new util.Color('white'),
@@ -2428,9 +2395,9 @@ function experimentInit() {
   text_51 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_51',
-    text: 'Please click on the green rectangle to continue',
+    text: 'Please click on the grey rectangle in the middle of the response numbers to continue',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.5)], height: 0.05,  wrapWidth: 1000, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -11.0 
@@ -2441,7 +2408,7 @@ function experimentInit() {
     name: 'text_52',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
+    units: 'norm', 
     pos: [0, (- 0.7)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -12.0 
@@ -2935,10 +2902,12 @@ function screen_scaleRoutineEnd(trials) {
     ratio_pxpermm = ((x_scale * x_size) / 85.6);
     thisExp.addData("X Scale", x_scale);
     thisExp.addData("ratio_pxpermm", ratio_pxpermm);
-    screen_size_x = ((1 / ratio_pxpermm) * win.size[0]);
-    screen_size_y = ((1 / ratio_pxpermm) * win.size[1]);
+    screen_size_x = ((1 / ratio_pxpermm) * psychoJS.window.size[0]);
+    screen_size_y = ((1 / ratio_pxpermm) * screen.height);
     thisExp.addData("screen_size_x", screen_size_x);
     thisExp.addData("screen_size_y", screen_size_y);
+    thisExp.addData('testsize', psychoJS.window.size[0]);
+    
     
     // the Routine "screen_scale" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -4457,6 +4426,7 @@ function instr_11RoutineEnd(trials) {
 }
 
 
+var ballpos;
 var calibration_exampleComponents;
 function calibration_exampleRoutineBegin(trials) {
   return function () {
@@ -4466,6 +4436,8 @@ function calibration_exampleRoutineBegin(trials) {
     frameN = -1;
     // update component parameters for each repeat
     black_square3.setSize([(8.5 * ratio_pxpermm), (8.5 * ratio_pxpermm)]);
+    ballpos = ((window.innerWidth / 2) * 0.75);
+    
     // keep track of which components have finished
     calibration_exampleComponents = [];
     calibration_exampleComponents.push(white_ball1);
@@ -4509,7 +4481,7 @@ function calibration_exampleRoutineEachFrame(trials) {
     }
     
     if (white_ball1.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      white_ball1.setPos([((- frameN) + 200), 0]);
+      white_ball1.setPos([(((- frameN) * ((window.innerWidth / 2) * 0.003)) + ballpos), 0]);
       white_ball1.setSize([(8.5 * ratio_pxpermm), (8.5 * ratio_pxpermm)]);
     }
     
@@ -4522,6 +4494,10 @@ function calibration_exampleRoutineEachFrame(trials) {
       black_square3.setAutoDraw(true);
     }
 
+    
+    if (black_square3.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      black_square3.setPos([((window.innerWidth / 2) * 0.8), 0]);
+    }
     
     // *text_19* updates
     if (t >= 0.0 && text_19.status === PsychoJS.Status.NOT_STARTED) {
@@ -4558,12 +4534,12 @@ function calibration_exampleRoutineEachFrame(trials) {
       white_ball12.setAutoDraw(true);
     }
 
-    if (white_ball12.status === PsychoJS.Status.STARTED && frameN >= 500) {
+    if (white_ball12.status === PsychoJS.Status.STARTED && frameN >= 400) {
       white_ball12.setAutoDraw(false);
     }
     
     if (white_ball12.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      white_ball12.setPos([((- frameN) - 50), 0]);
+      white_ball12.setPos([(((- frameN) * ((window.innerWidth / 2) * 0.003)) + ((window.innerWidth / 2) * 0.05)), 0]);
       white_ball12.setSize([(8.5 * ratio_pxpermm), (8.5 * ratio_pxpermm)]);
     }
     
@@ -4591,7 +4567,7 @@ function calibration_exampleRoutineEachFrame(trials) {
     }
     
     // *white_ball13* updates
-    if (frameN >= 500 && white_ball13.status === PsychoJS.Status.NOT_STARTED) {
+    if (frameN >= 400 && white_ball13.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       white_ball13.tStart = t;  // (not accounting for frame time here)
       white_ball13.frameNStart = frameN;  // exact frame index
@@ -4599,15 +4575,15 @@ function calibration_exampleRoutineEachFrame(trials) {
       white_ball13.setAutoDraw(true);
     }
 
-    if (white_ball13.status === PsychoJS.Status.STARTED && frameN >= 700) {
+    if (white_ball13.status === PsychoJS.Status.STARTED && frameN >= 550) {
       white_ball13.setAutoDraw(false);
     }
     
     if (white_ball13.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      white_ball13.setPos([((- frameN) + 700), 0]);
+      white_ball13.setPos([((((- frameN) + 400) * ((window.innerWidth / 2) * 0.003)) + ballpos), 0]);
       white_ball13.setSize([(8.5 * ratio_pxpermm), (8.5 * ratio_pxpermm)]);
     }
-    if ((frameN === 700)) {
+    if ((frameN === 550)) {
         continueRoutine = false;
     }
     
@@ -4945,6 +4921,7 @@ function ball_calibrationRoutineBegin(trials) {
     key_resp_19.rt = undefined;
     _key_resp_19_allKeys = [];
     blindspot_angle = 13.5;
+    ballpos = ((window.innerWidth / 2) * 0.75);
     radians_to_degrees = 57.2958;
     calibrationcountext = `${calibrationcount} of 5 angle calibrations complete`;
     
@@ -4985,7 +4962,7 @@ function ball_calibrationRoutineEachFrame(trials) {
 
     
     if (black_square2.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      black_square2.setPos([500, 0]);
+      black_square2.setPos([((window.innerWidth / 2) * 0.8), 0]);
     }
     
     // *white_ball* updates
@@ -4999,7 +4976,7 @@ function ball_calibrationRoutineEachFrame(trials) {
 
     
     if (white_ball.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      white_ball.setPos([((- frameN) + 350), 0]);
+      white_ball.setPos([(((- frameN) * ((window.innerWidth / 2) * 0.003)) + ballpos), 0]);
     }
     
     // *key_resp_19* updates
@@ -6358,9 +6335,9 @@ function Stim1_display_pracRoutineEnd(trials) {
 }
 
 
+var gotValidClick;
 var Colour_2;
 var Circle2_col;
-var gotValidClick;
 var response_pracComponents;
 function response_pracRoutineBegin(trials) {
   return function () {
@@ -6369,6 +6346,10 @@ function response_pracRoutineBegin(trials) {
     response_pracClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    // setup some python lists for storing info about the mouse_5
+    mouse_5.clicked_name = [];
+    gotValidClick = false; // until a click is received
+    event.clearEvents();
     pracnumber = (pracnumber + 1);
     Colour_2 = (Math.floor((Math.random() * ((9 - 1) + 1))) + 1);
     if ((Colour_2 === 1)) {
@@ -6407,23 +6388,16 @@ function response_pracRoutineBegin(trials) {
         }
     }
     
-    // setup some python lists for storing info about the mouse_5
-    mouse_5.clicked_name = [];
-    gotValidClick = false; // until a click is received
     Circle_3.setSize([(15 * ratio_pxpermm), (15 * ratio_pxpermm)]);
     Circle_3.setFillColor(new util.Color(Circle2_col));
     Circle_3.setLineColor(new util.Color(Circle2_col));
     // keep track of which components have finished
     response_pracComponents = [];
-    response_pracComponents.push(response1disk_5);
-    response_pracComponents.push(response2disk_5);
-    response_pracComponents.push(response3disk_5);
-    response_pracComponents.push(response4disk_5);
-    response_pracComponents.push(response5disk_5);
-    response_pracComponents.push(response6disk_5);
-    response_pracComponents.push(response7disk_5);
-    response_pracComponents.push(response8disk_5);
     response_pracComponents.push(mouse_5);
+    response_pracComponents.push(response1disk_5);
+    response_pracComponents.push(response3disk_5);
+    response_pracComponents.push(response5disk_5);
+    response_pracComponents.push(response7disk_5);
     response_pracComponents.push(Circle_3);
     response_pracComponents.push(text_29);
     
@@ -6445,88 +6419,8 @@ function response_pracRoutineEachFrame(trials) {
     t = response_pracClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *response1disk_5* updates
-    if (t >= 0.0 && response1disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response1disk_5.tStart = t;  // (not accounting for frame time here)
-      response1disk_5.frameNStart = frameN;  // exact frame index
-      
-      response1disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response2disk_5* updates
-    if (t >= 0.0 && response2disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response2disk_5.tStart = t;  // (not accounting for frame time here)
-      response2disk_5.frameNStart = frameN;  // exact frame index
-      
-      response2disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response3disk_5* updates
-    if (t >= 0.0 && response3disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response3disk_5.tStart = t;  // (not accounting for frame time here)
-      response3disk_5.frameNStart = frameN;  // exact frame index
-      
-      response3disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response4disk_5* updates
-    if (t >= 0.0 && response4disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response4disk_5.tStart = t;  // (not accounting for frame time here)
-      response4disk_5.frameNStart = frameN;  // exact frame index
-      
-      response4disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response5disk_5* updates
-    if (t >= 0.0 && response5disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response5disk_5.tStart = t;  // (not accounting for frame time here)
-      response5disk_5.frameNStart = frameN;  // exact frame index
-      
-      response5disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response6disk_5* updates
-    if (t >= 0.0 && response6disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response6disk_5.tStart = t;  // (not accounting for frame time here)
-      response6disk_5.frameNStart = frameN;  // exact frame index
-      
-      response6disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response7disk_5* updates
-    if (t >= 0.0 && response7disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response7disk_5.tStart = t;  // (not accounting for frame time here)
-      response7disk_5.frameNStart = frameN;  // exact frame index
-      
-      response7disk_5.setAutoDraw(true);
-    }
-
-    
-    // *response8disk_5* updates
-    if (t >= 0.0 && response8disk_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      response8disk_5.tStart = t;  // (not accounting for frame time here)
-      response8disk_5.frameNStart = frameN;  // exact frame index
-      
-      response8disk_5.setAutoDraw(true);
-    }
-
     // *mouse_5* updates
-    if (t >= 0.0 && mouse_5.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.01 && mouse_5.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       mouse_5.tStart = t;  // (not accounting for frame time here)
       mouse_5.frameNStart = frameN;  // exact frame index
@@ -6542,7 +6436,7 @@ function response_pracRoutineEachFrame(trials) {
         if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
           // check if the mouse was inside our 'clickable' objects
           gotValidClick = false;
-          for (const obj of [response1disk_5,response2disk_5,response3disk_5,response4disk_5,response5disk_5,response6disk_5,response7disk_5,response8disk_5,]) {
+          for (const obj of [response1disk_5,response3disk_5,response5disk_5,response7disk_5,]) {
             if (obj.contains(mouse_5)) {
               gotValidClick = true;
               mouse_5.clicked_name.push(obj.name)
@@ -6554,6 +6448,46 @@ function response_pracRoutineEachFrame(trials) {
         }
       }
     }
+    
+    // *response1disk_5* updates
+    if (t >= 0.0 && response1disk_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      response1disk_5.tStart = t;  // (not accounting for frame time here)
+      response1disk_5.frameNStart = frameN;  // exact frame index
+      
+      response1disk_5.setAutoDraw(true);
+    }
+
+    
+    // *response3disk_5* updates
+    if (t >= 0.0 && response3disk_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      response3disk_5.tStart = t;  // (not accounting for frame time here)
+      response3disk_5.frameNStart = frameN;  // exact frame index
+      
+      response3disk_5.setAutoDraw(true);
+    }
+
+    
+    // *response5disk_5* updates
+    if (t >= 0.0 && response5disk_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      response5disk_5.tStart = t;  // (not accounting for frame time here)
+      response5disk_5.frameNStart = frameN;  // exact frame index
+      
+      response5disk_5.setAutoDraw(true);
+    }
+
+    
+    // *response7disk_5* updates
+    if (t >= 0.0 && response7disk_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      response7disk_5.tStart = t;  // (not accounting for frame time here)
+      response7disk_5.frameNStart = frameN;  // exact frame index
+      
+      response7disk_5.setAutoDraw(true);
+    }
+
     
     // *Circle_3* updates
     if (t >= 0.0 && Circle_3.status === PsychoJS.Status.NOT_STARTED) {
@@ -6603,79 +6537,6 @@ function response_pracRoutineEachFrame(trials) {
 
 var mousexpos;
 var mouseypos;
-var x11d;
-var y11d;
-var x12d;
-var y12d;
-var x13d;
-var y13d;
-var a1d;
-var b1d;
-var c1d;
-var x21d;
-var y21d;
-var x22d;
-var y22d;
-var x23d;
-var y23d;
-var a2d;
-var b2d;
-var c2d;
-var x31d;
-var y31d;
-var x32d;
-var y32d;
-var x33d;
-var y33d;
-var a3d;
-var b3d;
-var c3d;
-var x41d;
-var y41d;
-var x42d;
-var y42d;
-var x43d;
-var y43d;
-var a4d;
-var b4d;
-var c4d;
-var x51d;
-var y51d;
-var x52d;
-var y52d;
-var x53d;
-var y53d;
-var a5d;
-var b5d;
-var c5d;
-var x61d;
-var y61d;
-var x62d;
-var y62d;
-var x63d;
-var y63d;
-var a6d;
-var b6d;
-var c6d;
-var x71d;
-var y71d;
-var x72d;
-var y72d;
-var x73d;
-var y73d;
-var a7d;
-var b7d;
-var c7d;
-var x81d;
-var y81d;
-var x82d;
-var y82d;
-var x83d;
-var y83d;
-var a8d;
-var b8d;
-var c8d;
-var similarity;
 function response_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'response_prac'-------
@@ -6684,115 +6545,6 @@ function response_pracRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    mousexpos = (mouse.getPos()[0] * 100);
-    mouseypos = (mouse.getPos()[1] * 100);
-    x11d = 4;
-    y11d = 29;
-    x12d = 26;
-    y12d = 29;
-    x13d = 4;
-    y13d = 1;
-    a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
-    b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
-    c1d = ((1 - a1d) - b1d);
-    x21d = 4;
-    y21d = 1;
-    x22d = 26;
-    y22d = 29;
-    x23d = 26;
-    y23d = 1;
-    a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
-    b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
-    c2d = ((1 - a2d) - b2d);
-    x31d = 4;
-    y31d = (- 1);
-    x32d = 28;
-    y32d = (- 1);
-    x33d = 28;
-    y33d = (- 29);
-    a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
-    b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
-    c3d = ((1 - a3d) - b3d);
-    x41d = 4;
-    y41d = (- 1);
-    x42d = 26;
-    y42d = (- 29);
-    x43d = 4;
-    y43d = (- 29);
-    a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
-    b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
-    c4d = ((1 - a4d) - b4d);
-    x51d = (- 26);
-    y51d = (- 29);
-    x52d = (- 4);
-    y52d = (- 1);
-    x53d = (- 4);
-    y53d = (- 29);
-    a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
-    b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
-    c5d = ((1 - a5d) - b5d);
-    x61d = (- 26);
-    y61d = (- 29);
-    x62d = (- 4);
-    y62d = (- 1);
-    x63d = (- 26);
-    y63d = (- 29);
-    a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
-    b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
-    c6d = ((1 - a6d) - b6d);
-    x71d = (- 26);
-    y71d = 29;
-    x72d = (- 4);
-    y72d = 1;
-    x73d = (- 26);
-    y73d = 1;
-    a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
-    b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
-    c7d = ((1 - a7d) - b7d);
-    x81d = (- 26);
-    y81d = 29;
-    x82d = (- 4);
-    y82d = 29;
-    x83d = (- 4);
-    y83d = 1;
-    a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
-    b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
-    c8d = ((1 - a8d) - b8d);
-    if (((((0 <= a1d) && (a1d <= 1)) && ((0 <= b1d) && (b1d <= 1))) && ((0 <= c1d) && (c1d <= 1)))) {
-        similarity = 7;
-    } else {
-        if (((((0 <= a2d) && (a2d <= 1)) && ((0 <= b2d) && (b2d <= 1))) && ((0 <= c2d) && (c2d <= 1)))) {
-            similarity = 6;
-        } else {
-            if (((((0 <= a3d) && (a3d <= 1)) && ((0 <= b3d) && (b3d <= 1))) && ((0 <= c3d) && (c3d <= 1)))) {
-                similarity = 5;
-            } else {
-                if (((((0 <= a4d) && (a4d <= 1)) && ((0 <= b4d) && (b4d <= 1))) && ((0 <= c4d) && (c4d <= 1)))) {
-                    similarity = 4;
-                } else {
-                    if (((((0 <= a5d) && (a5d <= 1)) && ((0 <= b5d) && (b5d <= 1))) && ((0 <= c5d) && (c5d <= 1)))) {
-                        similarity = 3;
-                    } else {
-                        if (((((0 <= a6d) && (a6d <= 1)) && ((0 <= b6d) && (b6d <= 1))) && ((0 <= c6d) && (c6d <= 1)))) {
-                            similarity = 2;
-                        } else {
-                            if (((((0 <= a7d) && (a7d <= 1)) && ((0 <= b7d) && (b7d <= 1))) && ((0 <= c7d) && (c7d <= 1)))) {
-                                similarity = 1;
-                            } else {
-                                if (((((0 <= a8d) && (a8d <= 1)) && ((0 <= b8d) && (b8d <= 1))) && ((0 <= c8d) && (c8d <= 1)))) {
-                                    similarity = 0;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    thisExp.addData("Colour_2", Colour_2);
-    thisExp.addData("similarity", similarity);
-    thisExp.addData("response_time", mouse_5.mouseClock.getTime());
-    
     // store data for thisExp (ExperimentHandler)
     const xys = mouse_5.getPos();
     const buttons = mouse_5.getPressed();
@@ -6803,6 +6555,120 @@ function response_pracRoutineEnd(trials) {
     psychoJS.experiment.addData('mouse_5.rightButton', buttons[2]);
     if (mouse_5.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_5.clicked_name', mouse_5.clicked_name[0]);}
+    mousexpos = mouse.getPos()[0];
+    mouseypos = mouse.getPos()[1];
+    /*
+    # Triangle 7
+    x11d = a - b/2;
+    y11d = a + b/2;
+    x12d = a + b/2;
+    y12d = a + b/2;
+    x13d = a - b/2;
+    y13d = a - b/2;
+    a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
+    b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
+    c1d = 1 - a1d - b1d;
+    
+    # Triangle 6
+    x21d = a - b/2;
+    y21d = a - b/2
+    x22d = a + b/2
+    y22d = a + b/2
+    x23d = a + b/2
+    y23d = a - b/2
+    a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
+    b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
+    c2d = 1 - a2d - b2d
+    
+    # Triangle 5
+    x31d = a - b/2
+    y31d = -(a - b/2)
+    x32d = a + b/2
+    y32d = -(a - b/2)
+    x33d = a + b/2
+    y33d = -(a + b/2)
+    a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
+    b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
+    c3d = 1 - a3d - b3d
+    
+    
+    # Triangle 4
+    x41d = a - b/2
+    y41d = -(a - b/2)
+    x42d = a + b/2
+    y42d = -(a + b/2)
+    x43d = a - b/2
+    y43d = -(a + b/2)
+    a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
+    b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
+    c4d = 1 - a4d - b4d
+    
+    #  Triangle 3
+    x51d = -(a + b/2)
+    y51d = -(a + b/2)
+    x52d = -(a - b/2)
+    y52d = -(a - b/2)
+    x53d = -(a - b/2)
+    y53d = -(a + b/2)
+    a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
+    b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
+    c5d = 1 - a5d - b5d
+    
+    # Triangle 2
+    x61d = -(a+b/2)
+    y61d = -(a+b/2)
+    x62d = -(a-b/2)
+    y62d = -(a-b/2)
+    x63d = -(a+b/2)
+    y63d = - (a+b/2)
+    a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
+    b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
+    c6d = 1 - a6d - b6d
+    
+    # Triangle 1
+    
+    x71d = -(a + b/2)
+    y71d = a + b/2
+    x72d = -(a - b/2)
+    y72d = a - b/2
+    x73d = -(a + b/2)
+    y73d = a - b/2
+    a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
+    b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
+    c7d = 1 - a7d - b7d
+    
+    
+    # Triangle 0
+    x81d = -(a + b/2)
+    y81d = a + b/2
+    x82d = -(a - b/2)
+    y82d = a + b/2
+    x83d = -(a - b/2)
+    y83d = a - b/2
+    a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
+    b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
+    c8d = 1 - a8d - b8d
+    
+    
+    if (0 <= a1d <= 1) and (0 <= b1d <= 1) and (0 <= c1d <= 1):
+    similarity = 7
+    elif (0 <= a2d <= 1) and (0 <= b2d <= 1) and (0 <= c2d <= 1):
+    similarity = 6
+    elif (0 <= a3d <= 1) and (0 <= b3d <= 1) and (0 <= c3d <= 1):
+    similarity = 5
+    elif (0 <= a4d <= 1) and (0 <= b4d <= 1) and (0 <= c4d <= 1):
+    similarity = 4
+    elif (0 <= a5d <= 1) and (0 <= b5d <= 1) and (0 <= c5d <= 1):
+    similarity = 3
+    elif (0 <= a6d <= 1) and (0 <= b6d <= 1) and (0 <= c6d <= 1):
+    similarity = 2
+    elif (0 <= a7d <= 1) and (0 <= b7d <= 1) and (0 <= c7d <= 1):
+    similarity = 1
+    elif (0 <= a8d <= 1) and (0 <= b8d <= 1) and (0 <= c8d <= 1):
+    similarity = 0*/
+    thisExp.addData("Colour_2", Colour_2);
+    thisExp.addData("response_time", mouse_5.mouseClock.getTime());
+    
     // the Routine "response_prac" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -6823,12 +6689,16 @@ function summary_pracRoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_10
     mouse_10.clicked_name = [];
     gotValidClick = false; // until a click is received
+    response2disk_10.setPos([a, a]);
+    response2disk_10.setSize([b, b]);
     rectangle_8.setFillColor(new util.Color(grey));
     pracnumbertext = `You have finished ${pracnumber} of 7 practice questions`;
+    event.clearEvents();
     
     text_50.setText(pracnumbertext);
     // keep track of which components have finished
     summary_pracComponents = [];
+    summary_pracComponents.push(mouse_10);
     summary_pracComponents.push(response1disk_10);
     summary_pracComponents.push(response2disk_10);
     summary_pracComponents.push(response3disk_10);
@@ -6837,7 +6707,6 @@ function summary_pracRoutineBegin(trials) {
     summary_pracComponents.push(response6disk_10);
     summary_pracComponents.push(response7disk_10);
     summary_pracComponents.push(response8disk_10);
-    summary_pracComponents.push(mouse_10);
     summary_pracComponents.push(rectangle_8);
     summary_pracComponents.push(text_49);
     summary_pracComponents.push(text_50);
@@ -6859,6 +6728,35 @@ function summary_pracRoutineEachFrame(trials) {
     t = summary_pracClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse_10* updates
+    if (t >= 0.0 && mouse_10.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse_10.tStart = t;  // (not accounting for frame time here)
+      mouse_10.frameNStart = frameN;  // exact frame index
+      
+      mouse_10.status = PsychoJS.Status.STARTED;
+      mouse_10.mouseClock.reset();
+      prevButtonState = mouse_10.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse_10.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse_10.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [rectangle_8]) {
+            if (obj.contains(mouse_10)) {
+              gotValidClick = true;
+              mouse_10.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk_10* updates
     if (t >= 0.0 && response1disk_10.status === PsychoJS.Status.NOT_STARTED) {
@@ -6939,35 +6837,6 @@ function summary_pracRoutineEachFrame(trials) {
       response8disk_10.setAutoDraw(true);
     }
 
-    // *mouse_10* updates
-    if (t >= 0.0 && mouse_10.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse_10.tStart = t;  // (not accounting for frame time here)
-      mouse_10.frameNStart = frameN;  // exact frame index
-      
-      mouse_10.status = PsychoJS.Status.STARTED;
-      mouse_10.mouseClock.reset();
-      prevButtonState = mouse_10.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse_10.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_10.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [rectangle_8]) {
-            if (obj.contains(mouse_10)) {
-              gotValidClick = true;
-              mouse_10.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     
     // *rectangle_8* updates
     if (t >= 0.0 && rectangle_8.status === PsychoJS.Status.NOT_STARTED) {
@@ -7139,7 +7008,6 @@ function special_trial_pracRoutineEnd(trials) {
 }
 
 
-var catchnumberprac;
 var catchtext;
 var catch_pracComponents;
 function catch_pracRoutineBegin(trials) {
@@ -7152,13 +7020,14 @@ function catch_pracRoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_7
     mouse_7.clicked_name = [];
     gotValidClick = false; // until a click is received
-    catchnumberprac = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);
     catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumberprac}`;
+    event.clearEvents();
     
     text_32.setText(catchtext);
     rectangle_5.setFillColor(new util.Color(grey));
     // keep track of which components have finished
     catch_pracComponents = [];
+    catch_pracComponents.push(mouse_7);
     catch_pracComponents.push(response1disk_7);
     catch_pracComponents.push(response2disk_7);
     catch_pracComponents.push(response3disk_7);
@@ -7167,7 +7036,6 @@ function catch_pracRoutineBegin(trials) {
     catch_pracComponents.push(response6disk_7);
     catch_pracComponents.push(response7disk_7);
     catch_pracComponents.push(response8disk_7);
-    catch_pracComponents.push(mouse_7);
     catch_pracComponents.push(text_32);
     catch_pracComponents.push(rectangle_5);
     
@@ -7188,6 +7056,35 @@ function catch_pracRoutineEachFrame(trials) {
     t = catch_pracClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse_7* updates
+    if (t >= 0.0 && mouse_7.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse_7.tStart = t;  // (not accounting for frame time here)
+      mouse_7.frameNStart = frameN;  // exact frame index
+      
+      mouse_7.status = PsychoJS.Status.STARTED;
+      mouse_7.mouseClock.reset();
+      prevButtonState = mouse_7.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse_7.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse_7.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [response1disk_7,response2disk_7,response3disk_7,response4disk_7,response5disk_7,response6disk_7,response7disk_7,response8disk_7,]) {
+            if (obj.contains(mouse_7)) {
+              gotValidClick = true;
+              mouse_7.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk_7* updates
     if (t >= 0.0 && response1disk_7.status === PsychoJS.Status.NOT_STARTED) {
@@ -7268,35 +7165,6 @@ function catch_pracRoutineEachFrame(trials) {
       response8disk_7.setAutoDraw(true);
     }
 
-    // *mouse_7* updates
-    if (t >= 0.0 && mouse_7.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse_7.tStart = t;  // (not accounting for frame time here)
-      mouse_7.frameNStart = frameN;  // exact frame index
-      
-      mouse_7.status = PsychoJS.Status.STARTED;
-      mouse_7.mouseClock.reset();
-      prevButtonState = mouse_7.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse_7.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_7.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [response1disk_7,response2disk_7,response3disk_7,response4disk_7,response5disk_7,response6disk_7,response7disk_7,response8disk_7,]) {
-            if (obj.contains(mouse_7)) {
-              gotValidClick = true;
-              mouse_7.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {
         continueRoutine = false;
     }
@@ -7348,7 +7216,6 @@ function catch_pracRoutineEachFrame(trials) {
 }
 
 
-var catchprac;
 function catch_pracRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'catch_prac'-------
@@ -7367,119 +7234,125 @@ function catch_pracRoutineEnd(trials) {
     psychoJS.experiment.addData('mouse_7.rightButton', buttons[2]);
     if (mouse_7.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_7.clicked_name', mouse_7.clicked_name[0]);}
-    mousexpos = (mouse.getPos()[0] * 100);
-    mouseypos = (mouse.getPos()[1] * 100);
-    x11d = 4;
-    y11d = 29;
-    x12d = 26;
-    y12d = 29;
-    x13d = 4;
-    y13d = 1;
-    a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
-    b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
-    c1d = ((1 - a1d) - b1d);
-    x21d = 4;
-    y21d = 1;
-    x22d = 26;
-    y22d = 29;
-    x23d = 26;
-    y23d = 1;
-    a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
-    b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
-    c2d = ((1 - a2d) - b2d);
-    x31d = 4;
-    y31d = (- 1);
-    x32d = 28;
-    y32d = (- 1);
-    x33d = 28;
-    y33d = (- 29);
-    a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
-    b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
-    c3d = ((1 - a3d) - b3d);
-    x41d = 4;
-    y41d = (- 1);
-    x42d = 26;
-    y42d = (- 29);
-    x43d = 4;
-    y43d = (- 29);
-    a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
-    b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
-    c4d = ((1 - a4d) - b4d);
-    x51d = (- 26);
-    y51d = (- 29);
-    x52d = (- 4);
-    y52d = (- 1);
-    x53d = (- 4);
-    y53d = (- 29);
-    a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
-    b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
-    c5d = ((1 - a5d) - b5d);
-    x61d = (- 26);
-    y61d = (- 29);
-    x62d = (- 4);
-    y62d = (- 1);
-    x63d = (- 26);
-    y63d = (- 29);
-    a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
-    b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
-    c6d = ((1 - a6d) - b6d);
-    x71d = (- 26);
-    y71d = 29;
-    x72d = (- 4);
-    y72d = 1;
-    x73d = (- 26);
-    y73d = 1;
-    a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
-    b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
-    c7d = ((1 - a7d) - b7d);
-    x81d = (- 26);
-    y81d = 29;
-    x82d = (- 4);
-    y82d = 29;
-    x83d = (- 4);
-    y83d = 1;
-    a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
-    b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
-    c8d = ((1 - a8d) - b8d);
-    if (((((0 <= a1d) && (a1d <= 1)) && ((0 <= b1d) && (b1d <= 1))) && ((0 <= c1d) && (c1d <= 1)))) {
-        catchprac = 7;
-        thisExp.addData("catchprac", catchprac);
-    } else {
-        if (((((0 <= a2d) && (a2d <= 1)) && ((0 <= b2d) && (b2d <= 1))) && ((0 <= c2d) && (c2d <= 1)))) {
-            catchprac = 6;
-            thisExp.addData("catchprac", catchprac);
-        } else {
-            if (((((0 <= a3d) && (a3d <= 1)) && ((0 <= b3d) && (b3d <= 1))) && ((0 <= c3d) && (c3d <= 1)))) {
-                catchprac = 5;
-                thisExp.addData("catchprac", catchprac);
-            } else {
-                if (((((0 <= a4d) && (a4d <= 1)) && ((0 <= b4d) && (b4d <= 1))) && ((0 <= c4d) && (c4d <= 1)))) {
-                    catchprac = 4;
-                    thisExp.addData("catchprac", catchprac);
-                } else {
-                    if (((((0 <= a5d) && (a5d <= 1)) && ((0 <= b5d) && (b5d <= 1))) && ((0 <= c5d) && (c5d <= 1)))) {
-                        catchprac = 3;
-                        thisExp.addData("catchprac", catchprac);
-                    } else {
-                        if (((((0 <= a6d) && (a6d <= 1)) && ((0 <= b6d) && (b6d <= 1))) && ((0 <= c6d) && (c6d <= 1)))) {
-                            catchprac = 2;
-                            thisExp.addData("catchprac", catchprac);
-                        } else {
-                            if (((((0 <= a7d) && (a7d <= 1)) && ((0 <= b7d) && (b7d <= 1))) && ((0 <= c7d) && (c7d <= 1)))) {
-                                catchprac = 1;
-                                thisExp.addData("catchprac", catchprac);
-                            } else {
-                                if (((((0 <= a8d) && (a8d <= 1)) && ((0 <= b8d) && (b8d <= 1))) && ((0 <= c8d) && (c8d <= 1)))) {
-                                    catchprac = 0;
-                                    thisExp.addData("catchprac", catchprac);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    mousexpos = mouse.getPos()[0];
+    mouseypos = mouse.getPos()[1];
+    /*
+    # Triangle 7
+    x11d = a - b/2;
+    y11d = a + b/2;
+    x12d = a + b/2;
+    y12d = a + b/2;
+    x13d = a - b/2;
+    y13d = a - b/2;
+    a1d = ((y12d - y13d)*(mousexpos - x13d) + (x13d - x12d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
+    b1d = ((y13d - y11d)*(mousexpos - x13d) + (x11d - x13d)*(mouseypos - y13d)) / ((y12d - y13d)*(x11d - x13d)+(x13d - x12d)*(y11d - y13d))
+    c1d = 1 - a1d - b1d;
+    
+    # Triangle 6
+    x21d = a - b/2;
+    y21d = a - b/2
+    x22d = a + b/2
+    y22d = a + b/2
+    x23d = a + b/2
+    y23d = a - b/2
+    a2d = ((y22d - y23d)*(mousexpos - x23d) + (x23d - x22d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
+    b2d = ((y23d - y21d)*(mousexpos - x23d) + (x21d - x23d)*(mouseypos - y23d)) / ((y22d - y23d)*(x21d - x23d)+(x23d - x22d)*(y21d - y23d))
+    c2d = 1 - a2d - b2d
+    
+    # Triangle 5
+    x31d = a - b/2
+    y31d = -(a - b/2)
+    x32d = a + b/2
+    y32d = -(a - b/2)
+    x33d = a + b/2
+    y33d = -(a + b/2)
+    a3d = ((y32d - y33d)*(mousexpos - x33d) + (x33d - x32d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
+    b3d = ((y33d - y31d)*(mousexpos - x33d) + (x31d - x33d)*(mouseypos - y33d)) / ((y32d - y33d)*(x31d - x33d)+(x33d - x32d)*(y31d - y33d))
+    c3d = 1 - a3d - b3d
+    
+    
+    # Triangle 4
+    x41d = a - b/2
+    y41d = -(a - b/2)
+    x42d = a + b/2
+    y42d = -(a + b/2)
+    x43d = a - b/2
+    y43d = -(a + b/2)
+    a4d = ((y42d - y43d)*(mousexpos - x43d) + (x43d - x42d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
+    b4d = ((y43d - y41d)*(mousexpos - x43d) + (x41d - x43d)*(mouseypos - y43d)) / ((y42d - y43d)*(x41d - x43d)+(x43d - x42d)*(y41d - y43d))
+    c4d = 1 - a4d - b4d
+    
+    #  Triangle 3
+    x51d = -(a + b/2)
+    y51d = -(a + b/2)
+    x52d = -(a - b/2)
+    y52d = -(a - b/2)
+    x53d = -(a - b/2)
+    y53d = -(a + b/2)
+    a5d = ((y52d - y53d)*(mousexpos - x53d) + (x53d - x52d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
+    b5d = ((y53d - y51d)*(mousexpos - x53d) + (x51d - x53d)*(mouseypos - y53d)) / ((y52d - y53d)*(x51d - x53d)+(x53d - x52d)*(y51d - y53d))
+    c5d = 1 - a5d - b5d
+    
+    # Triangle 2
+    x61d = -(a+b/2)
+    y61d = -(a+b/2)
+    x62d = -(a-b/2)
+    y62d = -(a-b/2)
+    x63d = -(a+b/2)
+    y63d = - (a+b/2)
+    a6d = ((y62d - y63d)*(mousexpos - x63d) + (x63d - x62d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
+    b6d = ((y63d - y61d)*(mousexpos - x63d) + (x61d - x63d)*(mouseypos - y63d)) / ((y62d - y63d)*(x61d - x63d)+(x63d - x62d)*(y61d - y63d))
+    c6d = 1 - a6d - b6d
+    
+    # Triangle 1
+    
+    x71d = -(a + b/2)
+    y71d = a + b/2
+    x72d = -(a - b/2)
+    y72d = a - b/2
+    x73d = -(a + b/2)
+    y73d = a - b/2
+    a7d = ((y72d - y73d)*(mousexpos - x73d) + (x73d - x72d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
+    b7d = ((y73d - y71d)*(mousexpos - x73d) + (x71d - x73d)*(mouseypos - y73d)) / ((y72d - y73d)*(x71d - x73d)+(x73d - x72d)*(y71d - y73d))
+    c7d = 1 - a7d - b7d
+    
+    
+    # Triangle 0
+    x81d = -(a + b/2)
+    y81d = a + b/2
+    x82d = -(a - b/2)
+    y82d = a + b/2
+    x83d = -(a - b/2)
+    y83d = a - b/2
+    a8d = ((y82d - y83d)*(mousexpos - x83d) + (x83d - x82d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
+    b8d = ((y83d - y81d)*(mousexpos - x83d) + (x81d - x83d)*(mouseypos - y83d)) / ((y82d - y83d)*(x81d - x83d)+(x83d - x82d)*(y81d - y83d))
+    c8d = 1 - a8d - b8d
+    
+    if (0 <= a1d <= 1) and (0 <= b1d <= 1) and (0 <= c1d <= 1):
+    catchprac = 7
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a2d <= 1) and (0 <= b2d <= 1) and (0 <= c2d <= 1):
+    catchprac = 6
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a3d <= 1) and (0 <= b3d <= 1) and (0 <= c3d <= 1):
+    catchprac = 5
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a4d <= 1) and (0 <= b4d <= 1) and (0 <= c4d <= 1):
+    catchprac = 4
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a5d <= 1) and (0 <= b5d <= 1) and (0 <= c5d <= 1):
+    catchprac = 3
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a6d <= 1) and (0 <= b6d <= 1) and (0 <= c6d <= 1):
+    catchprac = 2
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a7d <= 1) and (0 <= b7d <= 1) and (0 <= c7d <= 1):
+    catchprac = 1;
+    thisExp.addData("catchprac", catchprac);
+    elif (0 <= a8d <= 1) and (0 <= b8d <= 1) and (0 <= c8d <= 1):
+    catchprac = 0;
+    thisExp.addData("catchprac", catchprac);
+    */
     thisExp.addData("catchnumberprac", catchnumberprac);
     
     // the Routine "catch_prac" was not non-slip safe, so reset the non-slip timer
@@ -7501,12 +7374,21 @@ function summary2_pracRoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_6
     mouse_6.clicked_name = [];
     gotValidClick = false; // until a click is received
+    response3disk_6.setPos([a, (- a)]);
+    response3disk_6.setSize([b, b]);
+    response7disk_6.setPos([(- a), a]);
+    response7disk_6.setSize([b, b]);
     rectangle_4.setFillColor(new util.Color(grey));
     pracnumbertext = `You have finished ${pracnumber} of 7 practice questions`;
+    event.clearEvents();
+    if ((! ((pracnumber === catchtrialorderprac[0]) || (pracnumber === catchtrialorderprac[1])))) {
+        continueRoutine = false;
+    }
     
     text_31.setText(pracnumbertext);
     // keep track of which components have finished
     summary2_pracComponents = [];
+    summary2_pracComponents.push(mouse_6);
     summary2_pracComponents.push(response1disk_6);
     summary2_pracComponents.push(response2disk_6);
     summary2_pracComponents.push(response3disk_6);
@@ -7515,7 +7397,6 @@ function summary2_pracRoutineBegin(trials) {
     summary2_pracComponents.push(response6disk_6);
     summary2_pracComponents.push(response7disk_6);
     summary2_pracComponents.push(response8disk_6);
-    summary2_pracComponents.push(mouse_6);
     summary2_pracComponents.push(rectangle_4);
     summary2_pracComponents.push(text_30);
     summary2_pracComponents.push(text_31);
@@ -7537,6 +7418,35 @@ function summary2_pracRoutineEachFrame(trials) {
     t = summary2_pracClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse_6* updates
+    if (t >= 0.0 && mouse_6.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse_6.tStart = t;  // (not accounting for frame time here)
+      mouse_6.frameNStart = frameN;  // exact frame index
+      
+      mouse_6.status = PsychoJS.Status.STARTED;
+      mouse_6.mouseClock.reset();
+      prevButtonState = mouse_6.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse_6.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse_6.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [rectangle_4]) {
+            if (obj.contains(mouse_6)) {
+              gotValidClick = true;
+              mouse_6.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk_6* updates
     if (t >= 0.0 && response1disk_6.status === PsychoJS.Status.NOT_STARTED) {
@@ -7617,35 +7527,6 @@ function summary2_pracRoutineEachFrame(trials) {
       response8disk_6.setAutoDraw(true);
     }
 
-    // *mouse_6* updates
-    if (t >= 0.0 && mouse_6.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse_6.tStart = t;  // (not accounting for frame time here)
-      mouse_6.frameNStart = frameN;  // exact frame index
-      
-      mouse_6.status = PsychoJS.Status.STARTED;
-      mouse_6.mouseClock.reset();
-      prevButtonState = mouse_6.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse_6.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_6.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [rectangle_4]) {
-            if (obj.contains(mouse_6)) {
-              gotValidClick = true;
-              mouse_6.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     
     // *rectangle_4* updates
     if (t >= 0.0 && rectangle_4.status === PsychoJS.Status.NOT_STARTED) {
@@ -8041,6 +7922,10 @@ function responseRoutineBegin(trials) {
     responseClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    // setup some python lists for storing info about the mouse
+    mouse.clicked_name = [];
+    gotValidClick = false; // until a click is received
+    event.clearEvents();
     trialnumber = (trialnumber + 1);
     if ((Colour2 === 1)) {
         Circle2_colour = [1, (- 1), (- 1)];
@@ -8078,14 +7963,28 @@ function responseRoutineBegin(trials) {
         }
     }
     
-    // setup some python lists for storing info about the mouse
-    mouse.clicked_name = [];
-    gotValidClick = false; // until a click is received
+    response1disk.setPos([a, a]);
+    response1disk.setSize([b, b]);
+    response2disk.setPos([a, a]);
+    response2disk.setSize([b, b]);
+    response3disk.setPos([a, (- a)]);
+    response3disk.setSize([b, b]);
+    response4disk.setPos([a, (- a)]);
+    response4disk.setSize([b, b]);
+    response5disk.setPos([(- a), (- a)]);
+    response5disk.setSize([b, b]);
+    response6disk.setPos([(- a), (- a)]);
+    response6disk.setSize([b, b]);
+    response7disk.setPos([(- a), a]);
+    response7disk.setSize([b, b]);
+    response8disk.setPos([(- a), a]);
+    response8disk.setSize([b, b]);
     Circle_2.setSize([(15 * ratio_pxpermm), (15 * ratio_pxpermm)]);
     Circle_2.setFillColor(new util.Color(Circle2_colour));
     Circle_2.setLineColor(new util.Color(Circle2_colour));
     // keep track of which components have finished
     responseComponents = [];
+    responseComponents.push(mouse);
     responseComponents.push(response1disk);
     responseComponents.push(response2disk);
     responseComponents.push(response3disk);
@@ -8094,7 +7993,6 @@ function responseRoutineBegin(trials) {
     responseComponents.push(response6disk);
     responseComponents.push(response7disk);
     responseComponents.push(response8disk);
-    responseComponents.push(mouse);
     responseComponents.push(Circle_2);
     responseComponents.push(text_23);
     
@@ -8115,6 +8013,35 @@ function responseRoutineEachFrame(trials) {
     t = responseClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse* updates
+    if (t >= 0.0 && mouse.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse.tStart = t;  // (not accounting for frame time here)
+      mouse.frameNStart = frameN;  // exact frame index
+      
+      mouse.status = PsychoJS.Status.STARTED;
+      mouse.mouseClock.reset();
+      prevButtonState = mouse.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [response1disk,response3disk,response5disk,response7disk]) {
+            if (obj.contains(mouse)) {
+              gotValidClick = true;
+              mouse.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk* updates
     if (t >= 0.0 && response1disk.status === PsychoJS.Status.NOT_STARTED) {
@@ -8195,35 +8122,6 @@ function responseRoutineEachFrame(trials) {
       response8disk.setAutoDraw(true);
     }
 
-    // *mouse* updates
-    if (t >= 0.0 && mouse.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse.tStart = t;  // (not accounting for frame time here)
-      mouse.frameNStart = frameN;  // exact frame index
-      
-      mouse.status = PsychoJS.Status.STARTED;
-      mouse.mouseClock.reset();
-      prevButtonState = mouse.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [response1disk,response2disk,response3disk,response4disk,response5disk,response6disk,response7disk,response8disk,]) {
-            if (obj.contains(mouse)) {
-              gotValidClick = true;
-              mouse.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     
     // *Circle_2* updates
     if (t >= 0.0 && Circle_2.status === PsychoJS.Status.NOT_STARTED) {
@@ -8271,6 +8169,79 @@ function responseRoutineEachFrame(trials) {
 }
 
 
+var x11d;
+var y11d;
+var x12d;
+var y12d;
+var x13d;
+var y13d;
+var a1d;
+var b1d;
+var c1d;
+var x21d;
+var y21d;
+var x22d;
+var y22d;
+var x23d;
+var y23d;
+var a2d;
+var b2d;
+var c2d;
+var x31d;
+var y31d;
+var x32d;
+var y32d;
+var x33d;
+var y33d;
+var a3d;
+var b3d;
+var c3d;
+var x41d;
+var y41d;
+var x42d;
+var y42d;
+var x43d;
+var y43d;
+var a4d;
+var b4d;
+var c4d;
+var x51d;
+var y51d;
+var x52d;
+var y52d;
+var x53d;
+var y53d;
+var a5d;
+var b5d;
+var c5d;
+var x61d;
+var y61d;
+var x62d;
+var y62d;
+var x63d;
+var y63d;
+var a6d;
+var b6d;
+var c6d;
+var x71d;
+var y71d;
+var x72d;
+var y72d;
+var x73d;
+var y73d;
+var a7d;
+var b7d;
+var c7d;
+var x81d;
+var y81d;
+var x82d;
+var y82d;
+var x83d;
+var y83d;
+var a8d;
+var b8d;
+var c8d;
+var similarity;
 function responseRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'response'-------
@@ -8279,77 +8250,87 @@ function responseRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    mousexpos = (mouse.getPos()[0] * 100);
-    mouseypos = (mouse.getPos()[1] * 100);
-    x11d = 4;
-    y11d = 29;
-    x12d = 26;
-    y12d = 29;
-    x13d = 4;
-    y13d = 1;
+    // store data for thisExp (ExperimentHandler)
+    const xys = mouse.getPos();
+    const buttons = mouse.getPressed();
+    psychoJS.experiment.addData('mouse.x', xys[0]);
+    psychoJS.experiment.addData('mouse.y', xys[1]);
+    psychoJS.experiment.addData('mouse.leftButton', buttons[0]);
+    psychoJS.experiment.addData('mouse.midButton', buttons[1]);
+    psychoJS.experiment.addData('mouse.rightButton', buttons[2]);
+    if (mouse.clicked_name.length > 0) {
+      psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
+    mousexpos = mouse.getPos()[0];
+    mouseypos = mouse.getPos()[1];
+    x11d = (a - (b / 2));
+    y11d = (a + (b / 2));
+    x12d = (a + (b / 2));
+    y12d = (a + (b / 2));
+    x13d = (a - (b / 2));
+    y13d = (a - (b / 2));
     a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
     b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
     c1d = ((1 - a1d) - b1d);
-    x21d = 4;
-    y21d = 1;
-    x22d = 26;
-    y22d = 29;
-    x23d = 26;
-    y23d = 1;
+    x21d = (a - (b / 2));
+    y21d = (a - (b / 2));
+    x22d = (a + (b / 2));
+    y22d = (a + (b / 2));
+    x23d = (a + (b / 2));
+    y23d = (a - (b / 2));
     a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
     b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
     c2d = ((1 - a2d) - b2d);
-    x31d = 4;
-    y31d = (- 1);
-    x32d = 28;
-    y32d = (- 1);
-    x33d = 28;
-    y33d = (- 29);
+    x31d = (a - (b / 2));
+    y31d = (- (a - (b / 2)));
+    x32d = (a + (b / 2));
+    y32d = (- (a - (b / 2)));
+    x33d = (a + (b / 2));
+    y33d = (- (a + (b / 2)));
     a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
     b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
     c3d = ((1 - a3d) - b3d);
-    x41d = 4;
-    y41d = (- 1);
-    x42d = 26;
-    y42d = (- 29);
-    x43d = 4;
-    y43d = (- 29);
+    x41d = (a - (b / 2));
+    y41d = (- (a - (b / 2)));
+    x42d = (a + (b / 2));
+    y42d = (- (a + (b / 2)));
+    x43d = (a - (b / 2));
+    y43d = (- (a + (b / 2)));
     a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
     b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
     c4d = ((1 - a4d) - b4d);
-    x51d = (- 26);
-    y51d = (- 29);
-    x52d = (- 4);
-    y52d = (- 1);
-    x53d = (- 4);
-    y53d = (- 29);
+    x51d = (- (a + (b / 2)));
+    y51d = (- (a + (b / 2)));
+    x52d = (- (a - (b / 2)));
+    y52d = (- (a - (b / 2)));
+    x53d = (- (a - (b / 2)));
+    y53d = (- (a + (b / 2)));
     a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
     b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
     c5d = ((1 - a5d) - b5d);
-    x61d = (- 26);
-    y61d = (- 29);
-    x62d = (- 4);
-    y62d = (- 1);
-    x63d = (- 26);
-    y63d = (- 29);
+    x61d = (- (a + (b / 2)));
+    y61d = (- (a + (b / 2)));
+    x62d = (- (a - (b / 2)));
+    y62d = (- (a - (b / 2)));
+    x63d = (- (a + (b / 2)));
+    y63d = (- (a + (b / 2)));
     a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
     b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
     c6d = ((1 - a6d) - b6d);
-    x71d = (- 26);
-    y71d = 29;
-    x72d = (- 4);
-    y72d = 1;
-    x73d = (- 26);
-    y73d = 1;
+    x71d = (- (a + (b / 2)));
+    y71d = (a + (b / 2));
+    x72d = (- (a - (b / 2)));
+    y72d = (a - (b / 2));
+    x73d = (- (a + (b / 2)));
+    y73d = (a - (b / 2));
     a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
     b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
     c7d = ((1 - a7d) - b7d);
-    x81d = (- 26);
-    y81d = 29;
-    x82d = (- 4);
-    y82d = 29;
-    x83d = (- 4);
-    y83d = 1;
+    x81d = (- (a + (b / 2)));
+    y81d = (a + (b / 2));
+    x82d = (- (a - (b / 2)));
+    y82d = (a + (b / 2));
+    x83d = (- (a - (b / 2)));
+    y83d = (a - (b / 2));
     a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
     b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
     c8d = ((1 - a8d) - b8d);
@@ -8389,16 +8370,6 @@ function responseRoutineEnd(trials) {
     thisExp.addData("similarity", similarity);
     thisExp.addData("response_time", mouse.mouseClock.getTime());
     
-    // store data for thisExp (ExperimentHandler)
-    const xys = mouse.getPos();
-    const buttons = mouse.getPressed();
-    psychoJS.experiment.addData('mouse.x', xys[0]);
-    psychoJS.experiment.addData('mouse.y', xys[1]);
-    psychoJS.experiment.addData('mouse.leftButton', buttons[0]);
-    psychoJS.experiment.addData('mouse.midButton', buttons[1]);
-    psychoJS.experiment.addData('mouse.rightButton', buttons[2]);
-    if (mouse.clicked_name.length > 0) {
-      psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
     // the Routine "response" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -8419,12 +8390,30 @@ function response_2RoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_2
     mouse_2.clicked_name = [];
     gotValidClick = false; // until a click is received
+    response1disk_2.setPos([a, a]);
+    response1disk_2.setSize([b, b]);
+    response2disk_2.setPos([a, a]);
+    response2disk_2.setSize([b, b]);
+    response3disk_2.setPos([a, (- a)]);
+    response3disk_2.setSize([b, b]);
+    response4disk_2.setPos([a, (- a)]);
+    response4disk_2.setSize([b, b]);
+    response5disk_2.setPos([(- a), (- a)]);
+    response5disk_2.setSize([b, b]);
+    response6disk_2.setPos([(- a), (- a)]);
+    response6disk_2.setSize([b, b]);
+    response7disk_2.setPos([(- a), a]);
+    response7disk_2.setSize([b, b]);
+    response8disk_2.setPos([(- a), a]);
+    response8disk_2.setSize([b, b]);
     rectangle.setFillColor(new util.Color(grey));
     trialnumbertext = `You have finished ${trialnumber} of 324 questions`;
+    event.clearEvents();
     
     text_24.setText(trialnumbertext);
     // keep track of which components have finished
     response_2Components = [];
+    response_2Components.push(mouse_2);
     response_2Components.push(response1disk_2);
     response_2Components.push(response2disk_2);
     response_2Components.push(response3disk_2);
@@ -8433,7 +8422,6 @@ function response_2RoutineBegin(trials) {
     response_2Components.push(response6disk_2);
     response_2Components.push(response7disk_2);
     response_2Components.push(response8disk_2);
-    response_2Components.push(mouse_2);
     response_2Components.push(rectangle);
     response_2Components.push(text_25);
     response_2Components.push(text_24);
@@ -8455,6 +8443,35 @@ function response_2RoutineEachFrame(trials) {
     t = response_2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse_2* updates
+    if (t >= 0.0 && mouse_2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse_2.tStart = t;  // (not accounting for frame time here)
+      mouse_2.frameNStart = frameN;  // exact frame index
+      
+      mouse_2.status = PsychoJS.Status.STARTED;
+      mouse_2.mouseClock.reset();
+      prevButtonState = mouse_2.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse_2.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse_2.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [rectangle]) {
+            if (obj.contains(mouse_2)) {
+              gotValidClick = true;
+              mouse_2.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk_2* updates
     if (t >= 0.0 && response1disk_2.status === PsychoJS.Status.NOT_STARTED) {
@@ -8535,35 +8552,6 @@ function response_2RoutineEachFrame(trials) {
       response8disk_2.setAutoDraw(true);
     }
 
-    // *mouse_2* updates
-    if (t >= 0.0 && mouse_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse_2.tStart = t;  // (not accounting for frame time here)
-      mouse_2.frameNStart = frameN;  // exact frame index
-      
-      mouse_2.status = PsychoJS.Status.STARTED;
-      mouse_2.mouseClock.reset();
-      prevButtonState = mouse_2.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse_2.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_2.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [rectangle]) {
-            if (obj.contains(mouse_2)) {
-              gotValidClick = true;
-              mouse_2.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     
     // *rectangle* updates
     if (t >= 0.0 && rectangle.status === PsychoJS.Status.NOT_STARTED) {
@@ -8747,12 +8735,30 @@ function catch_1RoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_3
     mouse_3.clicked_name = [];
     gotValidClick = false; // until a click is received
+    response1disk_3.setPos([a, a]);
+    response1disk_3.setSize([b, b]);
+    response2disk_3.setPos([a, a]);
+    response2disk_3.setSize([b, b]);
+    response3disk_3.setPos([a, (- a)]);
+    response3disk_3.setSize([b, b]);
+    response4disk_3.setPos([a, (- a)]);
+    response4disk_3.setSize([b, b]);
+    response5disk_3.setPos([(- a), (- a)]);
+    response5disk_3.setSize([b, b]);
+    response6disk_3.setPos([(- a), (- a)]);
+    response6disk_3.setSize([b, b]);
+    response7disk_3.setPos([(- a), a]);
+    response7disk_3.setSize([b, b]);
+    response8disk_3.setPos([(- a), a]);
+    response8disk_3.setSize([b, b]);
     catchnumber = (Math.floor((Math.random() * ((7 - 0) + 1))) + 0);
+    event.clearEvents();
     catchtext = `SPECIAL TRIAL PLEASE JUST SELECT ${catchnumber}`;
     
     text_26.setText(catchtext);
     // keep track of which components have finished
     catch_1Components = [];
+    catch_1Components.push(mouse_3);
     catch_1Components.push(response1disk_3);
     catch_1Components.push(response2disk_3);
     catch_1Components.push(response3disk_3);
@@ -8761,7 +8767,6 @@ function catch_1RoutineBegin(trials) {
     catch_1Components.push(response6disk_3);
     catch_1Components.push(response7disk_3);
     catch_1Components.push(response8disk_3);
-    catch_1Components.push(mouse_3);
     catch_1Components.push(text_26);
     catch_1Components.push(rectangle_2);
     
@@ -8782,6 +8787,35 @@ function catch_1RoutineEachFrame(trials) {
     t = catch_1Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse_3* updates
+    if (t >= 0.0 && mouse_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse_3.tStart = t;  // (not accounting for frame time here)
+      mouse_3.frameNStart = frameN;  // exact frame index
+      
+      mouse_3.status = PsychoJS.Status.STARTED;
+      mouse_3.mouseClock.reset();
+      prevButtonState = mouse_3.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse_3.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse_3.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [response1disk_3,response2disk_3,response3disk_3,response4disk_3,response5disk_3,response6disk_3,response7disk_3,response8disk_3,]) {
+            if (obj.contains(mouse_3)) {
+              gotValidClick = true;
+              mouse_3.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk_3* updates
     if (t >= 0.0 && response1disk_3.status === PsychoJS.Status.NOT_STARTED) {
@@ -8862,35 +8896,6 @@ function catch_1RoutineEachFrame(trials) {
       response8disk_3.setAutoDraw(true);
     }
 
-    // *mouse_3* updates
-    if (t >= 0.0 && mouse_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse_3.tStart = t;  // (not accounting for frame time here)
-      mouse_3.frameNStart = frameN;  // exact frame index
-      
-      mouse_3.status = PsychoJS.Status.STARTED;
-      mouse_3.mouseClock.reset();
-      prevButtonState = mouse_3.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse_3.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_3.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [response1disk_3,response2disk_3,response3disk_3,response4disk_3,response5disk_3,response6disk_3,response7disk_3,response8disk_3,]) {
-            if (obj.contains(mouse_3)) {
-              gotValidClick = true;
-              mouse_3.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     if ((! ((((((((((((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])) || (trialnumber === catchtrialorder[10])) || (trialnumber === catchtrialorder[11])) || (trialnumber === catchtrialorder[12])) || (trialnumber === catchtrialorder[13])) || (trialnumber === catchtrialorder[14])) || (trialnumber === catchtrialorder[15])) || (trialnumber === catchtrialorder[16])) || (trialnumber === catchtrialorder[17])) || (trialnumber === catchtrialorder[18])) || (trialnumber === catchtrialorder[19])))) {
         continueRoutine = false;
     }
@@ -8960,77 +8965,77 @@ function catch_1RoutineEnd(trials) {
     psychoJS.experiment.addData('mouse_3.rightButton', buttons[2]);
     if (mouse_3.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse_3.clicked_name', mouse_3.clicked_name[0]);}
-    mousexpos = (mouse.getPos()[0] * 100);
-    mouseypos = (mouse.getPos()[1] * 100);
-    x11d = 4;
-    y11d = 29;
-    x12d = 26;
-    y12d = 29;
-    x13d = 4;
-    y13d = 1;
+    mousexpos = mouse.getPos()[0];
+    mouseypos = mouse.getPos()[1];
+    x11d = (a - (b / 2));
+    y11d = (a + (b / 2));
+    x12d = (a + (b / 2));
+    y12d = (a + (b / 2));
+    x13d = (a - (b / 2));
+    y13d = (a - (b / 2));
     a1d = ((((y12d - y13d) * (mousexpos - x13d)) + ((x13d - x12d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
     b1d = ((((y13d - y11d) * (mousexpos - x13d)) + ((x11d - x13d) * (mouseypos - y13d))) / (((y12d - y13d) * (x11d - x13d)) + ((x13d - x12d) * (y11d - y13d))));
     c1d = ((1 - a1d) - b1d);
-    x21d = 4;
-    y21d = 1;
-    x22d = 26;
-    y22d = 29;
-    x23d = 26;
-    y23d = 1;
+    x21d = (a - (b / 2));
+    y21d = (a - (b / 2));
+    x22d = (a + (b / 2));
+    y22d = (a + (b / 2));
+    x23d = (a + (b / 2));
+    y23d = (a - (b / 2));
     a2d = ((((y22d - y23d) * (mousexpos - x23d)) + ((x23d - x22d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
     b2d = ((((y23d - y21d) * (mousexpos - x23d)) + ((x21d - x23d) * (mouseypos - y23d))) / (((y22d - y23d) * (x21d - x23d)) + ((x23d - x22d) * (y21d - y23d))));
     c2d = ((1 - a2d) - b2d);
-    x31d = 4;
-    y31d = (- 1);
-    x32d = 28;
-    y32d = (- 1);
-    x33d = 28;
-    y33d = (- 29);
+    x31d = (a - (b / 2));
+    y31d = (- (a - (b / 2)));
+    x32d = (a + (b / 2));
+    y32d = (- (a - (b / 2)));
+    x33d = (a + (b / 2));
+    y33d = (- (a + (b / 2)));
     a3d = ((((y32d - y33d) * (mousexpos - x33d)) + ((x33d - x32d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
     b3d = ((((y33d - y31d) * (mousexpos - x33d)) + ((x31d - x33d) * (mouseypos - y33d))) / (((y32d - y33d) * (x31d - x33d)) + ((x33d - x32d) * (y31d - y33d))));
     c3d = ((1 - a3d) - b3d);
-    x41d = 4;
-    y41d = (- 1);
-    x42d = 26;
-    y42d = (- 29);
-    x43d = 4;
-    y43d = (- 29);
+    x41d = (a - (b / 2));
+    y41d = (- (a - (b / 2)));
+    x42d = (a + (b / 2));
+    y42d = (- (a + (b / 2)));
+    x43d = (a - (b / 2));
+    y43d = (- (a + (b / 2)));
     a4d = ((((y42d - y43d) * (mousexpos - x43d)) + ((x43d - x42d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
     b4d = ((((y43d - y41d) * (mousexpos - x43d)) + ((x41d - x43d) * (mouseypos - y43d))) / (((y42d - y43d) * (x41d - x43d)) + ((x43d - x42d) * (y41d - y43d))));
     c4d = ((1 - a4d) - b4d);
-    x51d = (- 26);
-    y51d = (- 29);
-    x52d = (- 4);
-    y52d = (- 1);
-    x53d = (- 4);
-    y53d = (- 29);
+    x51d = (- (a + (b / 2)));
+    y51d = (- (a + (b / 2)));
+    x52d = (- (a - (b / 2)));
+    y52d = (- (a - (b / 2)));
+    x53d = (- (a - (b / 2)));
+    y53d = (- (a + (b / 2)));
     a5d = ((((y52d - y53d) * (mousexpos - x53d)) + ((x53d - x52d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
     b5d = ((((y53d - y51d) * (mousexpos - x53d)) + ((x51d - x53d) * (mouseypos - y53d))) / (((y52d - y53d) * (x51d - x53d)) + ((x53d - x52d) * (y51d - y53d))));
     c5d = ((1 - a5d) - b5d);
-    x61d = (- 26);
-    y61d = (- 29);
-    x62d = (- 4);
-    y62d = (- 1);
-    x63d = (- 26);
-    y63d = (- 29);
+    x61d = (- (a + (b / 2)));
+    y61d = (- (a + (b / 2)));
+    x62d = (- (a - (b / 2)));
+    y62d = (- (a - (b / 2)));
+    x63d = (- (a + (b / 2)));
+    y63d = (- (a + (b / 2)));
     a6d = ((((y62d - y63d) * (mousexpos - x63d)) + ((x63d - x62d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
     b6d = ((((y63d - y61d) * (mousexpos - x63d)) + ((x61d - x63d) * (mouseypos - y63d))) / (((y62d - y63d) * (x61d - x63d)) + ((x63d - x62d) * (y61d - y63d))));
     c6d = ((1 - a6d) - b6d);
-    x71d = (- 26);
-    y71d = 29;
-    x72d = (- 4);
-    y72d = 1;
-    x73d = (- 26);
-    y73d = 1;
+    x71d = (- (a + (b / 2)));
+    y71d = (a + (b / 2));
+    x72d = (- (a - (b / 2)));
+    y72d = (a - (b / 2));
+    x73d = (- (a + (b / 2)));
+    y73d = (a - (b / 2));
     a7d = ((((y72d - y73d) * (mousexpos - x73d)) + ((x73d - x72d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
     b7d = ((((y73d - y71d) * (mousexpos - x73d)) + ((x71d - x73d) * (mouseypos - y73d))) / (((y72d - y73d) * (x71d - x73d)) + ((x73d - x72d) * (y71d - y73d))));
     c7d = ((1 - a7d) - b7d);
-    x81d = (- 26);
-    y81d = 29;
-    x82d = (- 4);
-    y82d = 29;
-    x83d = (- 4);
-    y83d = 1;
+    x81d = (- (a + (b / 2)));
+    y81d = (a + (b / 2));
+    x82d = (- (a - (b / 2)));
+    y82d = (a + (b / 2));
+    x83d = (- (a - (b / 2)));
+    y83d = (a - (b / 2));
     a8d = ((((y82d - y83d) * (mousexpos - x83d)) + ((x83d - x82d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
     b8d = ((((y83d - y81d) * (mousexpos - x83d)) + ((x81d - x83d) * (mouseypos - y83d))) / (((y82d - y83d) * (x81d - x83d)) + ((x83d - x82d) * (y81d - y83d))));
     c8d = ((1 - a8d) - b8d);
@@ -9087,12 +9092,33 @@ function response_sumRoutineBegin(trials) {
     // setup some python lists for storing info about the mouse_11
     mouse_11.clicked_name = [];
     gotValidClick = false; // until a click is received
+    response1disk_11.setPos([a, a]);
+    response1disk_11.setSize([b, b]);
+    response2disk_11.setPos([a, a]);
+    response2disk_11.setSize([b, b]);
+    response3disk_11.setPos([a, (- a)]);
+    response3disk_11.setSize([b, b]);
+    response4disk_11.setPos([a, (- a)]);
+    response4disk_11.setSize([b, b]);
+    response5disk_11.setPos([(- a), (- a)]);
+    response5disk_11.setSize([b, b]);
+    response6disk_11.setPos([(- a), (- a)]);
+    response6disk_11.setSize([b, b]);
+    response7disk_11.setPos([(- a), a]);
+    response7disk_11.setSize([b, b]);
+    response8disk_11.setPos([(- a), a]);
+    response8disk_11.setSize([b, b]);
     rectangle_9.setFillColor(new util.Color(grey));
     trialnumbertext = `You have finished ${trialnumber} of 324 questions`;
+    event.clearEvents();
+    if ((! ((((((((((((((((((((trialnumber === catchtrialorder[0]) || (trialnumber === catchtrialorder[1])) || (trialnumber === catchtrialorder[2])) || (trialnumber === catchtrialorder[3])) || (trialnumber === catchtrialorder[4])) || (trialnumber === catchtrialorder[5])) || (trialnumber === catchtrialorder[6])) || (trialnumber === catchtrialorder[7])) || (trialnumber === catchtrialorder[8])) || (trialnumber === catchtrialorder[9])) || (trialnumber === catchtrialorder[10])) || (trialnumber === catchtrialorder[11])) || (trialnumber === catchtrialorder[12])) || (trialnumber === catchtrialorder[13])) || (trialnumber === catchtrialorder[14])) || (trialnumber === catchtrialorder[15])) || (trialnumber === catchtrialorder[16])) || (trialnumber === catchtrialorder[17])) || (trialnumber === catchtrialorder[18])) || (trialnumber === catchtrialorder[19])))) {
+        continueRoutine = false;
+    }
     
     text_52.setText(trialnumbertext);
     // keep track of which components have finished
     response_sumComponents = [];
+    response_sumComponents.push(mouse_11);
     response_sumComponents.push(response1disk_11);
     response_sumComponents.push(response2disk_11);
     response_sumComponents.push(response3disk_11);
@@ -9101,7 +9127,6 @@ function response_sumRoutineBegin(trials) {
     response_sumComponents.push(response6disk_11);
     response_sumComponents.push(response7disk_11);
     response_sumComponents.push(response8disk_11);
-    response_sumComponents.push(mouse_11);
     response_sumComponents.push(rectangle_9);
     response_sumComponents.push(text_51);
     response_sumComponents.push(text_52);
@@ -9123,6 +9148,35 @@ function response_sumRoutineEachFrame(trials) {
     t = response_sumClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // *mouse_11* updates
+    if (t >= 0.0 && mouse_11.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse_11.tStart = t;  // (not accounting for frame time here)
+      mouse_11.frameNStart = frameN;  // exact frame index
+      
+      mouse_11.status = PsychoJS.Status.STARTED;
+      mouse_11.mouseClock.reset();
+      prevButtonState = mouse_11.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse_11.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      let buttons = mouse_11.getPressed();
+      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = buttons;
+        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [rectangle]) {
+            if (obj.contains(mouse_11)) {
+              gotValidClick = true;
+              mouse_11.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     
     // *response1disk_11* updates
     if (t >= 0.0 && response1disk_11.status === PsychoJS.Status.NOT_STARTED) {
@@ -9203,35 +9257,6 @@ function response_sumRoutineEachFrame(trials) {
       response8disk_11.setAutoDraw(true);
     }
 
-    // *mouse_11* updates
-    if (t >= 0.0 && mouse_11.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse_11.tStart = t;  // (not accounting for frame time here)
-      mouse_11.frameNStart = frameN;  // exact frame index
-      
-      mouse_11.status = PsychoJS.Status.STARTED;
-      mouse_11.mouseClock.reset();
-      prevButtonState = mouse_11.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse_11.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      let buttons = mouse_11.getPressed();
-      if (!buttons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = buttons;
-        if (buttons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [rectangle]) {
-            if (obj.contains(mouse_11)) {
-              gotValidClick = true;
-              mouse_11.clicked_name.push(obj.name)
-            }
-          }
-          if (gotValidClick === true) { // abort routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     
     // *rectangle_9* updates
     if (t >= 0.0 && rectangle_9.status === PsychoJS.Status.NOT_STARTED) {
